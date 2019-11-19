@@ -1,0 +1,22 @@
+@charset "utf-8";
+* { box-sizing: border-box; }
+main { clear: both; width: 70%; margin: 0 auto; position: relative; }
+
+.local { width: 15%; height: 300px; float: left; font-family: 'tree'; position: relative; text-align: right; }
+.lo_bar { position: absolute;  width: 70%; right: 30%; top: 30px; }
+.local p { font-size: 38px; line-height: 70px; margin-bottom: 20px; }
+.local ul { font-size: 25px; line-height: 38px; }
+.local a:hover { text-decoration: underline; }
+
+.bread { height: 60px; margin-left: 17%; font-size: 20px; padding-top: 20px; text-align: right; margin-right: 60px; }
+.bread a { text-decoration: underline; }
+.content { margin-left: 15%; width: 85%; margin-top: 25px; border-left: 2px solid; }
+.content p { font-size: 20px; line-height: 30px; margin: 20px; }
+.content span { display: block; }
+
+.con { width: 100%; margin: 0 auto; margin-bottom: 50px; }
+.con h1 { font-size: 30px; text-align: center; margin: 30px; }
+.text { width: 850px; margin: 0 auto;  }
+#sp { text-align: right; }
+.con img { width: 900px; margin: 0 auto; }
+
