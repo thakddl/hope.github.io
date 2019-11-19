@@ -1,0 +1,26 @@
+@charset utf-8;
+
+@font-face {
+
+    font-family:"hangelnuB";
+
+    src:local("./font/HangeulNuriB"), url("./font/HangeulNuriB.eot") format("embedded-opentype"), url("./font/HangeulNuriB.woff") format("woff"), url("./font/HangeulNuriB") format("opentype");
+
+    font-weight:100;
+
+    font-style: normal;
+
+}
+
+@font-face {
+
+    font-family:"hangelnuR";
+
+    src:local("./font/HangeulNuriR"), url("./font/HangeulNuriR.otf.eot") format("embedded-opentype"), url("./font/HangeulNuriR.woff") format("woff"), url("./font/HangeulNuriR") format("opentype");
+
+    font-weight:900;
+
+    font-style: normal;
+
+}
+@font-face { font-family: 'YunTaemin'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/YunTaemin.woff') format('woff'); font-weight: normal; font-style: normal; }
