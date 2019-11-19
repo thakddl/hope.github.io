@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Visit Seoul</title>
+    <meta name="title" content="Visit Seoul">
+    <meta name="keywords" content="서울, 여행, 맛집, 명소, 문화, 관광, 예술">
+    <meta name="description" content="서울의 문화 관광을 소개한다.">
+    <meta name="author" content="Hope Lee">
+    <meta property="og:title" content="VISIT SEOUL">
+    <meta property="og:description" content="한국의 중심 서울에 가다.">
+    <meta property="og:image" content="./data/back.jpg">
+    <!--절대값 주소-->
+    <link rel="stylesheet" href="./css/common.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <!--상대값 주소-->
+    <style>
+/*       메인 콘텐츠 서식*/
+        #vdo {width: 100%; height: 100%; overflow: hidden;}
+        #vd1 {width: 100%; min-height: 100%;} /* 1. 부모의 크기를 따라가려면 블록을 줘야한다. 
+        2. 동영상은 높이를 따라간다. 동영상크기가 화면크기와 달라 테두리가 비어서 출력될경우 min-h을 쓰는데 뜻은 최소높이가 100%를 넘어간다는 뜻이다. 따라서 width를100%설정하면
+        넓이가 맞아진다. 대신 동영상 아래쪽이 짤린다. */
+        #cover_page{position: absolute; width: 100%; height: 100%; z-index: 10; top: 0; left: 0;}
+        .tit { background-image: url("./data/logo2.png"); width: 430px; height: 80px; margin: 90px auto; margin-top: 200px; background-repeat: no-repeat;}
+        #frm1 { width: 1000px; height: 80px; margin: 0 auto; background-color: rgba(0,0,0,0.6);}
+        #keyword { display: block; height: 70px; width: 915px; font-size: 24px; text-indent: 24px; margin: 5px; float: left; opacity: 0.6; transition: 0.5s;}
+        #search { display: block; width: 70px; height: 70px; float: right; margin: 5px; margin-left: 0; background-color: #777; background-image: url("./data/search.png"); text-indent: -9999px; background-size: 44px 49px; background-position: center center; background-repeat: no-repeat; opacity: 0.6; transition: 0.5s;}
+        #keyword:focus { opacity: 0.8;}
+        #keyword:focus ~ #search { opacity: 0.9;}
+        #page2, #page3 { background-image: url("./data/bg.jpg"); background-repeat: no-repeat; background-size: cover;}
+        #page2 { background-attachment: fixed; padding-top: 40px; }
+        #insight { background-color: #f0f0f0; height: 95%;}
+        .page_tit {text-align: center; line-height: 100px; font-size: 48px; }
+        .thum_lst li { float: left; width: 373px; margin-left: 40px; position: relative; overflow: hidden; height: 320px; margin-top: 40px;}
+        .thum_lst li.col8 { width: 786px; }
+        .thum_lst li a { color: #333; display: block; width: 360px; height: 300px; overflow: hidden; border: 3px solid transparent; margin: 7px auto; transition: 0.6s; transition-delay: 0.1s; background-color: #e1e1e1; }
+        .thum_lst li a:after {content: "▶"; position: absolute; bottom: 27px;right: 24px;display: none;}
+        .thum_lst li a:hover { border: 3px solid #fe3c08; background-color: #fff;}
+        .thum_lst li a:hover::after {display: block; }
+        .cate_tit {padding: 14px; color: #fe3c08; text-decoration: underline;}
+        .lst_tit {padding: 14px;}
+        .lst_com {padding: 14px;}
+        .lst_date {padding: 14px;}
+        .thum_lst li.col8 a {width: 770px; color: #fff; background-image: url(./data/culture.jpg); background-size: cover; background-repeat: no-repeat;}
+                
+        #vs_con {padding-top: 50px;}
+        #vs {width: 100%; overflow-x: hidden; background-color: #fff; padding-top: 50px;position: relative;}
+        .img_box{width: 400%;}
+        .img_box li {float: left; width: 25%;}
+        .img_box li .pic {display: block; width: 580px; float: left; margin-left: 40px; margin-bottom: 40px;}
+        .img_box li .tit_box {width: 580px; float: right; margin-right: 40px;margin-bottom: 40px;}
+        .vs_tit {padding: 24px;}
+        .vs_com {padding: 24px;}
+        .more {display: block; width: 120px;height: 40px;border: 2px solid #333; color: #333; text-align: center; line-height: 40px; margin: 24px;}
+        .btn_box{position: absolute; right: 100px; bottom: 50px; z-index: 50; width: 500px;height: 14px;}
+        .btn_box li {width: 150px;margin-left: 12px;float: left;}
+        .btn_box li button {display: block; width: 150px;height: 14px; background-color: #666;}
+        .btn_box li.on button{background-color: #fe3c08;}      
+        .ico_link {clear: both;margin-top: 50px;width: 100%;height: 64px;background: #fff;}    
+        .ico_link li {float:left;width: 50%; height: 64px;}
+        .ico_link li a {display: block; color: #333; font-size: 22px; line-height: 64px; text-align: center; background: #fff; padding-left: 100px;}
+        .ico_link li a.item2 {background: #f0f0f0}
+        .ico_link li a span {display: block; float:left;padding-left: 15px;}
+        .ico_link li a.item1 .ico {background-repeat: no-repeat;background-image: url(./data/place.png);margin-left: 100px; margin-top: 12px; width: 26px; height: 40px;}
+        .ico_link li a.item2 .ico {background-repeat: no-repeat;background-image: url(./data/call.png);margin-left: 100px; margin-top: 12px; width: 42px; height: 40px;}
+/*      스플릿아이콘을 가지고 있을 경우 
+        .ico_link li a .ico{background-repeat: no-repeat;background-image: url(); margin-top: 5px;}
+        .ico_link li a.item1 .ico {background-position: 0px -301px; width: 20px; height: 53px;}
+        .ico_link li a.item2 .ico {background-position: -40px -301px; width: 42px; height: 53px;}*/
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+<!--       헤드-->
+        <nav id="tnb">
+            <ul class="right menu">
+                <li><a href="login.html">로그인</a></li>
+                <li><a href="join.html">회원가입</a></li>
+            </ul>
+        </nav>
+        <input type="checkbox" id="ck1">
+        <label for="ck1" class="lst_btn"></label>
+        <nav id="gnb">
+            <label for="ck1" class="close_btn">닫기</label>
+            <ul class="main">
+                <li><a href="menu1.html">서울의 명소</a></li>
+                <li><a href="menu2.html">핫플레이스 맛집</a></li>
+                <li><a href="menu3.html">예약하기</a></li>
+                <li><a href="menu4.html">여행필수정보</a></li>
+            </ul>
+            <ul class="bottom">
+                <li><a href="bmenu1.html">지도</a></li>
+                <li><a href="bmenu2.html">지하철</a></li>
+                <li><a href="bmenu3.html">버스</a></li>
+            </ul>
+        </nav>
+<!--        메인-->
+        <div class="page" id="page1">
+            <figure id="vdo">
+                <video src="./data/backvdo.mp4" id="vd1" autoplay loop></video>
+            </figure>
+            <section class="page_wrap" id="cover_page">
+                <h2 class="tit"></h2>
+                <form action="" id="frm1">
+                    <input type="text" id="keyword" placeholder="search...">
+                    <input type="submit" id="search">
+                </form>
+            </section>
+        </div>
+        <div class="page" id="page2">
+            <section class="page_wrap" id="insight">
+                <h2 class="page_tit">INSIGHT</h2>
+                <ul class="thum_lst">
+                    <li class="col4"><a href="insight1.html">
+                            <h4 class="cate_tit">서울시립미술관</h4>
+                            <h3 class="lst_tit">석가산의 액션 뮤직</h3>
+                            <p class="lst_com">백남준을 둘러싼 ‘기억’을 출발점으로 삼고 있는 이 전시는 백남준 예술 세계의 토대가 되는 어린 시절의 공간과 시간의 단면을 새롭게 조명하고, 지금 여기로 연결점을 찾고자 합니다.</p>
+                            <span class="lst_date">2019.07.20 - 2020.02.29</span>
+                        </a></li>
+                    <li class="col4"><a href="insight2.html">
+                            <h4 class="cate_tit">서울 드럼 페스티벌</h4>
+                            <h3 class="lst_tit">서울시 대표축제, 서울드럼페스티벌</h3>
+                            <p class="lst_com">타악기를 보고 듣고 배울 수 있는 전시체험장과 가슴을 뛰게 할 드럼 공연이 준비되어 있다. 다양한 볼거리, 즐길 거리가 있어 가족, 친구, 연인과 함께 이곳으로 봄나들이 계획을 세워보는 것을 추천한다.</p>
+                            <span class="lst_date">2019.09.28 - 09.30</span>
+                        </a></li>
+                    <li class="col4"><a href="insight3.html">
+                            <h4 class="cate_tit">서울세계불꽃축제</h4>
+                            <h3 class="lst_tit">낮부터 밤까지 꺼지지 않는 최초의 불꽃축제, 서울세계불꽃축제 2019</h3>
+                            <p class="lst_com">이번 불꽃축제는 한국, 스페인, 캐나다 총 3개국 대표 연화 팀이 참여하며, 총 10만여 발의 환상적인 불꽃이 63빌딩의 멀티미디어쇼와 함께 가을 하늘을 찬란하게 수놓을 예정이다.</p>
+                            <span class="lst_date">2019.09.17</span>
+                        </a></li>
+                    <li class="col4"><a href="insight4.html">
+                            <h4 class="cate_tit">서울프린지페스티벌2019</h4>
+                            <h3 class="lst_tit">예술적 일탈을 상상하다, 서울프린지페스티벌2019</h3>
+                            <p class="lst_com">시원한 바람이 불어오믐 가을, 10월 15일(목)부터 24일(토)까지 서울프린지페스티벌2019가 개최된다.</p>
+                            <span class="lst_date">2019.10.15 - 10.24</span>
+                        </a></li>
+                    <li class="col8"><a href="insight5.html">
+                            <h4 class="cate_tit">서울 문화로 바캉스</h4>
+                            <h3 class="lst_tit">서울의 대표 가을행사 '서울문화로 바캉스'</h3>
+                            <p class="lst_com">올해 12회째를 맞은 『2019 서울 문화로 바캉스』는 서울광장, 청계광장, 광화문광장 등 3개 광장에서 운영되는 '야외 프로그램'과 서울시 6개 문화시설에서 열리는 '실내 프로그램'으로 구성된다. </p>
+                            <span class="lst_date">2019.10.25</span>
+                        </a></li>
+                </ul>
+            </section>
+        </div>
+        <div class="page" id="page3">
+            <section class="page_wrap" id="vs_con">
+                <figure id="vs">
+                    <ul class="img_box">
+                         <li>
+                            <img src="./data/museum.jpg" alt="배너1" class="pic">
+                            <div class="tit_box">
+                                <h3 class="vs_tit">한양도성박물관 기획전 「겸재가 그린 창의문」</h3>
+                                <p class="vs_com">조선시대 화가 겸재 정신이 그린 두 점의 창의문도를 통해 한양도성의 가장 오래된 성문, 창의문을 재조명하는 전시이다. 이 전시에는 백악과 인왕산 기슭의 장동(壯洞)에서 오랜 시간 살아온 화가의 시선과 창의문의 역사가 오롯이 담겨 있다.</p>
+                                <a href="culture2.html" class="more">VIEW MORE</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./data/back.jpg" alt="배너2" class="pic">
+                            <div class="tit_box">
+                                <h3 class="vs_tit">마음으로 바라보며, 기억해야 할 여행「서울 다크 투어리즘」</h3>
+                                <p class="vs_com">바쁘게 돌아가는 서울, 반복되는 일상에 무심코 잊고 사는 것들이 있다. 불과 100년 전만 하더라도 일본의 식민지로 전락한 서울에서는 잔혹한 참상이 벌어졌었다. 역사적 장소를 돌아보는 ‘다크 투어’를 통해 잊어서는 안 될 역사를 기억해보고자 한다.</p>
+                                <a href="culture1.html" class="more">VIEW MORE</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./data/kmu.jpg" alt="배너3" class="pic">
+                            <div class="tit_box">
+                                <h3 class="vs_tit">국악 둘레여행 IN 북촌&amp;도심</h3>
+                                <p class="vs_com">오는 6월부터 11월까지 주말마다 북촌 일대와 덕수궁길 등 보행자 전용거리에서 "국악 둘레여행 IN 북촌&amp;도심"이라는 주제로 흥겨운 국악 한마당이 펼쳐진다. </p>
+                                <a href="culture3.html" class="more">VIEW MORE</a>
+                            </div>
+                            <ul class="btn_box">
+                                <li class="on"><button></button></li>
+                                <li><button></button></li>
+                                <li><button></button></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </figure>
+                <ul class="ico_link">
+                    <li><a href="map.html" class="item1">
+                        <span class="ico"></span>
+                        <span>서울관광재단위치</span>
+                    </a></li>
+                    <li><a href="tel:02-3788-8113" class="item2">
+                        <span class="ico"></span>
+                        <span>연락처</span>
+                    </a></li>
+                </ul>
+<!--                푸터-->
+                <footer id="ft">
+                    <ul class="fnb">
+                        <li><a href="">홈페이지</a></li>
+                        <li><a href="">도우미</a></li>
+                        <li><a href="">저작권정책</a></li>
+                        <li><a href="">개인정보처리방침</a></li>
+                        <li><a href="">사이트맵</a></li>
+                    </ul>
+                    <p class="copyright">© Seoul Metropolitan Government all rights reserved</p>
+                </footer>
+            </section>
+        </div>
+    </div>
+    <a href="#" id="totop">↑</a>
+</body>
+</html>
