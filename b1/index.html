@@ -71,6 +71,20 @@
         .ico_link li a.item1 .ico {background-position: 0px -301px; width: 20px; height: 53px;}
         .ico_link li a.item2 .ico {background-position: -40px -301px; width: 42px; height: 53px;}*/
     </style>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+    $(document).ready(function(){
+        var ht = parseInt($(window).height());
+        $(window).scroll(function(){
+               var sc = parseInt($(window).scrollTop());
+               if(sc>=ht){
+                   $(".lst_btn").stop().animate({"left":"70px"},500);
+               } else {
+                   $(".lst_btn").stop().animate({"left":"150px"},500);
+               }    
+        });    
+    });    
+    </script>    
 </head>
 
 <body>
