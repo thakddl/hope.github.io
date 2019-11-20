@@ -75,12 +75,15 @@
     <script>
     $(document).ready(function(){
         var ht = parseInt($(window).height());
+        $("#totop").css("display","none");
         $(window).scroll(function(){
                var sc = parseInt($(window).scrollTop());
                if(sc>=ht){
                    $(".lst_btn").stop().animate({"left":"70px"},500);
+                   $("#totop").fadeIn();
                } else {
                    $(".lst_btn").stop().animate({"left":"150px"},500);
+                   $("#totop").fadeOut();
                }    
         });    
     });    
