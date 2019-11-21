@@ -1,53 +1,59 @@
 @charset "utf-8";
 /*       메인 콘텐츠 서식*/
-        #vdo {width: 100%; height: 100%; overflow: hidden;}
-        #vd1 {width: 100%; min-height: 100%;} /* 1. 부모의 크기를 따라가려면 블록을 줘야한다. 
-        2. 동영상은 높이를 따라간다. 동영상크기가 화면크기와 달라 테두리가 비어서 출력될경우 min-h을 쓰는데 뜻은 최소높이가 100%를 넘어간다는 뜻이다. 따라서 width를100%설정하면
-        넓이가 맞아진다. 대신 동영상 아래쪽이 짤린다. */
-        #cover_page{position: absolute; width: 100%; height: 100%; z-index: 10; top: 0; left: 0;}
-        .tit { background-image: url("../data/logo2.png"); width: 430px; height: 80px; margin: 90px auto; margin-top: 200px; background-repeat: no-repeat;}
-        #frm1 { width: 1000px; height: 80px; margin: 0 auto; background-color: rgba(0,0,0,0.6);}
-        #keyword { display: block; height: 70px; width: 915px; font-size: 24px; text-indent: 24px; margin: 5px; float: left; opacity: 0.6; transition: 0.5s;}
-        #search { display: block; width: 70px; height: 70px; float: right; margin: 5px; margin-left: 0; background-color: #777; background-image: url("../data/search.png"); text-indent: -9999px; background-size: 44px 49px; background-position: center center; background-repeat: no-repeat; opacity: 0.6; transition: 0.5s;}
-        #keyword:focus { opacity: 0.8;}
-        #keyword:focus ~ #search { opacity: 0.9;}
-        #page2, #page3 { background-image: url("../data/bg.jpg"); background-repeat: no-repeat; background-size: cover;}
-        #page2 { background-attachment: fixed; padding-top: 40px; }
-        #insight { background-color: #f0f0f0; height: 95%;}
-        .page_tit {text-align: center; line-height: 100px; font-size: 48px; }
-        .thum_lst li { float: left; width: 373px; margin-left: 40px; position: relative; overflow: hidden; height: 320px; margin-top: 40px;}
-        .thum_lst li.col8 { width: 786px; }
-        .thum_lst li a { color: #333; display: block; width: 360px; height: 300px; overflow: hidden; border: 3px solid transparent; margin: 7px auto; transition: 0.6s; transition-delay: 0.1s; background-color: #e1e1e1; }
-        .thum_lst li a:after {content: "▶"; position: absolute; bottom: 27px;right: 24px;display: none;}
-        .thum_lst li a:hover { border: 3px solid #fe3c08; background-color: #fff;}
-        .thum_lst li a:hover::after {display: block; }
-        .cate_tit {padding: 14px; color: #fe3c08; text-decoration: underline;}
-        .lst_tit {padding: 14px;}
-        .lst_com {padding: 14px;}
-        .lst_date {padding: 14px;}
-        .thum_lst li.col8 a {width: 770px; color: #fff; background-image: url("../data/culture.jpg"); background-size: cover; background-repeat: no-repeat;}
-                
-        #vs_con {padding-top: 50px;}
-        #vs {width: 100%; overflow-x: hidden; background-color: #fff; padding-top: 50px;position: relative;}
-        .img_box{width: 400%;}
-        .img_box li {float: left; width: 25%;}
-        .img_box li .pic {display: block; width: 580px; float: left; margin-left: 40px; margin-bottom: 40px;}
-        .img_box li .tit_box {width: 580px; float: right; margin-right: 40px;margin-bottom: 40px;}
-        .vs_tit {padding: 24px;}
-        .vs_com {padding: 24px;}
-        .more {display: block; width: 120px;height: 40px;border: 2px solid #333; color: #333; text-align: center; line-height: 40px; margin: 24px;}
-        .btn_box{position: absolute; right: 100px; bottom: 50px; z-index: 50; width: 500px;height: 14px;}
-        .btn_box li {width: 150px;margin-left: 12px;float: left;}
-        .btn_box li button {display: block; width: 150px;height: 14px; background-color: #666;}
-        .btn_box li.on button{background-color: #fe3c08;}      
-        .ico_link {clear: both;margin-top: 50px;width: 100%;height: 64px;background: #fff;}    
-        .ico_link li {float:left;width: 50%; height: 64px;}
-        .ico_link li a {display: block; color: #333; font-size: 22px; line-height: 64px; text-align: center; background: #fff; padding-left: 100px;}
-        .ico_link li a.item2 {background: #f0f0f0}
-        .ico_link li a span {display: block; float:left;padding-left: 15px;}
-        .ico_link li a.item1 .ico {background-repeat: no-repeat;background-image: url(../data/place.png);margin-left: 100px; margin-top: 12px; width: 26px; height: 40px;}
-        .ico_link li a.item2 .ico {background-repeat: no-repeat;background-image: url(../data/call.png);margin-left: 100px; margin-top: 12px; width: 42px; height: 40px;}
+#vdo { width: 100%; height: 100%; overflow: hidden;}
+#vd1 { display: block; min-width: 100%; }
+/* 1. 부모의 크기를 따라가려면 블록을 줘야한다. 
+2. 동영상은 높이를 따라간다. 동영상크기가 화면크기와 달라 테두리가 비어서 출력될경우 min-h을 쓰는데 뜻은 최소높이가 100%를 넘어간다는 뜻이다. 따라서 width를100%설정하면
+넓이가 맞아진다. 대신 동영상 아래쪽이 짤린다. */
+#cover_page{position: absolute; width: 100%; height: 100%; z-index: 10; top: 0; left: 0;}
+.tit { background-image: url("../data/logo2.png"); width: 430px; height: 80px; margin: 90px auto; margin-top: 200px; background-repeat: no-repeat;}
+#frm1 { width: 1000px; height: 80px; margin: 0 auto; background-color: rgba(0,0,0,0.6);}
+#keyword { display: block; height: 70px; width: 915px; font-size: 24px; text-indent: 24px; margin: 5px; float: left; opacity: 0.6; transition: 0.5s;}
+#search { display: block; width: 70px; height: 70px; float: right; margin: 5px; margin-left: 0; background-color: #777; background-image: url("../data/search.png"); text-indent: -9999px; background-size: 44px 49px; background-position: center center; background-repeat: no-repeat; opacity: 0.6; transition: 0.5s;}
+#keyword:focus { opacity: 0.8;}
+#keyword:focus ~ #search { opacity: 0.9;}
+
+#page2 { background-image: url("../data/bg8.jpg"); min-height: 992px; background-repeat: no-repeat; background-size: cover;}
+#page3 { background-image: url("../data/bg6.jpg"); height: 800px; background-repeat: no-repeat; }
+#page2 { background-attachment: fixed; padding-top: 40px; }
+#insight { background-color: #f0f0f0; min-height: 905px; }
+.page_tit { text-align: center; line-height: 100px; font-size: 48px; }
+.thum_lst li { float: left; width: 373px; margin-left: 40px; position: relative; overflow: hidden; height: 320px; margin-top: 40px;}
+.thum_lst li.col8 { width: 786px; }
+.thum_lst li a { color: #333; display: block; width: 360px; height: 300px; overflow: hidden; border: 3px solid transparent; margin: 7px auto; transition: 0.6s; transition-delay: 0.1s; background-color: #e1e1e1; }
+.thum_lst li a:after {content: "▶"; position: absolute; bottom: 27px;right: 24px;display: none;}
+.thum_lst li a:hover { border: 3px solid #fe3c08; background-color: #fff;}
+.thum_lst li a:hover::after { display: block; }
+.cate_tit {padding: 14px; color: #fe3c08; text-decoration: underline;}
+.lst_tit {padding: 14px;}
+.lst_com {padding: 14px;}
+.lst_date {padding: 14px;}
+.thum_lst li.col8 a { display: block; width: 100%; box-sizing: border-box; color: #fff; background-image: url("../data/culture.jpg"); background-size: cover; background-repeat: no-repeat;}
+
+#vs_con { padding-top: 50px; }
+#vs { width: 100%; overflow-x: hidden; background-color: #fff; padding-top: 50px; position: relative; }
+.img_box{width: 400%;}
+.img_box li {float: left; width: 25%;}
+.img_box li .pic {display: block; width: 580px; float: left; margin-left: 40px; margin-bottom: 40px;}
+.img_box li .tit_box { width: 580px; float: right; margin-right: 40px; margin-bottom: 40px; }
+.vs_tit { padding: 24px; }
+.vs_com { padding: 24px; }
+.more { display: block; width: 120px; height: 40px; border: 2px solid #333; color: #333; text-align: center; line-height: 40px; margin: 24px; }
+.btn_box{position: absolute; right: 100px; bottom: 50px; z-index: 50; width: 500px;height: 14px;}
+.btn_box li {width: 150px; position: absolute; }
+.btn_box li button { display: block; width: 150px;height: 14px; background-color: #666; }
+.btn_box .item2 { left: 170px; }
+.btn_box .item3 { left: 340px; }
+.btn_box li.on button{background-color: #fe3c08;}
+
+.ico_link {clear: both;margin-top: 50px;width: 100%;height: 64px;background: #fff;}  
+.ico_link li {float:left;width: 50%; height: 64px;}
+.ico_link li a {display: block; color: #333; font-size: 22px; line-height: 64px; text-align: center; background: #fff; padding-left: 100px;}
+.ico_link li a.item2 {background: #f0f0f0}
+.ico_link li a span {display: block; float:left;padding-left: 15px;}
+.ico_link li a.item1 .ico {background-repeat: no-repeat;background-image: url(../data/place.png);margin-left: 100px; margin-top: 12px; width: 26px; height: 40px;}
+.ico_link li a.item2 .ico {background-repeat: no-repeat;background-image: url(../data/call.png);margin-left: 100px; margin-top: 12px; width: 42px; height: 40px;}
 /*      스플릿아이콘을 가지고 있을 경우 
-        .ico_link li a .ico{background-repeat: no-repeat;background-image: url(); margin-top: 5px;}
-        .ico_link li a.item1 .ico {background-position: 0px -301px; width: 20px; height: 53px;}
-        .ico_link li a.item2 .ico {background-position: -40px -301px; width: 42px; height: 53px;}*/
+.ico_link li a .ico{background-repeat: no-repeat;background-image: url(); margin-top: 5px;}
+.ico_link li a.item1 .ico {background-position: 0px -301px; width: 20px; height: 53px;}
+.ico_link li a.item2 .ico {background-position: -40px -301px; width: 42px; height: 53px;}*/

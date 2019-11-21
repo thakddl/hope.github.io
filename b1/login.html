@@ -15,12 +15,26 @@
     <meta property="og:image" content="./data/back.jpg">
     <!--절대값 주소-->
     <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/login.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <!--상대값 주소-->
     <script src="https://code.jquery.com/jquery-latest.js"></script>
-    <script src="common.js"></script> 
-    <script src="index.js"></script> 
+    <script>
+    $(document).ready(function(){
+        var ht = parseInt($(window).height());
+        $("#totop").css("display","none");
+        $(window).scroll(function(){
+           var sc = parseInt($(window).scrollTop());
+           if(sc>=ht){
+               $(".lst_btn").stop().animate({"left":"70px"},500);
+               $("#totop").fadeIn();
+           } else {
+               $(".lst_btn").stop().animate({"left":"150px"},500);
+               $("#totop").fadeOut();
+           }    
+        });    
+    });    
+    </script>    
 </head>
 <body>
     <div class="wrap">
@@ -32,14 +46,9 @@
             </ul>
         </nav>
         <input type="checkbox" id="ck1">
-        <label for="ck1" class="lst_btn">
-            <div>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </label>
+        <label for="ck1" class="lst_btn"></label>
         <nav id="gnb">
+            <label for="ck1" class="close_btn">닫기</label>
             <ul class="main">
                 <li><a href="menu1.html">서울의 명소</a></li>
                 <li><a href="menu2.html">핫플레이스 맛집</a></li>
@@ -55,7 +64,7 @@
 <!--        메인-->
         <div class="page" id="page1">
             <figure id="vdo">
-                <img src="./data/bg5.jpg" alt="메인" id="vd1">
+                <image src="./data/bg1.jpg" id="vd1"></image>
             </figure>
             <section class="page_wrap" id="cover_page">
                 <h2 class="tit"></h2>
@@ -129,12 +138,12 @@
                                 <p class="vs_com">오는 6월부터 11월까지 주말마다 북촌 일대와 덕수궁길 등 보행자 전용거리에서 "국악 둘레여행 IN 북촌&amp;도심"이라는 주제로 흥겨운 국악 한마당이 펼쳐진다. </p>
                                 <a href="culture3.html" class="more">VIEW MORE</a>
                             </div>
+                            <ul class="btn_box">
+                                <li class="on"><button></button></li>
+                                <li><button></button></li>
+                                <li><button></button></li>
+                            </ul>
                         </li>
-                    </ul>
-                    <ul class="btn_box">
-                        <li class="item1 on"><button></button></li>
-                        <li class="item2"><button></button></li>
-                        <li class="item3"><button></button></li>
                     </ul>
                 </figure>
                 <ul class="ico_link">
