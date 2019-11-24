@@ -14,42 +14,8 @@
     <meta property="og:image" content="./data/poster.jpg">
     <!--절대값 주소-->
     <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="font.css">
-    <style>
-        *{margin: 0; padding: 0;}
-        body, html {폰트패밀리}
-        ul{list-style: none;}
-        a{text-decoration: none;}
-        .hd {width: 100%; height: 150px; background-image: url("./data/hd_bg.jpg");}
-        .hd_wrap {clear: both; width: 60%;  margin: 0 auto; position: relative; }
-/*        이게 무스ㅏ,ㄴ일인가 왜 60%인가 1000px은 왜안됏었나?*/
-        .s_logo {display: block; background-image: url("./data/s_logo.png"); background-repeat: no-repeat; width: 103px; height: 40px; float: left; margin-left: 20px; margin-top: 8px;}
-        .info_box {float: left; line-height: 50px; padding-left: 25px; background-image: url("./data/news.png"); text-indent: 40px; background-position: 0px center; background-repeat: no-repeat; margin-left: 100px; color: #4c4c4c; }
-        .top {float: right;}
-        .top li {float: left;}
-        .top li a {display: block; line-height: 50px; padding: 0px 20px; font-size: 14px; color: ece6d8;}
-        .logo {display: block; width: 120px; height: 60px; background-image: url("./data/logo.png"); margin-top: 20px; float: left;}
-        .sub {overflow: hidden; width: 100vw; display: none; margin-top: 10px; background-color: antiquewhite;}
-        #mainmenu {float: left; margin-left: 45px; margin-top: 25px; width: 650px;}
-        #mainmenu li {float: left; width: 150px; position: relative;}
-        #mainmenu li .sub li {clear: both; }
-        #mainmenu li a {display: block; color: #333; font-size: 14px; line-height: 30px; }
-        #mainmenu li a.dp1 { font-size: 20px; width: 150px; color: #808080; text-align: center; margin-top: 12px;}
-        #mainmenu li:hover a.dp1{color: #0c82e9;}
-        #mainmenu:hover .sub {display: block; text-align: center; margin-top: 20px;}
-        #frm1 {float: left; padding-top: 33px;}
-        .search {display: block; float: left; width: 40px; height: 40px; border-radius: 21px; background-color: #b89b57; overflow: hidden; text-indent: -9999px;  background-image: url("./data/search.png"); background-repeat: no-repeat; background-position: center center; cursor:pointer;}
-        #sel {display: block; float: left; width: 140px; margin-left: 15px; margin-top: 6px; line-height: 32px; height: 32px; border-radius: 5px 0px 0px 5px;}
-        #go_btn {display: block; float: left; width: 32px; height: 32px; line-height: 32px; text-align: center;margin-top: 6px; border-left: 0px; outline: 0; background: #fff; transition: 0.5s; overflow: hidden; border-radius: 0px 5px 5px 0px;}
-        #search_form {position: absolute; left:0; top:110px; width: 100vw; height: 0px; background-color: #fff; transition: 0.5s; overflow: hidden; border-bottom: 3px solid trensparent;}
-        #ck1 {display: none}
-        #ck1:checked + #search_form {height: 200px; border-bottom: 3px solid #333;}
-/*        #ck1:ckecked .sub {display: none;}*/
-        .close_btn {display: block; float: left; width: 30px; height: 30px; cursor: pointer; background-image: url("./data/close.png"); background-position: center center; background-repeat: no-repeat; text-indent: -9999px; position: absolute; right: 46%; top: 7px;}
-        #keyword {display: block; width: 500px; height: 60px; outline:0; border: 0; background: rgba(0,0,0,0.5); margin-top: 50px;margin-left: 250px; float: left;}
-        .search_btn { display: block; width: 60px; height: 60px; background-image: url("./data/search.png"); background-position: center; background-repeat: no-repeat; background-color: antiquewhite; float: left; margin-top: 50px; margin-left: 3px; text-indent: -9999px;}
-        
-    </style>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./font/font.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148908800-1"></script>
     <script>
@@ -59,20 +25,20 @@
         gtag('js', new Date());
         gtag('config', 'UA-148908800-1');
     </script>
-
 </head>
 <body>
    <header class="hd">
-       <div class="hd_wrap">
+       <div class="hd_wrap tnb">
            <a href="" class="s_logo"></a>
-           <div class="info_box">가평군의 소식을 전합니다.</div>
+           <div class="info_box"><a href="">가평군의 소식을 전합니다.</a></div>
            <ul class="top">
                <li><a href="">가평 소식</a></li>
                <li><a href="">Q&amp;A</a></li>
                <li><a href="">공지사항</a></li>
            </ul>
        </div>
-       <div class="hd_wrap">
+       <div class="hd_wrap gnb">
+           <input type="checkbox" id="ck1">
            <a href="" class="logo"></a>
            <nav id="mainmenu">
                <ul>
@@ -80,7 +46,6 @@
                        <a href="" class="dp1">축제 소개</a>
                        <ul class="sub">
                            <li><a href="">막걸리 축제 소개</a></li>
-                           <li><a href="">막걸리 이야기</a></li>
                            <li><a href="">참여 막걸리</a></li>
                            <li><a href="">찾아오시는 길</a></li>
                        </ul>
@@ -90,14 +55,12 @@
                        <ul class="sub">
                            <li><a href="">축제 프로그램</a></li>
                            <li><a href="">공연 일정</a></li>
-                           <li><a href="">행사장 안내</a></li>
                        </ul>
                    </li>
                    <li>
                        <a href="" class="dp1">커뮤니티</a>
                        <ul class="sub">
                            <li><a href="">갤러리</a></li>
-                           <li><a href="">페이스북</a></li>
                            <li><a href="">공지사항</a></li>
                            <li><a href="">Q&amp;A</a></li>
                        </ul>
@@ -108,7 +71,6 @@
                            <li><a href="">관광 명소</a></li>
                            <li><a href="">재즈 페스티발</a></li>
                            <li><a href="">송어 페스티발</a></li>
-                           <li><a href="">음식/숙박 예약</a></li>
                        </ul>
                    </li>
                </ul>
@@ -122,10 +84,8 @@
                    <option value="">한국어</option>
                 </select>
                <button id="go_btn">GO</button>
-               <input type="checkbox" id="ck1">
                <div id="search_form">
-                   <label for="ck1" class="close_btn">닫기</label>
-                   <input type="text" id="keyword" class="search_txt">
+                   <input type="text" id="keyword" class="search_txt" title="검색어를 입력하세요." placeholder="Search..." autofocus>
                    <input type="submit" class="search_btn" value="GO">
                </div>
            </form>
@@ -133,92 +93,95 @@
    </header>
     <main id="content">
         <figure id="vs">
-            <ul class="img_box">
-                <li class="item"></li>
-                <li class="item"></li>
-                <li class="item"></li>
-            </ul>
-            <ul class="btn_box">
-                <li class="btn"><button></button></li>
-                <li class="btn"><button></button></li>
-                <li class="btn"><button></button></li>
-            </ul>
+            <img src="./data/main.jpg" alt="">
         </figure>
         <div class="vs_box">
             <div class="tit_box">
+                <div class="ani_box">
+                    <div class="drop"></div>
+                    <div class="left"></div>
+                    <div class="right"></div>
+                </div>
                 <h2 class="tit">2019 MACGEOLLI FESTIVAL</h2>
-                <p class="vs_com">09.20(금)부터 09.22(일)까지 신비와 청정의 자라섬에서 즐겨요!</p>
+                <p class="vs_com">09.20(금)부터 09.22(일)까지 자라섬에서<br> 신나는 막걸리 페스티벌을 즐겨요!</p>
             </div>
             <ul class="icon_box">
                 <li class="icon_fr"><a href="">오시는 길</a></li>
                 <li class="icon_fr"><a href="">공연 일정</a></li>
-                <li class="icon_fr"><a href="">행사장 배치도</a></li>
+                <li class="icon_fr"><a href="">행사장</a></li>
             </ul>
-            <div class="curve"></div>
+        </div>
+        <div class="curve"></div>
+        <div class="wrap">
             <ul class="col_box">
-                 <li>
+                 <li class="con">
                     <div class="col_fr">
                         <h3 class="col_tit">페스티벌 안내</h3>
-                        <p class="col_com">막페를 마음껏 즐겨보세요!</p>
+                        <p class="col_com"></p>
                     </div>
                     <ul class="lst">
                         <li><a href="">
-                                <img src="" alt="">
                                 <h4 class="cate_tit">막걸리 페스티벌 일정</h4>
-                                <p class="cate_com">막걸리 페스티벌 일정</p>
+                                <p class="cate_com">막페를 마음껏 즐겨보세요 !</p>
                             </a></li>
                         <li><a href="">
-                                <img src="" alt="">
                                 <h4 class="cate_tit">참가 막걸리</h4>
-                                <p class="cate_com">다채로운 막걸리의 매력을 즐기자!</p>
+                                <p class="cate_com">다채로운 막걸리의 매력을 즐기자 !</p>
                             </a></li>
                         <li><a href="">
-                                <img src="" alt="">
-                                <h4 class="cate_tit">!</h4>
-                                <p class="cate_com">!</p>
+                                <h4 class="cate_tit">행사장 안내</h4>
+                                <p class="cate_com">행사장 구석구석을 누벼보세요 !</p>
                             </a></li>
                     </ul>
                 </li>
-                <li>
+                <li class="con">
                     <div class="col_fr">                       
                         <h3 class="col_tit">프로그램</h3>
-                        <p class="col_com">막걸리 페스티벌의 프로그램 소개</p>
                     </div>
                     <ul class="lst">
                         <li><a href="">
-                                <img src="" alt="">
                                 <h4 class="cate_tit">황금 막걸리를 찾아라!</h4>
                                 <p class="cate_com">커플 및 가족관람객 특별이벤트 !! </p>
                             </a></li>
                         <li><a href="">
-                                <img src="" alt="">
                                 <h4 class="cate_tit">막페 디제잉쇼</h4>
-                                <p class="cate_com">신나는 막페 디제잉 쇼! EDM 댄스 페스티벌 </p>
+                                <p class="cate_com">신나는 막페 EDM 댄스 페스티벌 </p>
                             </a></li>
                         <li><a href="">
-                                <img src="" alt="">
                                 <h4 class="cate_tit">막페 가족시네마</h4>
-                                <p class="cate_com">메인 무대 전광판에서 무비무비!!</p>
+                                <p class="cate_com">메인 무대 전광판에서 무비무비 !!</p>
                             </a></li>
                     </ul>
                 </li>
-                <li>
+                <li class="con">
                     <div class="col_fr">
                         <h3 class="col_tit">공지사항</h3>
-                        <p class="col_com"></p>
                     </div>
                     <ul class="nt">
+                        <li><a href="">- 우천시 행사 일정 안내드립니다.</a></li>
+                        <li><a href="">- 주차장 안내드립니다.</a></li>
+                    </ul>
+                    <ul class="thumb">
                         <li><a href=""></a></li>
                         <li><a href=""></a></li>
-                        <ul class="thumb">
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                        </ul>
+                        <li><a href=""></a></li>
                     </ul>
                 </li>
             </ul>
         </div>
     </main>
+    <footer id="ft">
+        <div class="q">
+            <img src="./data/logo.png" alt="">
+            <p>문의 : 02-6080-6177</p>
+        </div>
+        <div class="fnb">
+            <a href="">개인정보처리방침</a>
+            <a href="">사이트맵</a>
+            <a href="">오시는 길</a>
+        </div>
+        <p class="add">경기도 가평군 가평읍 달전리 1-1</p>
+        <p class="copy">Copyright(c) 2019 Hope Lee. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
