@@ -50,11 +50,11 @@ h2 { margin: 7% 0 4% 10%; }
 #rdo2:checked ~ .tap1 { border-right: 1px solid #000; border-bottom: 1px solid #000; box-sizing: border-box; }
 #rdo2:checked ~ .tap2 { border-top: 1px solid #000; box-sizing: border-box; }
 .page3 div:before { clear:both; display:table; content:''; }
-.re_num, .ti_num { width: 100%; height: 280px; clear: both; border-bottom: 1px solid #000; display: none; }
+.re_num, .ti_num { width: 100%; height: 310px; clear: both; border-bottom: 1px solid #000; display: none; }
 .re_num label, .ti_num label { display: block; width: 200px; margin: 0 auto; margin-top: 20px; height: 25px; }
-#re_num, #ti_num { display: block; margin: 10px auto; width: 200px; height: 25px; }
-#re_date, #ti_date { display: block; width: 200px; height: 29px; margin: 10px auto; }
-.check_btn { display: block; width: 120px; height: 40px; margin: 25px auto; background-color: #fff; border: 1px solid #000; }
+#re_num, #ti_num { display: block; margin: 10px auto; width: 200px; height: 40px; text-indent: 10px; }
+#re_date, #ti_date { display: block; width: 200px; height: 40px; margin: 10px auto; }
+.check_btn { display: block; width: 120px; height: 40px; margin: 25px auto; background-color: #fff; border: 1px solid #000;}
 
 .page4 { height: 300px; }
 .page4 p { font-size: 15px; margin: -10px 0 2vh 20vw; }
