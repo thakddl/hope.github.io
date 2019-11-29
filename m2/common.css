@@ -3,7 +3,7 @@
 html, body { width: 100%; font-family: 'RIDIBatang'; }
 ul { list-style: none; }
 a, img, label, span { display: block; margin: 0; padding: 0; text-decoration: none; border: 0px; }
-input, button { background-color: #fff; border: 1px solid #000; box-sizing: border-box; border-radius: 0; }
+input, button { display: block; background-color: #fff; border: 1px solid #000; box-sizing: border-box; border-radius: 0; }
 .none { display: none; }
 .blank { height: 80px; }
 #ck1:checked ~ #gnb { left: 0; }
