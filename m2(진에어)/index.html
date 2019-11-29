@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <script>
+        window.addEventListener('load', function(){
+        document.body.style.height = (document.documentElement.clientHeight+4)+'px';
+        setTimeout(function(){ window.scrollTo(0, 1); }, 100);
+    });
+    </script>
+    <title>Jin-Air</title>
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <input type="checkbox" id="ck1" class="none">
+    <input type="checkbox" id="ck2" name="search" class="none">
+    <input type="checkbox" id="ck3" name="login" class="none">    
+    <header id="hd">
+        <a href="index.html" class="logo"><img src="./data/logo.png" alt=""></a>
+        <label for="ck1" class="lst_btn">
+            <span class="line_box">
+                <span class="line1"></span>
+                <span class="line2"></span>
+                <span class="line3"></span>
+            </span>
+        </label>
+    </header>
+    <div class="blank"></div>
+    <nav id="gnb">
+        <ul class="thumb_menu">
+            <li><a href="index.html">언어</a></li>
+            <li><label for="ck2" class="search_call">검색</label></li>
+            <li><label for="ck3" class="log_call">로그인</label></li>
+        </ul>
+        <h2 class="gnb_tit">메뉴</h2>
+        <ul class="menu">
+            <li><a href="javascript:;" data-index="1">항공권 예약</a></li>
+            <li><a href="javascript:;" data-index="2">최저가 항공권</a></li>
+            <li><a href="javascript:;" data-index="3">체크인</a></li>
+            <li><a href="javascript:;" data-index="4">출도착 스케줄</a></li>
+        </ul>
+    </nav>
+    <div id="search_wrap">
+        <label for="ck2" class="close_btn">닫기</label>
+        <form action="">
+            <input type="text" id="search" placeholder="Search..." title="검색어를 입력하세요." autofocus>
+            <input type="submit" id="search_btn" value="검색">
+        </form>
+    </div>
+    <div id="login_wrap">
+        <label for="ck3" class="close_btn">닫기</label>
+        <form action="">
+            <input type="text" id="id" placeholder="아이디 입력" title="아이디를 입력하세요.">
+            <input type="password" id="pw" placeholder="비밀번호 입력" title="비밀번호를 입력하세요.">
+            <input type="submit" value="로그인" id="login_btn">
+        </form>
+    </div>
+    <main>
+        <div class="vs">
+            <ul class="vs_box">
+                <li id="img1"></li>
+                <li id="img2"></li>
+                <li id="img3"></li>
+            </ul>
+            <p id="tit">JIN-AIR</p>
+        </div>
+        <div class="page1">
+            <input type="radio" name="tap1" id="ra1" checked>
+            <input type="radio" name="tap1" id="ra2">
+            <label for="ra1" class="tap1">왕복</label>
+            <label for="ra2" class="tap2">편도</label>
+            <div class="re">
+                <form action=""></form>
+                    <div class="sel">
+                    <button class="from">출발지</button>
+                    <button class="return_img"></button>
+                    <button class="to">도착지</button>
+                    </div>
+                    <button class="date">탑승일</button>
+                    <button class="reservate">예약하기</button>
+                </form>
+            </div>
+            <div class="one">
+                <form action="">
+                    <div class="sel">
+                    <button class="from">출발지</button>
+                    <button class="one_way"></button>
+                    <button class="to">도착지</button>
+                    </div>
+                    <button class="date">탑승일</button>
+                    <button class="reservate">예약하기</button>
+                </form>
+            </div>
+        </div>
+        <div class="page2">
+            <ul class="slide_box">
+                <li><a href="" id="slide1"></a></li>
+                <li><a href="" id="slide2"></a></li>
+                <li><a href="" id="slide3"></a></li>
+            </ul>
+        </div>
+        <div class="page3">
+            <h2>체크인</h2>
+            <div class="con_wrap">
+                <input type="radio" name="tap2" id="rdo1" class="rad" checked>
+                <input type="radio" name="tap2" id="rdo2" class="rad">
+                <label for="rdo1" class="tap1">예약 번호</label>
+                <label for="rdo2" class="tap2">항공권 번호</label>
+                <div class="re_num">
+                    <form action="">
+                        <label for="re_num">예약 번호</label>
+                        <input type="text" id="re_num" placeholder="예약번호를 입력하세요." title="예약번호를 입력하세요.">
+                        <label for="re_date">탑승일</label>
+                        <button id="re_date">년/ 월/ 일</button>
+                        <input type="submit" value="예약조회" class="check_btn">
+                    </form>
+                </div>
+                <div class="ti_num">
+                    <form action="">
+                        <label for="ti_num">항공권 번호</label>
+                        <input type="text" id="ti_num" placeholder="예약번호를 입력하세요." title="예약번호를 입력하세요.">
+                        <label for="ti_date">탑승일</label>
+                        <button id="ti_date">년/ 월/ 일</button>
+                        <input type="submit" value="예약조회" class="check_btn">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="page4">
+            <h2>출도착 조회</h2>
+            <form action="">
+                <div class="sel">
+                <button class="from">출발지</button>
+                <button class="return_img"></button>
+                <button class="to">도착지</button>
+                </div>
+                <button class="date">날짜</button>
+                <p>※출발지 기준</p>
+                <button class="reservate">출도착 조회</button>
+            </form>
+        </div>
+    </main>
+    <footer id="ft">
+        <p id="copy">COPYRIGHTⓒ 2019 Hope Lee. <br> ALL RIGHTS RESERVED.</p>
+    </footer>
+</body>
+</html>
