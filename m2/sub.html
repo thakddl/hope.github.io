@@ -5,21 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <script>
+        window.addEventListener('load', function(){
+        document.body.style.height = (document.documentElement.clientHeight+4)+'px';
+        setTimeout(function(){ window.scrollTo(0, 1); }, 100);
+    });
+    </script>
     <title>Jin-Air</title>
     <link rel="stylesheet" href="./css/font.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/index.css">
     <script src="https://code.jquery.com/jquery-latest.js"></script>
     <script src="index.js"></script>
-    <script>
-    // 자바스크립트로 모바일 웹 주소창 숨기기
-    window.addEventListener('load', function() {
-        // body의 height를 살짝 늘리는 코드
-        document.body.style.height = (document.documentElement.clientHeight + 5) + 'px';
-        // scroll를 제어 하는 코드
-        setTimeout(function(){ window.scrollTo(0, 1); }, 100); 
-    });
-    </script>
 </head>
 <body>
     <input type="checkbox" id="ck1" class="none">
@@ -74,8 +71,7 @@
             </ul>
             <p id="tit">JIN-AIR</p>
         </div>
-        <div id="page1">
-            <h2>항공권 예약</h2>
+        <div class="page1">
             <input type="radio" name="tap1" id="ra1" checked>
             <input type="radio" name="tap1" id="ra2">
             <label for="ra1" class="tap1">왕복</label>
@@ -103,15 +99,14 @@
                 </form>
             </div>
         </div>
-        <div id="page2">
-            <h2>최저가 항공권</h2>
+        <div class="page2">
             <ul class="slide_box">
-                <li id="slide1"><a href="#">발리 항공권<br>저렴한 가격으로 발리 항공권을 이용해보세요.</a></li>
-                <li id="slide2"><a href="#">파리 항공권<br>매력적인 파리여행 진에어와 함께 하세요.</a></li>
-                <li id="slide3"><a href="#">타즈 매니아<br>진에어와 함께하는 오로라 여행!</a></li>
+                <li><a href="" id="slide1"></a></li>
+                <li><a href="" id="slide2"></a></li>
+                <li><a href="" id="slide3"></a></li>
             </ul>
         </div>
-        <div id="page3">
+        <div class="page3">
             <h2>체크인</h2>
             <div class="con_wrap">
                 <input type="radio" name="tap2" id="rdo1" class="rad" checked>
@@ -138,7 +133,7 @@
                 </div>
             </div>
         </div>
-        <div id="page4">
+        <div class="page4">
             <h2>출도착 조회</h2>
             <form action="">
                 <div class="sel">

@@ -4,7 +4,7 @@ $(document).ready(function(){
         $(".vs_box").not(":animated").animate({"margin-left":-a+"px"}, 1000,
         function(){
             $(".vs_box li").eq(0).appendTo($(".vs_box"));
-            $(".vs_box").css("margin-left","0px");
+            $(".vs_box").css("margin-left", 0 );
         });
     } setInterval(function(){ vsAni(); }, 2000);
     var b = parseInt($(".slide_box li").width())
@@ -16,4 +16,12 @@ $(document).ready(function(){
         });
     }
     setInterval(function(){ slideAni(); }, 2000);
+    $("#gnb .menu li a").on("click",function(){
+        var tar = parseInt($(this).attr("data-index"));
+        var ofs = $("#page"+tar).offset();
+        var sc = ofs.top;
+        console.log(sc);
+        $("body, html").animate({scrollTop:sc-80} ,500);
+        $("#ck1").prop("checked",false);
+    }); 
 });
