@@ -54,7 +54,7 @@ h2 { margin: 7% 0 4% 10%; }
 .re_num label, .ti_num label { display: block; width: 200px; margin: 0 auto; margin-top: 20px; height: 25px; }
 #re_num, #ti_num { display: block; margin: 10px auto; width: 200px; height: 40px; text-indent: 10px; background-color: #fff; border: 1px solid #000; }
 #re_date, #ti_date { display: block; width: 200px; height: 40px; margin: 10px auto; background-color: #fff; border: 1px solid #000; }
-.check_btn { display: block; width: 120px; height: 40px; margin: 25px auto; background-color: #fff; border: 1px solid #000; outline: none; }
+.check_btn { display: block; width: 120px; height: 40px; margin: 25px auto; background-color: #fff; border: 1px solid #000; outline: none; border-radius: 0; }
 
 .page4 { height: 300px; }
 .page4 p { font-size: 15px; margin: -10px 0 2vh 20vw; }
