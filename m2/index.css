@@ -2,10 +2,10 @@
 .vs { width: 100%; overflow: hidden; }
 #tit { position: absolute; left: 60vw; bottom: 9vh; font-size: 30px; color: #fff; text-shadow: 4px 4px 7px #000;  }
 .vs_box { width: 400%; }
-.vs_box li { position: relative; width: 25%; float: left; }
-.vs_box #img3 { height: 89vh; background-image: url("./data/img1.jpg"); background-position: center; background-repeat: no-repeat; }
-.vs_box #img2 { height: 89vh; background-image: url("./data/img2.jpg"); background-position: center; background-repeat: no-repeat; }
-.vs_box #img1 { height: 89vh; background-image: url("./data/img3.jpg"); background-position: center; background-repeat: no-repeat; }
+.vs_box li { width: 25%; float: left; }
+.vs_box #img3 { min-height: 89vh; background-image: url("./data/img1.jpg"); background-position: center; background-size: cover; background-repeat: no-repeat; }
+.vs_box #img2 { min-height: 89vh; background-image: url("./data/img2.jpg"); background-position: center; background-size: cover; background-repeat: no-repeat; }
+.vs_box #img1 { min-height: 89vh; background-image: url("./data/img3.jpg"); background-position: center; background-size: cover; background-repeat: no-repeat; }
 .vs_box li p { color: #fff; position: absolute; left: 60px; bottom: 150px; font-size: 20px;}
 
 h2 { margin: 7% 0 4% 10%; }
@@ -38,9 +38,9 @@ h2 { margin: 7% 0 4% 10%; }
 .page2 { width: 100%; overflow: hidden;}
 .slide_box { width: 400%; }
 .slide_box li { width: 25%; float: left; }
-#slide1 { display: block; height: 70vh; background-image: url("./data/slide2.jpg"); background-position: center; background-repeat: no-repeat; }
-#slide2 { display: block; height: 70vh; background-image: url("./data/slide3.jpg"); background-position: center; background-repeat: no-repeat; }
-#slide3 { display: block; height: 70vh; background-image: url("./data/slide1.jpg"); background-position: center; background-repeat: no-repeat; }
+#slide1 { display: block; min-height: 80vh; background-image: url("./data/slide2.jpg"); background-position: center; background-size: cover; background-repeat: no-repeat; }
+#slide2 { display: block; min-height: 80vh; background-image: url("./data/slide3.jpg"); background-position: center; background-size: cover; background-repeat: no-repeat; }
+#slide3 { display: block; min-height: 80vh; background-image: url("./data/slide1.jpg"); background-position: center; background-size: cover; background-repeat: no-repeat; }
 
 .rad { display: none; }
 #rdo1:checked ~ .re_num { display: block; }
@@ -52,8 +52,8 @@ h2 { margin: 7% 0 4% 10%; }
 .page3 div:before { clear:both; display:table; content:''; }
 .re_num, .ti_num { width: 100%; height: 310px; clear: both; border-bottom: 1px solid #000; display: none; }
 .re_num label, .ti_num label { display: block; width: 200px; margin: 0 auto; margin-top: 20px; height: 25px; }
-#re_num, #ti_num { display: block; margin: 10px auto; width: 200px; height: 40px; text-indent: 10px; }
-#re_date, #ti_date { display: block; width: 200px; height: 40px; margin: 10px auto; }
+#re_num, #ti_num { display: block; margin: 10px auto; width: 200px; height: 40px; text-indent: 10px; background-color: #fff; border: 1px solid #000; }
+#re_date, #ti_date { display: block; width: 200px; height: 40px; margin: 10px auto; background-color: #fff; border: 1px solid #000; }
 .check_btn { display: block; width: 120px; height: 40px; margin: 25px auto; background-color: #fff; border: 1px solid #000;}
 
 .page4 { height: 300px; }

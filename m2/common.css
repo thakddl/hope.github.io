@@ -3,7 +3,12 @@
 html, body { width: 100%; font-family: 'RIDIBatang'; }
 ul { list-style: none; }
 a, img, label, span { display: block; margin: 0; padding: 0; text-decoration: none; border: 0px; }
-input, button { -webkit-appearance:none; display: block; background-color: #fff; border: 1px solid #000; box-sizing: border-box; border-radius: 0; }
+input { display: block; background-color: transparent; border-radius: 0; font: inherit;
+    outline: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
 .none { display: none; }
 .blank { height: 80px; }
 #ck1:checked ~ #gnb { left: 0; }
@@ -38,7 +43,7 @@ input, button { -webkit-appearance:none; display: block; background-color: #fff;
 #login_wrap { width: 100%; height: 100vh; background: rgba(40,40,40,0.9); position: fixed; top: -100vh; z-index: 1000; transition: 0.6s; }
 #login_wrap form { float: left; width: 100%; margin-top: 10%; }
 #id, #pw { display: block; width: 60%; height: 40px; margin-left: 10%; text-indent: 20px; font-family: 'RIDIBatang'; font-size: 15px; margin: 0 auto; margin-bottom: 10px;}
-#login_btn { display:block; border-radius: 0; background-color: #fff; width: 16%; height: 42px; font-family: 'RIDIBatang'; margin-left: 2px; margin: 20px auto; }
+#login_btn { display:block; width: 16%; height: 42px; font-family: 'RIDIBatang'; margin-left: 2px; margin: 20px auto; background-color: #fff; border: 1px solid #000; box-sizing: border-box; border-radius: 0; }
 #ck3:checked ~ #login_wrap { top: 2px; }
 
 #ft { width: 100%; height: 80px; background: #333; }
