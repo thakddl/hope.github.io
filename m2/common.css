@@ -38,13 +38,13 @@ input[type=submit] {-webkit-appearance:none;}
 .close_btn { float: right; margin-top: 50px; margin-right: 30px; width: 80px; height: 40px; border: 2px solid #fff; box-sizing: border-box; text-align: center; line-height: 40px; color: #fff; }
 #search_wrap form { float: left; width: 100%; margin-top: 10%; }
 #search { display: block; width: 60%; height: 42px; margin-left: 11%; float: left; text-indent: 20px; font-size: 15px; border: 1px solid #fff; }
-#search_btn { display:block; width: 16%; height: 44px; float: left; margin-left: 2px; border-radius: 0; background-color: #fff; border: 1px solid #000; }
+#search_btn { display:block; width: 16%; height: 44px; float: left; margin-left: 2px; border-radius: 0; background-color: #fff; border: 0px; }
 #ck2:checked ~ #search_wrap { top: 2px; }
 
 #login_wrap { width: 100%; height: 100vh; background: rgba(40,40,40,0.9); position: fixed; top: -100vh; z-index: 1000; transition: 0.6s; }
 #login_wrap form { float: left; width: 100%; margin-top: 10%; }
 #id, #pw { display: block; width: 60%; height: 40px; margin-left: 10%; text-indent: 20px; font-size: 15px; margin: 0 auto; margin-bottom: 10px; border: 1px solid #fff;}
-#login_btn { display:block; width: 16%; height: 42px; margin-left: 2px; margin: 20px auto; background-color: #fff; border: 1px solid #000; box-sizing: border-box; border-radius: 0; }
+#login_btn { display:block; width: 16%; height: 42px; margin-left: 2px; margin: 20px auto; background-color: #fff; border: 0px; border-radius: 0; }
 #ck3:checked ~ #login_wrap { top: 2px; }
 
 #ft { width: 100%; height: 80px; background: #333; }
