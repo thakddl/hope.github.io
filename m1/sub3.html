@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>GOYARD</title>
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="고야드 - 공식 웹사이트">
+    <meta property="og:url" content="http://thakddl.github.io/m1">
+    <meta property="og:site_name" content="고야드">
+    <meta property="og:description" content="생활과 여행을 위한 시대를 초월하는 고급스러움을 만나보세요.">
+    <meta property="og:image" content="./data/news3.png">
+    <meta property="og:updated_time" content="2019.12.01">
+    <link rel="stylesheet" href="./css/sub3.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link href="https://fonts.googleapis.com/css?family=Baskervville|Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="common.js"></script>
+</head>
+<body>
+    <input type="checkbox" class="ck" id="ck1">
+    <input type="checkbox" class="ck" id="ck2">
+    <header id="hd">
+        <label for="ck1" id="t_btn1">
+            <span id="line1"></span>
+            <span id="line2"></span>
+            <span id="line3"></span>
+        </label>
+        <a href="index.html" id="logo"></a>
+        <label for="ck2" id="t_btn2">
+            <i class="fas fa-sign-in-alt"></i>
+            <span></span> 
+        </label>
+    </header>
+    <nav class="gnb">
+        <ul class="menu">
+            <li><a href="sub1.html">History</a></li>
+            <li><a href="sub2.html">Personalization</a></li>
+            <li><a href="sub3.html">Store Locator</a></li>
+            <li><a href="sub4.html">News</a></li>
+        </ul>
+    </nav>
+    <nav class="tnb">
+        <ul class="member">
+            <li><a href="sign.html">Sign</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+    </nav>
+    <div class="blank"></div>
+    <main>
+        <section class="con">
+            <h2 class="tit">Store Location</h2>
+            <p class="sub">매장 안내</p>
+            <p class="des">고야드 여행 관련 제품들은 전세계 저희 매장에서만 판매하고 있습니다. 어떤한 제품도 온라인으로 판매하지 않습니다.
+            </p>
+            <form action="">
+                <button class="go">위치 공유하기</button>
+                <select name="city" id="sel">
+                    <option value="#">도시 선택</option>
+                    <option value="#">교토</option>
+                    <option value="#">나고야</option>
+                    <option value="#">뉴욕</option>
+                    <option value="#">도교</option>
+                    <option value="#">런던</option>
+                    <option value="#">서울</option>
+                </select>
+            </form>
+            <div class="map">
+                <img src="./data/location.jpg" alt="매장 위치">
+            </div>
+        </section>
+    </main>
+    <footer id="ft">
+        <p class="copyright">COPYRIGHTⓒ 2019 Hope Lee. <br> ALL RIGHTS RESERVED.</p>
+    </footer>
+</body>
+</html>

@@ -2,12 +2,11 @@
 .vs { width: 100%; overflow: hidden; }
 .vs ul { width: 400%; }
 .vs li { float: left; width: 25%; }
-.vs img { width: 100%; }
+.vs img { width: 100%; min-height: 26vh; }
 
 main a { color: #fff; font-size: 13px; }
 
 section h3 { width: 70%; margin: 7% auto; text-indent: 7%; line-height: 35px; border-bottom: 2px solid #97894a; }
-section h4 { font-family: 'GyeonggiBatang'; }
 
 .page1 ul { width: 80%; margin: 0 auto; }
 .page1 li { width: 50%; float: left; }

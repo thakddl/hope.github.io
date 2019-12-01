@@ -1,0 +1,13 @@
+@charset "utf-8";
+.vs img { width: 100%;  }
+
+.tit { width: 80%; text-align: center; margin: 7% auto; margin-bottom: 0px; border-bottom: 2px solid #97894a; line-height: 3; }
+
+.n_con { width: 80%; margin: 7% auto; }
+.n_con li { float: left; width: 50%; }
+.n_con img { width: 90%; margin: 0 auto; }
+.n_con a { width: 80%; text-align: center; margin: 7% 10%; color: #fff; font-size: 13px; }
+
+.page { clear: both; width: 50%; margin: 0 auto; }
+.page li { float: left; margin: 8px; }
+.page a { width: 80%; text-align: center; margin: 7% 10%; color: #fff; font-size: 18px; }

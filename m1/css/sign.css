@@ -1,0 +1,12 @@
+@charset "utf-8";
+.tit { width: 80%; text-align: center; margin: 13vh auto; margin-bottom: 0px; border-bottom: 2px solid #97894a; line-height: 2; }
+main { height: 65vh; }
+.sign { width: 80%; margin: 10vh auto; }
+.sign input { display: block; margin: 3vh auto; border: 2px solid #97894a; background-color: transparent; color: #fff; height: 40px; text-indent: 10px; width: 70%; font-size: 16px; }
+#sbt { width: 30%; text-indent: 0; margin-bottom: 5vh; }
+
+.mem { clear: both; width: 262px; margin: 0 auto; }
+.mem li { float: left; padding: 7px; }
+.mem li:after { content: "|"; padding-left: 14px; }
+.mem li:last-child::after { content: ""; }
+.mem a { font-size: 16px; color: #fff; float: left; }
