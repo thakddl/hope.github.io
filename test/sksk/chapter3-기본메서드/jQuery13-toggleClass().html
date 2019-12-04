@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery 기본매서드3 - toggleClass()</title>
+    <style> .gbd { border:5px solid #0f0; } </style>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        //토글은 온오프 기능만 된다.
+    $(document).ready(function(){
+        //아이디가 clsBtn인 요소를 클릭하면 img에 gbd클래스가 교대로 추가되거나 제거되도록 하시오
+        $("#clsBtn").click(function(){
+            $("img").toggleClass("gbd");
+        });
+    });
+    </script>
+</head>
+<body>
+    <img src="http://placehold.it/300x420/333" alt="">
+    <img src="http://placehold.it/300x420/9ff" class="gbd" alt="">
+    <img src="http://placehold.it/300x420/c99" alt="">
+    <br><br><br><p class="txt"></p>
+    <button id="clsBtn">이미지 클래스 토글</button>
+</body>
+</html>

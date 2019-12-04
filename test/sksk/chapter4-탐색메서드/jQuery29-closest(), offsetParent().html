@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>탐색 메서드13 - closest(), offsetParent() </title>
+    <style>
+        ul {list-style: none;}
+        p { padding: 20px; }
+        span, em, strong, b { display: block; padding: 2rem; }
+    </style>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("em").offsetParent().css("border","3px solid green");//최고 조상요소를 탐색  즉 html
+        $("em").closest("li").css("background-color","red");
+    });
+    </script>
+</head>
+<body>
+    <header id="hd">헤더구역</header>
+    <div>
+        <ul>
+            <li><span style="background: yellow;">이전</span></li>
+            <li><span><em>조상 엘리먼트 구간 검색</em></span></li>
+            <li><span style="background: yellow;">이후</span></li>
+        </ul>
+    </div>
+    <footer id="ft">푸터 구역</footer>
+</body>
+</html>

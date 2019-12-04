@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>탐색 메서드5 - eq(), first(), last()</title>
+    <style>
+    ul { list-style: none; }
+    li { float: left; width: 80px; height: 80px; margin: 10px; border: 3px solid #ccc;}
+    a { color: #333; }
+    .gt { border: 5px solid blue; }
+    .lt { border: 5px solid red; }
+    </style>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+    $(function(){
+        $("#btn3").click(function(){
+            var a = $(".abc li");
+            var len = a.length;
+            a.eq(len-2).css("border","5px solid green");
+            a.last().addClass("gt");
+            a.first().addClass("lt");
+        });
+    });
+    </script>
+</head>
+<body>
+    <button id="btn3">순번제어에 따른 스타일 입히기</button>
+    <ul class="abc">
+        <li><a href="">놈놈놈1</a></li>
+        <li><a href="">놈놈놈2</a></li>
+        <li><a href="">놈놈놈3</a></li>
+        <li><a href="">놈놈놈4</a></li>
+        <li><a href="">놈놈놈5</a></li>
+        <li><a href="">놈놈놈6</a></li>
+    </ul>
+</body>
+</html>

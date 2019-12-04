@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>탐색 메서드8 - next(), nextAll(), prev(), prevAll() 형제선택자임</title>
+    <style>
+    div, span { width: 60px; height: 60px; margin: 5px; float: left; border: 2px red solid; background: #fff; }
+    .after { font-size: 24px; color:#ff0; }
+    .sel { border:5px blue solid; }
+    </style>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#btn3").click(function(){
+            $("div").next().addClass("after");
+            $("div").css("padding","10px").nextAll("span").css("background-color","red");
+            $("div").prev().addClass("sel");
+            $("div").prevAll(".middle").css("text-decoration","underline");
+        });
+    });
+    </script>
+</head>
+<body>
+    <p><button id="btn3">바로 아래 형제 엘리먼트에 스타일 입히기</button></p>
+    <div id="first">first</div>
+    <span id="second" class="middle">sibling1 <div id="child">child</div></span>
+    <div class="middle">sibling2</div>
+    <span id="fourth" class="middle">sibling3</span>
+    <span id="fifth" class="middle">sibling4</span>
+    <div id="sixth">last</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>탐색 메서드4 - slice()</title>
+    <style>
+    div, section { width: 100px; height:100px; margin: 5px; float: left; background-color: #f7a6a6; border: 3px solid #ccc; }
+    </style>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+    $(function(){
+        $("#btn2").click(function(){
+            var tar = $("html>body>div");
+            tar.slice(0,3).css("background-color","deeppink"); // 앞에 지정한 인덱스 넘버부터 두번째 선택한 인덱스 넘버의 앞까지 선택 
+            tar.slice(3).css("border","2px solid purple");//하나의 인덱스만 지정했을 경우, 지정한 인덱스 넘버를 포함하여 이후의 모든 애들을 선택
+            tar.slice(-3,-1).css("border-radius","10px"); //음수는 끝에서 부터 세는 것으로 마지막 것은 -1이다. 앞의 숫자는 포함, 뒤의 숫자는 불포함하는 규칙이 똑같이 적용된다.  
+        });
+    });
+    </script>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <section><div></div></section>
+    <section><div></div></section>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <section></section>
+    <section></section>
+    <button id="btn2">색 입히기</button>
+</body>
+</html>

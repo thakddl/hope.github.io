@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>탐색 메서드6 - is(), has()</title>
+    <style>
+    ul, ol { list-style: none; }
+    a { text-decoration:none; color: #333; }
+    </style>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("li").has("ul").css("background-color", "red");//li의 내부의 ul 즉 ul을 가지고 있는 li를 선택해라.
+        $("ul").click(function(event){ //li의 외부가 ul인 경우
+            var tar = $(event.target);
+            if(tar.is("li")){tar.css("border", "3px solid blue");}
+        });
+    });
+    </script>
+</head>
+<body>
+    <nav id="gnb">
+        <ol>
+            <li>
+                <div class="dp1">메인메뉴1</div>
+                <ul class="sub">
+                    <li>서브메뉴11</li>
+                    <li>서브메뉴12</li>
+                    <li>서브메뉴13</li>
+                </ul>
+            </li>
+            <li>
+                <div class="dp1">메인메뉴2</div>
+            </li>
+            <li>
+                <div class="dp1">메인메뉴3</div>
+                <ol class="sub">
+                    <li>서브메뉴31</li>
+                    <li>서브메뉴32</li>
+                    <li>서브메뉴33</li>
+                </ol>
+            </li>
+            <li>
+                <div class="dp1">메인메뉴4</div>
+            </li>
+        </ol>
+    </nav>
+</body>
+</html>

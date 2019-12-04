@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>탐색 메서드12 - parentsUntil() </title>
+    <style>
+        p { padding: 20px; }
+        span, em, strong, b { display: block; padding: 2rem; }
+    </style>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("em").parentsUntil("section").css("border","3px solid green");//지시한 요소 전까지만 포함한다.
+    });
+    </script>
+</head>
+<body>
+    <header id="hd">헤더구역</header>
+    <div>
+        <section>
+            <p><span style="background: yellow;">이전</span></p>
+            <p><span><em>조상 엘리먼트 구간 검색</em></span></p>
+            <p><span style="background: yellow;">이후</span></p>
+        </section>
+    </div>
+    <footer id="ft">푸터 구역</footer>
+</body>
+</html>

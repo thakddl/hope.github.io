@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery 탐색 메서드1-add()</title>
+    <style>
+    div { width: 60px; height: 60px; margin: 10px; float: left; }
+    p { clear: both; }
+    .rB { border: 2px solid red; }
+    .yB { background-color: yellow; }
+    </style>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(function(){
+            $(".btn").click(function(){
+                $("div").addClass("yB").add("p").addClass("rB");//앞서 나온 선택자를 선택하고 추가로 선택자를 선택할때 쓴다.
+            });
+        });
+    </script>
+</head>
+<body>
+    <button class="btn">클릭</button>
+    <div></div>
+    <div></div>
+    <div></div>
+    <p>yB클래스 적용은 받지 못하고 rB클래스의 적용을 받음</p>
+</body>
+</html>

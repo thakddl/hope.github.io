@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>탐색 메서드10 - nextUntil(), prevUntil() </title>
+    <style>
+    .sec { background: yellow; }
+    .on { color: red; }
+    </style>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#term-2").nextUntil("dt").css("background-color", "lightgreen");
+        $("#term-2").prevUntil("dt").css("background-color", "deepgreen");
+    });
+    </script>
+</head>
+<body>
+    <dl>
+        <dt id="term-1">term1</dt>
+            <dd>definition1-a</dd>
+            <dd>definition1-b</dd>
+            <dd>definition1-c</dd>
+            <dd>definition1-d</dd>
+        <dt id="term-2">term2</dt>
+            <dd>definition2-a</dd>
+            <dd>definition2-b</dd>
+            <dd>definition2-c</dd>
+            <dd>definition2-d</dd>
+        <dt id="term-3">term3</dt>
+            <dd>definition3-a</dd>
+            <dd>definition3-b</dd>
+            <dd>definition3-c</dd>
+            <dd>definition3-d</dd>
+    </dl>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>탐색 메서드15 - find() 내부요소에서 찾기 차일드보다 많이 쓴다.</title>
+    <style>
+        span { color: blue; }
+    </style>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("p").css("background","pink").find("em").css("color","red");
+    });
+    </script>
+</head>
+<body>
+    <div>p엘리먼트 중에서<em>이텔릭 단어의</em></div>
+    <p>글자
+        <b><em>색</em></b>을
+        <em>빨간색으로</em>변경한다.
+    </p>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>08 - 인덱스 값(0부터 시작한다.)을 사용하는 순서 선택자</title>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+    $(document).ready(function(){
+        //odd:홀수 even:짝수 first:전체문서 구성에서 첫째, last:전체 문서구성에서 마지막
+        $("tr:odd").css("background","orange");
+        $("tr:even").css("background","blue");
+        $("td:first").css("color","deeppink");
+        $("td:last").css("color","deeppink");
+
+
+    });
+    </script>
+</head>
+<body>
+    <table class="tb">
+        <tr>
+            <td>도토리1</td>
+        </tr>
+        <tr>
+            <td>도토리2</td>
+        </tr>
+        <tr>
+            <td>도토리3</td>
+        </tr>
+        <tr>
+            <td>도토리4</td>
+        </tr>
+        <tr>
+            <td>도토리5</td>
+        </tr>
+        <tr>
+            <td>도토리6</td>
+        </tr>
+    </table>
+</body>
+</html>
