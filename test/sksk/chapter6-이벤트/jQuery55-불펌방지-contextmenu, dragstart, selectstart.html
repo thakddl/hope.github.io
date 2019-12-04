@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>이벤트12 - 개별이벤트 메서드로 사용할 수 없는 이벤트 contextmenu, dragstart, selectstart </title>
+    <style>
+        div { width: 400px; height: 400px; float: left; background-color: brown; cursor: pointer; margin: 5px; }
+    </style>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+    $(document).ready(function(){
+        // $(document).on("contextmenu",function(){
+        //     console.log("마우스 오른쪽 버튼을 클릭하셨습니다.");
+        //     return false;
+        // });
+        // $(document).on("dragstart",function(){
+        //     console.log("드래그를 시작하셨습니다.");
+        //     return false;
+        // });
+        // $(document).on("selectstart",function(){
+        //     console.log("선택을 하셨습니다.");
+        //     return false;
+        // });
+        $(document).on("contextmenu dragstart selectstart", function(){
+            return false;
+        });//파이어폭스랑 인터넷익스플로러는 안먹힌다.
+    });
+    </script>
+</head>
+<body>
+    <input type="text"><br>
+    마우스 우클릭, 드래그, 선택방지 테스트(불펌방지)
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>이벤트13 - 개별이벤트 메서드로 사용할 수 없는 이벤트 scrollTop() </title>
+    <style>
+        * { margin: 0; padding: 0; }
+        /*스크롤시 화면이 떨리는 플리커현상없애기 h100% html은 overflow: hidden;  body는 overflow: auto; */
+        html, body { width: 100%; height: 100%; }
+        html { overflow: hidden; }
+        body { overflow: auto; }
+        body::-webkit-scrollbar { display:none; } /*스크롤바 없애기*/
+        ul { list-style: none; }
+        a { text-decoration: none; }
+        img { margin: 0; padding: 0; display: block; width: 100%; height: 100vh; }
+
+        header { width: 100%; position: fixed; z-index: 999; height: 100px; background-color: rgba(80,80,80,0.9); }
+        .gnb { float: right; text-align: center; width: 40%; height: 100px; margin: 0 auto; right: 20%; }
+        .gnb li { float: left; margin-left: 50px; }
+        .gnb a { color: #ffffff; line-height: 100px; }
+
+        footer { width: 100%; height: 100px; background-color: rgba(80,80,80,0.9); text-align: center; color: #fff; line-height: 100px; position: fixed; left: 0; bottom: 0; display: none; z-index: 999; }
+        .pageNum { display: block; position: fixed; z-index: 999; bottom: 20px; right: 20px; background-color: #000; color: #fff; width: 32px; height: 32px; line-height: 32px; border-radius: 17px; text-align: center; box-shadow: 2px 2px 7px #fff; }
+        .page { position: relative; }
+        .page_tit { position: absolute; width: 100px; height: 20px; left: 30%; opacity: 0; transition: 1s 0.2s; top: 25%; transform: rotateY(180deg); font-size: 30px; text-shadow: 2px 2px 5px #fff;}
+        .on .page_tit { opacity: 1; top: 30%; transform: rotateY(0deg); }
+    </style>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="../file/jquery.easing.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        var ht = parseInt($(window).height());
+        var n = 1;
+        $(window).on("mousewheel",function(e){
+            if(e.originalEvent.wheelDelta < 0){
+                $("body, html").not(":animated").animate({scrollTop:"+="+ht+"px"}, 1000, 'easeOutQuad');
+            } else {
+                $("body, html").not(":animated").animate({scrollTop:"-="+ht+"px"}, 1000, 'easeOutQuad');
+            }
+        });
+        $("body").scroll(function(){
+            var sc_top = parseInt($("body").scrollTop());
+            n = parseInt(sc_top/(ht-5))+1;
+            if(n==4){ $("footer").fadeIn(); }
+            else { $("footer").fadeOut(); }
+            $(".pageNum").text(n);
+            $(".page").eq(n-1).addClass("on");
+            $(".page").eq(n-1).siblings().removeclass("on");
+        });
+    });
+    </script>
+</head>
+<body>
+    <header>
+        <ul class="gnb">
+            <li><a href="">Menu1</a></li>
+            <li><a href="">Menu2</a></li>
+            <li><a href="">Menu3</a></li>
+            <li><a href="">Menu4</a></li>
+        </ul>
+    </header>
+    <main>
+        <div class="page on" id="page1">
+            <img src="img1_56.jpg" alt="">
+            <h3 class="page_tit">page1</h3>
+        </div>
+        <div class="page" id="page2"><img src="img2_56.jpg" alt=""><h3 class="page_tit">page2</h3></div>
+        <div class="page" id="page3"><img src="img3_56.jpg" alt=""><h3 class="page_tit">page3</h3></div>
+        <div class="page" id="page4"><img src="img4_56.jpg" alt=""><h3 class="page_tit">page4</h3></div>
+    </main>
+    <footer>푸터</footer>
+    <div class="pageNum">1</div>
+</body>
+</html>

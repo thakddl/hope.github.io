@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>이벤트19 - 개별이벤트 메서드 keyup()</title>
+    <style>
+    </style>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#msgBox").keyup(function(event){
+            var len = $(this).val().length;
+            var rem = 80 - len;
+            $("#remain").html(rem);
+            if ( rem >=0 ) {
+                $("#remain").css("color","blue");
+            } else {
+                $("#remain").css("color","red");
+                $("#msgBox").attr("disabled",true);
+                $("#status").text(Math.abs(rem)+"글자를 초과하였습니다.");
+            }
+        });
+        $("#btn1").click(function(){
+            // $("#msgBox").remove();
+            // $("#remain").after("<textarea id='msgBox' cols='40' rows='8'></textarea>");
+            // $("#msgBox").trigger("keyup");
+            $("#msgBox").val("").attr("disabled", false);
+            $("#remain").text("80").css("color","black");
+            $("#status").text("");
+        });
+    });
+    </script>
+</head>
+<body>
+    <div id="messenger">
+        남은 글자수
+        <h1 id="remain">80</h1>
+        <textarea id="msgBox" cols="40" rows="8"></textarea>
+    </div>
+    <div id="status"></div><button id="btn1">초기화</button>
+</body>
+</html>

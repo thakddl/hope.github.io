@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>이벤트2 - 종합이벤트 메서드 on(), bind()</title>
+    <style>
+        img { display: block; width: 400px; margin: 100px auto; }
+    </style>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+    // $(function(){
+    //     $("img").on("mouseover",function(){
+    //         $(this).attr("src","paang.jpg")
+    //     });
+    //     $("img").on("mouseout",function(){
+    //         $(this).attr("src","pang.png");
+    //     });
+    //     $("img").click(function(){
+    //         alert("클릭하지 마시고 마우스 오버에 양보하세요.");
+    //     });
+    // });
+    $(function(){//종합이벤트는 여러개를 한번에 처리가 가능하다
+        $("img").on({
+            mouseover:function(){
+                $(this).attr("src","paang.jpg");
+            },
+            mouseout:function(){
+                $(this).attr("src","pang.png");
+            },
+            click:function(){
+                alert("클릭하지 마시고 마우스 오버에 양보하세요.");
+            }
+        });
+    });
+    </script>
+</head>
+<body>
+    <img src="pang.png" alt="팽수">
+</body>
+</html>

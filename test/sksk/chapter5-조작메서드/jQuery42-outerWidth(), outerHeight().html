@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>조작 메서드10 - outerWidth(), outerHeight() </title>
+    <style>
+        p:first-child { width: 120px; height: 60px; margin: 20px; text-align: center; background: red; cursor: pointer; color: #fff; line-height: 60px; }
+    </style>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+    $(document).ready(function(){
+        var a = $("p:first").outerWidth(true);
+        var b = $("p:first").outerHeight(true);
+        $("#res1").text("마진을 포함한 너비 : "+a);
+        $("#res2").text("마진을 포함한 높이 : "+b);
+    });
+    </script>
+</head>
+<body>
+    <p>Hello Hope</p>
+    <p>Do you know my mind?</p>
+    <br> 
+    <div id="res1"></div>
+    <div id="res2"></div>
+</body>
+</html>

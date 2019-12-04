@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>이벤트20 - 개별이벤트 메서드 keypress()</title>
+    <style>
+        body { background-image: url("img1_56.jpg"); }
+        #imgTarget { display: block; width: 200px; height: auto; position: absolute; bottom: 300px; left: 50px; }
+        .on { transform: rotateY(180deg); }
+    </style>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+    $(document).ready(function(){
+        var $t = $("#imgTarget");
+        s1 = "./giphy/stop.png";
+        s2 = "./giphy/giphy.gif";
+        $("body").keypress(function(event){
+            var a = parseInt($t.css("left"));
+            if ( event.which == 100 ){ //d
+                $t.fadeIn();
+                $t.removeClass("on").attr("src", s2).not(":animated").stop().animate({"left":a+50+"px"}, 450, function(){ $t.attr("src", s1); });
+            } else if ( event.which == 97 ){ //a
+                $t.fadeIn();
+                $t.addClass("on").attr("src", s2).not(":animated").stop().animate({"left":a-50+"px"}, 450, function(){ $t.attr("src", s1); });
+            } else if ( event.which == 119 ){ //w
+                $t.fadeIn();
+                $t.attr("src", s2).not(":animated").stop().animate({"bottom":"370px"}, 450).delay(200).animate({"bottom":"300px"}, 450, function(){ $t.attr("src", s1); });
+            } else {
+                $t.fadeToggle();
+                $("#status").text("잘못 누르셨습니다.");
+                $("#help").fadeIn();
+            }
+        });
+    });
+    </script>
+</head>
+<body>
+    <div>
+        <h2>캐릭터 제어 애니메이션</h2>
+        <h2 id="status"></h2>
+    </div>
+    <div id="help">
+        <h3>a: 좌로 이동, w:점프, d:우로 이동</h3>
+        <img src="./giphy/stop.png" alt="" id="imgTarget">
+    </div>
+</body>
+</html>

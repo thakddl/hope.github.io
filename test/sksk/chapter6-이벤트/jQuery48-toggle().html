@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>이벤트6 - 종합이벤트 메서드 toggle() </title>
+    <style>
+        div { width: 200px; height: 400px; background: black; transition: 0.6s; }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.8.0.js"></script>
+    <script>
+    $(function(){//toggle이벤트는 1.9이상의 버전에서 삭제됨 따라서 무조건 업데이트 한다고 좋은게 아니다.
+        $("div").toggle(
+            function(event){ $(event.target).css("background","#669933").width(400); },
+            function(event){ $(event.target).css("background","#993366").width(200); },
+            function(event){ $(event.target).css("background","#33cc66").width(300); },
+            function(event){ $(event.target).css("background","#aa33cc").width(500); }
+        );
+    });
+    </script>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

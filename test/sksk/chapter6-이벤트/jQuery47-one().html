@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>이벤트4 - 종합이벤트 메서드 one()</title>
+    <style>
+        img { display: block; width: 400px; margin: 100px auto; }
+    </style>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+    $(function(){
+        $("img").one("click",function(){
+            var $t = $(this);
+            $t.width($t.width()*2.0);
+        });
+    });
+    </script>
+</head>
+<body>
+    <img src="pang.png" alt="팽수">
+</body>
+</html>
