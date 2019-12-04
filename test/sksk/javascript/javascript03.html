@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>javascript03</title>
+</head>
+<body>
+    <script>
+//        var arr = [["",0],["",0]];//배열 변수 선언에서 표를 만들때 [["문자"],[0-숫자-]];
+//        arr[0][0] = prompt("첫 번째 학생의 이름을 입력하세요");
+//        arr[0][1] = parseInt(prompt("첫 번째 학생의 점수를 입력하세요"));
+//        arr[1][0] = prompt("두 번째 학생의 이름을 입력하세요");
+//        arr[1][1] = parseInt(prompt("두 번째 학생의 점수를 입력하세요"));
+//        var tot = arr[0][1]+arr[1][1];
+//
+//        document.write(arr[0][0]+"님의 점수는 "+arr[0][1]+"점 입니다.<br>");
+//        document.write(arr[1][0]+"님의 점수는 "+arr[1][1]+"점 입니다.<br>");
+//        document.write("전체 총점은 "+tot+"점 입니다.<br>");
+//        function blue(){ 함수화하기
+        var blue = [["","",0],["","",0]];
+        blue[0][0] = prompt("당신의 이름은? ");
+        blue[0][1] = prompt("가장 좋아하는 노래는? ");
+        blue[0][2] = parseInt(prompt("앨범 트랙 번호는? "));
+        blue[1][0] = prompt("요즘의 기분은? ");
+        blue[1][1] = prompt("요즘 가장 많이 듣는 노래는? ");
+        blue[1][2] = parseInt(prompt("앨범 트랙 번호는? "));
+        var tot = blue[0][2]+blue[1][2]
+        
+        document.write(blue[0][0]+"님이 가장 좋아하는 노래는 "+blue[0][1]+"이며 이 노래의 앨범 번호는 "+blue[0][2]+"입니다.<br>");
+        document.write(blue[0][0]+"님의 요즘 기분은 "+blue[1][0]+"이며 가장 많이 듣는 노래는 "+blue[1][1]+"입니다.<br>");
+        document.write("두 노래의 트랙번호를 합치면 "+tot+"입니다.");
+//        }
+//        blue();
+    </script>
+</body>
+</html>

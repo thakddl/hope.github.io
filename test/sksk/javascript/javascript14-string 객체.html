@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>javascript14</title>
+</head>
+<body>
+    <h3>string 객체</h3>
+    <p>변수 또는 객체에 관계없이 모두 사용 가능</p>
+    <p>관련 매서드</p>
+    <ul>
+        <li class="divider">속성</li>
+        <li>객체.length : 문자열의 글자수를 보관</li>
+        <li class="divider">메서드</li>
+        <li>객체.charAt(인덱스번호) : 지정한 인덱스 번호에 해당되는 문자를 반환</li>
+        <li>객체.charCodeAt(인덱스번호) : 지정한 인덱스 번호에 해당하는 문자를 아스키 코드로 반환</li>
+        <li>String.fromCharCode(아스키코드번호) : 지정한 아스키코드 번호에 해당하는 문자로 반환</li>
+        <li>객체.concat(문자열1, 문자열2...) : 객체의 문자열값과 괄호안의 문자열 값들을 더한결과 반환</li>
+        <li>객체.indexOf(특정문자 또는 단어) : 객체에서 특정 문자나 단어의 맨처음 찾은 위치를 인덱스 번호로 반환</li>
+        <li>객체.lastIndexOf(특정문자 또는 단어) : 객체에서 특정 문자나 단어의 맨 나중에 찾은 위치를 인덱스 번호로 반환</li>
+        <li>객체.replace(찾을단어, 바꿀단어) : 객체의 문자열에서 찾을 단어를 찾아 바꿀단어로 변경하여 반환</li>
+        <li>객체.split(구분기호) : 객체의 문자열을 지정한 구분기호로 분리하여 배열형태로 반환</li>
+        <li>객체.substr(인덱스시작번호[, 글자수]) : 객체에서 시작인덱스번호에 속하는 문자로부터 지정한 글자수까지 추출하여 반환</li>
+        <li>객체.substring(인덱스시작번호[, 끝인덱스번호]) : 객체에서 시작인덱스번호에 속하는 문자로부터 끝인덱스번호 전까지 추출하여 반환</li>
+        <li>객체.slice(인덱스시작번호[, 끝인덱스번호]) : 객체에서 시작인덱스번호에 속하는 문자로부터 끝인덱스번호 전까지 잘라내어하여 반환(음수일 경우 뒤에서부터)</li>
+        <li>객체.toLowerCase() : 객체의 문자열값을 모두 소문자로 변환하여 반환</li>
+        <li>객체.toUpperCase() : 객체의 문자열값을 모두 대문자로 변환하여 반환</li>
+        <li>객체.trim() : 객체의 양쪽 끝에 있는 공백을 제거하여 반환</li>
+        <li>객체.repeat(반복횟수) : 객체의 문자열을 반복횟수만큼 반복하여 반환</li>
+        <li>객체.includes(문자열) : 객체에 해당문자열이 있는지 검색하여 있으면 true 반환</li>
+        <li>객체.match(비교할문자열) : 객체에 해당 문자열이 있으면 찾은 문자열을 배열로 반환</li>
+        <li>객체.matchAll(비교할문자열패턴) : 객체에 해당 문자열이 포함되어 있으면 찾은 문자열을 가장 비교할문자배열패턴과 일치하는 것부터 배열하여 반환</li>
+        <li>객체.valueOf() : 문자열형 객체를 일반변수로 변환</li>
+    </ul>
+    <script>
+    var kim = "I'm a Boy.";
+    var choi = "You're a Girl.";
+    var man1 = "    My name is So.  ";
+    var women1 = "  Your name is So.  ";
+    var handsome = "<br> So is very handsome. <br>";
+    document.write("<br>kim의 글자수 : "+kim.length);
+    document.write("<br>kim의 인덱스가 2인 글자 : "+kim.charAt(2));
+    document.write("<br>kim의 인덱스가 2인 글자의 아스키번호 : "+kim.charCodeAt(2));
+    document.write("<br>kim의 아스키번호가 77인 글자 : "+String.fromCharCode(77));
+    document.write("<br>kim과 choi 그리고 Handsome의 문자열 결합 : "+handsome.concat(kim, choi));
+    document.write("<br>choi의 문자열에서 G의 인덱스 값은 : "+choi.indexOf("G"));
+    document.write("<br>choi의 문자열에서 맨 마지막에 있는 r의 인덱스 값은 : "+choi.lastIndexOf("r"));
+    document.write("<br>man1의 문자열 So를 찾아 Cnn로 변경하면 : "+man1.replace("So","Cnn"));
+    document.write("<br>kim에서 인덱스가 6에서 3글자를 추출하면 : "+kim.substr(6,3));
+    document.write("<br>choi에서 인덱스가 9에서 12까지를 추출하면 : "+choi.substring(9,13));
+    document.write("<br>choi에서 인덱스가 9에서  : "+choi.slice(9,13));
+    document.write("<br>choi에서 인덱스 값으로 -9를 입력하면 오른쪽부터 9글자를 추출 : "+choi.slice(-9));
+    document.write("<br>choi의 문자열을 소문자로 변환 : "+choi.toLowerCase());
+    document.write("<br>choi의 문자열을 대문자로 변환 : "+choi.toUpperCase());
+    document.write("<br>women1을 트림하기전의 글자수 : "+women1.length+"<br> women1을 트림한 후 글자수 : "+women1.trim().length);
+    document.write("<br>handsome를 3번 반복 : "+handsome.repeat(3));
+    document.write("<br>man1에 'KM'문자열이 포함되어 있습니까? : "+man1.includes("KM"));
+
+    var reText1 = /[A-Z]/g;
+    var wm1 = women1.match(reText1);
+    document.write("<br>women1에 대문자 A~Z까지가 무엇무엇이 포함되어 있나요? : " +wm1);
+    console.log("<br>women1에 대문자 A~Z까지가 무엇무엇이 포함되어 있나요? : " +wm1);
+
+    var str = "kim, lee, choi, park, nam, yang";
+    var arr = str.split(", ");
+    for(var i=0;i<arr.length;i++){
+        document.write("<br>"+i+"번째 사람 : "+arr[i]);
+    }
+
+    var strObj = new string("I love you.");
+    document.write("<br>strObj는 객체입니까? "+(typeof strObj));
+    document.write("<br>strObj.valueOf()는 객체입니까? "+(typeof strObj.valueOf()));
+
+
+    </script>
+</body>
+</html>

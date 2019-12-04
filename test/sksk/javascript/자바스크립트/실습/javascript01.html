@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>자바스크립트 연습01</title>
+    <script>
+        console.log ("안녕하세요!? 자바스크립트 입니다.");
+    </script>
+    <style>
+        .item2 { display: block; width: 142px; height: 142px; background-image: url("kakaostroy_ds.png"); float: left;}
+        .item2:hover { background-image: url("kakaostroy.png");}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header class="hd">여기는 헤더입니다.</header>
+        <main class="con">여기는 메인입니다.</main>
+        <footer class="ft">여기는 푸터입니다.</footer>
+        <nav id="sns">
+            <a href="" class="item1"><img src="facebook_ds.png" onmouseover="this.src='facebook.png'" onmouseout="this.src='facebook_ds.png'" alt="페이스북"></a>
+            <a href="" class="item2"></a>
+            <a href="" class="item3"><img src="line_ds.png" alt="라인"></a>
+        </nav>   
+    </div>
+    <script>
+        console.log ("여기는 해당문서 내용을 출력 후 나오는 구문입니다.");
+        alert ("여기는 알림창 입니다.");
+        confirm ("여기는 확인창 입니다.");
+        var name=prompt ("여기는 입력창입니다. 자신의 이름를 입력해 주세요.");
+        document.write ("당신의 이름은"+name+"입니다.");
+    </script>
+</body>
+</html>

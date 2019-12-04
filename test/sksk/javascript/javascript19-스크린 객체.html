@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>javascript19</title>
+</head>
+<body>
+    <div class="wrap">
+        <h2 class="page_tit">screen객체</h2>
+    </div>
+    <script>
+        for( var key in screen ){
+            document.write("<br>"+key+":"+screen[key]);
+        }
+        var data = document.getElementById("txt");
+        var txt = "<br> 디스플레이 화면의 너비 : " +screen.width+"<br>";
+        txt+="디스플레이 화면의 높이 : "+screen.height+"<br>";
+        txt+="실제사용할 수 있는 화면의 넓이 : "+screen.availWidth+"<br>";
+        txt+="실제 사용할 수있는 화면의 높이 : "+screen.availHeight+"<br>";
+        txt+="한 색상당 사용할 수 있는 비트수 : "+screen.colorDepth+"<br>";
+        txt+="표현 가능한 색상 수 : "+math.pow(2, screen.colorDepth)+"<br>";
+        txt+="화면 픽셀당 표시할 수 있는 비트수(해상도) : "+screen.pixelDepth+"<br>";
+        txt+="사용할 수 있는 x좌표 값 : "+screen.availLeft+"<br>";
+        txt+="사용할 수 있는 y좌표 값 : "+screen.availTop+"<br>";
+        var orien = window.screen.orientation||window.screen.mozOrientation||window.screen.webkitOrientation;
+        data.innerHTML = txt;
+
+    </script>
+</body>
+</html>

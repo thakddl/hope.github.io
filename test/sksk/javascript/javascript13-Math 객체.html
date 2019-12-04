@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>javascript13</title>
+</head>
+<body>
+    <div id="wrap">
+        <h2>자바스크립트의 표준 데이터형 객체</h2>
+    </div>
+    <h3>Math 객체</h3>
+    <p>생성자 없이 사용</p>
+    <p>관련 속성과 메서드</p>
+    <ul>
+        <li class="divider">속성</li>
+        <li>Math.E : 오일러의 상수이며 자연로그의 밑. 약 2.718.</li>
+        <li>Math.LN2 : 2의 자연로그. 약 0.693.</li>
+        <li>Math.LN10 : 10의 자연로그. 약 2.303.</li>
+        <li>Math.Log2E : 밑이 2인 로그 E. 약 1.443.</li>
+        <li>Math.Log10E : 밑이 10인 로그 E. 약 0.434.</li>
+        <li>Math.PI : 원의 둘레와 지름의 비율. 약 3.141592.</li>
+        <li>Math.SQRT1_2 : 1/2의 제곱근. 약 0.707.</li>
+        <li>Math.SQRT2 : 2의 제곱근. 약 1.414.</li>
+        <li class="divider">메서드</li>
+        <li>Math.abs(변수/연산식/값) : 괄호안의 결과값을 절대값으로 반환</li>
+        <li>Math.round(변수/연산식/값) : 괄호안의 결과값을 소숫점 이하 반올림한 정수로 반환</li>
+        <li>Math.ceil(변수/연산식/값) : 괄호안의 결과값을 소숫점 이하 올림한 정수를 반환</li>
+        <li>Math.floor(변수/연산식/값) : 괄호안의 결과값을 소숫점 이하 내림한 정수를 반환</li>
+        <li>Math.sqrt(변수/연산식/값) : 괄호안의 결과값에 대한 제곱근을 반환</li>
+        <li>Math.random(변수/연산식/값) : 괄호안의 결과값에 대한 임의의 수를 반환</li>
+        <li>Math.pow(자연수, 승수) : 괄호안의 자연수에 대한 승수의 결과를 반환</li>
+        <li>Math.max(숫자1, 숫자2...) : 괄호안의 숫자 분포에서 가장 큰 수를 반환</li>
+        <li>Math.min(숫자1, 숫자2...) : 괄호안의 숫자 분포에서 가장 작은 수를 반환</li>
+        <li>Math.sin(각도숫자) : 괄호 안의 각도숫자에 대한 sin값을 구하여 반환</li>
+        <li>Math.cos(각도숫자) : 괄호 안의 각도숫자에 대한 cos값을 구하여 반환</li>
+        <li>Math.tan(각도숫자) : 괄호 안의 각도숫자에 대한 tan값을 구하여 반환</li>
+    </ul>
+    <h3>Math가 생략되어 사용하는 범용 메서드</h3>
+    <ul>
+        <li>parseInt(변경할값) : 정수로 변경시 사용</li>
+        <li>parseFloat(변경할값) : 실수로 변경시 사용</li>
+        <li>Number(변경할값) : 숫자로 변경시 사용</li>
+    </ul>
+    <script>
+    var num1 = 123;
+    var num2 = -123;
+    var num3 = 256.2534;
+    var num4 = 254.8253;
+    var num4 = -256.2356;
+    var num5 = 254.3542;
+    var num6 = -254.6369;
+    var num7 = 16;
+    var num8 = 3;
+    var num9 = 100;
+    var angle1 = 30;
+    var angle2 = 45;
+    var angle3 = 60;
+    var 반지름 = 10;
+
+    document.write("<br>반지름이 10인 원의 둘레길이 : "+(반지름*2*Math.PI));
+    document.write("<br>반지름이 10인 원의 넓이 : "+(반지름*반지름*Math.PI));
+    document.write("<br>num1의 절대값은 : "+Math.abs(num1));
+    document.write("<br>num2의 절대값은 : "+Math.abs(num2));
+    document.write("<br>num3을 반올림하여 정수로 바꾸면 : "+Math.round(num3));
+    document.write("<br>num4을 반올림하여 정수로 바꾸면 : "+Math.round(num4));
+    document.write("<br>num5을 반올림하여 정수로 바꾸면 : "+Math.round(num5));
+    document.write("<br>num6을 반올림하여 정수로 바꾸면 : "+Math.round(num6));
+    document.write("<br>num3을 올림하여 정수로 바꾸면 : "+Math.ceil(num3));
+    document.write("<br>num4을 올림하여 정수로 바꾸면 : "+Math.ceil(num4));
+    document.write("<br>num5을 올림하여 정수로 바꾸면 : "+Math.ceil(num5));
+    document.write("<br>num6을 올림하여 정수로 바꾸면 : "+Math.ceil(num6));
+    document.write("<br>num3을 내림하여 정수로 바꾸면 : "+Math.floor(num3));
+    document.write("<br>num4을 내림하여 정수로 바꾸면 : "+Math.floor(num4));
+    document.write("<br>num5을 내림하여 정수로 바꾸면 : "+Math.floor(num5));
+    document.write("<br>num6을 내림하여 정수로 바꾸면 : "+Math.floor(num6));
+    document.write("<br>num7을 제곱근하면 : "+Math.sqrt(num7));
+    document.write("<br>1에서 num9까지의 임의수를 출력하면 : "+Math.floor(Math.random()*num9+1));
+    document.write("<br>16의 3승의 수를 출력하면 : "+Math.pow(num7, num8));
+    document.write("<br>num1~num5까지에서 가장 큰 수를 출력하면 : "+Math.max(num1, num2, num3, num4, num5));    
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+            var ht = parseInt($(window).height());
+            var cnt = 1;
+            var n = parseInt($(".contents li").length / 9 + 0.95);
+            $(".more_btn").click(function(){
+                if(cnt<n){
+                    cnt++;
+                    $(".contents").height(ht*cnt);
+                    $("body, html").animate({scrollTop:ht*(cnt-1)}, 500);
+                }
+            });
+            $(window).scroll(function(){
+                var sc = parseInt($(window).scrollTop)
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>clock</title>
+
+    <style>
+        * { margin: 0; padding: 0; }
+        img { display: block; position: absolute; margin: 0; bottom: 0; transform-origin: bottom;}
+        .wrap { background-image: url("bg.jpg"); background-size: cover; width: 600px; height: 600px; position: relative; margin: 100px auto; }
+        #cl { width: 600px; height: 600px; }
+        .line { position:absolute; top: 100px; left: 290px; }
+        #sec { top: 0; left:8px; }
+        #min { top: 20px; left:5px; }
+        #hour { top: 55px; left:3px; }
+        .wrap:after { display: block; content: ""; width: 20px; height: 20px; border-radius: 20px; background-color: #000000; left: 290px; top: 290px; position: absolute; }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <img src="clo.png" alt="" id="cl">
+        <div class="line">
+            <img src="second.jpg" alt="" id="sec">
+            <img src="min.jpg" alt="" id="min">
+            <img src="hour.jpg" alt="" id="hour">
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

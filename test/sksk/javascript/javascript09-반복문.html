@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .row { clear: both; width: 800px; margin: 10px auto; list-style: none; }
+    .col { float: left; width: 100px; }
+    .blank { height: 300px; }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h2 class="tit">반복문</h2>
+        <h3>for문</h3>
+        <p>순서값을 증감시켜 조건이 만족하는 동안 원하는 만큼 처리문장을 반복</p>
+        <p>문법1 <br>
+            for(변수설정 및 초기화;조건;증감식) { <br>
+                반복처리할문장; <br>
+            } <br>
+        </p>
+        <p>문법2 <br>
+            for(var key in 배열변수및객체명) {<br>
+                반복처리할문장; <br>
+            } <br>
+        </p>
+        <p>문법3 <br>
+            배열변수명.forEach(function(element, index) { <br> 
+                반복처리할문장; <br>
+            }); <br>
+        </p>
+        <br><hr><br>
+        <h3>while문</h3>
+        <p>조건이 만족하는 동안 블록처리문장을 반복 수행</p>
+        <p>문법1 <br>
+            while(조건) { 반복처리할문장; } <br>
+        </p>
+        <p>문법2 <br>
+            do{ 반복처리할문장; } while(조건);<br>
+        </p>
+        <br><hr><br>
+        <h3>무한반복(infinite loop)문장</h3>
+        <p>for문이나 while문이 실행에 끝이 없이 반복 수행</p>
+        <p>문법1 <br>
+            for(;;){ 반복처리할문장; } <br>
+        </p>
+        <p>문법2 <br>
+            while(){반복처리할문장;} <br>
+        </p>
+        <p>조건이 항상 만족하거나 생략된 경우 무한반복문장이 됨</p>
+        <br><hr><br>
+        <h3>반복문의 제어</h3>
+        <h4>continue문</h4>
+        <p>실행구간을 건너띄도록 하는 제어문</p>
+        <p>문법 <br>
+            for(변수설정및초기화;조건;증감식){
+                if(조건) continue;
+            }
+        </p>
+        <h4>break문</h4>
+        <p>더 이상 실행되지 못하도록 하는 제어문</p>
+        <p>문법 <br>
+            for(변수설정및초기화;조건;증감식){
+                if(조건) break;
+            }
+        </p>
+    </div>
+    <script>
+    var arr1 = [1, 90, 80, 80, 70, 75, 100];
+    var arr2 = [[1, 80, 90, 70], [2, 100, 40, 90], [3, 80, 70, 100]];
+    var obj = { num:2, kor:100, eng:70, mat:80, sci:90, his:100};
+
+    document.write("<br>배열에 담긴 데이터를 출력");
+    for(var i=0;i<arr1.length;i++){
+        document.write("<br>"+arr1[i]);
+    }
+    document.write("<br><br>객체에 담긴 속성명과 데이터를 출력");
+    for(var key in obj) {
+        document.write("<br>"+key+" : "+obj[key]);
+    }
+    document.write("<br><br>forEach문을 활용하여 배열에 담긴 인덱스와 데이터를 출력");
+    arr1.forEach(function(element, index){
+        document.write("<br>"+index+"번째 : "+element);
+    });
+    document.write("<br><br>중첩 for문을 활용하여 2차원 배열에 담긴 데이터를 출력");
+    for(var i=0;i<3;i++){ //행 i가 0일동안
+        document.write("<br>번호 : "+arr2[i][0]+"번"); //3번 실행
+        for(var j=1;j<4;j++){ //열 j가 1부터 3까지 3번 실행
+            document.write(", "+arr2[i][j]+"점"); // (총 9번 실행)
+            }
+    }
+   
+    for(var a=1;a<=9;a++){
+        document.write("<ul class='row'>");
+        for(var b=2;b<=9;b++) {
+            document.write("<li class='col'>"+b+"x"+a+"="+(b*a)+"</li>");
+        }
+        document.write("</ul>");
+    }
+    
+    document.write("<h2>while문</h2>");
+    var a=1, tot=0;
+    while(a<=100) {
+        tot=tot+a; //tot+=a
+        a++
+    }
+    document.write("<br>"+(a-1)+"까지의 합계 : "+tot);
+    document.write("<br>");
+
+    var b=1;
+    do { 
+        document.write("<h2>do~while문은 조건이 만족하지 않아도 최소 1회 실행을 보장한다.</h2>");
+    } while(b<1);
+    document.write("<br>");
+
+    document.write("<h2>무한반복문</h2>");
+    var c=0;
+    for(;;){
+        c++;
+        document.write("<br>"+c);
+        if(c>=10) break;
+    }
+    document.write("<h2>건너뛰기</h2>");
+    var haps=0;
+    for(var d=0; d<100; d++){
+        if(d % 2 == 1) continue;
+        haps+=d;
+    }
+    document.write("<h2>0부터 100까지의 짝수의 합 : "+haps+"</h2>");
+
+
+
+
+
+    </script>
+    <div class="blank"></div>
+</body>
+</html>

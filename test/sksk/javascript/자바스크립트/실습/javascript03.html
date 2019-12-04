@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트 연습03</title>
+</head>
+<body>
+   <div id="tit">웹문서</div>
+    <script>
+        var stu1=prompt("학생의 이름을 입력하여주세요");
+        var stu2=prompt("학생의 점수를 입력하여주세요");
+        var stu3=prompt("학생의 이름을 입력하여주세요");
+        var stu4=prompt("학생의 점수를 입력하여주세요");
+        var stu5=Number(stu2)+Number(stu4);
+        document.write (stu1+" 님의 점수는 "+stu2+"입니다."+"<br>");
+        document.write (stu3+" 님의 점수는 "+stu4+"입니다."+"<br>");
+        document.write ("전체 총점은"+stu5+"입니다.<br>");
+
+        var arr = (["",0],["",0]);
+        var arr[0][0]=prompt("첫번째 학생의 이름을 입력해주세요.");
+        var arr[0][1]=parseIntprompt("첫번째 학생의 점수를 입력해주세요.");
+        var arr[1][0]=prompt("두번째 학생의 이름을 입력해주세요.");
+        var arr[1][1]=parseIntprompt("두번째 학생의 점수를 입력해주세요.");
+        document.write (arr[0][0]+" 님의 점수는 "+arr[0][1]+"입니다."+"<br>");
+        document.write (arr[1][0]+" 님의 점수는 "+arr[1][1]+"입니다."+"<br>");
+        document.write ("전체 총점은"+(arr[0][1]+arr[1][1])+"입니다."); 
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>계산기</title>
+    <link href="https://fonts.googleapis.com/css?family=McLaren&display=swap" rel="stylesheet">
+    <script src="./jquery-1.11.1.js"></script>
+    <script src="계산기.js"></script>
+    <style>
+        input, button { margin: 0; padding: 0; display: block; }
+        
+        .wrap { width: 500px; height: 740px; margin: 150px auto; border: 1px solid; border-radius: 40px; box-shadow: 13px 15px 30px; background: radial-gradient(circle at 50%, #fbac2d, #e17900); opacity: 0.9; }
+        #text { display: block; width: 350px; height: 90px; margin: 120px auto; border-radius: 20px; text-align: right; font-size: 50px; box-shadow: 5px 5px 10px #a80500, 2px 2px 10px #a80500 inset; font-family: 'McLaren', cursive; }
+        .btn { width: 400px; margin: 0 auto; margin-top: -70px; }
+        div input { width: 70px; height: 70px; border-radius: 60px; margin-left: 10px; margin-top: 10px; float: left; background-color: #fa7000; box-shadow: 4px 4px 7px #a80500; font-size: 20px; font-family: 'McLaren', cursive; }
+        div input:hover { background: #ccc; }
+        .top { clear: both; }
+
+        .num { width: 240px; float: left; }
+        .num button { background: #fee579; }
+        .num button:hover { background: #ccc; }
+        
+        .right { width: 160px; float: left; }
+        .cls_btn { background-color: antiquewhite; }
+        
+        #col { height: 150px; float: right; }
+    </style>
+    </head>
+    <body>
+        <form name="calc" class="wrap">
+            <input type="text" id="text" name="result">
+            <div class="btn">
+                <div class="top">
+                    <input type="button" value="C" class="cls_btn">
+                    <input type="button" value="AC" class="cls_btn">
+                    <input type="button" value="M+">
+                    <input type="button" value="M-">
+                    <input type="button" value="÷">
+                </div>
+                <div class="num">
+                    <input type="button" value="7">
+                    <input type="button" value="8">
+                    <input type="button" value="9">
+                    <input type="button" value="4">
+                    <input type="button" value="5">
+                    <input type="button" value="6">
+                    <input type="button" value="1">
+                    <input type="button" value="2">
+                    <input type="button" value="3">
+                    <input type="button" value="0">
+                    <input type="button" value=".">
+                    <input type="button" value="00">
+                </div>
+                <div class="right">
+                    <input type="button" value="√">
+                    <input type="button" value="×">
+                    <input type="button" value="DEL">
+                    <input type="button" value="-">
+                    <input type="button" value="%">
+                    <input type="button" value="=" id="col" class="result_btn">
+                    <input type="button" value="+">
+                </div>
+            </div>
+        </form>
+</body>
+</html>

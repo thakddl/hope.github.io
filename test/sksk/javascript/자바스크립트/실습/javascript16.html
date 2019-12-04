@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>자바스크립트 연습 16</title>
+    <style>
+        #time {font-size: 2em;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h2 class="tit">자바스크립트의 표준 데이터형 객체</h2>
+    </div>
+    <div id="birth">
+        <span id="b_year">1998</span>-<span id="b_month">12</span>-<span id="b_day">16</span>
+    </div>
+    <h1 id="time"></h1>
+    <h3>Date 객체</h3>
+    <p>시간객체에만 사용 가능함</p>
+    <h4>생성자함수(Constructor) : new Date(year, month[, day, hour, minute, second, millisecond])</h4>
+    <p>생성자 함수에 의해서만 활요 가능함</p>
+    <p>관련 속성과 메서드</p>
+    <ul>
+        <li class="divider">메서드</li>
+        <li>Date.now() : 1970년 1월 1일 00:00:00(UTC)을 기점으로 현재 시간까지 경과한 밀리초를 숫자로 반환</li>
+        <li>Date.parse("년월일시분초") : 1998년 1월 1일 00:00:00:(UTC)을 기점으로 인수로 전달된 지정 시간(new Date(dateString)의 인수와 동일한 형식)까지의 밀리초를 숫자로 반환</li>
+        <li>객체.getFullYear() : 년도를 나타내는 4자리 숫자를 구함</li> //get : 값을 가져오다
+        <li>객체.setFullYear() : 날짜 객체에 지정한 4자리 숫자값을 년도로 설정</li> //set : 값을 설정하다
+        <li>객체.getYear() : 년도를 나타내는 2자리 숫자를 구함</li>
+        <li>객체.setYear(년도) : 날짜 객체에 지정한 2자리 숫자값을 년도로 설정</li>
+        <li>객체.getMonth() : 월을 나타내는 숫자를 구함(단, 0~11)</li>
+        <li>객체.setMonth(월) : 날짜 객체에 지정한 0~11의 숫자값을 월로 설정</li>
+        <li>객체.getDate() : 일을 나타내는 숫자를 구함</li>
+        <li>객체.setDate(일) : 날짜 객체에 지정한 숫자값을 일로 설정</li>
+        <li>객체.getDay() : 요일번호를 나타내는 숫자를 구함(0~6)</li>
+        <li>객체.getHours() : 시를 나타내는 숫자를 구함</li>
+        <li>객체.setHours(시) : 날짜 객체에 지저한 숫자값을 시로 설정</li>
+        <li>객체.getMinutese() : 분을 나타내는 숫자를 구함</li>
+        <li>객체.setMinutes(분) : 날짜 객체에 지정한 숫자값을 분으로 설정</li>
+        <li>객체.getSeconds() : 초를 나타내는 숫자를 구함</li>
+        <li>객체.setSeconds(초) : 날짜 객체에 지정한 숫자값을 초로 설정</li>
+        <li>객체.getMilliseconds() : 밀리초를 나타내는 숫자를 구함</li>
+        <li>객체.setMilliseconds(초) : 날짜 객체에 지정한 숫자값을 밀리초로 설정</li>
+        <li>객체.getTime() : 1970년 1월 1일 00:00:00(UTC)를 기점으로 현재 시간까지 경과된 밀리초를 설정</li>
+        <li>객체.getTimezoneOffset() : UTC와 지정 로케일(Locale) 시간과의 차이를 분단위로 반환</li>
+        <li>객체.toDateString() : 사람이 읽을 수 있는 형식의 문자열로 날짜를 반환</li>
+        <li>객체.toTimeString() : 사람이 읽을 수 있는 형식의 문자열로 시간을 반환</li>
+    </ul>
+    <script>
+        var week = ["일", "월", "화", "수", "목", "금", "토"];
+        var today = new Date();
+        var your = new Date(1998,12,16);
+        var nowYear = today.getFullYear();
+        var nowMonth = today.getMonth();
+        var nowWeek = week[today.getDay()];
+        var hour = today.getHours();
+        var minute = today.getMinutes();
+        var second = today.getSeconds();
+        var b_year = document.getElementById("b_year").innerText;
+        var b_month = document.getElementById("b_month").innerText;
+        var b_day = document.getElementById("b_day").innerText;
+        console.log(b_year, b_month, b_day);
+        var birth = new Date(); //birth는 오늘 날짜
+        birth.setFullYear(b_year);
+        birth.setMonth(b_month-1);
+        birth.setDate(b_day);
+        var nowMill = Date.parse(today);
+        var birthMill = Date.parse(birth);
+        var liveday = (nowMill - birthMill)/1000/60/60/24;
+        document.write("<br>오늘의 날짜 : "+nowYear+"년 "+nowMonth+"월 "+nowWeek+"일("+nowWeek+")");
+        document.write("<br>당신의 나이는 얼마입니까?"+(nowYear-your.getYear()-1900)+"살");
+        document.write("<br>당신의 나이가 41세가 되려면 몇 년도입니까?"+(your.getYear()+41+1900)+"년");
+        document.write("<br>나의 생일은?"+b_year+"-"+b_month+"-"+b_day);
+        document.write("<br>내가 살아온 날 수는 며칠 입니까?"+liveday+"일");
+        document.write("<br>현재 시간 =>"+hour+":"+minute+":"+second);
+
+        var time = document.getElementById("time");
+        function clock(){
+            var t = new Date();
+            var h = t.getHours();
+            var ampm;
+            if(h>=12){ ampm="PM"; h=h-12; } else{ ampm="AM"; }
+            var m = t.getMinutes();
+            var s = t.getSeconds();
+            h = compare(h);
+            m = compare(m);
+            s = compare(s);
+            time.innerText = h+":"+m+":"+s+" "+ampm;
+        }
+        function compare(x){
+            if(x<10){ return "0"+x; } else { return x;}
+        }
+        setInterval(function(){clock();},1000);
+        
+    </script>
+</body>
+</html>

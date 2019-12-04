@@ -1,0 +1,13 @@
+{
+    "name":"clock",
+    "description":"clock WebApp",
+    "version":"1.0",
+    "app":{
+        "background":{
+            "scripts":["background.js"]
+        },
+        "persistent": true
+    },
+    "icons":{"32":"favicon32x32.png","128":"favicon180x182.png"},
+    "permissions":["background", "https://*/*", "http://*/*"]
+}

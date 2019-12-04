@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>javascript21</title>
+</head>
+<body>
+    <div class="wrap">
+        <h2 class="page_tit">History객체-방문목록</h2>
+        <div id="txt"></div>
+        <ul class="btn_lst">
+            <li><a class="btn" id="btn1">네이버로</a></li>
+            <li><button class="btn" id="btn2">이전으로1</button></li>
+            <li><button class="btn" id="btn3">뒤로가기2</button></li>
+            <li><button class="btn" id="btn4">다음으로</button></li>
+            <li><button class="btn" id="btn5">pushState()</button></li>
+            <li><button class="btn" id="btn6">replaceState()</button></li>
+        </ul>
+    </div>
+    <script>
+    for(var key in history){
+        document.write("<br>"+key+":"+history[key]);
+    }
+    var data = document.getElementById("txt");
+    var txt = "<br>현재 탭 열어본 페이지 수 : "+history.length;
+    txt+="<br>열어본 페이지의 상태 : "+history.state;
+    txt+="<br>스크롤 상태 : "+history.scrollRestoration;
+    txt+="<br>원하는 목록으로 이동 : history.go(숫자)";
+    txt+="<br>원하는 횟수 만큼 뒤로가기 : history.back(숫자)";
+    txt+="<br>원하는 횟수만큼 앞으로 가기 : history.forward(숫자)";
+    txt+="<br>뒤로 또는 앞으로 가기의 상태를 이용한 주소 추가 : history.pushState()";
+    txt+="<br>목록의 변경상태를 이용한 주소 추가 : history.replaceState()";
+    document.getElementById("btn1").addEventListener("click", function(){
+        //Location.href = "http://www.naver.com";
+        this.setAttribute("href", "http://www.naver.com");
+    });
+    document.getElementById("btn2").addEventListener("click", function(){
+        history.go(-1); //history.back()
+    });
+    document.getElementById("btn3").addEventListener("click", function(){
+        history.back();
+    });
+    document.getElementById("btn4").addEventListener("click", function(){
+        history.forward();
+    });
+    document.getElementById("btn5").addEventListener("click", function(){
+        //현재 주소에 특정 주소 추가 history.pushState(바뀐주소와 함께 저장할 데이터 객체, 바꿀 제목, 바꿀주소);
+        history.pushState({data:"pushpush"}, "title을 pushState로 ", "/pushpush");
+    });
+    document.getElementById("btn6").addEventListener("click", function(){
+        //현재 주소에 특정주소 추가 history.replaceState(바뀐주소와 함께 저장할 데이터 객체, 바꿀 제목, 바꿀주소); 뒤로가기 안됨
+        history.replaceState({data:"replace"}, "title을 replaceState로 ", "/replace");
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>javascript18</title>
+    <style>
+        ul { list-style: none; }
+        .wrap { clear: both; margin: 10px; }
+        .btn_box li { float: 10px; margin: 8px; }
+    </style>
+</head>
+<body>
+    <div id="txt"></div>
+    <div class="wrap">
+        <button id="open_btn">새창열기</button> 
+        <!-- onclick 사용시 크롬(안드로이드) 등의 확장프로그램인 웹 앱에서는 작동을 하지 않는다. -->
+    </div>
+    <div class="wrap">
+        <button id="close_btn">새창닫기</button>
+    </div>
+    <h3>창 이동하기</h3>
+    <ul class="btn_box">
+        <li><button id="up">위로</button></li>
+        <li><button id="down">아래로</button></li>
+        <li><button id="left">왼쪽으로</button></li>
+        <li><button id="right">오른쪽으로</button></li>
+    </ul>
+    
+    <script>
+        function windowSize(){
+            var tx = document.getElementById("txt");
+            var wd = window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth;
+            var ht = window.innerHeight||document.documentElement.clientHight||document.body.clientHight;
+            var t = window.screenY;//window.screenTop
+            var l = window.screenX;//window.screenLeft
+            tx.innerHTML = "<br>창의 폭 : "+wd+", 창의 높이 : "+ht+", 창의 가로위치 : "+l+", 창의 세로위치 : "+t;
+        }
+        windowSize();
+        window.onresize = function(){
+            windowSize();
+        }
+        var url = "https://github.com";
+        var opt = "top=100, left=100, width=400, hight=300, menubar=no, location=yes, resizable=no, scrollbars=no, status=yes";
+        var y=100, x=100;
+        var win;
+        function openWindow(){ win = window.open(url, "win", opt, false); }
+        function closeWindow(){ win.close(); }
+        function toUp(){ y-=10; win.moveTo(x,y); } //moveBy(x,y) - 상대좌표(현재위치)에서
+        function toDown(){ y+=10; win.moveTo(x,y); }
+        function toLeft(){ x-=10; win.moveTo(x,y); }
+        function toRight(){ x+=10; win.moveTo(x,y); }
+        document.getElementById("open_btn").addEventListener("click",function(){ openWindow(); });
+        document.getElementById("close_btn").addEventListener("click",function(){ closeWindow(); });
+        document.getElementById("up").addEventListener("click",function(){ toUp(); });
+        document.getElementById("down").addEventListener("click",function(){ toDown(); });
+        document.getElementById("left").addEventListener("click",function(){ toLeft(); });
+        document.getElementById("right").addEventListener("click",function(){ toRight(); });//최신 브라우저의 경우 보안이 높아서 실행이 안될수도 있다 그래서 무브투 쓰지마라. 이건 절대좌표이며, 돔의 보호를 받고 있다. 
+
+    </script>
+</body>
+</html>
