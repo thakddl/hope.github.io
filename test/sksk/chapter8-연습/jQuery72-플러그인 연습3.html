@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>효과</title>
+    <style>
+         * { margin: 0; padding: 0; }
+        ul { list-style: none; }
+        a { text-decoration: none; }
+        .vs { width: 300px; height: 300px; overflow: hidden; border-right: 1px solid #ccc; box-shadow: 1px 0 25px #999; margin: 30px auto; clear: both; }
+        .btn_box { width: 100px; margin: 0 auto; }
+        button { display: block; width: 30px; height: 30px; margin-left: 10px; float: left; margin-bottom: 30px; }
+        .img_box { width: 400%; }
+        .img_box a { float: left; display: block; width: 25%; position: relative; }
+        .img_box a img { display: block; }
+        .num { display: block; color: #000; width: 30px; height: 30px; background-color: blanchedalmond; text-align: center; line-height: 30px; margin: 10px; position: absolute; left: 0; top: 0; }
+        .txt { clear: both; text-align: center; }
+    </style>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="sl2.js"></script>
+    <script>
+    $(function(){
+        $("#visual").sl({"cycle":3000, "ani":600, "item":"a", "imgbox":".img_box", "lr_btn":true});
+        // $("#visual2").sl({"cycle":3000, "ani":600, "item":"a", "imgbox":".img_box"});
+        $("#visual2").sl({"lr_btn":false});
+    });
+    </script>
+</head>
+<body>
+    <section class="vs" id="visual">
+        <div class="img_box">
+            <a href=""><img src="img1.jpg" alt=""><span class="num">1</span></a>
+            <a href=""><img src="img2.jpg" alt=""><span class="num">2</span></a>
+            <a href=""><img src="img3.jpg" alt=""><span class="num">3</span></a>
+            <a href=""><img src="img4.jpg" alt=""><span class="num">4</span></a>
+        </div>
+    </section>
+    <section class="vs" id="visual2">
+        <div class="img_box">
+            <a href=""><img src="img4.jpg" alt=""><span class="num">1</span></a>
+            <a href=""><img src="img3.jpg" alt=""><span class="num">2</span></a>
+            <a href=""><img src="img2.jpg" alt=""><span class="num">3</span></a>
+            <a href=""><img src="img1.jpg" alt=""><span class="num">4</span></a>
+        </div>
+    </section>
+</body>
+</html>

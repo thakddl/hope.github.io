@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{ margin: 0; padding: 0; }
+        ul{ list-style: none; }
+        html, body { width: 100%; height: 100%; }
+
+        .btn_box { width: 400px; height: 50px; margin: 20px auto; }
+        .left { float: left; display: block; width: 30px; height: 30px; margin: 10px; line-height: 30px; text-align: center; }
+        .right { float: right; display: block; width: 30px; height: 30px; margin: 10px; line-height: 30px; text-align: center; }
+
+        .wrap { width: 400px; height: 400px; margin: 100px auto; margin-bottom: 150px; transform-style: preserve-3d; backface-visibility: visible; transform: rotateX(-25deg) perspective(1200px); }
+        .box { width: 100%; height: 25%; position: relative; }
+        .box li { position: absolute; top: 0; left: 0; }
+        
+        .row1 { background-image: url(); }
+
+        .top { width: 400px; height: 400px; background-color: rgba(30, 30, 30, 0.2); transform: rotateX(-90deg) translate3D(0, 0, 200px) ; }
+        .bottom { width: 400px; height: 400px; background-color: #333; transform: rotateX(90deg) translate3D(0, 0, 200px); }
+
+    </style> 
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function(){
+            var btn = "<section class='btn_box'>";
+            btn += "<button class='left'>◀</button>";
+            btn += "<button class='right'>▶</button>";
+            btn += "</section>";
+            $(".wrap").after(btn);
+            
+        });
+    </script>
+</head>
+<body>
+    <section class="wrap">
+            <ul class="box" id="box1">
+                <li class="row1 top"></li>
+                <li class="row1 ln1">1_1</li>
+                <li class="row1 ln2">2_1</li>
+                <li class="row1 ln3">3_1</li>
+                <li class="row1 ln4">4_1</li>
+                <li class="row1 bottom"></li>
+            </ul>
+            <ul class="box" id="box2">
+                <li class="row2 top"></li>
+                <li class="row2 ln1">1_2</li>
+                <li class="row2 ln2">2_2</li>
+                <li class="row2 ln3">3_2</li>
+                <li class="row2 ln4">4_2</li>
+                <li class="row2 bottom"></li>
+            </ul>
+            <ul class="box" id="box3">
+                <li class="row3 top"></li>
+                <li class="row3 ln1">1_3</li>
+                <li class="row3 ln2">2_3</li>
+                <li class="row3 ln3">3_3</li>
+                <li class="row3 ln4">4_3</li>
+                <li class="row3 bottom"></li>
+            </ul>
+            <ul class="box" id="box4">
+                <li class="row4 top"></li>
+                <li class="row4 ln1">1_4</li>
+                <li class="row4 ln2">2_4</li>
+                <li class="row4 ln3">3_4</li>
+                <li class="row4 ln4">4_4</li>
+                <li class="row4 bottom"></li>
+            </ul>
+    </section>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>효과</title>
+    <style>
+        * { margin: 0; padding: 0; }
+        ul { list-style: none; }
+        a { text-decoration: none; }
+        .vs { width: 300px; height: 300px; overflow: hidden; border-right: 1px solid #ccc; box-shadow: 1px 0 25px #999; margin: 100px auto; }
+        .btn_box { width: 100px; margin: 0 auto; }
+        button { display: block; width: 30px; height: 30px; margin-left: 10px; float: left; }
+        .img_box { width: 400%; }
+        .img_box a { float: left; display: block; width: 25%; position: relative; }
+        .img_box a img { display: block; }
+        .num { display: block; color: #000; width: 30px; height: 30px; background-color: blanchedalmond; text-align: center; line-height: 30px; margin: 10px; position: absolute; left: 0; top: 0; }
+        .txt { clear: both; text-align: center; }
+    </style>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+    $(document).ready(function(){
+        var btn = "<section class='btn_box'>";
+        btn += "<button class='left'>◀</button>";
+        btn += "<button class='right'>▶</button>";
+        btn += "</section>";
+        var cycle = 3000;
+        var ani = 600;
+        var vs = $(".vs");
+        var item = "a";
+        var box = $(".img_box");
+        vs.after(btn);
+        var wd = parseInt(vs.width());
+        var len = vs.find(item).length;
+        var a = $(".img_box a").width();
+        console.log(a);
+        $(".right").click(function(){
+            clearInterval(intv);
+            rMot();
+            intv = setInterval(function(){rMot();}, cycle);
+        });
+        $(".left").click(function(){
+            clearInterval(intv);
+            lMot();
+            intv = setInterval(function(){rMot();}, cycle);
+        });
+        function rMot(){
+            box.not(":animated").animate({"margin-left": -wd+"px"}, ani, function(){
+                box.find(item).eq(0).appendTo(box);
+                box.css("margin-left", "0px");
+            });
+        }
+        function lMot(){
+                box.find(item).eq(len-1).prependTo(box);
+                box.css("margin-left",-wd+"px");
+                box.not(":animated").animate({"margin-left":"0px"}, ani);
+        }
+        var intv = setInterval(function(){ rMot(); }, cycle);
+    });
+    </script>
+</head>
+<body>
+    <section class="vs" id="visual">
+        <div class="img_box">
+            <a href=""><img src="img1.jpg" alt=""><span class="num">1</span></a>
+            <a href=""><img src="img2.jpg" alt=""><span class="num">2</span></a>
+            <a href=""><img src="img3.jpg" alt=""><span class="num">3</span></a>
+            <a href=""><img src="img4.jpg" alt=""><span class="num">4</span></a>
+        </div>
+    </section>
+</body>
+</html>
