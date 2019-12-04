@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>조작 메서드6 - wrap(), wrapAll()떨어져 있는 요소들이 그룹핑이 되어서 하나의 부모를 가지게 된다. </title>
+    <style>
+        .border { border: 2px solid red; margin: 10px; padding: 0 30px; float:left; width: 60px; }
+    </style>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("p").click(function(){
+            // $("p").wrap("<div class='border'></div>");//p요소의 부모요소를 각각 <div class='border'></div>요소로 두게하기
+            $("p").wrapAll("<div class='border'></div>");//p요소를 한꺼번에 <div class='border'></div>요소로 그룹핑하기
+        });
+    });
+    </script>
+</head>
+<body>
+    <h2>jQuery After Third part - 312</h2>
+    <p>React -> 37</p>
+    <div>
+        <p>VUE.js -> 1</p>
+    </div>
+    <p>angular -> 54</p>
+    <p>polymer -> 3</p>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>조작 메서드11 - scrollLeft(), scrollTop()</title>
+    <style>
+        div.demo { background: #ccc none repeat scroll 0 0; border:3px solid #666; margin: 5px; padding: 5px; position: relative; width: 200px; height: 100px; overflow: auto; }
+        p { margin: 10px; padding: 5px; border: 2px solid #666; width: 1000px; height: 1000px; }
+    </style>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+    $(document).ready(function(){
+        $(".demo").scroll(function(){
+            $("#res1 em").text($(this).scrollLeft());
+            $("#res2 em").text($(this).scrollTop());
+        });
+    });
+    </script>
+</head>
+<body>
+    <div class="demo">
+        <h1>lalalalala</h1>
+        <p>자우림</p>
+    </div>
+    <br><hr><br>
+    <div id="res1"><strong>옆으로 스크롤된 링</strong> : <em></em></div>
+    <div id="res2"><strong>위아래로 스크롤된 링</strong> : <em></em></div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>조작 메서드2 - prepend(), prependTo() </title>
+    <style>
+    </style>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+    $(document).ready(function(){
+        var man = ["김기태", "김영수", "김현우", "양성호", "이동욱", "이예준"];
+        $.each(man, function(index,value){
+            $(".man_lst").prepend("<li>"+value+"</li>");
+        });
+        $("strong").prependTo($("#tit1"));
+    });
+    </script>
+</head>
+<body>
+    <strong>정말 죽도록 사랑하는 사람</strong>
+    <div class="wrap">
+        <h3 class="tit">내가 좋아하는 사람</h3>
+        <ul class="man_lst"></ul>
+    </div>
+    <div class="wrap">
+        <h3 class="tit" id="tit1"> : 이소망</h3>
+    </div>
+</body>
+</html>

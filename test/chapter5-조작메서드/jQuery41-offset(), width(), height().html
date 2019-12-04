@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>조작 메서드9 - offset(), width(), height() </title>
+    <style>
+        div.abs { width: 150px; height: 60px; position: absolute; left: 220px; top: 35px; background: green; cursor: pointer; }
+    </style>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+    $(document).ready(function(){
+        var a = $(this).offset(); //left, top계산
+        var b = $(this).width();
+        var c = $(this).height();
+        $("div.abs").click(function(){
+            // $("#result").text("좌표값 : "+a.left+a.top);
+            var $obj = $(this).offset();
+            $("#result").text("좌표값("+$obj.left+","+$obj.top+"), "+"너비 : "+$(this).width()+", 높이 : "+$(this).height());
+        });
+    });
+    </script>
+</head>
+<body>
+    <div id="result"></div>
+    <div class="abs"></div>
+</body>
+</html>

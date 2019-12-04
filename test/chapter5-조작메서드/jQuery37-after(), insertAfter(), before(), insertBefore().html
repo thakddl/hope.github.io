@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>조작 메서드5 - after(), insertAfter(), before(), insertBefore() 용도의 차이는 없지만 순서가 뒤집어진다.</title>
+    <style>
+        div { float: left; margin: 25px; width: 500px; }
+    </style>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("header").after("<div class='col1'>최선경");
+        $("<div class='row1'>손성민</div>").insertAfter($("header"));
+        $("footer").brfore("<div class='col2'>김한주</li>");
+        $("<div class='row2'>류신혜</div>").insertBefore($("footer"));
+    });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>오늘도 함께 공부할</h1>
+    </header>
+    <footer>
+        <h3><i>copyright Hope Lee</i></h3>
+    </footer>
+</body>
+</html>
