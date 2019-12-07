@@ -20,61 +20,45 @@
     <meta property="og:site_name" content="비전화카페서울">
     <meta property="og:description" content="비전화카페는 전기와 화학물질에 의존하지 않으면서 행복하고 풍요로운 삶의 방식을 추구합니다. 비전화카페는 바라는 삶을 살아내는 힘을 확산합니다.">
     <meta property="og:image" content="./data/fixed_1.jpg">
-    <meta property="og:updated_time" content="2019.11.01">
-
+    <meta property="og:updated_time" content="2019.11.08">
+    
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/font.css">
     <link rel="stylesheet" href="./css/main4.css">
     <script src="jquery-1.11.1.js"></script>
-    <script src="common.js"></script>
+    <script src="main4_1.js"></script>
+    <script>
+    $(document).ready(function(){
+        $(".reser").click(function(){
+            alert("로그인 시 예약이 가능합니다.");
+            $(".pop").fadeIn(1500);
+        });
+        $(".close_btn0").click(function(){
+            $(".pop").fadeOut(500);
+        });
+    });
+    
+    </script>
 </head>
 <body>
+ <div class="pop">
+    <button class="close_btn0">X</button>
+    <a href="index.html" id="pop"></a>
+    <input type="text" id="id0" placeholder="아이디" title="아이디를 입력하세요." autofocus>
+    <input type="password" id="pw0" placeholder="비밀번호" title="비밀번호를 입력하세요.">
+    <input type="submit" value="로그인" id="pop_in">
+    <ul>
+        <li><a href="join.html">회원가입</a></li>
+        <li class="last"><a href="pw.html">비밀번호 찾기</a></li>
+    </ul>
+</div>
    <div class="hd_wrap">
         <header class="hd">
            <div class="join_btn">
                 <a href="sign.html" class="log_in">로그인</a>
                 <a href="join.html" class="log_in">회원가입</a>
             </div>
-<!--
-            <div class="join_btn">
-                <button class="log_in">로그인</button>
-                <button class="jo">회원가입</button>
-            </div>
-            <form action="" class="sign">
-                <button class="close_btn1">X</button>
-                <a href="index.html" id="logo"></a>
-                <input type="text" id="id" placeholder="아이디" title="아이디를 입력하세요." autofocus>
-                <input type="password" id="pw" placeholder="비밀번호" title="비밀번호를 입력하세요.">
-                <input type="submit" value="로그인" id="sign_in">
-                <ul>
-                    <li><a href="#">회원가입</a></li>
-                    <li><a href="#" id="last">비밀번호 찾기</a></li>
-                </ul>
-            </form>
-            <form action="" class="join">
-                <feildset>
-                    <button class="close_btn2">X</button>
-                    <legend>회원가입</legend>
-                    <label for="m_id">아이디</label>
-                    <input type="text" id="m_id" placeholder="아이디를 입력하세요." title="아이디를 입력하세요." autofocus>
-                    <label for="m_pw">비밀번호</label>
-                    <input type="password" id="m_pw" placeholder="패스워드를 입력하세요." title="패스워드를 입력하세요.">
-                    <label for="m_pw">비밀번호 확인</label>
-                    <input type="password" id="m_pw2" placeholder="패스워드 확인을 입력하세요." title="패스워드 확인을 입력하세요.">
-                    <label for="tel">전화번호</label>
-                    <input type="tel" id="tel" placeholder="전화번호를 입력하세요." title="전화번호를 입력하세요.">
-                    <label for="e_mail">이메일</label>
-                    <input type="email" id="e_mail" placeholder="아이디" title="이메일을 입력하세요.">@
-                    <select name="email2" id="e_mail2">
-                        <option value="">선택안함</option>
-                        <option value="naver.com">네이버</option>
-                        <option value="google.com">구글</option>
-                        <option value="daum.net">다음</option>
-                    </select>
-                    <input type="submit" value="가입하기" id="join_in">
-                </feildset>
-            </form>
--->
+
             <nav class="tnb">
                 <a href="http://noplug.kr/" target="_blank" class="t_logo"></a>
                 <ul>
@@ -142,12 +126,12 @@
                         </tr>
                         <tr>
                             <td>5</td>
-                            <td><a href="main4_1.html" class="reser">2019년 11월 30일</a></td>
+                            <td><button class="log_in reser">2019년 11월 30일</button></td>
                             <td>가능</td>
                         </tr>
                         <tr>
                             <td>4</td>
-                            <td><a href="main4_1.html" class="reser">2019년 11월 29일</a></td>
+                            <td><button class="log_in reser">2019년 11월 29일</button></td>
                             <td>가능</td>
                         </tr>
                         <tr>

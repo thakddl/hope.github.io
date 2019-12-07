@@ -1,6 +1,6 @@
 @charset "utf-8";
 * { margin: 0; padding: 0; }
-html, body { width: 100%; height: 100%; font-family: "tree"; }
+html, body { width: 100%; height: 100%; font-family: 'TDTDTadakTadak'; }
 ul { list-style: none; }
 a { text-decoration: none; color: #000000; }
 img, button, label { display: block; border: 0; background-color: transparent; outline: 0; }
