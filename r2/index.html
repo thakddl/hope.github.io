@@ -11,6 +11,65 @@
     <link rel="stylesheet" href="./css/font.css">
     <script src="https://code.jquery.com/jquery-latest.js"></script>
     <script src="./jquery/common.js"></script>
+    <style>
+    @media screen and (max-width:767px) {
+        .menu_btn { top: 6vh; right: 0px; }
+        #m_cover { display: block; height: 55vh; }
+        #de_cover { display: none; }
+
+        #min { width: 180px; height: 110px; line-height: 110px; font-size: 25px; text-indent: 5px; left: 8vw; top: 64vh; }
+        .spl_bar { height: 22px; }
+        #m_logo { display: block; }
+        
+        .logo { position: absolute; left: 10vw; top: 5vh; width: 50px; height: 20px; }
+        .gnb { margin: 0; }
+        .gnb a { line-height: 10px; font-size: 13px; }
+
+        .con_menu { display: none; }
+        .con_fr { display: none; }
+        #vs_des { display: none; }
+        #page2 { display: flex; justify-content: center; }
+        .con_wrap { margin: 0; padding: 0; }
+        #vs_book { width: 55vw; display: flex; justify-content: center; }
+        #vs_book img { width: 55vw; margin: 0; }
+        #vs_bo { margin: 0 auto; padding-top: 40px; width: 250px; text-align: center; font-size: 13px; }
+
+        .ft { height: 380px; padding-top: 25px; }
+        .fnb { display: none; }
+        #sim { width: 90px; }
+        .com { font-size: 22px; }
+        #copy { width: 250px; text-align: center; }
+    }
+    @media screen and (min-width:768px) and (max-width:1200px) {
+        .menu_btn { top: 6vh; right: 0px; }
+        #m_cover { display: none; }
+        #de_cover { display: none; }
+
+        #min { width: 250px; height: 120px; line-height: 120px; font-size: 30px; text-indent: 5px; left: 8vw; top: 64vh; }
+        .spl_bar { height: 22px; }
+        #m_logo { display: block; }
+        
+        .logo { position: absolute; left: 10vw; top: 5vh; width: 50px; height: 20px; }
+        .gnb { margin: 0; }
+        .gnb a { line-height: 10px; font-size: 13px; }
+
+        .con_menu { width: 28vw; padding-left: 3vw; }
+        .con_menu h2 { margin-bottom: 50px; }
+        .con_menu li { color: #555; font-size: 18px; margin: 10px 0; cursor: pointer; line-height: 35px; }
+        .con_fr { display: none; }
+        #page2 { display: flex; justify-content: space-around; align-content: center; }
+        .con_wrap { margin: 0; padding: 0; }
+        #vs_book { width: 55vw; display: flex; justify-content: center; align-content: center; }
+        #vs_book img { height: 25vh; margin: 0; margin-left: -50px; padding: 0; }
+        #vs_bo { width: 50vw; margin: 0; margin-top: 50px; }
+
+        .ft { height: 380px; padding-top: 25px; flex-flow: column; }
+        .fnb { display: none; }
+        #sim { width: 90px; }
+        .com { font-size: 22px; }
+        .f_box { margin-top: 5vh; }
+    }
+    </style>
 </head>
 <body>
     <header class="hd">
@@ -44,7 +103,6 @@
                     <li class="menu">
                         <a href="#">북클럽</a>
                         <ul class="sub">
-                            <li><a href="#">Book Shop</a></li>
                             <li><a href="#">책의 공간</a></li>
                             <li><a href="#">나의 북클럽</a></li>
                         </ul>
@@ -54,7 +112,8 @@
         </div>
     </header>
     <section class="page vs">
-        <video src="./data/vs3.mp4" class="cover" autoplay></video>
+        <video src="./data/vs3.mp4" class="cover" autoplay id="de_cover"></video>
+        <img src="./script/vsimg.jpg" alt="" class="cover" id="m_cover">
         <p id="min">
             <span class="spl_bar" id="spl_top"></span>
             <span class="spl it" id="spl1">M</span>
@@ -66,6 +125,7 @@
             <span class="spl" id="spl7">A</span>
             <span class="spl_bar" id="spl_bottom"></span>
         </p>
+        <div class="lo_wrap"><a href="" id="m_logo"></a></div>
     </section>
     <section class="page" id="page2">
         <div class="con_menu">
@@ -85,16 +145,16 @@
                     <img src="./data/img1.jpg" alt="" id="vs_img">
                 </a>
                 <a href="#">
-                    <div>
-                    <h3 id="vs_tit">런던, NW</h3>
-                    <p id="vs_des">『하얀 이빨』, 『온 뷰티』의 작가 제이디 스미스 신작 《뉴욕 타임스 북 리뷰》·《월 스트리트 저널》·《타임》 TOP 10선정 전미 서평가 협회상 최종 후보</p>
+                    <div id="vs_bo">
+                        <h3 id="vs_tit">런던, NW</h3>
+                        <p id="vs_des">『하얀 이빨』, 『온 뷰티』의 작가 제이디 스미스 신작 《뉴욕 타임스 북 리뷰》·《월 스트리트 저널》·《타임》 TOP 10선정 전미 서평가 협회상 최종 후보</p>
                     </div>
                 </a>
             </div>
             <div class="con_fr">
                 <ul class="con_box">
                     <li class="on" id="con0">
-                        <img src="./data/img1.jpg" alt="" class="new_b" id="ee">
+                        <img src="./data/img1.jpg" alt="" class="new_b">
                         <div class="txt_box">
                             <h3 class="tit">런던, NW</h3>
                             <p class="des">『하얀 이빨』, 『온 뷰티』의 작가 제이디 스미스 신작 《뉴욕 타임스 북 리뷰》·《월 스트리트 저널》·《타임》 TOP 10선정 전미 서평가 협회상 최종 후보</p>
@@ -139,7 +199,7 @@
             </div>
         </div>
     </section>
-    <div class="curve"></div>
+    <div class="curve"><img src="./data/contact_bg.png" alt=""></div>
     <footer class="ft">
         <img src="./data/sim.png" alt="" id="sim">
         <p class="com_wrap">
