@@ -63,7 +63,7 @@ $(document).ready(function(){
             $(".con_box li").eq(0).siblings().removeClass("on");
             book();
         });
-    } var int = setInterval(function() { intv(); }, 4000);
+    } var int = setInterval(function() { intv(); }, 5000);
     //북이미지 클릭
     $(".new_b").click(function(){
         clearInterval(int);
@@ -88,6 +88,6 @@ $(document).ready(function(){
             $(".con_box li").eq(0).siblings().removeClass("on");
         }
         book();
-        int = setInterval(function() { intv(); }, 4000);
+        int = setInterval(function() { intv(); }, 5000);
     });
 });
