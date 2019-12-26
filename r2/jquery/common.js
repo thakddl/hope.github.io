@@ -7,11 +7,13 @@ $(document).ready(function(){
             $("#bar1").css({"transform":"translateY(10px) rotateZ(45deg)", "transform-origin":"50% 50%"});
             $("#bar3").css({"transform":"translateY(-10px) rotateZ(-45deg)", "transform-origin":"50% 50%"});
             $("#bar2").css("display","none");
+            $("html").css("overflow","hidden");
         } else {
             $(".menu_fr").fadeOut(400);
             $("#bar1").css({"transform":"translateY(0px) rotateZ(0deg)", "transform-origin":"50% 50%"});
             $("#bar3").css({"transform":"translateY(0px) rotateZ(0deg)", "transform-origin":"50% 50%"});
             $("#bar2").css("display","block");
+            $("html").css("overflow","auto");
         } sw = !sw
     });
 
