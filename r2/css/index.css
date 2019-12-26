@@ -1,7 +1,7 @@
 @charset "utf-8";
 .vs { width: 100%; height: 100%; overflow: hidden; }
-.cover { display: block; width: 100vw; }
-#m_cover { display: none; }
+.cover { display: none; width: 100vw; }
+#de_cover { display: block; }
 
 #min { position: absolute; top: 56.5vh; left: 16.5vw; font-size: 50px; background-color: rgba(255,255,255,0.5); height: 160px; width: 420px; line-height: 160px; text-indent: 15px; }
 .spl { display: block; float: left; font-family: ''; }
@@ -9,7 +9,6 @@
 #spl_top { top: 0; left: 0; }
 #spl_bottom { left: 0; bottom: 0; }
 
-.lo_wrap { width: 100vw; height: 60px; display: flex; justify-content: center; position: absolute; bottom: 0; }
 #m_logo { display: none; width: 50px; height: 20px; background-image: url("../data/minumsa.png"); background-repeat: no-repeat; background-size: contain; }
 
 #page2 { background-color: #121212; height: 100vh; display: flex; justify-content: space-around; align-items: center; }
@@ -18,13 +17,13 @@
 .con_menu h2 { margin-bottom: 70px; color: #999; }
 .con_menu li { color: #555; font-size: 20px; margin: 25px 0; cursor: pointer; line-height: 35px; }
 
-.con_wrap { width: 58vw; height: 50vh; display: block; position: relative; padding-right: 11vw; }
+.con_wrap { width: 60vw; height: 50vh; display: block; position: relative; padding-right: 11vw; }
 #vs_book { width: 100%; height: 50vh; display: flex; flex-flow: row wrap; justify-items: center; }
 #vs_book a { color: #f3f3f3; }
 #vs_book img { display: block; height: 48vh; margin-left: 40px; box-shadow: 1px 0px 10px cornsilk; overflow: hidden; }
-#vs_bo { display: block; width: 750px; margin-left: 120px; margin-top: 40px; }
+#vs_bo { width: 720px; margin-left: 50px; }
 
-.con_fr { position: absolute; width: 56%; height: 26vh; overflow: hidden; right: 4vw; bottom: 2vh; }
+.con_fr { position: absolute; width: 59%; height: 26vh; overflow: hidden; right: 4vw; bottom: 2vh; }
 .con_bo { width: 150%; padding-left: 50px; display: flex; align-items: flex-end; }
 .con_box .on { display: none; }
 .new_b { display: block; width: 7vw; box-shadow: 1px 0px 5px cornsilk; margin: 20px 50px 20px 0; float: left; }
