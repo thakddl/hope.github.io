@@ -6,6 +6,7 @@
 
 .ft { height: 380px; padding-top: 25px; flex-flow: column; }
 .fnb { display: none; }
+#sim_wrap { position: relative; width: 120px; height: 120px; }
 #sim { width: 90px; }
 .com { font-size: 22px; }
 .f_box { margin-top: 5vh; }
