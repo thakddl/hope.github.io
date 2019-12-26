@@ -75,7 +75,7 @@ $(document).ready(function(){
             $(this).parent().siblings().removeClass("on");
         }
         book();
-        int = setInterval(function() { intv(); }, 4000);
+        int = setInterval(function() { intv(); }, 5000);
     });
     //페이지2 메뉴 버튼 클릭
     $(".con_local li").click(function(){
