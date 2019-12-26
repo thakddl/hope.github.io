@@ -25,8 +25,9 @@ input { -webkit-appearance: none; }
 .curve { width: 100%; background-color: #121212; }
 .curve img { display: block; width: 100%; }
 
-.ft { position: relative; height: 500px; display: flex; flex-flow: column wrap; align-items: center; }
-#sim { width: 120px; animation: sim 10s ease infinite; margin: 3vh; position: relative; }
+.ft { height: 500px; display: flex; flex-flow: column wrap; align-items: center; }
+#sim_wrap { position: relative; }
+#sim { width: 120px; animation: sim 10s ease infinite; margin: 3vh; }
 @keyframes sim {
     0% { transform: rotateY(0deg); }
     50% { transform: rotateY(360deg); }
