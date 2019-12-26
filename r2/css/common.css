@@ -22,8 +22,8 @@ input { -webkit-appearance: none; }
 .sub { display: flex; flex-flow: row wrap; }
 .gnb a { display: block; line-height: 5rem; color: black; font-size: 2em; margin: 20px; }
 
-.curve { width: 100vw; background-color: #121212; }
-.curve img { display: block; width: 100vw; }
+.curve { width: 100%; background-color: #121212; }
+.curve img { display: block; width: 100%; }
 
 .ft { height: 500px; display: flex; flex-flow: column wrap; align-items: center; }
 #sim { width: 120px; animation: sim 10s ease infinite; margin: 3vh; position: relative; }
