@@ -11,20 +11,20 @@
 
 #m_logo { display: none; width: 50px; height: 20px; background-image: url("../data/minumsa.png"); background-repeat: no-repeat; background-size: contain; }
 
-#page2 { background-color: #121212; height: 100vh; display: flex; justify-content: space-around; align-items: center; }
+#page2 { background-color: #121212; height: 100vh; display: flex; justify-content: center; align-items: center; }
 
-.con_menu { width: 16vw; padding-left: 3vw; }
+.con_menu { width: 16vw; margin-right: 100px; }
 .con_menu h2 { margin-bottom: 70px; color: #999; }
 .con_menu li { color: #555; font-size: 20px; margin: 25px 0; cursor: pointer; line-height: 35px; }
 
-.con_wrap { width: 60vw; height: 50vh; display: block; position: relative; padding-right: 11vw; }
-#vs_book { width: 100%; height: 50vh; display: flex; flex-flow: row wrap; justify-items: center; }
+.con_wrap { width: 60vw; height: 50vh; display: block; position: relative; }
+#vs_book { width: 100%; height: 50vh; display: flex; flex-flow: row nowrap; justify-items: center; }
 #vs_book a { color: #f3f3f3; }
 #vs_book img { display: block; height: 48vh; margin-left: 40px; box-shadow: 1px 0px 10px cornsilk; overflow: hidden; }
-#vs_bo { width: 720px; margin-left: 50px; }
+#vs_bo { width: 720px; margin-left: 120px; margin-top: 50px; }
 
-.con_fr { position: absolute; width: 59%; height: 26vh; overflow: hidden; right: 4vw; bottom: 2vh; }
-.con_bo { width: 150%; padding-left: 50px; display: flex; align-items: flex-end; }
+.con_fr { position: absolute; width: 37vw; height: 26vh; overflow: hidden; right: 0; bottom: 2vh; }
+.con_box { width: 150%; display: flex; align-items: flex-end; }
 .con_box .on { display: none; }
 .new_b { display: block; width: 7vw; box-shadow: 1px 0px 5px cornsilk; margin: 20px 50px 20px 0; float: left; }
 .txt_box { display: none; }

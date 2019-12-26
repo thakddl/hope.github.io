@@ -18,10 +18,10 @@
     @media screen and (max-width:767px) {
         #m_cover { display: block; height: 55vh; }
         #de_cover { display: none; }
-        
+
         .vs_bottom { position: relative; height: 45vh; display: flex; flex-flow: column; justify-content: space-around; align-items: center; }
-        #min { position: relative; left: -60px; top: auto; width: 180px; height: 110px; line-height: 110px; font-size: 25px; text-indent: 5px; }
-        .spl_bar { height: 22px; }
+        #min { position: relative; left: -60px; top: auto; width: 160px; height: 100px; line-height: 100px; font-size: 20px; text-indent: 5px; }
+        .spl_bar { height: 20px; }
         #m_logo { display: block; }
 
         .con_menu { display: none; }
@@ -34,20 +34,24 @@
         #vs_bo { margin: 0 auto; padding-top: 40px; width: 250px; text-align: center; font-size: 13px; }
     }
     @media screen and (min-width:768px) and (max-width:1200px) {
-        #m_cover { display: none; }
         #de_cover { display: none; }
+        #t_cover { display: block; width: auto; height: 50vh; margin-top: 10vh; animation: tcover 17s cubic-bezier(1,-0.01,0,1) infinite; }
 
-        #min { width: 250px; height: 120px; line-height: 120px; font-size: 30px; text-indent: 5px; left: 8vw; top: 64vh; }
-        .spl_bar { height: 22px; }
+        @keyframes tcover {
+            0% { transform: rotateZ(0deg); }
+            100% { transform: rotateZ(-360deg); }
+        }
+        .vs { position: relative; height: 100vh; display: flex; flex-flow: column; justify-content: space-around; align-items: center; }
+        #min { display: none; }
         #m_logo { display: block; }
         
-        .con_menu { width: 28vw; padding-left: 3vw; }
+        .con_menu { width: 28vw; margin-right: 0; }
         .con_menu h2 { margin-bottom: 50px; }
         .con_menu li { color: #555; font-size: 18px; margin: 10px 0; cursor: pointer; line-height: 35px; }
         .con_fr { display: none; }
-        #page2 { display: flex; justify-content: space-around; align-content: center; }
-        .con_wrap { margin: 0; padding: 0; }
-        #vs_book { width: 55vw; display: flex; justify-content: center; align-content: center; }
+        #page2 { display: flex; justify-content: center; align-content: center; }
+        .con_wrap { margin: 0; padding: 0; width: auto; }
+        #vs_book { width: 55vw; display: flex; justify-content: center; align-items: center; flex-flow: column; margin-left: 40px; }
         #vs_book img { height: 25vh; margin: 0; margin-left: -50px; padding: 0; }
         #vs_bo { width: 50vw; margin: 0; margin-top: 50px; }
     }
@@ -94,7 +98,7 @@
         </div>
     </header>
     <section class="page vs">
-        <video src="./data/vs3.mp4" class="cover" autoplay id="de_cover"></video>
+        <video src="./data/vs3.mp4" class="cover" autoplay muted id="de_cover"></video>
         <img src="./data/vsimg.jpg" alt="" class="cover" id="m_cover">
         <img src="./data/lolo.png" alt="" class="cover" id="t_cover">
         <div class="vs_bottom">
