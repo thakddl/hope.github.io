@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>민음사</title>
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/common.css">
@@ -19,7 +19,8 @@
         #m_cover { display: block; height: 55vh; }
         #de_cover { display: none; }
         
-        #min { position: relative; width: 180px; height: 110px; line-height: 110px; font-size: 25px; text-indent: 5px; left: 8vw; top: 40px; }
+        .vs_bottom { position: relative; height: 45vh; display: flex; flex-flow: column; justify-content: space-around; align-items: center; }
+        #min { position: relative; left: -60px; top: auto; width: 180px; height: 110px; line-height: 110px; font-size: 25px; text-indent: 5px; }
         .spl_bar { height: 22px; }
         #m_logo { display: block; }
 
@@ -95,18 +96,21 @@
     <section class="page vs">
         <video src="./data/vs3.mp4" class="cover" autoplay id="de_cover"></video>
         <img src="./data/vsimg.jpg" alt="" class="cover" id="m_cover">
-        <p id="min">
-            <span class="spl_bar" id="spl_top"></span>
-            <span class="spl it" id="spl1">M</span>
-            <span class="spl" id="spl2">I</span>
-            <span class="spl" id="spl3">N</span>
-            <span class="spl" id="spl4">U</span>
-            <span class="spl" id="spl5">M</span>
-            <span class="spl" id="spl6">S</span>
-            <span class="spl" id="spl7">A</span>
-            <span class="spl_bar" id="spl_bottom"></span>
-        </p>
-        <div class="lo_wrap"><a href="" id="m_logo"></a></div>
+        <img src="./data/lolo.png" alt="" class="cover" id="t_cover">
+        <div class="vs_bottom">
+            <p id="min">
+                <span class="spl_bar" id="spl_top"></span>
+                <span class="spl it" id="spl1">M</span>
+                <span class="spl" id="spl2">I</span>
+                <span class="spl" id="spl3">N</span>
+                <span class="spl" id="spl4">U</span>
+                <span class="spl" id="spl5">M</span>
+                <span class="spl" id="spl6">S</span>
+                <span class="spl" id="spl7">A</span>
+                <span class="spl_bar" id="spl_bottom"></span>
+            </p>
+            <a href="" id="m_logo"></a>
+        </div>
     </section>
     <section class="page" id="page2">
         <div class="con_menu">
