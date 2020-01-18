@@ -1,6 +1,6 @@
 @charset "utf-8";
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html, body { width: 100%; height: 100%; color:#fff;  background-color: #000; font-family: '777Minibeancafe'; }
+html, body { width: 100%; height: 100%; color:#fff; background-color: transparent; font-family: 'Indie Flower', 'UhBeeMiMi'; }
 html { overflow: hidden; }
 body { overflow: auto; }
 a { text-decoration: none; color:#fff; }
@@ -8,48 +8,76 @@ ul { list-style: none; }
 ::-webkit-scrollbar { display: none; }
 ::-moz-scrollbar { display: none; }
 ::-o-scrollbar { display: none; }
+/* universe */
+.container { position: fixed; width: 100%; height: 100%; background-image: radial-gradient(1200px at 60% 120%, rgb(23, 28, 58) 5%, #020409 100%); }
+.content { width: inherit; height: inherit; }
+#universe { width: 100%; height: 100%; }
 
 .page { width: 100%; height: 100vh; position: relative; overflow: hidden; }
-#about { background-color: #333; }
-
-
-
-.hd { position: fixed; z-index: 999; width: 100%; font-family: 'godoMaum'; }
-.gnb { color: #fff; font-size: 58px; width: 90%; overflow: hidden; display: flex; justify-content:space-evenly; padding: 30px 0; }
+.hd { position: fixed; z-index: 999; width: 100%; }
+.gnb { color: #fff; font-size: 35px; width: 80%; overflow: hidden; display: flex; justify-content: space-evenly; padding-top: 50px; margin-left: 5%; }
 .gnb li { transform: translateX(300px); opacity: 0; cursor: pointer; transition: 1.5s; }
-.fa-cog { position: fixed; z-index: 1000; right: 80px; top: 30px; color: #fff; font-size: 50px; animation: snow 4s infinite linear; cursor: pointer; }
-@keyframes snow {
-  0% { transform: scale(0.7) rotate(0deg); }
-  50% { transform: scale(1.05) rotate(180deg); }
-  100% { transform: scale(0.7) rotate(360deg); }
+#moon { position: fixed; z-index: 1000; right: 11.5%; top: 40px; width: 65px; animation: scale 5s infinite linear; cursor: pointer; transform-origin: 50% 60%; }
+#info { position: absolute; font-size: 24px; right: 6%; top: 13vh; text-shadow: 1px 1px 10px #fff; }
+
+@keyframes scale {
+  0% { transform: scale(0.8) rotate(0deg); }
+  50% { transform: scale(1.0) rotate(180deg); }
+  100% { transform: scale(0.8) rotate(360deg); }
 }
 @keyframes circle { 
   from { transform: rotate(0deg); }
   to { transform: rotate(-360deg); }
 }
 
+/* home */
+#hi { display: block; width: 600px; text-align: center; font-size: 40px; margin: 19% auto; }
+
 /* about page */
-#about { padding-top: 20vh; }
-#card { width: 60%; height: 60vh; margin: 0 auto; border: 1px solid ;  }
-#hi_box { position: absolute; right: 25%; top: 20vh; font-size: 30px; }
-#char { transform: rotateZ(10deg); }
-#hi_box p { padding-top: 20px; }
+#about { padding-top: 28vh; }
+#card { display:block; width: 60%; height: 60vh; margin: auto; border: 1px solid #fff; }
+#character { position: absolute; left: 15%; top: 22vh; float: left; transform: rotateZ(-10deg); }
+/* #hi_box p { float: left; padding-left: 20px; padding-top: 30px; } */
 
 /* ability page */
-#planet_wrap { width: 96%; height: 96vh; margin: 3vh auto; position: relative; }
-#ring { display: block; width: 270px; height: 270px; animation: circle 25s infinite linear; cursor: pointer; top: 16vh; left: 10%; }
-#html { width: 190px; height: 190px; top: 32vh; right: 22%; transform: rotateZ(-130deg); }
-#css { width: 190px; height: 190px;  top: 17vh; right: 50%; transform: rotateZ(-10deg); }
-#javascript { width: 130px; height: 130px; top: 12vh; right: 10%; transform: rotateZ(-110deg); }
-#jquery { width: 360px; height: 360px; bottom: 10vh; right: 38%; transform: rotateZ(20deg); }
-#php { width: 150px; height: 150px; bottom: 23vh; left: 23%; }
-#photoshop { width: 160px; height: 160px; bottom: 15vh; right: 14%; transform: rotateZ(-20deg); }
+#planet_wrap { width: 87%; height: 85vh; margin: 13vh auto; position: relative; }
+#ring { display: block; width: 250px; height: 250px; animation: circle 25s infinite linear; cursor: pointer; top: 10%; left: 10%; }
+#html { width: 130px; height: 130px; top: 28%; right: 25%; transform: rotateZ(-130deg); }
+#css { width: 160px; height: 160px;  top: 17%; right: 50%; transform: rotateZ(-10deg); }
+#javascript { width: 100px; height: 100px; top: 12%; right: 10%; transform: rotateZ(-110deg); }
+#jquery { width: 310px; height: 310px; bottom: 10%; right: 38%; transform: rotateZ(20deg); }
+#php { width: 130px; height: 130px; bottom: 23%; left: 23%; }
+#photoshop { width: 140px; height: 140px; bottom: 15%; right: 14%; transform: rotateZ(-20deg); }
+#ability p { position: absolute; display: block; font-size: 27px; }
+#front { top: 21.2%; left: 14.2%; text-align: center; }
+#html_tit { top: 40%; right: 32.8%; }
+#css_tit { top: 14%; right: 54.3%; }
+#javascript_tit { top: 14%; right: 18%; }
+#jquery_tit { bottom: 22%; left: 38%; }
+#php_tit { bottom: 22%; left: 20%; }
+#photoshop_tit { bottom: 15%; right: 22%;  }
+.planet { cursor: pointer; }
+.planet_tit { opacity: 0; transform: translateX(-200px); }
 
 /* works page */
-#soso { display: block; height: 700px; position: absolute; bottom: 0; right: 7vw; }
-.work_part { display: flex; margin-left: 4vw; width: 70%; height: 100vh; justify-content: space-evenly; align-items: flex-end;  text-align: center; }
-.work_box li { padding-bottom: 10px; }
-.part_tit { color: #fff; font-size: 45px; font-weight: 100; padding-bottom: 20px; }
-.lnk h3 { font-size: 28px; font-weight: 100; }
-.lnk p { font-size: 22px; margin-top: -5px; }
+.me { position: absolute; width: 250px; bottom: 4vh; right: 22vw; }
+#charlee { display: block; height: 700px; }
+#hover { position: absolute; width: 180px; font-size: 22px; top: 22%; right: -35%; transform: rotateZ(65deg); transform-origin: 50% 50%; text-shadow: 5px -3px 10px #fff;  }
+@keyframes move { 
+  0% { text-shadow: 1px 1px 10px #fff; }
+  50% { text-shadow: -15px -5px 10px #fff; }
+  100% { text-shadow: 1px 1px 10px #fff; }
+} 
+.work_part { width: 910px; text-align: center; margin: 0 15%; margin-top: 25vh; } 
+.part { clear: both; padding-bottom: 200px; }
+.part_tit { color: #fff; padding-top: 20px; font-size: 30px; font-weight: 100; float: left; }
+.work_box { float: right; }
+.work_box li { float:left; margin-left: 30px; }
+.lnk h3 { font-size: 22px; font-weight: 100; }
+.lnk p { font-size: 18px; margin-top: -5px; }
 
+/* contact page */
+.l1 { width: 1px; height: 100vh; background-color: #fff; display: block; position: absolute; left: 100px; top: 0; }
+#ii { margin: 200px auto; }
+#contact p { position: absolute; }
+#thank { font-size: 50px; top: 45vh; left: 45%; }
