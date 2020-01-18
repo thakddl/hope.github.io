@@ -38,6 +38,25 @@ $(document).ready(function(){
       $("html, body").not(":animated").animate({"scrollTop":"-="+ht+"px"}, 900, 'easeOutQuad')
     }
   });
+//planets control
+  $("#ring").click(function(){
+    $("#ring_wrap").css({"width":"250px", "heigth":"250px", "left":"15%", "top":"20%" });
+    $("#ring_tit").text("Cilck planets.");
+    $("#planet_box").css({"width":"87%", "transform":"translate(0%)"});
+    $("#ability_box li").stop().hide(1000);
+  });
+
+  $(".planet_wrap").click(function(){
+    $("#ring_wrap").css({"width":"210px", "heigth":"210px", "top":"17%", "left":"9%"});
+    var num = $(this).index();
+    var arr = ["HTML5","CSS3","Javascript","jQuery","PHP","Design tools"];
+    var skill = arr[num];
+    $("#ring_tit").text(skill);
+    $("#planet_box").css({"width":"60%", "transform":"translate(25%)"});
+    $("#ability_box li:eq("+num+")").stop().show(1000);
+    $("#ability_box li:eq("+num+")").siblings().stop().hide(1000);
+  });
+
   //works hover effect
   $(".me").mouseover(function(){
     $("#charlee").attr("src","./data/somang.png");
