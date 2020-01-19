@@ -42,14 +42,14 @@ $(document).ready(function(){
   sw=false;
   $("#ring").click(function(){
     sw=true;
-    $("#ring_wrap").css({"width":"250px", "heigth":"250px", "left":"15%", "top":"20%" });
+    $("#ring_wrap").css({"width":"25vh", "heigth":"25vh", "top":"20%", "left":"15%" });
     $("#ring_tit").text("Cilck planets.");
     $("#planet_box").css({"width":"87%", "transform":"translate(0%)"});
     $("#ability_box li").stop().hide(1000); 
   });
   $(".planet_wrap").click(function(){
     sw=false;
-    $("#ring_wrap").css({"width":"210px", "heigth":"210px", "top":"17%", "left":"9%"});
+    $("#ring_wrap").css({"width":"21vh", "heigth":"21vh", "top":"17%", "left":"9%"});
     var name = document.getElementById("ring_tit");
     var idx = $(this).index();
     var arr = [90,85,73,85,65,72];
@@ -67,11 +67,11 @@ $(document).ready(function(){
   });
   //works hover effect
   $(".me").mouseover(function(){
-    $("#charlee").attr("src","./data/somang.png");
+    $("#charlee").attr("src","./data/somang.png").css({"height":"77vh","margin-top":"-2vh","margin-left":"-1vw"});
     $("#hover").text("Just tell me your style what you want.").css({"transform":"rotateZ(10deg) translateY(-150%) translateX(15%)", "font-size":"24px"});
   });
   $(".me").mouseout(function(){
-    $("#charlee").attr("src","./data/character lee.png");
+    $("#charlee").attr("src","./data/character lee.png").css({"height":"70vh","margin-top":"0vh","margin-left":"0vw"});
     $("#hover").text("Mouseover Me ! !").css({transform:"rotateZ(65deg)","font-size":"22px"});
   });
 });
