@@ -39,24 +39,32 @@ $(document).ready(function(){
     }
   });
 //planets control
+  sw=false;
   $("#ring").click(function(){
+    sw=true;
     $("#ring_wrap").css({"width":"250px", "heigth":"250px", "left":"15%", "top":"20%" });
     $("#ring_tit").text("Cilck planets.");
     $("#planet_box").css({"width":"87%", "transform":"translate(0%)"});
-    $("#ability_box li").stop().hide(1000);
+    $("#ability_box li").stop().hide(1000); 
   });
-
   $(".planet_wrap").click(function(){
+    sw=false;
     $("#ring_wrap").css({"width":"210px", "heigth":"210px", "top":"17%", "left":"9%"});
-    var num = $(this).index();
-    var arr = ["HTML5","CSS3","Javascript","jQuery","PHP","Design tools"];
-    var skill = arr[num];
-    $("#ring_tit").text(skill);
+    var name = document.getElementById("ring_tit");
+    var idx = $(this).index();
+    var arr = [90,85,73,85,65,72];
+    var score = arr[idx]; var x = 55;
+    function counter(){
+    if(sw==true){ return false; }//or x=score;
+    else if ( x++<score ) {
+      name.innerText = x+"%";
+      setTimeout(counter,1);
+    }  
+    } counter();
     $("#planet_box").css({"width":"60%", "transform":"translate(25%)"});
-    $("#ability_box li:eq("+num+")").stop().show(1000);
-    $("#ability_box li:eq("+num+")").siblings().stop().hide(1000);
+    $("#ability_box li:eq("+idx+")").stop().show(1000);
+    $("#ability_box li:eq("+idx+")").siblings().stop().hide(1000);
   });
-
   //works hover effect
   $(".me").mouseover(function(){
     $("#charlee").attr("src","./data/somang.png");

@@ -31,7 +31,7 @@ ul { list-style: none; }
 }
 
 /* home */
-#hi { display: block; width: 600px; text-align: center; font-size: 40px; margin: 19% auto; }
+#hi { display: block; width: 600px; text-align: center; font-size: 40px; margin: 40vh auto; }
 
 /* about page */
 #about { padding-top: 28vh; }
@@ -43,52 +43,54 @@ ul { list-style: none; }
 /* ability page */
 #planet_box { width: 87%; height: 85vh; margin: 13vh auto; position: relative; transition: 1s; z-index: 887; }
 .planet { cursor: pointer; width: 100%; height: 100%; }
-.planet_tit { position: absolute; display: block; font-size: 24px; }
+.planet_tit { position: absolute; display: block; font-size: 22px; }
 .planet_wrap { position: absolute; }
 
-#ring_wrap { position: absolute; z-index: 888; cursor: pointer; top: 20%; left: 15%; width: 250px; height: 250px; transition: 1s; }
+#ring_wrap { position: absolute; z-index: 888; cursor: pointer; top: 20%; left: 15%; width: 25vh; height: 25vh; transition: 1s; }
 #ring { display: block; width: 100%; height: 100%; animation: circle 25s infinite linear; }
-#ring_tit { position: absolute; font-size: 27px; text-align: center; width: 100%; top: 43%; }
+#ring_tit { position: absolute; font-size: 25px; text-align: center; width: 100%; top: 43%; }
 
-#html_wrap { width: 130px; height: 130px; top: 28%; right: 25%;  position: absolute;}
+#html_wrap { width: 13vh; height: 13vh; top: 28%; right: 25%;  position: absolute;}
 #html { transform: rotateZ(-130deg); }
 #html_tit { top: 85%; left: -32%; }
 
-#css_wrap { width: 160px; height: 160px; top: 17%; right: 50%;  position: absolute;}
+#css_wrap { width: 16vh; height: 16vh; top: 17%; right: 50%;  position: absolute;}
 #css { transform: rotateZ(-10deg); }
 #css_tit { top: -14%; left: 25%; }
 
-#javascript_wrap { width: 100px; height: 100px; top: 12%; right: 10%; }
+#javascript_wrap { width: 10vh; height: 10vh; top: 12%; right: 10%; }
 #javascript { transform: rotateZ(-110deg); }
 #javascript_tit { top: -40%; left: -40%; }
 
-#jquery_wrap { width: 310px; height: 310px; bottom: 10%; right: 38%; }
+#jquery_wrap { width: 31vh; height: 31vh; bottom: 10%; right: 38%; }
 #jquery { transform: rotateZ(20deg); }
 #jquery_tit { top: 10%; left: -8%; }
 
-#php_wrap { width: 130px; height: 130px; bottom: 28%; left: 19%; }
+#php_wrap { width: 13vh; height: 13vh; bottom: 28%; left: 19%; }
 #php_tit { top: 90%; left: -23%; }
 
-#design_wrap { width: 140px; height: 140px; bottom: 15%; right: 14%; }
+#design_wrap { width: 14vh; height: 14vh; bottom: 15%; right: 14%; }
 #design { transform: rotateZ(-20deg); }
 #design_tit { top: 95%; left: -40%; }
 
-#ability_box { position: absolute; top: 26%; left: 23%; font-size: 20px; width: 550px; height: 300px; }
+#ability_box { position: absolute; top: 25%; left: 23%; font-size: 23px; width: 550px; height: 300px; }
 #ability_box li { position: absolute; display: none; }
+#ability_box li h3 { padding-bottom: 10px; }
+#ability_box li span { display: block; padding: 5px 0; }
 
 
 /* works page */
-.me { position: absolute; width: 250px; bottom: 4vh; right: 19vw; }
-#charlee { display: block; height: 700px; }
-#hover { position: absolute; width: 180px; font-size: 22px; top: 22%; right: -35%; transform: rotateZ(65deg); transform-origin: 50% 50%; text-shadow: 5px -3px 10px #fff;  }
-.work_part { width: 910px; text-align: center; margin: 0 17%; margin-top: 25vh; } 
+#works { padding-top: 25vh; }
+.work_wrap { width: 1250px; margin: 0 auto; }
+.me { float: left; width: 25vh; position: relative; }
+#charlee { display: block; height: 70vh; }
+#hover { position: absolute; width: 180px; font-size: 22px; top: 22%; left: 60%; transform: rotateZ(65deg); transform-origin: 50% 50%; text-shadow: 5px -3px 10px #fff; }
+.work_part { float: left; width: 910px; margin-right: 3vw; text-align: center; } 
 .part { clear: both; padding-bottom: 200px; }
 .part_tit { color: #fff; padding-top: 20px; font-size: 30px; font-weight: 100; float: left; }
 .work_box { float: right; }
 .work_box li { float:left; margin-left: 30px; }
 .work_box li:hover { text-shadow: 3px 3px 10px #fff; }
-.lnk h3 { font-size: 22px; font-weight: 100; }
-.lnk p { font-size: 18px; margin-top: -5px; }
 
 /* contact page */
 #rocket { position: absolute; width: 55px; left: 19%; bottom: 33vh; animation: rocket 7s ease-out infinite; }
@@ -102,5 +104,5 @@ ul { list-style: none; }
   18% { transform: rotateZ(0deg); width: 55px; left: 19%; bottom: 33vh;  }
   100% { bottom: 92vh; left: 85%; width: 15px; }
 }
-#thank { position: absolute; font-size: 60px; top: 45vh; left: 43%; }
-#box { position: absolute; font-size: 30px; left: 15%; bottom: 18vh; }
+#thank { font-size: 60px; text-align: center; margin: 45vh auto; }
+#box { position: absolute; font-size: 30px; left: 25vh; bottom: 18vh; }
