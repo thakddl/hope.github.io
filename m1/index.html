@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/font.css">
     <link href="https://fonts.googleapis.com/css?family=Baskervville|Nanum+Myeongjo&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <script src="https://code.jquery.com/jquery-latest.js"></script>
     <script src="index.js"></script>
     <script src="common.js"></script>
@@ -33,7 +33,7 @@
         </label>
         <a href="index.html" id="logo"></a>
         <label for="ck2" id="t_btn2">
-            <span></span> 
+            <i class="fas fa-sign-in-alt"></i>
         </label>
     </header>
     <nav class="gnb">
@@ -122,5 +122,11 @@
     <footer id="ft">
         <p class="copyright">COPYRIGHTⓒ 2019 Hope Lee. <br> ALL RIGHTS RESERVED.</p>
     </footer>
+    <script>
+        
+        <i class="fas fa-sign-in-alt"></i>
+        <i class="fas fa-sign-out-alt"></i>
+    $("#ck2").prop(":checked").removeClass("fa-sign-in-alt").addClass("fa-sign-out-alt")
+    </script>
 </body>
 </html>
