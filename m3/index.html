@@ -14,6 +14,7 @@
     <meta property="og:description" content="더 편리한 국민은행 모바일">
     <meta property="og:image" content="./data/icon.png">
     <meta property="og:update_time" content="2019.12.22">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <script src="https://code.jquery.com/jquery-latest.js"></script>
     <script>
         $(document).ready(function(){
@@ -131,6 +132,7 @@
         #f_btn_box { width: 100%; height: 100px; overflow: hidden; }
         .titt { text-indent: 15px; margin-top: 15px; font-size: 13px; font-weight: bold; float: left; }
         #f_set { text-indent: 13px; margin-top: 15px; margin-right: 15px; font-size: 12px; float: right; }
+        #f_set i { margin-right: 5px; }
         .lst_wrap { width: 93%; margin: 0 auto; display: flex; height: 65px; align-items: center; justify-content: space-around; }
         .lst_wrap p { font-size: 13px; color: #999; }
 
@@ -142,7 +144,7 @@
         #page2 { height: 33vh; padding-top: 17px; box-sizing: border-box; }
         .box h4 { text-indent: 15px; font-size: 13px; }
         #con_wrap { display: flex; margin: 20px auto; width: 90%; justify-content: space-around; align-items: center; font-size: 13px; }
-        #con_wrap img { display: block; width: 30px; height: 30px; margin: 0 auto; }
+        #con_wrap i { margin-right: 5px; }
         #con_wrap2 { font-size: 13px; line-height: 22px; text-indent: 20px; margin-top: 15px; }
         #more { float: right; margin-right: 20px; margin-top: -18px; }
 
@@ -160,6 +162,7 @@
         .ft { width: 100%; height: 12vh; background-color: rgb(200,200,200); }
         .fnb { display: flex; width: 95%; margin: 0 auto; height: 100%; justify-content: space-around; align-items: center; font-size: 12px;}
         .fnb li { display: flex; flex-flow: column; justify-content: space-around; align-items: center; }
+        .fnb li i { margin-bottom: 5px; }
     </style>
 </head>
 <body>
@@ -230,7 +233,7 @@
         </div>
         <div id="f_btn_box">
             <p class="titt">다른 로그인 방식 선택</p>
-            <p id="f_set"><img src="" alt="#">설정</p>
+            <p id="f_set"><i class="fas fa-cog"></i>설정</p>
             <div class="lst_wrap">
                 <button class="f_btn">간편<br>비밀번호</button>
                 <p>|</p>
@@ -256,11 +259,11 @@
         <div class="box">
             <h4>빠른 메뉴</h4>
             <ul id="con_wrap">
-                <li><a href=""><img src="" alt="#">챗봇 상담</a></li>
+                <li><a href=""><i class="fas fa-headset"></i>챗봇 상담</a></li>
                 <p>|</p>
-                <li><a href=""><img src="" alt="#">자산관리</a></li>
+                <li><a href=""><i class="far fa-address-book"></i>자산관리</a></li>
                 <p>|</p>
-                <li><a href=""><img src="" alt="#">KB금융그룹</a></li>
+                <li><a href=""><i class="fas fa-university"></i>KB금융그룹</a></li>
             </ul>
         </div>
         <div class="box">
@@ -287,23 +290,23 @@
     <footer class="ft">
         <ul class="fnb">
             <li>
-                <img src="" alt="#">
+                <i class="fas fa-home"></i>
                 <p>홈</p>
             </li>
             <li>
-                <img src="" alt="#">
+                <i class="fas fa-user-check"></i>
                 <p>전계좌조회</p>
             </li>
             <li>
-                <img src="" alt="#">
+                <i class="fas fa-share-square"></i>
                 <p>빠른 이체</p>
             </li>
             <li>
-                <img src="" alt="#">
+                <i class="fas fa-piggy-bank"></i>
                 <p>금융상품</p>
             </li>
             <li>
-                <img src="" alt="#">
+                <i class="fas fa-headset"></i>
                 <p>상담/예약</p>
             </li>
         </ul>
