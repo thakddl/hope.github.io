@@ -13,7 +13,7 @@ img, a, label, span, input, button, select { display: block; margin: 0; padding:
 #ck1:checked ~ #hd #line2 { opacity: 0; }
 #ck1:checked ~ #hd #line3 { transform: translateX(-5px) translateY(-13px) rotateZ(-45deg); transform-origin: 50% 50%; width: 40px; height: 3px;  border-radius: 2px;}
 #t_btn2 { right: 15px; }
-#ck2:checked ~ #hd #t_btn2 span { width: 10px; height: 10px; background-color: #97894a; margin: 20px auto; }
+.fas { font-size: 23px; color: #97894a; margin: 13.5px; }
 .ck { display: none; }
 
 .gnb { position: fixed; top: 80px; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.9); left: -100vw; transition: 0.6s;}
