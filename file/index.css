@@ -50,8 +50,8 @@ ul { list-style: none; }
 
 /* about page */
 #about { padding-top: 33vh; padding-left: 6vw; }
-#about_wrap { width: 1200px; height: 50vh; margin: 0 auto; }
-#ab_box { float: left; margin-right: 4vw; margin-top: -7vh;  transform: rotateZ(-10deg); font-size: 25px; }
+#about_wrap { width: 70%; min-width: 1150px; height: 50vh; margin: 0 auto; }
+#ab_box { float: left; margin-right: 4vw; margin-top: -7vh; transform: rotateZ(-10deg); font-size: 25px; }
 #ab_img { display: block; height: 25vh; }
 /* @keyframes char { 흔들리는 기능. 사용안함 animation: char 3s ease-out; transform-origin: 50% 0; 
   0% { transform: rotateZ(40deg); }
@@ -64,7 +64,7 @@ ul { list-style: none; }
   100% { transform: rotateZ(0deg); }
 } */
 
-#card { float: left; font-size: 23px; columns: 2; }
+#card { float: left; width: 857px; font-size: 23px; columns: 2; }
 #card li { padding-bottom: 5vh; margin-left: 3vw; }
 #card p { text-indent: 7px; } 
 #edu_lst li { clear: both; padding-bottom: 0vh; margin-left: 0vw;  }
@@ -115,8 +115,8 @@ ul { list-style: none; }
 
 /* works page */
 #works { padding-top: 25vh; }
-.work_wrap { width: 62%; margin: 0 auto; }
-.work_part { float: left; margin-right: 3vw; text-align: center; } 
+.work_wrap { width: 61%; min-width: 850px; margin: 0 auto; }
+.work_part { float: left; min-width: 635px; margin-right: 3vw; text-align: center; } 
 
 .part { clear: both; }
 .part_tit { color: #fff; padding-top: 20px; font-size: 30px; font-weight: 100; float: left; }
@@ -145,4 +145,4 @@ ul { list-style: none; }
   100% { bottom: 94vh; left: 94%; width: 15px; }
 }
 #thank { font-size: 60px; text-align: center; margin: 45vh auto; }
-#box { position: absolute; font-size: 30px; left: 25vh; bottom: 18vh; }
+#box { position: absolute; font-size: 30px; left: 25vh; bottom: 18vh; font-family: 'UhBeeMiMi' }
