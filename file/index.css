@@ -32,16 +32,16 @@ ul { list-style: none; }
   to { transform: rotateY(180deg) rotateZ(-12deg); }
 }
 #moon_btn { position: fixed; z-index: 1000; right: 60px; top: 40px; }
-#moon {  width: 50px; animation: scale 5s infinite linear; cursor: pointer; transform-origin: 50% 60%; transform: rotate(70deg) rotateY(180deg); }
+#moon {  width: 50px; animation: scale 5s infinite linear; cursor: pointer; transform-origin: 50% 60%; transform: rotate(-90deg) rotateY(180deg) rotateX(-180deg); }
 #info { position: absolute; font-size: 24px; width: 200px; margin-left: -55px; padding-top: 15px; text-shadow: 3px 3px 15px #fff; }
 @keyframes scale {
-  0% { transform: scale(0.8) rotate(0deg) rotateY(180deg); }
-  50% { transform: scale(1.0) rotate(180deg) rotateY(180deg); }
-  100% { transform: scale(0.8) rotate(360deg) rotateY(180deg); }
+  0% { transform: scale(0.8) rotate(0deg) rotateY(180deg) rotateX(-180deg); }
+  50% { transform: scale(1.0) rotate(180deg) rotateY(180deg) rotateX(-180deg); }
+  100% { transform: scale(0.8) rotate(360deg) rotateY(180deg) rotateX(-180deg); }
 }
 @keyframes circle { 
-  from { transform: rotate(70deg) rotateY(180deg); }
-  to { transform: rotate(-290deg) rotateY(180deg); }
+  from { transform: rotate(-90deg) rotateY(180deg) rotateX(-180deg); }
+  to { transform: rotate(-450deg) rotateY(180deg) rotateX(-180deg); }
 }
 
 
