@@ -5,7 +5,7 @@ $(document).ready(function(){
   function menu()
   {
     if(sw==true){
-      $("#moon").css("animation", "circle 4s 1 linear");
+      $("#moon").css("animation", "circle 4s 1 ease-out");
       for(var a=0; a<5; a++){
         $(".gnb li:eq("+a+")").css({"transform":"translateX(0px)", "opacity":"1", "transition-delay":a*0.4+"s"});
       }
