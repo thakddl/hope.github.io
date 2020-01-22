@@ -5,9 +5,9 @@ html { overflow: hidden; }
 body { overflow: auto; }
 a { text-decoration: none; color: #fff; }
 ul { list-style: none; }
-::-webkit-scrollbar { display: none; }
+/* ::-webkit-scrollbar { display: none; }
 ::-moz-scrollbar { display: none; }
-::-o-scrollbar { display: none; }
+::-o-scrollbar { display: none; } */
 /* universe */
 .container { position: fixed; width: 100%; height: 100%; background-image: radial-gradient(1200px at 60% 120%, rgb(23, 28, 58) 5%, #020409 100%); }
 .content { width: inherit; height: inherit; }
@@ -65,6 +65,8 @@ ul { list-style: none; }
 } */
 
 #card { float: left; width: 857px; font-size: 23px; columns: 2; }
+.card_lst { transition: 0.7s ease-out; transform: translateX(3vw); opacity: 0; }
+.on { transform: translateX(0vw) translateY(0vh); opacity: 1; }
 #card li { padding-bottom: 5vh; margin-left: 3vw; }
 #card p { text-indent: 7px; } 
 #edu_lst li { clear: both; padding-bottom: 0vh; margin-left: 0vw;  }
@@ -80,6 +82,12 @@ ul { list-style: none; }
 .planet { cursor: pointer; width: 100%; height: 100%; }
 .planet_tit { position: absolute; display: block; font-size: 22px; }
 .planet_wrap { position: absolute; }
+.planet_wrap:hover { animation: planet 0.6s infinite linear; }
+@keyframes planet{
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
 
 #ring_wrap { position: absolute; z-index: 888; cursor: pointer; top: 22%; left: 15%; width: 25vh; height: 25vh; transition: 1s; }
 #ring { display: block; width: 100%; height: 100%; animation: circle 25s infinite linear; }
@@ -130,10 +138,9 @@ ul { list-style: none; }
 #hover { position: absolute; width: 180px; font-size: 22px; top: 22%; left: 60%; transform: rotateZ(65deg); transform-origin: 50% 50%; text-shadow: 5px -3px 10px #fff; }
 
 /* contact page */
-#rocket { position: absolute; width: 55px; left: 19%; bottom: 33vh; animation: rocket 8s ease-out infinite; }
+#rocket { position: absolute; width: 55px; left: 19%; bottom: 33vh; }
 @keyframes rocket { 
   0% { transform: rotateZ(0deg); }
-  10% { transform: rotateZ(0deg); }
   11% { transform: rotateZ(10deg); }
   12% { transform: rotateZ(0deg); }
   13% { transform: rotateZ(10deg); }

@@ -10,7 +10,7 @@ $(document).ready(function(){
         $(".gnb li:eq("+a+")").css({"transform":"translateX(0px)", "opacity":"1", "transition-delay":a*0.4+"s"});
       }
     } else{
-      $("#moon").css("animation", "scale 5s infinite linear");
+      $("#moon").css("animation", "scale 4s infinite linear");
       var d = 0;
       for(var a=4; a>-1; a--){
         d++
@@ -27,17 +27,11 @@ $(document).ready(function(){
     tar_idx = tar.index();
     var lf=tar.offset().left;
     var wd=tar.width();
-      $("#fishing").stop().fadeIn(500).css( {"left": lf+wd-10+"px"} );
-      $("#float").stop().fadeOut(1000);
+      $("#float").stop().fadeOut(200);
+      $("#fishing").stop().fadeOut(200);
+      setTimeout(function(){$("#fishing").stop().css({"left": lf+wd-10+"px"}).fadeIn(600);}, 220) 
   }
-  //fishing first position
-  var st = $("body").scrollTop(); //html은 overflow hidden상태이므로 스크롤 불가능 
-  var idx = st/ht;
-  tar = $(".gnb li:eq("+idx+")");
-  tar_idx = tar.index();
-  var lf=tar.offset().left;
-  var wd=tar.width();
-  $("#fishing").stop().css( {"left": lf+wd-10+"px"} );
+
   //moon cilck effect
   $("#moon").click(function(){
     $("#info").fadeOut(500);
@@ -47,13 +41,31 @@ $(document).ready(function(){
       setTimeout(fishing,3000);
     } 
     else { menu();
-      setTimeout(function(){$("#fishing").fadeOut();},1500);
+      setTimeout(function(){$("#fishing").fadeOut();},1000);
       setTimeout(function(){$("#hide").css("display","none");}, 2400); 
     }
   });
   //scroll effect
   $("body, html").scroll(function() { 
     if(sw==false){fishing();}
+    $("#info").fadeOut(500);
+
+    obj = $("#about").offset().top;
+    idx=-1
+    if( 0==obj){
+      function pl(){
+      if (idx++<=4){
+          $("#card li.card_lst:eq("+idx+")").addClass("on");
+          setTimeout(pl,250);
+        } 
+      }pl()
+    } else { $("#card li").removeClass("on"); }
+
+    p = $("#contact").offset().top;
+    console.log(p);
+    if(0==p){
+      $("#rocket").css("animation","rocket 8s ease-out infinite");
+    } else { $("#rocket").css("animation","");}
   });
 
   // gnb li cilck & hover effect
@@ -85,7 +97,6 @@ $(document).ready(function(){
       $("html, body").not(":animated").animate({"scrollTop":"-="+ht+"px"}, 900, 'easeOutQuad')
     }
   });
-
 //planets control
   sw2=false;
   $("#ring").click(function(){
