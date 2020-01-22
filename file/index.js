@@ -53,17 +53,19 @@ $(document).ready(function(){
     obj = $("#about").offset().top;
     idx=-1
     if( 0==obj){
+      $("#ab_box").fadeIn(500);
       function pl(){
-      if (idx++<=4){
+        if (idx++<=4){
           $("#card li.card_lst:eq("+idx+")").addClass("on");
-          setTimeout(pl,250);
+          setTimeout(pl,300);
         } 
       }pl()
-    } else { $("#card li").removeClass("on"); }
+    } else { 
+      $("#ab_box").fadeOut(200);
+      $("#card li").removeClass("on"); }
 
     p = $("#contact").offset().top;
-    console.log(p);
-    if(0==p){
+      if(0==p){
       $("#rocket").css("animation","rocket 8s ease-out infinite");
     } else { $("#rocket").css("animation","");}
   });

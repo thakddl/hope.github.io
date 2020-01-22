@@ -51,7 +51,7 @@ ul { list-style: none; }
 /* about page */
 #about { padding-top: 33vh; padding-left: 6vw; }
 #about_wrap { width: 70%; min-width: 1150px; height: 50vh; margin: 0 auto; }
-#ab_box { float: left; margin-right: 4vw; margin-top: -7vh; transform: rotateZ(-10deg); font-size: 25px; }
+#ab_box { float: left; margin-right: 4vw; margin-top: -7vh; transform: rotateZ(-10deg); font-size: 25px; display: none; }
 #ab_img { display: block; height: 25vh; }
 /* @keyframes char { 흔들리는 기능. 사용안함 animation: char 3s ease-out; transform-origin: 50% 0; 
   0% { transform: rotateZ(40deg); }
@@ -148,7 +148,8 @@ ul { list-style: none; }
   15% { transform: rotateZ(10deg); }
   16% { transform: rotateZ(0deg); }
   17% { transform: rotateZ(10deg); }
-  18% { transform: rotateZ(0deg); width: 55px; left: 19%; bottom: 33vh; }
+  18% { transform: rotateZ(0deg); }
+  19% { transform: rotateZ(15deg); width: 55px; left: 19%; bottom: 33vh; }
   100% { bottom: 94vh; left: 94%; width: 15px; }
 }
 #thank { font-size: 60px; text-align: center; margin: 45vh auto; }
