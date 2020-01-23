@@ -144,4 +144,7 @@ $(document).ready(function(){
     $("#charlee").attr("src","./data/character lee.png").css({"height":"70vh","margin-top":"0vh","margin-left":"0vw"});
     $("#hover").text("Mouseover Me ! !").css({transform:"rotateZ(65deg)","font-size":"22px"});
   });
+    $(document).on("dragstart selectstart", function(){
+    return false;
+  });
 });
