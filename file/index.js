@@ -68,6 +68,11 @@ $(document).ready(function(){
       if(0==p){
       $("#rocket").css("animation","rocket 8s ease-out infinite");
     } else { $("#rocket").css("animation","");}
+
+    po = $("#ability").offset().top;
+    if(0!=po){
+      ring_reset();
+    }
   });
 
   // gnb li cilck & hover effect
@@ -101,12 +106,16 @@ $(document).ready(function(){
   });
 //planets control
   sw2=false;
-  $("#ring").click(function(){
+  function ring_reset()
+  {
     sw2=true;
     $("#ring_wrap").css({"width":"25vh", "heigth":"25vh", "top":"22%", "left":"15%" });
     $("#ring_tit").text("Cilck planets.");
     $("#planet_box").css({"width":"87%", "transform":"translate(0%)"});
     $("#ability_box li").stop().hide(1000); 
+  }
+  $("#ring").click(function(){
+    ring_reset();
   });
   $(".planet_wrap").click(function(){
     sw2=false;
@@ -116,11 +125,11 @@ $(document).ready(function(){
     var arr = [90,85,73,85,65,72];
     var score = arr[idx]; var x = 40;
     function counter(){
-    if(sw2==true){ return false; }//or x=score;
-    else if ( x++<score ) {
-      name.innerText = x+"%";
-      setTimeout(counter,1);
-    }  
+      if(sw2==true){ return false; }//or x=score;
+      else if ( x++<score ) {
+        name.innerText = x+"%";
+        setTimeout(counter, 1);
+        }  
     } counter();
     $("#planet_box").css({"width":"60%", "transform":"translate(25%)"});
     $("#ability_box li:eq("+idx+")").stop().show(1000);

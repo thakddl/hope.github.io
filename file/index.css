@@ -45,7 +45,7 @@ ul { list-style: none; }
 }
 
 /* home */
-#hi { display: block; width: 600px; text-align: center; font-size: 40px; margin: 40vh auto; }
+#hi { display: block; width: 350px; text-align: center; font-size: 40px; margin: 40vh auto; }
 #hi span { display: block; }
 
 /* about page */
@@ -140,8 +140,8 @@ ul { list-style: none; }
 /* contact page */
 #rocket { position: absolute; width: 55px; left: 19%; bottom: 33vh; }
 @keyframes rocket { 
-  0% { transform: rotateZ(0deg); }
-  11% { transform: rotateZ(10deg); }
+  3% { transform: rotateZ(0deg); }
+  11% { transform: rotateZ(15deg); }
   12% { transform: rotateZ(0deg); }
   13% { transform: rotateZ(10deg); }
   14% { transform: rotateZ(0deg); }
@@ -153,4 +153,4 @@ ul { list-style: none; }
   100% { bottom: 94vh; left: 94%; width: 15px; }
 }
 #thank { font-size: 60px; text-align: center; margin: 45vh auto; }
-#box { position: absolute; font-size: 30px; left: 25vh; bottom: 18vh; font-family: 'UhBeeMiMi' }
+#box { position: absolute; font-size: 30px; left: 25vh; bottom: 18vh; }
