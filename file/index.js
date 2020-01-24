@@ -1,5 +1,9 @@
 $(document).ready(function(){
-  //menu call
+  //setting
+  $(document).on("dragstart selectstart", function(){
+    return false;
+  });
+  //함수 setting
   var sw=true;
   var ht = $(window).height(); 
   function menu()
@@ -7,14 +11,14 @@ $(document).ready(function(){
     if(sw==true){
       $("#moon").css("animation", "circle 4s 1 ease-out");
       for(var a=0; a<5; a++){
-        $(".gnb li:eq("+a+")").css({"transform":"translateX(0px)", "opacity":"1", "transition-delay":a*0.4+"s"});
+        $(".gnb li:eq("+a+")").css({"transform":"translateX(0px)", "opacity":"1", "transition-delay":a*0.2+"s"});
       }
     } else{
       $("#moon").css("animation", "scale 4s infinite linear");
       var d = 0;
       for(var a=4; a>-1; a--){
         d++
-        $(".gnb li:eq("+a+")").css({"transform":"translateX(300px)", "opacity":"0", "transition-delay":d*0.3+"s"}
+        $(".gnb li:eq("+a+")").css({"transform":"translateX(300px)", "opacity":"0", "transition-delay":d*0.2+"s"}
         );
       }
     } sw=!sw;
@@ -31,18 +35,26 @@ $(document).ready(function(){
       $("#fishing").stop().fadeOut(200);
       setTimeout(function(){$("#fishing").stop().css({"left": lf+wd-10+"px"}).fadeIn(600);}, 220) 
   }
-
-  //moon cilck effect
+  sw2=false;
+  function ring_reset()
+  {
+    sw2=true;
+    $("#ring_wrap").css({"width":"25vh", "heigth":"25vh", "top":"22%", "left":"15%" });
+    $("#ring_tit").text("Cilck planets.");
+    $("#planet_box").css({"width":"87%", "transform":"translate(0%)"});
+    $("#ability_box li").stop().hide(1000); 
+  }
+  //menu call
   $("#moon").click(function(){
     $("#info").fadeOut(500);
     if ( sw ){
       $("#hide").css("display","block");
       setTimeout(menu,10);
-      setTimeout(fishing,3000);
+      setTimeout(fishing,1400);
     } 
     else { menu();
-      setTimeout(function(){$("#fishing").fadeOut();},1000);
-      setTimeout(function(){$("#hide").css("display","none");}, 2400); 
+      setTimeout(function(){$("#fishing").fadeOut();},800);
+      setTimeout(function(){$("#hide").css("display","none");}, 2000); 
     }
   });
   //scroll effect
@@ -52,7 +64,7 @@ $(document).ready(function(){
 
     obj = $("#about").offset().top;
     idx=-1
-    if( 0==obj){
+    if( 0<=obj){
       $("#ab_box").fadeIn(500);
       function pl(){
         if (idx++<=4){
@@ -60,9 +72,7 @@ $(document).ready(function(){
           setTimeout(pl,300);
         } 
       }pl()
-    } else { 
-      $("#ab_box").fadeOut(200);
-      $("#card li").removeClass("on"); }
+    } 
 
     p = $("#contact").offset().top;
       if(0==p){
@@ -105,15 +115,6 @@ $(document).ready(function(){
     }
   });
 //planets control
-  sw2=false;
-  function ring_reset()
-  {
-    sw2=true;
-    $("#ring_wrap").css({"width":"25vh", "heigth":"25vh", "top":"22%", "left":"15%" });
-    $("#ring_tit").text("Cilck planets.");
-    $("#planet_box").css({"width":"87%", "transform":"translate(0%)"});
-    $("#ability_box li").stop().hide(1000); 
-  }
   $("#ring").click(function(){
     ring_reset();
   });
@@ -135,16 +136,22 @@ $(document).ready(function(){
     $("#ability_box li:eq("+idx+")").stop().show(1000);
     $("#ability_box li:eq("+idx+")").siblings().stop().hide(1000);
   });
+  //work
+  var opt = "top=100, left=100, width=200, hight=600, menubar=no, location=yes, resizable=no, scrollbars=no, status=yes";
+  function openWindow(){ win = window.open(url, "win", opt, false); }
+  document.getElementById("open_btn").addEventListener("click",function(){ 
+    var url = $(this).attr("data-val");
+    openWindow(); });
   //works hover effect
   $(".me").mouseover(function(){
-    $("#charlee").attr("src","./data/somang.png").css({"height":"77vh","margin-top":"-2vh","margin-left":"-1vw"});
+    $("#real").css({"display":"block"});
+    $("#charlee").css({"display":"none"});
+
     $("#hover").text("Just tell me your style what you want.").css({"transform":"rotateZ(10deg) translateY(-150%) translateX(15%)", "font-size":"24px"});
   });
   $(".me").mouseout(function(){
-    $("#charlee").attr("src","./data/character lee.png").css({"height":"70vh","margin-top":"0vh","margin-left":"0vw"});
+    $("#real").css({"display":"none"});
+    $("#charlee").css({"display":"block"});
     $("#hover").text("Mouseover Me ! !").css({transform:"rotateZ(65deg)","font-size":"22px"});
-  });
-    $(document).on("dragstart selectstart", function(){
-    return false;
   });
 });

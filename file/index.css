@@ -17,7 +17,7 @@ ul { list-style: none; }
 .hd { position: fixed; z-index: 999; width: 100%; }
 #hide { display: none; }
 .gnb { color: #fff; font-size: 35px; width: 1120px; margin: 0px auto; padding-top: 50px; }
-.gnb li { transform: translateX(300px); opacity: 0; cursor: pointer; transition: 1.5s; position: relative; float: left; margin-right: 8.1vw; }
+.gnb li { transform: translateX(200px); opacity: 0; cursor: pointer; transition: 1s; position: relative; float: left; margin-right: 8.1vw; }
 .gnb li:last-child { margin-right: 0px; }
 #float { display: none; animation: float 2s infinite linear; position: absolute; height: 45px; width: 40px; top: 50px; left: 5vw; }
 #fishing { display: none; position: absolute; height: 40px; width: 60px; top: 35px; }
@@ -123,19 +123,21 @@ ul { list-style: none; }
 
 /* works page */
 #works { padding-top: 25vh; }
-.work_wrap { width: 61%; min-width: 850px; margin: 0 auto; }
+.work_wrap { width: 61%; min-width: 1000px; margin: 0 auto; }
 .work_part { float: left; min-width: 635px; margin-right: 3vw; text-align: center; } 
 
 .part { clear: both; }
 .part_tit { color: #fff; padding-top: 20px; font-size: 30px; font-weight: 100; float: left; }
 .work_box { float: right; }
-.work_box li { float:left; margin-left: 30px; margin-bottom: 2vh; }
+.work_box li { float:left; margin-left: 30px; margin-bottom: 1vh; }
 .work_box li:hover { text-shadow: 3px 3px 10px #fff; }
-.work_box img { display: block; height: 16vh; }
+.work_box img { display: block; height: 16vh; margin-bottom: 1vh; }
 
 .me { float: left; width: 25vh; position: relative; }
 #charlee { display: block; height: 70vh; }
-#hover { position: absolute; width: 180px; font-size: 22px; top: 22%; left: 60%; transform: rotateZ(65deg); transform-origin: 50% 50%; text-shadow: 5px -3px 10px #fff; }
+#real { display: none; height: 77vh; margin-top:-2vh; margin-left:-1; }
+
+#hover { position: absolute; width: 180px; font-size: 22px; top: 20%; left: 60%; transform: rotateZ(65deg); transform-origin: 50% 50%; text-shadow: 5px -3px 10px #fff; }
 
 /* contact page */
 #rocket { position: absolute; width: 55px; left: 19%; bottom: 33vh; }
