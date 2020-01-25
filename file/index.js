@@ -1,14 +1,13 @@
 $(document).ready(function(){
-  //setting
+  //documenr setting
   $(document).on("dragstart selectstart", function(){
     return false;
   });
   //함수 setting
-  var sw=true;
-  var ht = $(window).height(); 
-  function menu()
+  var sw=false; //메뉴바 활성화 상태 
+  function menu() //메뉴바 함수
   {
-    if(sw==true){
+    if(sw==false){
       $("#moon").css("animation", "circle 4s 1 ease-out");
       for(var a=0; a<5; a++){
         $(".gnb li:eq("+a+")").css({"transform":"translateX(0px)", "opacity":"1", "transition-delay":a*0.2+"s"});
@@ -23,31 +22,24 @@ $(document).ready(function(){
       }
     } sw=!sw;
   }
-  function fishing()
+
+  function fishing() //character location mark 
   {
     var st = $("body").scrollTop(); //html은 overflow hidden상태이므로 스크롤 불가능 
     var idx = st/ht;
     tar = $(".gnb li:eq("+idx+")");
     tar_idx = tar.index();
-    var lf=tar.offset().left;
-    var wd=tar.width();
+    var lf = tar.offset().left;
+    var wd = tar.width();
       $("#float").stop().fadeOut(200);
       $("#fishing").stop().fadeOut(200);
-      setTimeout(function(){$("#fishing").stop().css({"left": lf+wd-10+"px"}).fadeIn(600);}, 220) 
+      setTimeout(function(){$("#fishing").stop().css({"left": lf+wd-10+"px"}).fadeIn(600);}, 220);
   }
-  sw2=false;
-  function ring_reset()
-  {
-    sw2=true;
-    $("#ring_wrap").css({"width":"25vh", "heigth":"25vh", "top":"22%", "left":"15%" });
-    $("#ring_tit").text("Cilck planets.");
-    $("#planet_box").css({"width":"87%", "transform":"translate(0%)"});
-    $("#ability_box li").stop().hide(1000); 
-  }
-  //menu call
-  $("#moon").click(function(){
+
+  //menu bar on/off
+$("#moon").click(function(){
     $("#info").fadeOut(500);
-    if ( sw ){
+    if ( sw==false ){
       $("#hide").css("display","block");
       setTimeout(menu,10);
       setTimeout(fishing,1400);
@@ -55,33 +47,6 @@ $(document).ready(function(){
     else { menu();
       setTimeout(function(){$("#fishing").fadeOut();},800);
       setTimeout(function(){$("#hide").css("display","none");}, 2000); 
-    }
-  });
-  //scroll effect
-  $("body, html").scroll(function() { 
-    if(sw==false){fishing();}
-    $("#info").fadeOut(500);
-
-    obj = $("#about").offset().top;
-    idx=-1
-    if( 0<=obj){
-      $("#ab_box").fadeIn(500);
-      function pl(){
-        if (idx++<=4){
-          $("#card li.card_lst:eq("+idx+")").addClass("on");
-          setTimeout(pl,300);
-        } 
-      }pl()
-    } 
-
-    p = $("#contact").offset().top;
-      if(0==p){
-      $("#rocket").css("animation","rocket 8s ease-out infinite");
-    } else { $("#rocket").css("animation","");}
-
-    po = $("#ability").offset().top;
-    if(0!=po){
-      ring_reset();
     }
   });
 
@@ -105,7 +70,8 @@ $(document).ready(function(){
     $("#float").stop().fadeOut(200);
   });
 
-  // mousewheel
+  // 스크롤시 페이지 이동
+  var ht = $(window).height(); 
   $(window).on("mousewheel", function(e){
     if(e.originalEvent.wheelDelta < 0){
       $("#info").fadeOut(500);
@@ -114,34 +80,68 @@ $(document).ready(function(){
       $("html, body").not(":animated").animate({"scrollTop":"-="+ht+"px"}, 900, 'easeOutQuad')
     }
   });
+
+  //scroll effect 
+  $("body, html").scroll(function() { 
+    if(sw==true){fishing();}
+    $("#info").fadeOut(500);
+
+    obj = $("#about").offset().top;
+    idx=-1
+    if( 0<=obj){
+      $("#ab_box").fadeIn(500);
+      function pl(){
+        if (idx++<=4){
+          $("#card li.card_lst:eq("+idx+")").addClass("on");
+          setTimeout(pl,300);
+        } 
+      }pl()
+    } 
+    
+    po = $("#ability").offset().top;
+    if(0!=po){
+      ring_reset();
+    }
+
+    p = $("#contact").offset().top;
+      if(0==p){
+      $("#rocket").css("animation","rocket 8s ease-out infinite");
+    } else { $("#rocket").css("animation","");}
+  });
+  
 //planets control
+  sw2=true;//점수 멈춤 기능
+  function ring_reset()//
+  {
+    sw2=false;
+    $("#ring_wrap").css({"width":"25vh", "heigth":"25vh", "top":"22%", "left":"15%" });
+    $("#ring_tit").text("Cilck planets.");
+    $("#planet_box").css({"width":"87%", "transform":"translate(0%)"});
+    $("#ability_box li").stop().css("display","none"); 
+  }
+  
   $("#ring").click(function(){
     ring_reset();
   });
   $(".planet_wrap").click(function(){
-    sw2=false;
+    sw2=true;
     $("#ring_wrap").css({"width":"21vh", "heigth":"21vh", "top":"17%", "left":"9%"});
     var name = document.getElementById("ring_tit");
     var idx = $(this).index();
     var arr = [90,85,73,85,65,72];
     var score = arr[idx]; var x = 40;
     function counter(){
-      if(sw2==true){ return false; }//or x=score;
+      if(sw2==false){ return false; }//or x=score;
       else if ( x++<score ) {
         name.innerText = x+"%";
-        setTimeout(counter, 1);
+        setTimeout(counter, 2);
         }  
     } counter();
     $("#planet_box").css({"width":"60%", "transform":"translate(25%)"});
-    $("#ability_box li:eq("+idx+")").stop().show(1000);
-    $("#ability_box li:eq("+idx+")").siblings().stop().hide(1000);
+    $("#ability_box li.ability_con:eq("+idx+")").stop().slideDown(1000);
+    $("#ability_box li.ability_con:eq("+idx+")").siblings().stop().css("display","none");
   });
-  //work
-  var opt = "top=100, left=100, width=200, hight=600, menubar=no, location=yes, resizable=no, scrollbars=no, status=yes";
-  function openWindow(){ win = window.open(url, "win", opt, false); }
-  document.getElementById("open_btn").addEventListener("click",function(){ 
-    var url = $(this).attr("data-val");
-    openWindow(); });
+
   //works hover effect
   $(".me").mouseover(function(){
     $("#real").css({"display":"block"});
