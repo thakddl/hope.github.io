@@ -42,7 +42,7 @@ $("#moon").click(function(){
     if ( sw==false ){
       $("#hide").css("display","block");
       setTimeout(menu,10);
-      setTimeout(fishing,1400);
+      setTimeout(fishing,1600);
     } 
     else { menu();
       setTimeout(function(){$("#fishing").fadeOut();},800);

@@ -141,7 +141,7 @@ ul { list-style: none; }
 .com { width: 100%; padding: 3vh; }
 .img_box { margin-top: -15vh; }
 .bx:hover .img_box { margin-top: 0px; }
-
+.bg_w { background-color: #fff; height: 12vh; }
 
 /* 우유곽 애니메이션 */
 #milk li {display: block !important;}
