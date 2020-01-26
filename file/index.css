@@ -121,7 +121,7 @@ ul { list-style: none; }
 #ability_box li h3 { padding-bottom: 10px; }
 #ability_box li span { display: block; padding-top: 10px; }
 
-.ability_works { position: absolute; width: 35vw; margin-left: -12vw; margin-top: 5vh;  }
+.ability_works { position: absolute; width: 35vw; margin-left: -12vw; margin-top: 3vh;  }
 .ability_works dt { text-align: center; font-size: 1.3vw; animation: char 4s ease-out infinite; transform-origin: 50% 0; cursor: context-menu; text-shadow: 2px -2px 5px #fff; transform: rotateZ(15deg); }
 @keyframes char { 
   0% { transform: rotateZ(15deg); }
@@ -185,7 +185,7 @@ ul { list-style: none; }
 
 .me { float: left; width: 25vh; position: relative; }
 #charlee { display: block; height: 70vh; }
-#real { display: none; height: 77vh; margin-top:-2vh; margin-left:-1; }
+#real { display: none; height: 77vh; margin-top:-2vh; margin-left:-1vh; }
 
 #hover { position: absolute; width: 180px; font-size: 22px; top: 20%; left: 60%; transform: rotateZ(65deg); transform-origin: 50% 50%; text-shadow: 5px -3px 10px #fff; }
 
