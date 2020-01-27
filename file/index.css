@@ -180,9 +180,9 @@ p { cursor: context-menu;  }
 .part { clear: both; }
 .part_tit { color: #fff; padding-top: 20px; font-size: 30px; font-weight: 100; float: left; }
 .work_box { float: right; }
-.work_box li { float:left; margin-left: 30px; margin-bottom: 1vh; }
+.work_box li { float:left; margin-left: 30px; line-height: 1.2; margin-bottom: 1%; }
 .work_box li:hover { text-shadow: 3px 3px 10px #fff; }
-.work_box img { display: block; height: 16vh; margin-bottom: 1vh; }
+.work_box img { display: block; height: 16vh; margin-bottom: 1%; }
 
 .me { float: left; width: 25vh; position: relative; }
 #charlee { display: block; height: 70vh; }
