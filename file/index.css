@@ -178,7 +178,7 @@ p { cursor: context-menu;  }
 .work_part { float: left; min-width: 635px; margin-right: 3vw; text-align: center; } 
 
 .part { clear: both; }
-.part_tit { color: #fff; padding-top: 20px; font-size: 30px; font-weight: 100; float: left; }
+.part_tit { color: #fff; padding-top: 10%; font-size: 30px; font-weight: 100; float: left; }
 .work_box { float: right; }
 .work_box li { float:left; margin-left: 30px; line-height: 1.2; margin-bottom: 1%; }
 .work_box li:hover { text-shadow: 3px 3px 10px #fff; }
@@ -206,4 +206,4 @@ p { cursor: context-menu;  }
   100% { bottom: 94vh; left: 94%; width: 15px; }
 }
 #thank { font-size: 60px; text-align: center; margin: 45vh auto; }
-#box { position: absolute; font-size: 30px; left: 25vh; bottom: 18vh; }
+#box { position: absolute; font-size: 1vh; left: 25vh; bottom: 18vh; }
