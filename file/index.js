@@ -70,7 +70,7 @@ $("#moon").click(function(){
     $("#float").stop().fadeOut(200);
   });
 
-  // 스크롤시 페이지 이동
+  // 마우스 휠 사용시 페이지 이동
   var ht = $(window).height(); 
   $(window).on("mousewheel", function(e){
     if(e.originalEvent.wheelDelta < 0){
@@ -128,7 +128,7 @@ $("#moon").click(function(){
     $("#ring_wrap").css({"width":"21vh", "heigth":"21vh", "top":"17%", "left":"9%"});
     var name = document.getElementById("ring_tit");
     var idx = $(this).index();
-    var arr = [90,85,73,85,65,72];
+    var arr = [90,85,"developing..",85,65,72];
     var score = arr[idx]; var x = 40;
     function counter(){
       if(sw2==false){ return false; }//or x=score;
