@@ -42,7 +42,7 @@ select { margin-bottom: 25px; font-family: 'TDTDTadakTadak'; width: 110px; font-
 .gnb li:hover a.main { text-decoration: underline; }
 .sub a:hover { text-decoration: underline; }
 .logo { display: block; position: absolute; width: 174px; height: 100px; background-image: url("../data/main_logo.png"); margin-left: 150px; margin-top: 15px; float: left; }
-.gnb { position: absolute; width: 950px; left: 370px; }
+.gnb { width: 950px; margin: 0 auto; }
 .gnb li { float: left; margin-left: 50px; }
 .gnb a { display: block; line-height: 130px; font-size: 35px; margin-left: 50px; color: #000000; }
 
