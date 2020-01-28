@@ -70,7 +70,7 @@ $("#moon").click(function(){
     $("#float").stop().fadeOut(200);
   });
 
-  // 스크롤시 페이지 이동
+  //페이지 이동 
   var ht = $(window).height(); 
   $(window).on("mousewheel", function(e){
     if(e.originalEvent.wheelDelta < 0){
@@ -80,7 +80,14 @@ $("#moon").click(function(){
       $("html, body").not(":animated").animate({"scrollTop":"-="+ht+"px"}, 900, 'easeOutQuad')
     }
   });
-
+  $(document).keyup(function(event){
+    if(event.keyCode==40){
+      $("#info").fadeOut(500);
+      $("body, html").not(":animated").animate({"scrollTop":"+="+ht+"px"}, 900, 'easeOutQuad');
+    } else if(event.keyCode==38){
+      $("html, body").not(":animated").animate({"scrollTop":"-="+ht+"px"}, 900, 'easeOutQuad')
+    }
+  });
   //scroll effect 
   $("body, html").scroll(function() { 
     if(sw==true){fishing();}
