@@ -70,7 +70,7 @@ $("#moon").click(function(){
     $("#float").stop().fadeOut(200);
   });
 
-  // 마우스 휠 사용시 페이지 이동
+  // 스크롤시 페이지 이동
   var ht = $(window).height(); 
   $(window).on("mousewheel", function(e){
     if(e.originalEvent.wheelDelta < 0){
@@ -128,14 +128,18 @@ $("#moon").click(function(){
     $("#ring_wrap").css({"width":"21vh", "heigth":"21vh", "top":"17%", "left":"9%"});
     var name = document.getElementById("ring_tit");
     var idx = $(this).index();
-    var arr = [90,85,"developing..",85,65,72];
-    var score = arr[idx]; var x = 40;
+    var arr = [95,92,"developing..",88,65,72];
+    var score = arr[idx]; var x = 30;
     function counter(){
       if(sw2==false){ return false; }//or x=score;
-      else if ( x++<score ) {
-        name.innerText = x+"%";
-        setTimeout(counter, 2);
-        }  
+      else {
+        if ( typeof score != typeof x ) { //문자일 경우(숫지가 아닐경우)
+          name.innerText = score;
+        } else if( x++<score ){
+          name.innerText = x+"%";
+          setTimeout(counter, 2);
+        }
+      }  
     } counter();
     $("#planet_box").css({"width":"60%", "transform":"translate(25%)"});
     $("#ability_box li.ability_con:eq("+idx+")").stop().slideDown(1000);
@@ -154,4 +158,6 @@ $("#moon").click(function(){
     $("#charlee").css({"display":"block"});
     $("#hover").text("Mouseover Me ! !").css({transform:"rotateZ(65deg)","font-size":"22px"});
   });
+
+
 });
