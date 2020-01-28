@@ -123,7 +123,8 @@ p { cursor: context-menu;  }
 #ability_box li span { display: block; padding-top: 10px; }
 
 .ability_works { position: absolute; width: 35vw; margin-left: -12vw; margin-top: 3vh;  }
-.ability_works dt { text-align: center; font-size: 1.3vw; animation: char 4s ease-out infinite; transform-origin: 50% 0; cursor: context-menu; text-shadow: 2px -2px 5px #fff; transform: rotateZ(15deg); }
+.ability_works dt { text-align: center; font-size: 1.3vw;  cursor: context-menu;  border: 1px solid #fff; width: 5.5vw; padding-top: 0.2vw; line-height: 1.6; margin: 0 auto; }
+/* .ability_works dt p { animation: char 4s ease-out infinite; transform: rotateZ(15deg); transform-origin: 50% 0; }
 @keyframes char { 
   0% { transform: rotateZ(15deg); }
   10% { transform: rotateZ(-13deg); }
@@ -134,9 +135,10 @@ p { cursor: context-menu;  }
   90% { transform: rotateZ(0deg); }
   100% { transform: rotateZ(15deg); }
 }
-.ability_works dd { float: left; margin-right: 1.5vh; height: 0px; overflow: hidden; transition: 1.5s; line-height: 2.5; font-size: 1vw; }
+.ability_works:hover dt p { animation: auto; transform: rotateZ(0deg); }  */
+.ability_works dd { float: left; margin-right: 1.5vh; height: 0px; padding-top: 1vw; overflow: hidden; transition: 1.5s; line-height: 2.5; font-size: 1vw; }
 .ability_works:hover dd { height: 30vh; }
-.ability_works:hover dt { animation: auto; transform: rotateZ(0deg); }
+.ability_works:hover dt { text-shadow: 2px -2px 5px #fff; }
 .ability_works img, video, iframe { display: block; width: 20vh; height: 15vh; }
 .bx { height: 15vh; width: 20vh; overflow: hidden; background-color: rgb(250, 218, 177) ; transition: 0.3s; }
 .com { width: 100%; padding: 3vh; }
@@ -173,19 +175,18 @@ p { cursor: context-menu;  }
 }
 
 /* works page */
-#works { padding-top: 25vh; }
-.work_wrap { width: 61%; min-width: 1000px; margin: 0 auto; }
-.work_part { float: left; min-width: 635px; margin-right: 3vw; text-align: center; } 
+.work_wrap { width: 60%; min-width: 1000px; margin: 0 auto; }
+.work_part { padding-top: 28vh; float: left; min-width: 635px; margin-right: 3vw; text-align: center; } 
 
 .part { clear: both; }
 .part_tit { color: #fff; padding-top: 3%; font-size: 30px; font-weight: 100; float: left; }
 .work_box { float: right; }
-.work_box li { float:left; margin-left: 30px; margin-bottom: 1%; line-height: 1.2; }
+.work_box li { float:left; margin-left: 3vw; margin-bottom: 2.5vh; line-height: 1.3; }
 .work_box li:hover { text-shadow: 3px 3px 10px #fff; }
-.work_box img { display: block; height: 16vh; }
-.work_box h3 { margin-top: 4%; }
+.work_box img { display: block; height: 12vh; }
+.work_box h3 { margin-top: 2vh; }
 
-.me { float: left; width: 25vh; position: relative; }
+.me { float: left; width: 25vh; position: relative; margin-top: 23vh; }
 #charlee { display: block; height: 70vh; }
 #real { display: none; height: 77vh; margin-top:-2vh; margin-left:-1vh; }
 
