@@ -13,48 +13,8 @@
     <script src="https://code.jquery.com/jquery-latest.js"></script>
     <script src="./jquery/common.js"></script>
     <style>
-        @import url(./css/mobile.css) screen and (max-width:767px);
-        @import url(./css/tablet.css) screen and (min-width:768px) and (max-width:1200px);
-    @media screen and (max-width:767px) {
-        #m_cover { display: block; height: 55vh; }
-        #de_cover { display: none; }
-
-        .vs_bottom { position: relative; height: 45vh; display: flex; flex-flow: column; justify-content: space-around; align-items: center; }
-        #min { position: relative; left: -60px; top: auto; width: 160px; height: 100px; line-height: 100px; font-size: 20px; text-indent: 5px; }
-        .spl_bar { height: 20px; }
-        #m_logo { display: block; }
-
-        .con_menu { display: none; }
-        .con_fr { display: none; }
-        #vs_des { display: none; }
-        #page2 { display: flex; justify-content: center; }
-        .con_wrap { margin-top: 25px; margin-left: 24px; }
-        #vs_book { width: 55vw; display: flex; flex-flow: column; justify-content: center; align-items: center; }
-        #vs_book img { width: 55vw; margin: 0; }
-        #vs_bo { margin: 0 auto; padding-top: 40px; width: 250px; text-align: center; font-size: 13px; }
-    }
-    @media screen and (min-width:768px) and (max-width:1200px) {
-        #de_cover { display: none; }
-        #t_cover { display: block; width: auto; height: 50vh; margin-top: 10vh; animation: tcover 17s cubic-bezier(1,-0.01,0,1) infinite; }
-
-        @keyframes tcover {
-            0% { transform: rotateZ(0deg); }
-            100% { transform: rotateZ(-360deg); }
-        }
-        .vs { position: relative; height: 100vh; display: flex; flex-flow: column; justify-content: space-around; align-items: center; }
-        #min { display: none; }
-        #m_logo { display: block; }
-        
-        .con_menu { width: 28vw; margin-right: 0; }
-        .con_menu h2 { margin-bottom: 50px; }
-        .con_menu li { color: #555; font-size: 18px; margin: 10px 0; cursor: pointer; line-height: 35px; }
-        .con_fr { display: none; }
-        #page2 { display: flex; justify-content: center; align-content: center; }
-        .con_wrap { margin: 0; padding: 0; width: auto; }
-        #vs_book { width: 55vw; display: flex; justify-content: center; align-items: center; flex-flow: column; margin-left: 40px; }
-        #vs_book img { height: 25vh; margin: 0; margin-left: -50px; padding: 0; }
-        #vs_bo { width: 50vw; margin: 0; margin-top: 50px; }
-    }
+    @import url(./css/mobile.css) screen and (max-width:767px);
+    @import url(./css/tablet.css) screen and (min-width:768px) and (max-width:1200px);
     </style>
 </head>
 <body>
@@ -65,11 +25,15 @@
             <span class="btn_bar" id="bar3"></span>
         </span>
         <div class="menu_fr">
+            <div id="m_btn">
+                <a id="login">로그인</a>
+                <a id="join">회원가입</a>
+            </div>
             <div class="menu_wrap">
-                <a href="" class="logo"></a>
+                <a href="index.html" class="logo"></a>
                 <ul class="gnb">
                     <li class="menu">
-                        <a href="#">소개</a>
+                        <a href="intro.html">소개</a>
                     </li>
                     <li class="menu">
                         <a href="#">도서</a>
@@ -97,10 +61,10 @@
             </div>
         </div>
     </header>
-    <section class="page vs">
-        <video src="./data/vs3.mp4" class="cover" autoplay muted id="de_cover"></video>
-        <img src="./data/vsimg.jpg" alt="" class="cover" id="m_cover">
-        <img src="./data/lolo.png" alt="" class="cover" id="t_cover">
+    <div class="page vs">
+        <video src="./data/vs1.mp4" class="cover" autoplay muted id="de_cover"></video>
+        <img src="./data/vsimg.jpg" alt="이미지" class="cover" id="m_cover">
+        <img src="./data/lolo.png" alt="이미지" class="cover" id="t_cover">
         <div class="vs_bottom">
             <p id="min">
                 <span class="spl_bar" id="spl_top"></span>
@@ -115,8 +79,8 @@
             </p>
             <a href="" id="m_logo"></a>
         </div>
-    </section>
-    <section class="page" id="page2">
+    </div>
+    <div class="page" id="page2">
         <div class="con_menu">
             <h2>민음사 신작</h2>
             <ul class="con_local">
@@ -131,7 +95,7 @@
         <div class="con_wrap">
             <div id="vs_book">
                 <a href="#">
-                    <img src="./data/img1.jpg" alt="" id="vs_img">
+                    <img src="./data/img1.jpg" alt="이미지" id="vs_img">
                 </a>
                 <a href="#">
                     <div id="vs_bo">
@@ -143,42 +107,42 @@
             <div class="con_fr">
                 <ul class="con_box">
                     <li class="on" id="con0">
-                        <img src="./data/img1.jpg" alt="" class="new_b">
+                        <img src="./data/img1.jpg" alt="이미지" class="new_b">
                         <div class="txt_box">
                             <h3 class="tit">런던, NW</h3>
                             <p class="des">『하얀 이빨』, 『온 뷰티』의 작가 제이디 스미스 신작 《뉴욕 타임스 북 리뷰》·《월 스트리트 저널》·《타임》 TOP 10선정 전미 서평가 협회상 최종 후보</p>
                         </div>
                     </li>
                     <li id="con1">
-                        <img src="./data/img2.jpg" alt="" class="new_b">
+                        <img src="./data/img2.jpg" alt="이미지" class="new_b">
                         <div class="txt_box">
                             <h3 class="tit">느긋하게 밥을 먹고 느슨한 옷을 입습니다</h3>
                             <p class="des">소박한 음식, 미니멀한 옷, 함께하기 좋은 집, 화려하지는 않지만 따뜻하고 기분 좋은 보통의 일상이 온다</p>
                         </div>
                     </li>
                     <li id="con2">
-                        <img src="./data/img3.jpg" alt="" class="new_b">
+                        <img src="./data/img3.jpg" alt="이미지" class="new_b">
                         <div class="txt_box">
                             <h3 class="tit">어디서부터 오는 비인가요</h3>
                             <p class="des">인과와 질서의 견고한 세계 너머 자꾸만 감지되는 신비의 징후</p>
                         </div>
                     </li>
                     <li id="con3">
-                        <img src="./data/img4.jpg" alt="" class="new_b">
+                        <img src="./data/img4.jpg" alt="이미지" class="new_b">
                         <div class="txt_box">
                             <h3 class="tit">나를 참으면 다만 내가 되는 걸까</h3>
                             <p class="des">자신을 포착하기 위해 스스로를 잃어버리는 결항과 파국의 미학   김성대 신작 시집 『나를 참으면 다만 내가 되는 걸까』가 ‘민음의 시’로 출간되었다. 김성대…</p>
                         </div>
                     </li>
                     <li id="con4">
-                        <img src="./data/img5.jpg" alt="" class="new_b">
+                        <img src="./data/img5.jpg" alt="이미지" class="new_b">
                         <div class="txt_box">
                             <h3 class="tit">미친 아담</h3>
                             <p class="des">2019년 부커 상 수상 작가 마거릿 애트우드 『시녀 이야기』를 잇는 디스토피아 소설 ‘미친 아담 3부작’ 완결편 “그래요, 우리는 돌아올 거예요. 우리가 다시 돌아오기를…</p>
                         </div>
                     </li>
                     <li id="con5">
-                        <img src="./data/img6.jpg" alt="" class="new_b">
+                        <img src="./data/img6.jpg" alt="이미지" class="new_b">
                         <div class="txt_box">
                             <h3 class="tit">양방향</h3>
                             <p class="des">생각이 살아 움직이는 이상한 시의 나라 마르지 않는 이야기로 가득한 시의 미로</p>
@@ -187,10 +151,10 @@
                 </ul>
             </div>
         </div>
-    </section>
-    <div class="curve"><img src="./data/contact_bg.png" alt=""></div>
+    </div>
+    <div class="curve"><img src="./data/contact_bg.png" alt="이미지"></div>
     <footer class="ft">
-        <div id="sim_wrap"><img src="./data/sim.png" alt="" id="sim"></div>
+        <div id="sim_wrap"><img src="./data/sim.png" alt="이미지" id="sim"></div>
         <p class="com_wrap">
             <span class="com" id="com1">M</span>
             <span class="com" id="com2">I</span>
@@ -211,7 +175,7 @@
                 <li><a href="#">소식 PSS</a></li>
                 <li><a href="#">민음사 출판그룹도서 RSS</a></li>
             </ul>
-            <p id="copy">COPYRIGHTⓒ 2019 Hope Lee. ALL RIGHTS RESERVED.</p>
+            <p id="copy">COPYRIGHTⓒ 2020 Hope Lee. ALL RIGHTS RESERVED.</p>
         </div>
     </footer>
 </body>
