@@ -1,17 +1,13 @@
 @charset "utf-8";
 /*       메인 콘텐츠 서식*/
 #vdo { width: 100%; height: 100%; overflow: hidden;}
-#vd1 { display: block; min-width: 100%; }
+#vd1 { display: block; min-width: 100%; margin-top: -50px; }
 /* 1. 부모의 크기를 따라가려면 블록을 줘야한다. 
 2. 동영상은 높이를 따라간다. 동영상크기가 화면크기와 달라 테두리가 비어서 출력될경우 min-h을 쓰는데 뜻은 최소높이가 100%를 넘어간다는 뜻이다. 따라서 width를100%설정하면
 넓이가 맞아진다. 대신 동영상 아래쪽이 짤린다. */
 #cover_page{position: absolute; width: 100%; height: 100%; z-index: 10; top: 0; left: 0;}
-.tit { background-image: url("../data/logo2.png"); width: 430px; height: 80px; margin: 90px auto; margin-top: 200px; background-repeat: no-repeat;}
-#frm1 { width: 1000px; height: 80px; margin: 0 auto; background-color: rgba(0,0,0,0.6);}
-#keyword { display: block; height: 70px; width: 915px; font-size: 24px; text-indent: 24px; margin: 5px; float: left; opacity: 0.6; transition: 0.5s;}
-#search { display: block; width: 70px; height: 70px; float: right; margin: 5px; margin-left: 0; background-color: #777; background-image: url("../data/search.png"); text-indent: -9999px; background-size: 44px 49px; background-position: center center; background-repeat: no-repeat; opacity: 0.6; transition: 0.5s;}
-#keyword:focus { opacity: 0.8;}
-#keyword:focus ~ #search { opacity: 0.9;}
+.tit { width: 700px; height: 80px; margin: 0px auto; margin-top: 350px; font-family: 'Kalam', serif; text-align: center; line-height: 80px; font-size: 100px; line-height: 1.1; text-shadow: 3px 3px 5px #000; color: #e4e2e7; }
+
 
 #page2 { background-image: url("../data/bg8.jpg"); min-height: 992px; background-repeat: no-repeat; background-size: cover;}
 #page3 { background-image: url("../data/bg6.jpg"); height: 800px; background-repeat: no-repeat; }
@@ -46,7 +42,7 @@
 .btn_box .item3 { left: 340px; }
 .btn_box li.on button{background-color: #fe3c08;}
 
-.ico_link {clear: both;margin-top: 50px;width: 100%;height: 64px;background: #fff;}  
+.ico_link {clear: both; margin-top: 30px;width: 100%;height: 64px;background: #fff;}  
 .ico_link li {float:left;width: 50%; height: 64px;}
 .ico_link li a {display: block; color: #333; font-size: 22px; line-height: 64px; text-align: center; background: #fff; padding-left: 100px;}
 .ico_link li a.item2 {background: #f0f0f0}
