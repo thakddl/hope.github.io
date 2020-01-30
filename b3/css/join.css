@@ -2,14 +2,14 @@
 * { box-sizing: border-box; }
 html { overflow: hidden; }
 .pop { width: 500px; height: 500px; border: 2px solid; background-image: url("../data/paper.jpg"); background-position: center; position: absolute; z-index: 1000; left: 710px; top: 225px; }
-.close_btn0 { position: absolute; font-size: 25px; right: 40px; top: 30px; color: #fff; background: #333366; text-align: center; line-height: 25px; width: 20px; border-radius: 4px; opacity: 0.8; cursor: pointer; font-family: 'UhBeeSimplegirl'; }
+.close_btn0 { position: absolute; font-size: 25px; right: 40px; top: 30px; color: #fff; background: #333366; text-align: center; line-height: 25px; width: 20px; border-radius: 4px; opacity: 0.8; cursor: pointer; font-family: 'Goyang'; }
 #pop { display: block; background-image: url("../data/main_logo.png"); width: 250px; height: 150px; background-repeat: no-repeat; background-size: cover; margin: 50px auto; cursor: pointer; }
 #clo { display: none; }
-.pop input { clear: both; display: block; margin: 25px auto; font-family: 'UhBeeSimplegirl'; font-size: 18px; text-indent: 5px; }
+.pop input { clear: both; display: block; margin: 25px auto; font-family: 'Goyang'; font-size: 18px; text-indent: 5px; }
 #pop_in { display: block; width: 65px; height: 30px; border: 1px solid; font-size: 15px; line-height: 25px; background-color: #333366; color: #fff; border-radius: 7px; opacity: 0.8; cursor: pointer; }
 .pop ul { width: 190px; height: 20px; margin: 25px auto; padding-left: 10px; }
 .pop li { float: left; }
-.pop ul a { display: block; font-size: 18px; width: 90px; height: 18px; text-align: center; font-family: 'UhBeeSimplegirl'; }
+.pop ul a { display: block; font-size: 18px; width: 90px; height: 18px; text-align: center; font-family: 'Goyang'; }
 .pop li a:after { content: "|"; margin-left: 10px; }
 .pop li a.last:after { content: ""; }
 .on { display: none; }
@@ -24,7 +24,7 @@ main { clear: both; width: 70%; margin: 0 auto; position: relative; }
 .content h1 { font-size: 30px; text-align: center; margin: 30px; }
 .content form { margin: 40px auto; font-size: 18px; width: 320px; }
 .join label { font-size: 17px; margin-top: 20px; }
-.join input { margin-top: 8px; font-family: 'UhBeeSimplegirl'; width: 200px; height: 30px; font-size: 17px; }
-#join_in { border: 1px solid; font-size: 15px; line-height: 30px; font-family: 'UhBeeSimplegirl'; margin: 40px auto; display: block; width: 65px; background-color: #333366; color: #fff; border-radius: 7px; opacity: 0.8; text-align: center; }
+.join input { margin-top: 8px; font-family: 'Goyang'; width: 200px; height: 30px; font-size: 14px; }
+#join_in { border: 1px solid; font-size: 14px; line-height: 30px; font-family: 'Goyang'; margin: 40px auto; display: block; width: 65px; background-color: #333366; color: #fff; border-radius: 7px; opacity: 0.8; text-align: center; }
 #e_mail { width: 150px; }
-.join select { width: 150px; font-family: 'UhBeeSimplegirl'; height: 30px; font-size: 17px;   }
+.join select { width: 150px; font-family: 'Goyang'; height: 30px; font-size: 17px;   }

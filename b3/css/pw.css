@@ -20,7 +20,7 @@ main { clear: both; width: 70%; margin: 0 auto; position: relative; }
 .content h1 { clear: both; font-size: 30px; text-align: center; margin: 30px; }
 .content form { margin: 40px auto; font-size: 18px; width: 320px; }
 .join label { font-size: 17px; margin-top: 20px; }
-.join input { margin-top: 8px; font-family: 'TDTDTadakTadak'; width: 200px; height: 30px; font-size: 17px; }
-#join_in { border: 1px solid; font-size: 15px; line-height: 30px; font-family: 'TDTDTadakTadak'; margin: 40px auto; display: block; width: 65px; background-color: #333366; color: #fff; border-radius: 7px; opacity: 0.8; text-align: center; }
+.join input { margin-top: 8px; font-family: 'Goyang'; width: 200px; height: 30px; font-size: 17px; }
+#join_in { border: 1px solid; font-size: 15px; line-height: 30px; font-family: 'Goyang'; margin: 40px auto; display: block; width: 65px; background-color: #333366; color: #fff; border-radius: 7px; opacity: 0.8; text-align: center; }
 #e_mail { width: 150px; }
-.join select { width: 150px; font-family: 'TDTDTadakTadak'; height: 30px; font-size: 17px;   }
+.join select { width: 150px; font-family: 'Goyang'; height: 30px; font-size: 17px;   }
