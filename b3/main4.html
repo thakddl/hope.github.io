@@ -41,27 +41,56 @@
     </script>
 </head>
 <body>
- <div class="pop">
-    <button class="close_btn0">X</button>
-    <a href="index.html" id="pop"></a>
-    <input type="text" id="id0" placeholder="아이디" title="아이디를 입력하세요." autofocus>
-    <input type="password" id="pw0" placeholder="비밀번호" title="비밀번호를 입력하세요.">
-    <input type="submit" value="로그인" id="pop_in">
-    <ul>
-        <li><a href="join.html">회원가입</a></li>
-        <li class="last"><a href="pw.html">비밀번호 찾기</a></li>
-    </ul>
-</div>
-   <div class="hd_wrap">
+    <div class="hd_wrap">
         <header class="hd">
-           <div class="join_btn">
-                <a href="sign.html" class="log_in">로그인</a>
-                <a href="join.html" class="log_in">회원가입</a>
+            
+<!--
+            <div class="join_btn">
+                <button class="log_in">로그인</button>
+                <button class="jo">회원가입</button>
             </div>
-
-            <nav class="tnb">
-                <a href="http://noplug.kr/" target="_blank" class="t_logo"></a>
+            <form action="" class="sign">
+                <button class="close_btn1">X</button>
+                <a href="index.html" id="logo"></a>
+                <input type="text" id="id" placeholder="아이디" title="아이디를 입력하세요." autofocus>
+                <input type="password" id="pw" placeholder="비밀번호" title="비밀번호를 입력하세요.">
+                <input type="submit" value="로그인" id="sign_in">
                 <ul>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#" id="last">비밀번호 찾기</a></li>
+                </ul>
+            </form>
+            <form action="" class="join">
+                <feildset>
+                    <button class="close_btn2">X</button>
+                    <legend>회원가입</legend>
+                    <label for="m_id">아이디</label>
+                    <input type="text" id="m_id" placeholder="아이디를 입력하세요." title="아이디를 입력하세요." autofocus>
+                    <label for="m_pw">비밀번호</label>
+                    <input type="password" id="m_pw" placeholder="패스워드를 입력하세요." title="패스워드를 입력하세요.">
+                    <label for="m_pw">비밀번호 확인</label>
+                    <input type="password" id="m_pw2" placeholder="패스워드 확인을 입력하세요." title="패스워드 확인을 입력하세요.">
+                    <label for="tel">전화번호</label>
+                    <input type="tel" id="tel" placeholder="전화번호를 입력하세요." title="전화번호를 입력하세요.">
+                    <label for="e_mail">이메일</label>
+                    <input type="email" id="e_mail" placeholder="아이디" title="이메일을 입력하세요.">@
+                    <select name="email2" id="e_mail2">
+                        <option value="">선택안함</option>
+                        <option value="naver.com">네이버</option>
+                        <option value="google.com">구글</option>
+                        <option value="daum.net">다음</option>
+                    </select>
+                    <input type="submit" value="가입하기" id="join_in">
+                </feildset>
+            </form>  
+-->
+            <nav class="tnb">
+                <div class="join_btn">
+                    <a href="sign.html" class="log_in">로그인</a>
+                    <a href="join.html" class="log_in">회원가입</a>
+                </div>
+                <ul>
+                    <li id="t_lo"><a href="http://noplug.kr/" target="_blank" class="t_logo"></a></li>
                     <li><a href="https://noplug.tistory.com/" target="_blank"><img src="./data/blog.png" alt="블로그"></a></li>
                     <li><a href="https://www.facebook.com/noplug2017/" target="_blank"><img src="./data/facebook.png" alt="페이스북"></a></li>
                     <li><a href="https://www.instagram.com/noplugseoul/" target="_blank"><img src="./data/insta.png" alt="인스타그램"></a></li>
@@ -102,7 +131,7 @@
             </nav>
         </header>
    </div>
-    <main>
+   <main>
         <div class="bread">
             <p><a href="main4.html">Membership</a>&gt;소모임예약</p>
         </div>

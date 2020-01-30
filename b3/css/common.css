@@ -1,34 +1,34 @@
 @charset "utf-8";
 * { margin: 0; padding: 0; box-sizing: border-box;}
-html, body { width: 100%; height: 100%; font-family: 'UhBeeSimplegirl'; }
+html, body { width: 100%; height: 100%; font-family: 'Goyang'; }
 ul { list-style: none; }
 a { text-decoration: none; color: #000000; }
-img, button, label { display: block; border: 0; background-color: transparent; outline: 0; font-family: "UhBeeSimplegirl"; }
+img, button, label { display: block; border: 0; background-color: transparent; outline: 0; font-family: "Goyang"; }
 
 .join_btn { position: absolute; margin-left: 50px; }
-.join_btn a { display: block; border: 1px solid; font-size: 15px; float: left; line-height: 30px; font-family: 'UhBeeSimplegirl'; margin-left: 20px; margin: 10px; width: 65px; background-color: #333366; color: #fff; border-radius: 7px; opacity: 0.8; text-align: center; }
+.join_btn a { display: block; border: 1px solid; font-size: 15px; float: left; line-height: 30px; font-family: 'Goyang'; margin-left: 20px; margin: 10px; width: 65px; background-color: #333366; color: #fff; border-radius: 7px; opacity: 0.8; text-align: center; }
 /*
 .join_btn { margin-left: 50px; }
-.join_btn button { border: 1px solid; font-size: 15px; float: left; line-height: 30px; font-family: 'UhBeeSimplegirl'; margin-left: 20px; display: block; margin: 10px; width: 65px; background-color: #333366; color: #fff; border-radius: 7px; opacity: 0.8; cursor: pointer; }
+.join_btn button { border: 1px solid; font-size: 15px; float: left; line-height: 30px; font-family: 'Goyang'; margin-left: 20px; display: block; margin: 10px; width: 65px; background-color: #333366; color: #fff; border-radius: 7px; opacity: 0.8; cursor: pointer; }
 .sign { width: 500px; height: 500px; border: 2px solid; background-image: url("../data/paper.jpg"); background-position: center; position: absolute; z-index: 1000; left: 710px; top: 225px; display: none; }
-.close_btn1 { position: absolute; font-size: 25px; right: 40px; top: 30px; color: #fff; background: #333366; line-height: 25px; width: 20px; border-radius: 4px; opacity: 0.8; cursor: pointer; font-family: 'UhBeeSimplegirl'; }
+.close_btn1 { position: absolute; font-size: 25px; right: 40px; top: 30px; color: #fff; background: #333366; line-height: 25px; width: 20px; border-radius: 4px; opacity: 0.8; cursor: pointer; font-family: 'Goyang'; }
 #logo { display: block; background-image: url("../data/main_logo.png"); width: 250px; height: 150px; background-repeat: no-repeat; background-size: cover; margin: 50px auto; cursor: pointer; }
-.sign input { clear: both; display: block; margin: 25px auto; font-family: 'UhBeeSimplegirl'; font-size: 18px; text-indent: 5px; }
+.sign input { clear: both; display: block; margin: 25px auto; font-family: 'Goyang'; font-size: 18px; text-indent: 5px; }
 #sign_in { display: block; width: 65px; height: 30px; border: 1px solid; font-size: 15px; line-height: 25px; background-color: #333366; color: #fff; border-radius: 7px; opacity: 0.8; cursor: pointer; }
 .sign ul { width: 190px; height: 20px; margin: 25px auto; padding-left: 10px; }
 .sign li { float: left; }
-.sign ul a { display: block; font-size: 18px; width: 90px; height: 18px; text-align: center; font-family: 'UhBeeSimplegirl'; }
+.sign ul a { display: block; font-size: 18px; width: 90px; height: 18px; text-align: center; font-family: 'Goyang'; }
 .sign li a:after { content: "|"; margin-left: 10px; }
 .sign li a#last:after { content: ""; }
 
-.join { width: 500px; height: 550px; border: 2px solid; background-image: url("../data/paper.jpg"); background-position: center; font-family: 'UhBeeSimplegirl'; position: absolute; z-index: 1000; top: 200px; left: 710px; display: none; }
-.close_btn2 { position: absolute; font-size: 25px; right: 40px; top: 30px; color: #fff; background: #333366; line-height: 25px; width: 20px; border-radius: 4px; opacity: 0.8; cursor: pointer; font-family: 'UhBeeSimplegirl'; }
+.join { width: 500px; height: 550px; border: 2px solid; background-image: url("../data/paper.jpg"); background-position: center; font-family: 'Goyang'; position: absolute; z-index: 1000; top: 200px; left: 710px; display: none; }
+.close_btn2 { position: absolute; font-size: 25px; right: 40px; top: 30px; color: #fff; background: #333366; line-height: 25px; width: 20px; border-radius: 4px; opacity: 0.8; cursor: pointer; font-family: 'Goyang'; }
 feildset { display: block; width: 300px; height: 550px; margin: 0 auto; }
 legend { font-size: 23px; line-height: 30px; width: 80px; height: 30px; text-align: center; margin: 20px auto; margin-top: 50px; }
 .join label { font-size: 20px; margin-top: 15px; }
-.join input { margin-top: 10px; font-family: 'UhBeeSimplegirl'; width: 170px; font-size: 16px; text-indent: 5px; }
-select { margin-bottom: 25px; font-family: 'UhBeeSimplegirl'; width: 110px; font-size: 16px; }
-#join_in { display: block; width: 65px; height: 30px; border: 1px solid; font-size: 15px; line-height: 25px; font-family: 'UhBeeSimplegirl'; margin: 0 auto; background-color: #333366; color: #fff; border-radius: 7px; opacity: 0.8; cursor: pointer; }
+.join input { margin-top: 10px; font-family: 'Goyang'; width: 170px; font-size: 16px; text-indent: 5px; }
+select { margin-bottom: 25px; font-family: 'Goyang'; width: 110px; font-size: 16px; }
+#join_in { display: block; width: 65px; height: 30px; border: 1px solid; font-size: 15px; line-height: 25px; font-family: 'Goyang'; margin: 0 auto; background-color: #333366; color: #fff; border-radius: 7px; opacity: 0.8; cursor: pointer; }
 */
 
 
