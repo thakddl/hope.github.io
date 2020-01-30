@@ -10,7 +10,7 @@ $(document).ready(function(){
            $(".lst_btn").stop().animate({"left":"30px"},500);
            $("#totop").fadeIn();
        } else {
-           $(".lst_btn").stop().animate({"left":"220px"},500);
+           $(".lst_btn").stop().animate({"left":"50px"},500);
            $("#totop").fadeOut();
        }    
     });    

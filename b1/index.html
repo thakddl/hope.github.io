@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -16,28 +15,36 @@
     <!--절대값 주소-->
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <!--상대값 주소-->
     <script src="https://code.jquery.com/jquery-latest.js"></script>
-    <script src="common.js"></script> 
     <script src="index.js"></script> 
 </head>
 <body>
     <div class="wrap">
 <!--       헤드-->
         <nav id="tnb">
+            <input type="checkbox" id="ck">
+            <form action="#" id="frm1">
+                <input type="text" id="keyword" placeholder="search...">
+                <input type="submit" id="search">
+            </form>
             <ul class="right menu">
                 <li><a href="login.html">로그인</a></li>
-                <li><a href="join.html">회원가입</a></li>
+                <li class="ap"><a href="join.html">회원가입</a></li>
             </ul>
+            <label for="ck" id="la">
+                <i class="fas fa-search"></i>
+                <i class="far fa-times-circle"></i>
+            </label>
         </nav>
         <input type="checkbox" id="ck1">
         <label for="ck1" class="lst_btn">
-            <div>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <span></span>
+            <span></span>
+            <span></span>
         </label>
         <nav id="gnb">
             <ul class="main">
@@ -55,14 +62,10 @@
 <!--        메인-->
         <div class="page" id="page1">
             <figure id="vdo">
-                <img src="./data/bg5.jpg" alt="메인" id="vd1">
+                <video src="./data/vbg.mp4" loop autoplay muted id="vd1"></video>
             </figure>
             <section class="page_wrap" id="cover_page">
-                <h2 class="tit"></h2>
-                <form action="" id="frm1">
-                    <input type="text" id="keyword" placeholder="search...">
-                    <input type="submit" id="search">
-                </form>
+                <h2 class="tit">VISIT SEOUL</h2>
             </section>
         </div>
         <div class="page" id="page2">
@@ -147,7 +150,6 @@
                         <span>연락처</span>
                     </a></li>
                 </ul>
-<!--                푸터-->
                 <footer id="ft">
                     <ul class="fnb">
                         <li><a href="">홈페이지</a></li>
@@ -158,9 +160,11 @@
                     </ul>
                     <p class="copyright">© Seoul Metropolitan Government all rights reserved</p>
                 </footer>
+                <a href="#" id="totop">↑</a>
             </section>
         </div>
     </div>
-    <a href="#" id="totop">↑</a>
+<!--                푸터-->
+    
 </body>
 </html>
