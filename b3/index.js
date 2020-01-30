@@ -1,6 +1,6 @@
 $(document).ready(function(){
     function nextAni(){
-        $(".slide_box").not(":animated").animate({"margin-left":"-1920px"}, 500,
+        $(".slide_box").not(":animated").animate({"margin-left":"-100%"}, 500,
         function(){
             $(".slide_box li").eq(0).appendTo($(".slide_box"));
             $(".slide_box").css("margin-left","0px");
@@ -8,7 +8,7 @@ $(document).ready(function(){
     }
     function prevAni() {
         $(".slide_box li").eq(3).prependTo($(".slide_box"));
-        $(".slide_box").css("margin-left", "-1920px");
+        $(".slide_box").css("margin-left", "-100%");
         $(".slide_box").not(":animated").animate({"margin-left":"0px"}, 500);
     }
     
