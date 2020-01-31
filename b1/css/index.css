@@ -6,7 +6,7 @@
 2. 동영상은 높이를 따라간다. 동영상크기가 화면크기와 달라 테두리가 비어서 출력될경우 min-h을 쓰는데 뜻은 최소높이가 100%를 넘어간다는 뜻이다. 따라서 width를100%설정하면
 넓이가 맞아진다. 대신 동영상 아래쪽이 짤린다. */
 #cover_page{position: absolute; width: 100%; height: 100%; z-index: 10; top: 0; left: 0;}
-.tit { width: 700px; height: 80px; margin: 0px auto; margin-top: 350px; font-family: 'Kalam', serif; text-align: center; line-height: 80px; font-size: 100px; line-height: 1.1; text-shadow: 3px 3px 5px #000; color: #e4e2e7; }
+.tit { width: 700px; height: 80px; margin: 0px auto; margin-top: 350px; font-family: "tit"; text-align: center; line-height: 80px; font-size: 250px; line-height: 1.1; text-shadow: 3px 3px 5px #000; color: #e4e2e7; }
 
 
 #page2 { background-image: url("../data/bg8.jpg"); min-height: 992px; background-repeat: no-repeat; background-size: cover;}
