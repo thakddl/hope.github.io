@@ -1,6 +1,6 @@
 @charset "utf-8";
 /*       메인 콘텐츠 서식*/
-#vdo { width: 100%; height: 100%; overflow: hidden;}
+#vdo { width: 100%; height: 100%; overflow: hidden; background-color: #000; }
 #vd1 { display: block; min-width: 100%; margin-top: -50px; }
 /* 1. 부모의 크기를 따라가려면 블록을 줘야한다. 
 2. 동영상은 높이를 따라간다. 동영상크기가 화면크기와 달라 테두리가 비어서 출력될경우 min-h을 쓰는데 뜻은 최소높이가 100%를 넘어간다는 뜻이다. 따라서 width를100%설정하면
