@@ -3,9 +3,9 @@ $(document).ready(function(){
   $(document).on("dragstart selectstart", function(){
     return false;
   });
-  //함수 setting
+    //함수 setting
   var sw=false; //메뉴바 활성화 상태 
-  function menu() //메뉴바 함수
+  function moon_int() //메뉴바 함수
   {
     if(sw==false){
       $("#moon").css("animation", "circle 4s 1 ease-out");
@@ -30,44 +30,80 @@ $(document).ready(function(){
     tar = $(".gnb li:eq("+idx+")");
     tar_idx = tar.index();
     var lf = tar.offset().left;
+    var top = tar.offset().top;
     var wd = tar.width();
       $("#float").stop().fadeOut(200);
       $("#fishing").stop().fadeOut(200);
-      setTimeout(function(){$("#fishing").stop().css({"left": lf+wd-10+"px"}).fadeIn(600);}, 220);
+      setTimeout(function(){$("#fishing").stop().css({"left": lf+wd-10+"px","top":top-15+"px"}).fadeIn(600);}, 220);
   }
 
-  //menu bar on/off
-$("#moon").click(function(){
+  var scr = screen.width;
+  //moon_int bar on/off
+  $("#moon").click(function(){
     $("#info").fadeOut(500);
-    if ( sw==false ){
-      $("#hide").css("display","block");
-      setTimeout(menu,10);
-      setTimeout(fishing,1600);
-    } 
-    else { menu();
-      setTimeout(function(){$("#fishing").fadeOut();},800);
-      setTimeout(function(){$("#hide").css("display","none");}, 2000); 
-    }
-  });
+      if (scr>=1200){
+        if ( sw==false ){
+          $("#hide").css("display","block");
+          setTimeout(moon_int,10);
+          setTimeout(fishing,1600);
+        } 
+        else { moon_int();
+          setTimeout(function(){$("#fishing").fadeOut();},800);
+          setTimeout(function(){$("#hide").css("display","none");}, 2000); 
+        }
+      } 
+      else {
+        if ( sw==false ){
+          $("#hide").css("left","0");
+          setTimeout(moon_int,10);
+          setTimeout(fishing,1600);
+        } 
+        else { moon_int();
+          setTimeout(function(){$("#fishing").fadeOut();},800);
+          setTimeout(function(){$("#hide").css("left","100%");}, 2000); 
+        }
+      }
+    });
 
   // gnb li cilck & hover effect
   $(".gnb li").click(function(){
     var idx = $(this).index();
     $("body, html").not(":animated").animate({"scrollTop":idx*ht+"px"}, 900, 'easeOutQuad');
+    if (scr<1200){
+      moon_int();
+      $("#hide").css({"left":"100%"});
+      $("#fishing").css("display","none");
+      sw=false; 
+    }
   });
   $(".gnb li").mouseover(function(){
-    var lf=$(this).offset().left;
-    var wd=$(this).width();
-    var idx = $(this).index();
-    var st = $("body").scrollTop();
-    var sc_idx = st/ht;
-    if( idx==sc_idx ) { $("#float").stop().fadeIn(200).css({"animation":"rotate 2s infinite linear", "left": lf-50+"px"}) }
-    else {
-      $("#float").stop().fadeIn(200).css({"animation":"float 2s infinite linear", "left": lf+wd+10+"px"});
+    if(scr>=1200){
+      var lf=$(this).offset().left;
+      var wd=$(this).width();
+      var idx = $(this).index();
+      var st = $("body").scrollTop();
+      var sc_idx = st/ht;
+      if( idx==sc_idx ) { $("#float").stop().fadeIn(200).css({"animation":"rotate 2s infinite linear", "left": lf-50+"px","top":top+"px"}) }
+      else {
+        $("#float").stop().fadeIn(200).css({"animation":"float 2s infinite linear", "left": lf+wd+10+"px","top":top+"px"});
+      }
     }
   });
   $(".gnb li").mouseout(function() {
     $("#float").stop().fadeOut(200);
+  });
+
+  //works hover effect
+  $(".me").mouseover(function(){
+    $("#real").css({"display":"block"});
+    $("#charlee").css({"display":"none"});
+
+    $("#hover").text("Just tell me your style what you want.").css({"transform":"rotateZ(10deg) translateY(-150%) translateX(15%)", "font-size":"24px"});
+  });
+  $(".me").mouseout(function(){
+    $("#real").css({"display":"none"});
+    $("#charlee").css({"display":"block"});
+    $("#hover").text("Mouseover Me ! !").css({transform:"rotateZ(65deg)","font-size":"22px"});
   });
 
   //페이지 이동 
@@ -88,21 +124,23 @@ $("#moon").click(function(){
       $("html, body").not(":animated").animate({"scrollTop":"-="+ht+"px"}, 900, 'easeOutQuad')
     }
   });
+  
   //scroll effect 
   $("body, html").scroll(function() { 
     if(sw==true){fishing();}
     $("#info").fadeOut(500);
 
     obj = $("#about").offset().top;
-    idx=-1
+    id=-1;
     if( 0<=obj){
-      $("#ab_box").fadeIn(500);
+      $("#about_wrap").fadeIn(2000);
       function pl(){
-        if (idx++<=4){
-          $("#card li.card_lst:eq("+idx+")").addClass("on");
-          setTimeout(pl,300);
+        if (id++<=4){
+          $("#card li.card_lst:eq("+id+")").css("transition-delay",id*0.09+"s");
+          $("#card li.card_lst:eq("+id+")").addClass("on");
+          
         } 
-      }pl()
+      }setTimeout(function () { pl(); },500);
     } 
     
     po = $("#ability").offset().top;
@@ -115,16 +153,21 @@ $("#moon").click(function(){
       $("#rocket").css("animation","rocket 8s ease-out infinite");
     } else { $("#rocket").css("animation","");}
   });
-  
-//planets control
+  //planets control
   sw2=true;//점수 멈춤 기능
   function ring_reset()//
-  {
+  { 
     sw2=false;
-    $("#ring_wrap").css({"width":"25vh", "heigth":"25vh", "top":"22%", "left":"15%" });
-    $("#ring_tit").text("Cilck planets.");
-    $("#planet_box").css({"width":"87%", "transform":"translate(0%)"});
-    $("#ability_box li").stop().css("display","none"); 
+    if (scr>=1200){
+      $("#ring_tit").text("Cilck planets.");
+      $("#ability_box li").stop().css("display","none"); 
+      $("#ring_wrap").css({"width":"25vh", "heigth":"25vh", "top":"22%", "left":"15%" });
+      $("#planet_box").css({"width":"87%", "transform":"translate(0%)"});
+    }
+    else {
+      $("#ring_tit").text("Cilck planets.");
+      $("#ability_box li").stop().css("display","none"); 
+    }
   }
   
   $("#ring").click(function(){
@@ -132,7 +175,11 @@ $("#moon").click(function(){
   });
   $(".planet_wrap").click(function(){
     sw2=true;
-    $("#ring_wrap").css({"width":"21vh", "heigth":"21vh", "top":"17%", "left":"9%"});
+    if (scr>=1200){
+      $("#ring_wrap").css({"width":"21vh", "heigth":"21vh", "top":"17%", "left":"9%"});
+      $("#planet_box").css({"width":"60%", "transform":"translate(25%)"});
+    } 
+    
     var name = document.getElementById("ring_tit");
     var idx = $(this).index();
     var arr = [95,92,"developing..",88,65,72];
@@ -144,27 +191,13 @@ $("#moon").click(function(){
           name.innerText = score;
         } else if( x++<score ){
           name.innerText = x+"%";
-          setTimeout(counter, 2);
+          setTimeout(counter, 1);
         }
       }  
     } counter();
-    $("#planet_box").css({"width":"60%", "transform":"translate(25%)"});
+    
     $("#ability_box li.ability_con:eq("+idx+")").stop().slideDown(1000);
     $("#ability_box li.ability_con:eq("+idx+")").siblings().stop().css("display","none");
   });
-
-  //works hover effect
-  $(".me").mouseover(function(){
-    $("#real").css({"display":"block"});
-    $("#charlee").css({"display":"none"});
-
-    $("#hover").text("Just tell me your style what you want.").css({"transform":"rotateZ(10deg) translateY(-150%) translateX(15%)", "font-size":"24px"});
-  });
-  $(".me").mouseout(function(){
-    $("#real").css({"display":"none"});
-    $("#charlee").css({"display":"block"});
-    $("#hover").text("Mouseover Me ! !").css({transform:"rotateZ(65deg)","font-size":"22px"});
-  });
-
 
 });

@@ -46,17 +46,17 @@ p { cursor: context-menu;  }
 }
 
 /* home */
-#hi { display: block; width: 350px; text-align: center; font-size: 40px; margin: 40vh auto; }
+#hi { display: block; width: 310px; text-align: center; font-size: 40px; margin: 40vh auto; }
 #hi span { display: block; }
 
 /* about page */
 #about { padding-top: 33vh; padding-left: 6vw; }
-#about_wrap { width: 70%; min-width: 1150px; height: 50vh; margin: 0 auto; }
-#ab_box { float: left; margin-right: 4vw; margin-top: -7vh; transform: rotateZ(-10deg); font-size: 25px; display: none; }
+#about_wrap { width: 70%; min-width: 1150px; height: 50vh; margin: 0 auto; display: none; }
+#ab_box { float: left; margin-right: 4vw; margin-top: -7vh; transform: rotateZ(-10deg); font-size: 25px; }
 #ab_img { display: block; height: 25vh; }
 
 #card { float: left; width: 857px; font-size: 23px; columns: 2; }
-.card_lst { transition: 0.7s ease-out; transform: translateX(3vw); opacity: 0; }
+.card_lst { transition: 0.5s ease-out; transform: translateX(3vw); opacity: 0; }
 .card_lst.on { transform: translateX(0vw) translateY(0vh); opacity: 1; }
 #card li { padding-bottom: 5vh; margin-left: 3vw; }
 #card p { text-indent: 7px; } 
@@ -124,19 +124,10 @@ p { cursor: context-menu;  }
 
 .ability_works { position: absolute; width: 35vw; margin-left: -12vw; margin-top: 3vh;  }
 .ability_works dt { text-align: center; font-size: 1.3vw;  cursor: context-menu;  border: 1px solid #fff; width: 5.5vw; padding-top: 0.2vw; line-height: 1.6; margin: 0 auto; }
-/* .ability_works dt p { animation: char 4s ease-out infinite; transform: rotateZ(15deg); transform-origin: 50% 0; }
-@keyframes char { 
-  0% { transform: rotateZ(15deg); }
-  10% { transform: rotateZ(-13deg); }
-  20% { transform: rotateZ(10deg); }
-  30% { transform: rotateZ(-8deg); }
-  40% { transform: rotateZ(5deg); }
-  50% { transform: rotateZ(0deg); }
-  90% { transform: rotateZ(0deg); }
-  100% { transform: rotateZ(15deg); }
-}
-.ability_works:hover dt p { animation: auto; transform: rotateZ(0deg); }  */
-.ability_works dd { float: left; margin-right: 1.5vh; height: 0px; padding-top: 1vw; overflow: hidden; transition: 1.5s; line-height: 2.5; font-size: 1vw; }
+
+.ability_works dd { float: left; margin-right: 2.1vh; height: 0px; padding-top: 1vw; overflow: hidden; transition: 1.5s; line-height: 2.5; font-size: 1vw; }
+.ability_works dd:last-of-type { margin-right: 0vh; }
+
 .ability_works:hover dd { height: 30vh; }
 .ability_works:hover dt { text-shadow: 2px -2px 5px #fff; }
 .ability_works img, video, iframe { display: block; width: 20vh; height: 15vh; }
