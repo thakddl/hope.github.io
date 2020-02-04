@@ -20,16 +20,16 @@ $(document).ready(function(){
         ani();
         intv = setInterval(function(){ ani(); },4000);
     });
-    // var ht = parseInt($(window).height());
-    // $("#totop").css("display","none");
-    // $(window).scroll(function(){
-    //    var sc = parseInt($(window).scrollTop());
-    //    if(sc>=ht){
-    //        $(".lst_btn").stop().animate({"left":"30px"},500);
-    //        $("#totop").fadeIn();
-    //    } else {
-    //        $(".lst_btn").stop().animate({"left":"30px"},500);
-    //        $("#totop").fadeOut();
-    //    }    
-    // });    
+    var ht = parseInt($(window).height());
+    $("#totop").css("display","none");
+    $(window).scroll(function(){
+       var sc = parseInt($(window).scrollTop());
+       if(sc>=ht-500){
+        //    $(".lst_btn").stop().animate({"left":"30px"},500);
+           $("#totop").fadeIn();
+       } else {
+        //    $(".lst_btn").stop().animate({"left":"30px"},500);
+           $("#totop").fadeOut();
+       }    
+    });    
 });
