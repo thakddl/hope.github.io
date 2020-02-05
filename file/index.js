@@ -43,29 +43,29 @@ $(document).ready(function(){
   $("#moon").click(function(){
     var scr = parseInt($("body").width());
     $("#info").fadeOut(500);
-      if (scr>=1200){
-        if ( sw==false ){
-          $("#hide").css("display","block");
-          setTimeout(moon_int,10);
-          setTimeout(fishing,1600);
-        } 
-        else { moon_int();
-          setTimeout(function(){$("#fishing").fadeOut();},800);
-          setTimeout(function(){$("#hide").css("display","none");}, 2000); 
-        }
+    if (scr>=1200){
+      if ( sw==false ){
+        $("#hide").css("display","block");
+        setTimeout(moon_int,10);
+        setTimeout(fishing,1600);
       } 
-      else {
-        if ( sw==false ){
-          $("#hide").css("left","0");
-          setTimeout(moon_int,10);
-          setTimeout(fishing,1600);
-        } 
-        else { moon_int();
-          setTimeout(function(){$("#fishing").fadeOut();},800);
-          setTimeout(function(){$("#hide").css("left","100%");}, 2000); 
-        }
+      else { moon_int();
+        setTimeout(function(){$("#fishing").fadeOut();},800);
+        setTimeout(function(){$("#hide").css("display","none");}, 2000); 
       }
-    });
+    }
+    else {
+      if ( sw==false ){
+        $("#hide").css("left","0");
+        setTimeout(moon_int,10);
+        setTimeout(fishing,1600);
+      } 
+      else { moon_int();
+        setTimeout(function(){$("#fishing").fadeOut();},800);
+        setTimeout(function(){$("#hide").css("left","100%");}, 2000); 
+      }
+    }
+  });
 
   //페이지 이동 
   var ht = $(window).height(); 
@@ -113,6 +113,7 @@ $(document).ready(function(){
       sw=false; 
     }
   });
+
   
   //mouseover
   $(".gnb li").mouseover(function(){
@@ -132,6 +133,7 @@ $(document).ready(function(){
   $(".gnb li").mouseout(function() {
     $("#float").stop().fadeOut(200);
   });
+
   //mobile ability click effect
   $(".ability_works dt").click(function(){
     var scr = parseInt($("body").width());
@@ -139,13 +141,12 @@ $(document).ready(function(){
       $(".ability_works dd").animate({"height":"30vh"},1000);
     }
   });
-  $(".html").click(function(){
+  $("body").click(function(){
     var scr = parseInt($("body").width());
     if(scr<1200){
       $(".ability_works dd").animate({"height":"0vh"},1);
     }
   });
-  
   //works hover effect
   $(".me").mouseover(function(){
     $("#real").css({"display":"block"});
@@ -158,6 +159,7 @@ $(document).ready(function(){
     $("#charlee").css({"display":"block"});
     $("#hover").text("Mouseover Me ! !").css({transform:"rotateZ(65deg)","font-size":"22px"});
   });
+
   
   //scroll effect 
   $("body, html").scroll(function() { 
