@@ -104,6 +104,15 @@ $(document).ready(function(){
       sw=false; 
     }
   });
+  $("#hide").click(function(){
+    var scr = parseInt($("body").width());
+    if(scr<1200){
+      moon_int();
+      $("#hide").css({"left":"100%"});
+      $("#fishing").css("display","none");
+      sw=false; 
+    }
+  });
   
   //mouseover
   $(".gnb li").mouseover(function(){
