@@ -134,7 +134,7 @@ p { cursor: context-menu;  }
 .ability_works img, video, iframe { display: block; width: 20vh; height: 15vh; }
 .bx { height: 15vh; width: 20vh; overflow: hidden; background-color: rgb(250, 218, 177) ; transition: 0.3s; }
 .com { width: 100%; padding: 3vh; }
-.img_box { padding-top: -15vh; }
+.img_box { margin-top: -15vh; }
 .bx:hover .img_box { margin-top: 0px; }
 .bg_w { background-color: #fff; height: 12vh; }
 

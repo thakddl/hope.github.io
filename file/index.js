@@ -141,12 +141,20 @@ $(document).ready(function(){
       $(".ability_works dd").animate({"height":"30vh"},1000);
     }
   });
-  $("body").click(function(){
+  $(".bx").click(function(){
     var scr = parseInt($("body").width());
     if(scr<1200){
-      $(".ability_works dd").animate({"height":"0vh"},1);
+      $(".img_box").animate({"margin-top":"0vh"},300);
     }
   });
+  $(".planet").click(function(){
+    var scr = parseInt($("body").width());
+    if(scr<1200){
+      $(".ability_works dd").css({"height":"0vh"});
+      $(".img_box").animate({"margin-top":"-15vh"},300);
+    }
+  });
+
   //works hover effect
   $(".me").mouseover(function(){
     $("#real").css({"display":"block"});
