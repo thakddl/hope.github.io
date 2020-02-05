@@ -87,11 +87,11 @@ $(document).ready(function(){
     }
   });
   // gnb li cilck 
-  $(".page").each(function(index){
-      var pgtop = $(this).offset().top;
-      $(this).attr("data-top", pgtop);
-  });
   $(".gnb li").click(function(){
+    $(".page").each(function(index){//set page offset.top
+        var pgtop = $(this).offset().top;
+        $(this).attr("data-top", pgtop);
+    });
     var scr = parseInt($("body").width());
     idx = $(this).index();
     let otp = parseInt($(".page_wrap .page").eq(idx).attr("data-top"));
