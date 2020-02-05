@@ -90,11 +90,12 @@ $(document).ready(function(){
   $(".page").each(function(index){//set page offset.top
       var pgtop = $(this).offset().top;
       $(this).attr("data-top", pgtop);
-  });
-  $(".gnb li").click(function(){
+    });
+    $(".gnb li").click(function(){
     var scr = parseInt($("body").width());
     idx = $(this).index();
     let otp = parseInt($(".page_wrap .page").eq(idx).attr("data-top"));
+    console.log(otp)
     $("body, html").stop().animate({"scrollTop":otp+"px"}, 900, 'easeOutQuad');
     if (scr<1200){
       moon_int();

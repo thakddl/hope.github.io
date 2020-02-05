@@ -14,7 +14,7 @@ html { overflow: auto; }
 #hi { font-size: 30px; }
 
 /* about page */
-#about { padding-top: 15vh; height: auto; padding-left: 0vw; }
+#about { padding-top: 15vh; padding-left: 0vw; min-height: 870px; }
 #about_wrap { width: 100%; min-width: auto; height: 50vh; }
 #ab_box { float: none;  margin-right: auto; margin-top: auto; margin: 0 auto; transform: rotateZ(0deg); width: 30vw; font-size: 20px; }
 #ab_img { display: block; width: 30vw; height: auto; }
