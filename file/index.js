@@ -132,7 +132,20 @@ $(document).ready(function(){
   $(".gnb li").mouseout(function() {
     $("#float").stop().fadeOut(200);
   });
-
+  //mobile ability click effect
+  $(".ability_works dt").click(function(){
+    var scr = parseInt($("body").width());
+    if(scr<1200){
+      $(".ability_works dd").animate({"height":"30vh"},1000);
+    }
+  });
+  $(".html").click(function(){
+    var scr = parseInt($("body").width());
+    if(scr<1200){
+      $(".ability_works dd").animate({"height":"0vh"},1);
+    }
+  });
+  
   //works hover effect
   $(".me").mouseover(function(){
     $("#real").css({"display":"block"});
@@ -145,7 +158,6 @@ $(document).ready(function(){
     $("#charlee").css({"display":"block"});
     $("#hover").text("Mouseover Me ! !").css({transform:"rotateZ(65deg)","font-size":"22px"});
   });
-
   
   //scroll effect 
   $("body, html").scroll(function() { 
