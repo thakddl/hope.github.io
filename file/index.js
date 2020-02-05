@@ -155,14 +155,17 @@ $(document).ready(function(){
     } 
     
     po = $("#ability").offset();
-    if(0!=po.top){
+    var scr = parseInt($("body").width());
+    if(scr>=1200){
+      if(0!=po.top){
       ring_reset();
+      }
     }
 
     p = $("#contact").offset();
       if(0==p.top){
       $("#rocket").css("animation","rocket 8s ease-out infinite");
-    } else { $("#rocket").css("animation","");}
+    } 
   });
   //planets control
   sw2=true;//점수 멈춤 기능
