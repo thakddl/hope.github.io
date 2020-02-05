@@ -50,7 +50,7 @@ p { cursor: context-menu;  }
 #hi span { display: block; }
 
 /* about page */
-#about { padding-top: 33vh; padding-left: 6vw; }
+#about { padding-top: 33vh; padding-left: 6vw; height: auto; min-height: 870px; }
 #about_wrap { width: 70%; min-width: 1150px; height: 50vh; margin: 0 auto; }
 #ab_box { float: left; opacity: 0; margin-right: 4vw; margin-top: -7vh; transform: rotateZ(-10deg); font-size: 25px; }
 #ab_img { display: block; height: 25vh; }
