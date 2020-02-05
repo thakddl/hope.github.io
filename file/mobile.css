@@ -92,7 +92,7 @@ html { overflow: auto; }
 .bg_w { background-color: #fff; height: 12vh; }
 /* 우유곽 애니메이션 */
 #milk li {display: block !important;}
-#milk { position: relative; transform-style: preserve-3d; animation-name: cube; animation-duration: 7s; animation-iteration-count: infinite; width: 22vw; height: auto; margin-top: -3vh; }
+#milk { position: relative; transform-style: preserve-3d; animation-name: cube; animation-duration: 7s; animation-iteration-count: infinite; width: 22vw; height: auto; margin-top: 0.5vh; }
 .roof { position: absolute; width: 200px; height: 150px; transform: rotateY(-90deg); transform-style: preserve-3d; }
 .top { width: 200px; height: 50px; top: 0; transform: rotateY(90deg); background-color: pink; opacity: 0.85; }
 .roof .side12, .roof .side14 { position: absolute; top: 50px; width: 0; height: 0; border-style: solid; border-width: 0 100px 100px 100px; border-color: transparent transparent pink transparent; opacity: 0.6; font-size: 40px; text-align: center; line-height: 30px; }
@@ -112,10 +112,10 @@ html { overflow: auto; }
 .side11 { transform: rotateX(270deg) translate3d(0px, 0px, 100px); background-color: pink; }
 
 @keyframes cube { 
-  0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(0.4) scaleZ(0.4) ; }
-  40% { transform: rotateX(-20deg) rotateY(180deg) rotateZ(20deg) scale(0.4) scaleZ(0.4); }
-  80% { transform: rotateX(20deg) rotateY(360deg) rotateZ(15deg) scale(0.4) scaleZ(0.4); }
-  100% { transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg) scale(0.4) scaleZ(0.4); }
+  0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(0.3) scaleZ(0.3); }
+  40% { transform: rotateX(-20deg) rotateY(180deg) rotateZ(20deg) scale(0.3) scaleZ(0.3); }
+  80% { transform: rotateX(20deg) rotateY(360deg) rotateZ(15deg) scale(0.3) scaleZ(0.3); }
+  100% { transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg) scale(0.3) scaleZ(0.3); }
 }
 
 /* works page */
