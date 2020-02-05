@@ -75,13 +75,14 @@ html { overflow: auto; }
 #ability_box li h3 { padding-bottom: 5px; }
 #ability_box li span { display: block; padding-top: 5px; }
 
-.ability_works { position: absolute; width: 100%; margin-left: 0vw; margin-top: 2vh; }
-.ability_works dt { text-align: center; font-size: 16px;  cursor: context-menu;  border: 1px solid #fff; width: 5em; padding-top: 0.2vw; line-height: 1.6; margin: 0 auto; }
+.ability_works { position: absolute; width: 100%; margin-left: 0vw; margin-top: 0vh; padding-top: 1vh; }
+.ability_works dt { text-align: center; font-size: 16px;  cursor: context-menu;  border: 1px solid #fff; width: 5em; padding-top: 0vw; line-height: 1.6; margin: 0 auto; }
 
-.ability_works dd { float: left; margin-right: 2.2vh; height: 0; width: 30%; padding-top: 1vw; overflow: hidden; transition: 1.5s; line-height: 2.5; font-size: 1vw; }
+.ability_works dd { float: left; margin-right: 2.2vh; height: 0; width: 30%; padding-top: 1vh; overflow: hidden; transition: 1.5s; line-height: 2.5; font-size: 1vw; }
 .ability_works:hover dd { height: 20vh; }
 .ability_works:hover dt { text-shadow: 2px -2px 5px #fff; }
-.ability_works img, video, iframe { display: block; float: left; width: 100%; height: auto; }
+.ability_works img, video { float: left; width: 100%; height: auto; }
+.ability_works iframe { width: 100%; height: 12vh; }
 .bx { height: 10vh; width: 100%; overflow: hidden; background-color: rgb(250, 218, 177) ; transition: 0.3s; }
 .com { width: 100%; padding: 1.5vh; }
 .img_box img{ height: 100%; }
