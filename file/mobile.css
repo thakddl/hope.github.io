@@ -1,8 +1,8 @@
 @charset "utf-8";
 .page { overflow: auto; }
 #hide { position: absolute; display: block; background-color: rgba(0,0,0,0.85); width: 100%; height: 100vh; padding-top: 10vh; left: 100%; }
-.gnb { color: #fff; font-size: 35px; width: 100%; margin: 0px auto; text-align: center; }
-.gnb li { transform: translateX(200px); margin-right: 0vw;opacity: 0; transition: 1s; float: none; padding-bottom: 15px; width: fit-content; margin: 0 auto; }
+.gnb { width: 100%; margin: 0px auto; text-align: center; }
+.gnb li { margin-right: 0vw; float: none; padding-bottom: 15px; width: fit-content; margin: 0 auto; }
 .gnb li:last-child { margin-right: auto; }
 
 #moon_btn { position: fixed; z-index: 1000; right: 30px; top: 30px; }
@@ -10,10 +10,10 @@
 #info { display: none; }
 
 /* home */
-#hi { display: block; width: 310px; text-align: center; font-size: 30px; margin: 42vh auto; }
+#hi { font-size: 30px; }
 
 /* about page */
-#about { padding-top: 15vh; padding-left: 0vw; }
+#about { padding-top: 15vh; height: auto; padding-left: 0vw; }
 #about_wrap { width: 100%; min-width: auto; height: 50vh; }
 #ab_box { float: none;  margin-right: auto; margin-top: auto; margin: 0 auto; transform: rotateZ(0deg); width: 30vw; font-size: 20px; }
 #ab_img { display: block; width: 30vw; height: auto; }
@@ -35,7 +35,7 @@
 #ring { display: block; width: 100%; height: 100%; animation: circle 25s infinite linear; }
 #ring_tit { position: absolute; font-size: 18px; text-align: center; width: 100%; top: 40%; z-index: 888; text-shadow: 2px 2px 3px #000; }
 
-#planet_box { width: 95%; height: 27vh; float: right; margin-top: 13vh; position: relative; transition: 1s; }
+#planet_box { width: 95%; height: 27vh; float: right; position: relative; transition: 1s; }
 .planet { cursor: pointer; width: 100%; height: 100%; }
 .planet_tit { position: absolute; display: block; font-size: 18px; }
 .planet_wrap { position: absolute; }

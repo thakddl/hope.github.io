@@ -25,21 +25,23 @@ $(document).ready(function(){
 
   function fishing() //character location mark 
   {
-    var st = $("body").scrollTop(); //html은 overflow hidden상태이므로 스크롤 불가능 
-    var idx = st/ht;
-    tar = $(".gnb li:eq("+idx+")");
+    var st = $("body").scrollTop();
+    let idx = parseInt(st/ht);
+    tar = $(".gnb li").eq(idx);
     tar_idx = tar.index();
-    var lf = tar.offset().left;
-    var top = tar.offset().top;
+    var ofs = tar.offset();
+    var ofl = parseInt(ofs.left);
+    var oft = parseInt(ofs.top);
     var wd = tar.width();
-      $("#float").stop().fadeOut(200);
-      $("#fishing").stop().fadeOut(200);
-      setTimeout(function(){$("#fishing").stop().css({"left": lf+wd-10+"px","top":top-15+"px"}).fadeIn(600);}, 220);
+    $("#float").stop().fadeOut(100);
+    $("#fishing").stop().fadeOut(200,function(){
+      $("#fishing").css({"left": ofl+wd-10+"px","top":oft-15+"px"}).stop().fadeIn(300);
+    });
   }
-
-  var scr = screen.width;
+  
   //moon_int bar on/off
   $("#moon").click(function(){
+    var scr = parseInt($("body").width());
     $("#info").fadeOut(500);
       if (scr>=1200){
         if ( sw==false ){
@@ -65,10 +67,35 @@ $(document).ready(function(){
       }
     });
 
-  // gnb li cilck & hover effect
+  //페이지 이동 
+  var ht = $(window).height(); 
+  var idx;
+  $(window).on("mousewheel", function(e){
+    if(e.originalEvent.wheelDelta < 0){
+      $("#info").fadeOut(500);
+      $("body, html").not(":animated").animate({"scrollTop":"+="+ht+"px"}, 900, 'easeOutQuad');
+    } else {
+      $("html, body").not(":animated").animate({"scrollTop":"-="+ht+"px"}, 900, 'easeOutQuad')
+    }
+  });
+  $(document).keyup(function(event){
+    if(event.keyCode==40){
+      $("#info").fadeOut(500);
+      $("body, html").not(":animated").animate({"scrollTop":"+="+ht+"px"}, 900, 'easeOutQuad');
+    } else if(event.keyCode==38){
+      $("html, body").not(":animated").animate({"scrollTop":"-="+ht+"px"}, 900, 'easeOutQuad')
+    }
+  });
+  // gnb li cilck 
+  $(".page").each(function(index){
+      var pgtop = $(this).offset().top;
+      $(this).attr("data-top", pgtop);
+  });
   $(".gnb li").click(function(){
-    var idx = $(this).index();
-    $("body, html").not(":animated").animate({"scrollTop":idx*ht+"px"}, 900, 'easeOutQuad');
+    var scr = parseInt($("body").width());
+    idx = $(this).index();
+    let otp = parseInt($(".page_wrap .page").eq(idx).attr("data-top"));
+    $("body, html").stop().animate({"scrollTop":otp+"px"}, 900, 'easeOutQuad');
     if (scr<1200){
       moon_int();
       $("#hide").css({"left":"100%"});
@@ -76,16 +103,19 @@ $(document).ready(function(){
       sw=false; 
     }
   });
+  
+  //mouseover
   $(".gnb li").mouseover(function(){
+    var scr = parseInt($("body").width());
     if(scr>=1200){
-      var lf=$(this).offset().left;
+      var lf=$(this).offset();
       var wd=$(this).width();
-      var idx = $(this).index();
+      idx = $(this).index();
       var st = $("body").scrollTop();
-      var sc_idx = st/ht;
-      if( idx==sc_idx ) { $("#float").stop().fadeIn(200).css({"animation":"rotate 2s infinite linear", "left": lf-50+"px","top":top+"px"}) }
+      var sc_idx = parseInt(st/ht);
+      if( idx==sc_idx ) { $("#float").stop().fadeIn(200).css({"animation":"rotate 2s infinite linear", "left": lf.left-50+"px","top":top+"px"}) }
       else {
-        $("#float").stop().fadeIn(200).css({"animation":"float 2s infinite linear", "left": lf+wd+10+"px","top":top+"px"});
+        $("#float").stop().fadeIn(200).css({"animation":"float 2s infinite linear", "left": lf.left+wd+10+"px","top":top+"px"});
       }
     }
   });
@@ -106,50 +136,30 @@ $(document).ready(function(){
     $("#hover").text("Mouseover Me ! !").css({transform:"rotateZ(65deg)","font-size":"22px"});
   });
 
-  //페이지 이동 
-  var ht = $(window).height(); 
-  $(window).on("mousewheel", function(e){
-    if(e.originalEvent.wheelDelta < 0){
-      $("#info").fadeOut(500);
-      $("body, html").not(":animated").animate({"scrollTop":"+="+ht+"px"}, 900, 'easeOutQuad');
-    } else {
-      $("html, body").not(":animated").animate({"scrollTop":"-="+ht+"px"}, 900, 'easeOutQuad')
-    }
-  });
-  $(document).keyup(function(event){
-    if(event.keyCode==40){
-      $("#info").fadeOut(500);
-      $("body, html").not(":animated").animate({"scrollTop":"+="+ht+"px"}, 900, 'easeOutQuad');
-    } else if(event.keyCode==38){
-      $("html, body").not(":animated").animate({"scrollTop":"-="+ht+"px"}, 900, 'easeOutQuad')
-    }
-  });
   
   //scroll effect 
   $("body, html").scroll(function() { 
-    if(sw==true){fishing();}
+    if(sw==true){ setTimeout(function() { fishing(); }, 920); }
     $("#info").fadeOut(500);
 
-    obj = $("#about").offset().top;
-    id=-1;
+    obj = parseInt($("#about").offset().top);
     if( 0<=obj){
-      $("#about_wrap").fadeIn(2000);
       function pl(){
-        if (id++<=4){
-          $("#card li.card_lst:eq("+id+")").css("transition-delay",id*0.09+"s");
+        $("#ab_box").fadeTo(300,1);
+        for (id=-1; id<=4; id++ ){
+          $("#card li.card_lst:eq("+id+")").css("transition-delay",id*0.2+"s");
           $("#card li.card_lst:eq("+id+")").addClass("on");
-          
         } 
-      }setTimeout(function () { pl(); },500);
+      }setTimeout(function () { pl(); },600);
     } 
     
-    po = $("#ability").offset().top;
-    if(0!=po){
+    po = $("#ability").offset();
+    if(0!=po.top){
       ring_reset();
     }
 
-    p = $("#contact").offset().top;
-      if(0==p){
+    p = $("#contact").offset();
+      if(0==p.top){
       $("#rocket").css("animation","rocket 8s ease-out infinite");
     } else { $("#rocket").css("animation","");}
   });
@@ -158,6 +168,7 @@ $(document).ready(function(){
   function ring_reset()//
   { 
     sw2=false;
+    var scr = parseInt($("body").width());
     if (scr>=1200){
       $("#ring_tit").text("Cilck planets.");
       $("#ability_box li").stop().css("display","none"); 
@@ -175,6 +186,7 @@ $(document).ready(function(){
   });
   $(".planet_wrap").click(function(){
     sw2=true;
+    var scr = parseInt($("body").width());
     if (scr>=1200){
       $("#ring_wrap").css({"width":"21vh", "heigth":"21vh", "top":"17%", "left":"9%"});
       $("#planet_box").css({"width":"60%", "transform":"translate(25%)"});
