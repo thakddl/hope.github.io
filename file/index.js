@@ -138,7 +138,7 @@ $(document).ready(function(){
   $(".ability_works dt").click(function(){
     var scr = parseInt($("body").width());
     if(scr<1200){
-      $(".ability_works dd").animate({"height":"30vh"},1000);
+      $(".ability_works dd").animate({"height":"20vh"},1000);
     }
   });
   $(".bx").click(function(){
