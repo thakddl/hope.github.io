@@ -218,6 +218,3 @@ p { cursor: context-menu;  }
 }
 #thank { font-size: 60px; text-align: center; margin: auto; padding-top: 45vh; }
 #box { position: absolute; font-size: 30px; left: 10vw; bottom: 10vh; }
-
-
-#home, #ability, #about { display: none; }
