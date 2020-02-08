@@ -68,9 +68,9 @@ $(document).ready(function(){
   });
 
   //페이지 이동 
-  var ht = $(window).height(); 
   var idx;
   $(window).on("mousewheel", function(e){
+    var ht = $(window).height(); 
     if(e.originalEvent.wheelDelta < 0){
       $("#info").fadeOut(500);
       $("body, html").not(":animated").animate({"scrollTop":"+="+ht+"px"}, 900, 'easeOutQuad');
@@ -247,4 +247,20 @@ $(document).ready(function(){
     $("#ability_box li.ability_con:eq("+idx+")").siblings().stop().css("display","none");
   });
 
+  //works tab
+  $(".tab li").click(function(){
+    $(this).addClass("on");
+    $(this).siblings().removeClass("on");
+    var idx = $(this).index();
+    if ( idx==0 ){  
+      $(".grid__item").removeClass("on");
+      $(".grid__item").filter(".re").addClass("on");
+    } else if ( idx==1 ){  
+      $(".grid__item").removeClass("on");
+      $(".grid__item").filter(".mo").addClass("on");
+    } else if ( idx==2 ){  
+      $(".grid__item").removeClass("on");
+      $(".grid__item").filter(".de").addClass("on");
+    }
+  });
 });
