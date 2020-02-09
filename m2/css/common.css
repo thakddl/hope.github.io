@@ -22,7 +22,7 @@ input[type=submit] {-webkit-appearance:none;}
 #ck1:checked ~ #hd .line3 { transform-origin: 50% 50%; transform: translateY(-12px) rotateZ(-45deg); }
 #ck1:checked ~ #hd .line2 { opacity: 0; }
 
-#gnb { position: fixed; z-index: 998;  width: 300px; height: 100vh; background-color: rgba(37,172,226,0.85);  left: -80%; transition: 0.5s; }
+#gnb { position: fixed; z-index: 998;  width: 300px; height: 100vh; background-color: rgba(37,172,226,0.85);  left: -100%; transition: 0.5s; }
 .thumb_menu { width: 100%; }
 .thumb_menu li { float: left; height: 50px; margin-left: 15px; margin-top: 20px; }
 .thumb_menu label { width: 80px; height: 40px; border: 2px solid #333; box-sizing: border-box; text-align: center; line-height: 40px; color: #000; }
