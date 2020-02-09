@@ -170,7 +170,7 @@ p { cursor: context-menu;  }
 #works { padding-top: 26vh; }
 .work_wrap { width: 70%; margin: 0 auto; }
 .tab { width: 80%; padding-bottom: 12vh; }
-.tab li { float: left; width: calc(100% / 3); text-align: center; font-size: 2.2em; color: #fff; cursor: pointer; }
+.tab li { float: left; width: calc(100% / 3); text-align: center; font-size: 3.5vh; color: #fff; cursor: pointer; }
 .tab li.on { color: #0d75fd; text-shadow: 0px 0px 30px #fff; }
 .content {
   /* overflow: hidden; */
@@ -193,7 +193,7 @@ p { cursor: context-menu;  }
   -moz-osx-font-smoothing: grayscale;
 }
 .overlay__content span { display: block; text-indent: 0.5em; }
-.go { display: block; float: right; color: #000; font-weight: 900; padding-top: 2.5rem;
+.go { display: block; float: right; color: #000; font-weight: 900; padding-top: 2.5vh;
 	--color-link-hover: #0249a5;
 }
 
@@ -205,7 +205,7 @@ p { cursor: context-menu;  }
 
 /* contact page */
 #contact { padding-top: 25vh; }
-#rocket { position: absolute; z-index: 50; width: 55px; height: 55px; left: 17vw; bottom: 16vh; animation: 8s ease-out infinite rocket; }
+#rocket { position: absolute; z-index: 50; width: 55px; height: 55px; left: 17vw; bottom: 16vh; }
 @keyframes rocket { 
   3% { transform: rotateZ(0deg); }
   11% { transform: rotateZ(15deg); }
