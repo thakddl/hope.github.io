@@ -39,6 +39,7 @@
   <meta property="al:android:app_store_id" content="Hope's space">
   <meta property="al:web:url" content="https://thakddl.github.io">
   <!-- 문서 불러오기 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./file/font.css">
   <link rel="stylesheet" href="./file/index.css">
@@ -53,7 +54,7 @@
   @import url(./file/tablet.css) screen and (min-width: 768px) and (max-width:1200px);
   </style>
 </head>
-<body class="loading">
+<body class="web guide" data-page_section="web" data-page_type="guide">
   <svg class="hidden">
     <symbol id="icon-cross" viewBox="0 0 24 23">
       <title>cross</title>
@@ -410,7 +411,7 @@
     </div>
   </header>
   <main>
-    <div class="container">
+    <div class="container container-fluid">
       <canvas id="universe"></canvas>
     </div>
     <section class="page_wrap">
@@ -465,7 +466,7 @@
               </div>
             </li>
             <li class="card_lst">
-              <a href="./file/resume.pdf" target="_blank" rel="noopener noreferrer" id="resume">디자인 이력서 pdf 다운받기</a>
+              <a href="./file/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn" id="resume">디자인 이력서 pdf 다운받기</a>
             </li>
           </ul>
         </div>
@@ -513,7 +514,7 @@
               <dt>예시 보기</dt>
               <dd>
                 <p>태그 구조도</p>
-                <img src="./data/tag_structure.jpg" alt="" >
+                <img src="./data/tag_structure.jpg" alt="작업물이미지" >
               </dd>
               <dd>
                 <p>iframe을 이용한 지도 보기</p>
@@ -567,7 +568,7 @@
               <dd>
                 <p>프레임 워크 활용 - 수디오</p>
                 <a href="https://thakddl.github.io/r3/" target="_blank">
-                  <img src="./data/r3_img.png" alt="">
+                  <img src="./data/r3_img.png" alt="수디오이미지">
                 </a>
               </dd>
             </dl>
@@ -603,15 +604,15 @@
               <dt>예시 보기</dt>
               <dd>
                 <p>로고 제작</p>
-                <img src="./data/main_logo.png" alt="" class="bg_w">
+                <img src="./data/main_logo.png" alt="작업물이미지" class="bg_w">
               </dd>
               <dd>
                 <p>아이콘 제작</p>
-                <img src="./data/icon.png" alt="">
+                <img src="./data/icon.png" alt="작업물이미지">
               </dd>
               <dd>
                 <p>타이포그래피 - 맥주</p>
-                <img src="./data/typo.png" alt="">
+                <img src="./data/typo.png" alt="작업물이미지">
               </dd>
             </dl>
           </li>
@@ -629,7 +630,7 @@
               <a class="grid__item re on" href="#preview-r1" SameSite="none">
                 <div class="box">
                   <div class="box__shadow"></div>
-                  <img class="box__img" src="./data/r1_img.png" alt="Some image"/>
+                  <img class="box__img" src="./data/r1_img.png" alt="thumbnail"/>
                   <h3 class="box__title box__title--straight box__title--bottom"><span class="box__title-inner" data-hover="Minumsa">Minumsa</span></h3>
                   <h4 class="box__text box__text--bottom"><span class="box__text-inner box__text-inner--rotated1">Book</span></h4>
                 </div>
@@ -637,7 +638,7 @@
               <a class="grid__item re on" href="#preview-r2" SameSite="none">
                 <div class="box">
                   <div class="box__shadow"></div>
-                  <img class="box__img" src="./data/r2_img.png" alt="Some image"/>
+                  <img class="box__img" src="./data/r2_img.png" alt="thumbnail"/>
                   <h3 class="box__title box__title--straight box__title--bottom"><span class="box__title-inner" data-hover="of Architects">of Architects</span></h3>
                   <h4 class="box__text box__text--topcloser"><span class="box__text-inner">
                     Association</span></h4>
@@ -646,7 +647,7 @@
               <a class="grid__item re on" href="#preview-r3">
                 <div class="box">
                   <div class="box__shadow"></div>
-                  <img class="box__img" src="./data/r3_img.png" alt="Some image"/>
+                  <img class="box__img" src="./data/r3_img.png" alt="thumbnail"/>
                   <h3 class="box__title"><span class="box__title-inner" data-hover="Sudio">Sudio</span></h3>
                   <h4 class="box__text box__text--bottomcloser"><span class="box__text-inner">Music</span></h4>
                 </div>
@@ -654,7 +655,7 @@
               <a class="grid__item mo" href="#preview-m1">
                 <div class="box">
                   <div class="box__shadow"></div>
-                  <img class="box__img" src="./data/m1_img.png" alt="Some image"/>
+                  <img class="box__img" src="./data/m1_img.png" alt="thumbnail"/>
                   <h3 class="box__title box__title--straight box__title--bottom"><span class="box__title-inner" data-hover="Goyard">Goyard</span></h3>
                   <h4 class="box__text box__text--bottom"><span class="box__text-inner box__text-inner--rotated1">fashion</span></h4>
                 </div>
@@ -662,7 +663,7 @@
               <a class="grid__item mo" href="#preview-m2">
                 <div class="box">
                   <div class="box__shadow"></div>
-                  <img class="box__img" src="./data/m2_img.png" alt="Some image"/>
+                  <img class="box__img" src="./data/m2_img.png" alt="thumbnail"/>
                   <h3 class="box__title"><span class="box__title-inner" data-hover="KB-bank">KB-bank</span></h3>
                   <h4 class="box__text box__text--topcloser"><span class="box__text-inner">money</span></h4>
                 </div>
@@ -670,7 +671,7 @@
               <a class="grid__item mo" href="#preview-m3">
                 <div class="box">
                   <div class="box__shadow"></div>
-                  <img class="box__img" src="./data/m3_img.png" alt="Some image"/>
+                  <img class="box__img" src="./data/m3_img.png" alt="thumbnail"/>
                   <h3 class="box__title"><span class="box__title-inner" data-hover="jin-air">jin-air</span></h3>
                   <h4 class="box__text box__text--bottomcloser"><span class="box__text-inner">air</span></h4>
                 </div>
@@ -678,7 +679,7 @@
               <a class="grid__item de" href="#preview-d1">
                 <div class="box">
                   <div class="box__shadow"></div>
-                  <img class="box__img" src="./data/d1_img.png" alt="Some image"/>
+                  <img class="box__img" src="./data/d1_img.png" alt="thumbnail"/>
                   <h3 class="box__title box__title--straight box__title--bottom"><span class="box__title-inner" data-hover="no-plug cafe">no-plug cafe</span></h3>
                   <h4 class="box__text box__text--bottom"><span class="box__text-inner box__text-inner--rotated1">plug</span></h4>
                 </div>
@@ -686,7 +687,7 @@
               <a class="grid__item de" href="#preview-d2">
                 <div class="box">
                   <div class="box__shadow"></div>
-                  <img class="box__img" src="./data/d2_img.png" alt="Some image"/>
+                  <img class="box__img" src="./data/d2_img.png" alt="thumbnail"/>
                   <h3 class="box__title"><span class="box__title-inner" data-hover="macgeolli">macgeolli</span></h3>
                   <h4 class="box__text box__text--topcloser"><span class="box__text-inner">fastival</span></h4>
                 </div>
@@ -694,7 +695,7 @@
               <a class="grid__item de" href="#preview-d3">
                 <div class="box">
                   <div class="box__shadow"></div>
-                  <img class="box__img" src="./data/d3_img.png" alt="Some image"/>
+                  <img class="box__img" src="./data/d3_img.png" alt="thumbnail"/>
                   <h3 class="box__title"><span class="box__title-inner" data-hover="Visit-seoul">Visit-seoul</span></h3>
                   <h4 class="box__text box__text--bottomcloser"><span class="box__text-inner">travel</span></h4>
                 </div>
@@ -705,7 +706,7 @@
               <div class="overlay__item" id="preview-r1">
                 <div class="box">
                   <div class="box__shadow"></div>
-                  <img class="box__img box__img--original" src="./data/r1_img.png" alt="Some image"/>
+                  <img class="box__img box__img--original" src="./data/r1_img.png" alt="thumbnail"/>
                   <h3 class="box__title"><span class="box__title-inner">Minumsa</span></h3>
                   <h4 class="box__text"><span class="box__text-inner">Book</span></h4>
                 </div>
@@ -719,7 +720,7 @@
               <div class="overlay__item" id="preview-r2">
                 <div class="box">
                   <div class="box__shadow"></div>
-                  <img class="box__img box__img--original" src="./data/r2_img.png" alt="Some image"/>
+                  <img class="box__img box__img--original" src="./data/r2_img.png" alt="thumbnail"/>
                   <h3 class="box__title box__title--straight"><span class="box__title-inner">대한건축사협회</span></h3>
                   <h4 class="box__text box__text--bottom"><span class="box__text-inner box__text-inner--rotated1">Architects</span></h4>
                 </div>
@@ -732,7 +733,7 @@
               <div class="overlay__item" id="preview-r3">
                 <div class="box">
                   <div class="box__shadow"></div>
-                  <img class="box__img box__img--original" src="./data/r3_img.png" alt="Some image"/>
+                  <img class="box__img box__img--original" src="./data/r3_img.png" alt="thumbnail"/>
                   <h3 class="box__title"><span class="box__title-inner">Sudio</span></h3>
                   <h4 class="box__text box__text--topcloser"><span class="box__text-inner">Music</span></h4>
                 </div>
@@ -745,7 +746,7 @@
               <div class="overlay__item" id="preview-m1">
                 <div class="box">
                   <div class="box__shadow"></div>
-                  <img class="box__img box__img--original" src="./data/m1_img.png" alt="Some image"/>
+                  <img class="box__img box__img--original" src="./data/m1_img.png" alt="thumbnail"/>
                   <h3 class="box__title"><span class="box__title-inner">Goyard</span></h3>
                   <h4 class="box__text box__text--bottom box__text--right"><span class="box__text-inner box__text-inner--rotated3">fashion</span></h4>
                 </div>
@@ -759,7 +760,7 @@
               <div class="overlay__item" id="preview-m2">
                 <div class="box">
                   <div class="box__shadow"></div>
-                  <img class="box__img box__img--original" src="./data/m2_img.png" alt="Some image"/>
+                  <img class="box__img box__img--original" src="./data/m2_img.png" alt="thumbnail"/>
                   <h3 class="box__title"><span class="box__title-inner">KB-bank</span></h3>
                   <h4 class="box__text box__text--bottomcloser"><span class="box__text-inner">money</span></h4>
                 </div>
@@ -773,7 +774,7 @@
               <div class="overlay__item" id="preview-m3">
                 <div class="box">
                   <div class="box__shadow"></div>
-                  <img class="box__img box__img--original" src="./data/m3_img.png" alt="Some image"/>
+                  <img class="box__img box__img--original" src="./data/m3_img.png" alt="thumbnail"/>
                   <h3 class="box__title"><span class="box__title-inner">jin-air</span></h3>
                   <h4 class="box__text"><span class="box__text-inner">air</span></h4>
                 </div>
@@ -786,7 +787,7 @@
               <div class="overlay__item" id="preview-d1">
                 <div class="box">
                   <div class="box__shadow"></div>
-                  <img class="box__img box__img--original" src="./data/d1_img.png" alt="Some image"/>
+                  <img class="box__img box__img--original" src="./data/d1_img.png" alt="thumbnail"/>
                   <h3 class="box__title box__title--straight box__title--bottom"><span class="box__title-inner">no-plug cafe</span></h3>
                   <h4 class="box__text box__title--bottom"><span class="box__text-inner box__text-inner--rotated1">plug</span></h4>
                 </div>
@@ -799,7 +800,7 @@
               <div class="overlay__item" id="preview-d2">
                 <div class="box">
                   <div class="box__shadow"></div>
-                  <img class="box__img box__img--original" src="./data/d2_img.png" alt="Some image"/>
+                  <img class="box__img box__img--original" src="./data/d2_img.png" alt="thumbnail"/>
                   <h3 class="box__title"><span class="box__title-inner">macgeolli</span></h3>
                   <h4 class="box__text box__text--bottom"><span class="box__text-inner">fastival</span></h4>
                 </div>
@@ -812,7 +813,7 @@
               <div class="overlay__item" id="preview-d3">
                 <div class="box">
                   <div class="box__shadow"></div>
-                  <img class="box__img box__img--original" src="./data/d3_img.png" alt="Some image"/>
+                  <img class="box__img box__img--original" src="./data/d3_img.png" alt="thumbnail"/>
                   <h3 class="box__title"><span class="box__title-inner">Visit-seoul</span></h3>
                   <h4 class="box__text box__text--bottom"><span class="box__text-inner">travel</span></h4>
                 </div>
@@ -834,34 +835,64 @@
       </div>
       <div class="page" id="contact">
         <svg id="rocket"><use xlink:href="#icon_rocket"></use></svg>
-        <p id="thank">Thank you.</p>
-        <div id="box">
-          <p id="name">이소망</p>
-          <p id="name_en">Hope Lee</p>
-          <p id="phone">연락처 : <span style="font-family:'UhBeeMiMi'">010-2407-2270</span></p>
-          <p id="portfolio"><a href="https://thakddl.github.io/" target="_blank" rel="noopener noreferrer">https://thakddl.github.io</a></p>
-          <p id="mail">이메일 : <a href="mailto:coids2@naver.com">coids2@naver.com</a></p>
+        <div class="con_wrap">
+          <p id="thank">Thank you.</p>
+          <div class="ctt_wrap border2">
+            <div class="col">
+              <div id="map" class="border1">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12860.075339632149!2d127.4548274!3d36.3118501!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x80378004f3b41bde!2z64yA7KCE6rSR7Jet7IucIOuPmeq1rOyyrQ!5e0!3m2!1sko!2skr!4v1581252464619!5m2!1sko!2skr" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+              </div>
+              <p>이소망 ( Hope Lee )</p>
+              <p>주소 : 대전시 동구 and 서울시 서대문구</p>
+              <p><a href="https://thakddl.github.io/" target="_blank" rel="noopener noreferrer">https://thakddl.github.io</a></p>
+              <p>Mail to : <a href="mailto:coids2@naver.com">coids2@naver.com</a></p>
+            </div>
+            <div class="col">
+              <form class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbyvi3wvjoneDZFbsSiZ5zfdyooNTp5wP3Dq-yUzuv1Tats7lP0/exec">
+              
+              <div class="form-elements">
+                <fieldset class="pure-group border1">
+                  <label for="name">Name : </label>
+                  <input class="border05" id="name" name="name" placeholder="이름을 입력하세요." />
+                </fieldset>
+
+                <fieldset class="pure-group border1">
+                  <label for="message">Message : </label>
+                  <textarea class="border05" id="message" name="message" rows="6"
+                  placeholder="메세지를 적어주세요."></textarea>
+                </fieldset>
+
+                <fieldset class="pure-group border1">
+                  <label for="email">Your email :</label>
+                  <input class="border05" id="email" name="email" type="email" value=""
+                  required placeholder="your@email.com"/>
+                </fieldset>
+
+                <button class="button-success pure-button button-xlarge btn">
+                  <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+                </div>
+
+                <div class="thankyou_message" style="display:none;">
+                  <h2>감사합니다! <br> 이메일이 성공적으로 보내졌습니다. <br>
+                    빠른시간 안에 연락드리겠습니다:)</h2>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
-      <!-- <div id="copyright">
-        <div>js 아이콘 제작자<a href="https://www.flaticon.com/kr/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/kr/" title="Flaticon"> www.flaticon.com</a></div>
-        <div>css ai ps 아이콘, js, html, jquery, design tools, ring planet 아이콘 제작자<a href="https://www.flaticon.com/kr/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/kr/" title="Flaticon"> www.flaticon.com</a></div>
-        <div> css planet 아이콘 제작자 <a href="https://www.flaticon.com/kr/authors/adib-sulthon" title="Adib Sulthon">Adib Sulthon</a> from <a href="https://www.flaticon.com/kr/" title="Flaticon">www.flaticon.com</a></div>
-        <div>php planet 아이콘 제작자 <a href="https://www.flaticon.com/kr/authors/vectors-market" title="Vectors Market">Vectors Market</a> from <a href="https://www.flaticon.com/kr/" title="Flaticon">www.flaticon.com</a></div>
-        <div>gnb, gnb hover, gnb cilck 아이콘 제작자 <a href="https://www.flaticon.com/kr/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/kr/" title="Flaticon">www.flaticon.com</a></div>
-      </div> -->
+        <!-- <div id="copyright">
+          <div>js 아이콘 제작자<a href="https://www.flaticon.com/kr/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/kr/" title="Flaticon"> www.flaticon.com</a></div>
+          <div>css ai ps 아이콘, js, html, jquery, design tools, ring planet 아이콘 제작자<a href="https://www.flaticon.com/kr/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/kr/" title="Flaticon"> www.flaticon.com</a></div>
+          <div> css planet 아이콘 제작자 <a href="https://www.flaticon.com/kr/authors/adib-sulthon" title="Adib Sulthon">Adib Sulthon</a> from <a href="https://www.flaticon.com/kr/" title="Flaticon">www.flaticon.com</a></div>
+          <div>php planet 아이콘 제작자 <a href="https://www.flaticon.com/kr/authors/vectors-market" title="Vectors Market">Vectors Market</a> from <a href="https://www.flaticon.com/kr/" title="Flaticon">www.flaticon.com</a></div>
+          <div>gnb, gnb hover, gnb cilck 아이콘 제작자 <a href="https://www.flaticon.com/kr/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/kr/" title="Flaticon">www.flaticon.com</a></div>
+        </div> -->
       </div>
     </section>
   </main>
   <script src="file/imagesloaded.pkgd.min.js"></script>
   <script src="file/TweenMax.min.js"></script>
   <script src="file/demo.js"></script>
-  <script>
-  {
-    $(".overlay__item a.mo").on('click',function(){
-      var url = $(this).attr("data-href");
-      window.open(url, "", "width=375, height=667, left=400, top=200");
-    });
-  }
-  </script>
+  <script data-cfasync="false" type="text/javascript" src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
 </body>
 </html>
