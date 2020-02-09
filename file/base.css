@@ -242,7 +242,7 @@ a:focus {
 	height: 100%;
 	top: -1rem;
 	left: -1rem;
-	background: url(../data/box_bg_w.png);
+	background: url(../data/box_bg_g.png);
 }
 .grid__item:hover .box__shadow {
 	background: url(../data/box_bg_b.png);
