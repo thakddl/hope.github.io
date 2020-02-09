@@ -894,5 +894,13 @@
   <script src="file/TweenMax.min.js"></script>
   <script src="file/demo.js"></script>
   <script data-cfasync="false" type="text/javascript" src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+  <script>
+    {
+      $(".overlay__content a.mo").click(function(){
+        var url = $(this).attr("data-href");
+        window.open(url, "", "width=375, height=667, top=200, left=400", false);
+      });
+    }
+  </script>
 </body>
 </html>
