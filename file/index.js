@@ -25,6 +25,7 @@ $(document).ready(function(){
 
   function fishing() //character location mark 
   {
+    var ht = $(window).height(); 
     var st = $("body").scrollTop();
     let idx = parseInt(st/ht);
     tar = $(".gnb li").eq(idx);
@@ -65,6 +66,7 @@ $(document).ready(function(){
         setTimeout(function(){$("#hide").css("left","100%");}, 2000); 
       }
     }
+
   });
 
   //페이지 이동 
@@ -79,6 +81,7 @@ $(document).ready(function(){
     }
   });
   $(document).keyup(function(event){
+    var ht = $(window).height(); 
     if(event.keyCode==40){
       $("#info").fadeOut(500);
       $("body, html").not(":animated").animate({"scrollTop":"+="+ht+"px"}, 900, 'easeOutQuad');
@@ -88,21 +91,14 @@ $(document).ready(function(){
   });
   // gnb li cilck 
   $(".page").each(function(index){//set page offset.top
-      var pgtop = $(this).offset().top;
-      $(this).attr("data-top", pgtop);
-    });
-    $(".gnb li").click(function(){
+    var pgtop = $(this).offset().top;
+    $(this).attr("data-top", pgtop);
+  });
+  $(".gnb li").click(function(){
     var scr = parseInt($("body").width());
     idx = $(this).index();
     let otp = parseInt($(".page_wrap .page").eq(idx).attr("data-top"));
-    console.log(otp)
     $("body, html").stop().animate({"scrollTop":otp+"px"}, 900, 'easeOutQuad');
-    if (scr<1200){
-      moon_int();
-      $("#hide").css({"left":"100%"});
-      $("#fishing").css("display","none");
-      sw=false; 
-    }
   });
   $("#hide").click(function(){
     var scr = parseInt($("body").width());
@@ -110,13 +106,13 @@ $(document).ready(function(){
       moon_int();
       $("#hide").css({"left":"100%"});
       $("#fishing").css("display","none");
-      sw=false; 
     }
   });
 
   
   //mouseover
   $(".gnb li").mouseover(function(){
+    var ht = $(window).height(); 
     var scr = parseInt($("body").width());
     if(scr>=1200){
       var lf=$(this).offset();
