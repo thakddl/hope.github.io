@@ -113,7 +113,7 @@ html { overflow: auto; }
 }
 
 /* works page */
-#works { padding-top: 15vh; overflow: hidden; }
+#works { padding-top: 15vh; }
 .work_wrap { width: 100%; height: max-content; }
 .grid {
   display: grid;

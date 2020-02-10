@@ -119,7 +119,7 @@ html { overflow: auto; }
 }
 
 /* works page */
-#works { padding-top: 8vh; overflow: hidden; }
+#works { padding-top: 8vh; }
 .work_wrap { width: 100%; height: max-content; }
 
 .me { display: none; }
