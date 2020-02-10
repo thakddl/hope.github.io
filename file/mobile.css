@@ -137,7 +137,7 @@ html { overflow: auto; }
 .ctt_wrap { float: none; columns: 1; width: 80%; height: auto; font-size: 3vh; margin: auto; }
 .col { width: 80%; height: 100%; margin: auto; }
 
-#map { height: 40vh; margin: 5% auto; }
+#map { height: 40vh; margin: 5% auto; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; }
 
 .gform { font-size: 1.5rem; padding-bottom: 5vh; }
 
