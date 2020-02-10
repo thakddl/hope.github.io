@@ -197,7 +197,7 @@
             });
         }
         revealItem() {
-            this.contentItem.querySelector('.overlay__content').style.zIndex = 9999;
+            this.contentItem.querySelector('.overlay__content').style.zIndex = 101;
             this.contentItem.style.opacity = 1;
 
             let itemElems = [];
@@ -236,7 +236,7 @@
                 x: '0%',
                 onComplete: () => {
                     this.DOM.close.style.opacity = 0;
-                    this.contentItem.style.zIndex = 10;
+                    this.contentItem.style.zIndex = 100;
 
                     // show scroll
                     document.body.classList.remove('preview-open');
