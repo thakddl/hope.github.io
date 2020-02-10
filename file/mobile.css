@@ -121,7 +121,8 @@ html { overflow: auto; }
 
 /* works page */
 #works { padding-top: 8vh; }
-.tab { width: 100%; padding-bottom: 15vh; }
+.tab { width: 80%; padding-bottom: 15vh; margin: auto; }
+.tab li { font-size: 20px; }
 .work_wrap { width: 100%; height: max-content; }
 
 .me { display: none; }
