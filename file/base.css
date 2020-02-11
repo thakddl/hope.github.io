@@ -249,6 +249,7 @@ a:focus {
 	flex: none;
 	margin: 0 auto;
 	max-width: 100%;
+	min-width: 170px;
 	filter: grayscale(1);
 	transition: filter 0.3s;
 	/* pointer-events: none; */
