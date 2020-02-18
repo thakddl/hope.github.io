@@ -2,7 +2,6 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="keywords" content="웹디자인, 웹퍼블리셔, 프론트엔드, 포트폴리오, web design, web publisher, frontend, portfolio">
     <meta name="description" content="열정과 끈기로 하루하루 성장하는 프론트엔드 이소망입니다.">
@@ -40,12 +39,12 @@
     <!-- 문서 불러오기 -->
     <link type="text/css" href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="./data/reset.css">
-    <link type="text/css" rel="stylesheet" href="./data/index.css">
+    <link type="text/css" rel="stylesheet" href="./data/index_cross.css">
     <script src="https://code.jquery.com/jquery-latest.js"></script>
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <script src="./data/index.js"></script>
     <script>
-    $(document).imagesLoaded(function(){
+    $("#intro").imagesLoaded({ background: true }, function(){
         setTimeout(function(){
             $("body").removeClass("loading");
             $("body").addClass("loaded");
