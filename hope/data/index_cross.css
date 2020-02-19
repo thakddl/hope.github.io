@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* font face */
 @font-face { font-family: 'neou'; src: url('Neou-Bold.woff') format('woff'); font-weight: 900; }
-@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css); .notosanskr * { font-family: 'Noto Sans KR', sans-serif; }
+
 /* loader */
 .loading::before {
     content: '';
@@ -86,7 +86,7 @@ section h2 { width: 100%; padding-bottom: 6rem; font-family: 'Noto Serif'; font-
 #profile > div > ul { width: -webkit-max-content; width: -moz-max-content; width: max-content; -ms-grid-row: 2; -ms-grid-row-span: 1; margin: 6rem auto 0; font-size: 1.25rem; }
 #profile > div > ul > li { padding-bottom: 1.2em; }
 #profile > div > ul > li > h3 { padding-bottom: 0.6em; }
-#profile > div > ul > li img { display: inline-block; width: 3rem; }
+#profile > div > ul > li img { width: 3rem; }
 #profile > div > ul span { display: block; padding-left: 0.5em; font-size: 0.88em; line-height: 1.5; }
 
 /* ability page */
@@ -106,13 +106,13 @@ section h2 { width: 100%; padding-bottom: 6rem; font-family: 'Noto Serif'; font-
 
 /* works page */
 #kinds { width: -webkit-max-content; width: -moz-max-content; width: 27.8rem; margin: 0 auto; padding-bottom: 4rem; }
-#kinds > li { float: left; padding: 0.7rem 1rem; font-family: 'neou'; font-size: 1.25rem; text-transform: uppercase; -webkit-transition: 0.3s; -o-transition: 0.3s; transition: 0.3s; cursor: pointer; }
+#kinds > li { float: left; padding: 0.7rem 1rem; font-size: 1.25rem; text-transform: uppercase; -webkit-transition: 0.3s; -o-transition: 0.3s; transition: 0.3s; cursor: pointer; }
 #kinds > li:last-of-type { margin-right: 0%; }
 #kinds > li:hover { background-color: #03355f; color: #fff; }
 #list { display: -webkit-box; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; display: -ms-flexbox; width: 50%; margin: 0 auto; }
 #list > li { -ms-flex-preferred-size: 97%; flex-basis: 97%; position: relative; margin: 1.5%; border: 5px solid #000; -webkit-box-sizing: border-box; box-sizing: border-box; cursor: pointer; }
 .display_img { display: block; width: 100%; }
-.display_box { position: absolute; top: 30%; left: 18%; width: 64%; padding: 1rem; -webkit-box-sizing: border-box; box-sizing: border-box; background-color: #000; font-size: 1rem; color: #fff; line-height: 1.5; text-align: center; }
+.display_box { position: absolute; top: calc(50% - 2.25rem); left: 18%; width: 64%; padding: 1rem; -webkit-box-sizing: border-box; box-sizing: border-box; background-color: #000; color: #fff; font-size: 1rem; line-height: 1.5; text-align: center; }
 
 .overlay { display: none; position: absolute; z-index: 1000; top: 0; left: 0; width: 100%; min-height: 100vh; background-color: #eaeaea; -webkit-box-sizing: border-box; box-sizing: border-box; font-size: 1.25rem; }
 .overlay_item { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-flow: column; flex-flow: column; padding: 9vh 0;  }
@@ -153,7 +153,6 @@ section h2 { width: 100%; padding-bottom: 6rem; font-family: 'Noto Serif'; font-
     #list { width: 80%; }
     #list > li { overflow: hidden; -ms-flex-preferred-size: 47%; flex-basis: 47%; }
     #list > li img { -webkit-filter: blur(5px); filter: blur(5px); -webkit-transition: 0.3s; -o-transition: 0.3s; transition: 0.3s; }
-    .display_box { top: 33%; }
     #list > li:hover img { -webkit-filter: blur(0px); filter: blur(0px); }
     #list > li:hover { border: 5px solid #004680; }
     #list > li:hover .display_box { background-color: #03355f; -webkit-transition: 0.3s; -o-transition: 0.3s; transition: 0.3s; }
@@ -198,7 +197,6 @@ section h2 { width: 100%; padding-bottom: 6rem; font-family: 'Noto Serif'; font-
     .descript { -ms-grid-column: 1; -ms-grid-column-span: 3; grid-column: 1/3; }
     #list { width: 1080px; }
     #list > li { -ms-flex-preferred-size: 22%; flex-basis: 22%; }
-    .display_box { top: 28%; }
     .overlay_item { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row; flex-flow: row; width: 60%; margin: 0 auto; padding: 28vh; }
     .box { width: 100%; }
     .box_img { width: 70%; }
