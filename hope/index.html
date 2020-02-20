@@ -46,7 +46,7 @@
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <script src="./data/index.js"></script>
     <script>
-    $("#intro").imagesLoaded({ background: true }, function(){
+    $(".glitch_img").imagesLoaded({ background: true }, function(){
         setTimeout(function(){
             $("body").removeClass("loading");
             $("body").addClass("loaded");
