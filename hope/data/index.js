@@ -26,7 +26,7 @@ $(document).ready(function(){
             $(".menu").removeClass("active");
         }
         else {
-            $("nav").css("left","0");
+            $("nav").css("left","auto");
         }
     });
     $(window).scroll(function(){
@@ -58,11 +58,10 @@ $(document).ready(function(){
 // works #kinds btn 
     $("#kinds li").click(function(){
         var kind = $(this).text();
-        // $("#list li").css("display","none");
-        $("#list li").fadeOut(100);
-        $("#list li").filter("."+kind).fadeIn(500);
+        $("#list li").css("display","none");
+        $("#list li").filter("."+kind).css("display","block");
         if ( kind == "all" ){
-            $("#list li").fadeIn(300);
+            $("#list li").css("display","block");
         }
     });
 // class color
