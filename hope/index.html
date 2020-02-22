@@ -47,12 +47,16 @@
     <script src="./data/index.js"></script>
     <script>
     imagesLoaded('.glitch_img', { background: true }, () => {
-		document.body.classList.remove('loading');
-		document.body.classList.add('loaded');
+        setTimeout(function(){
+            var $loader = document.getElementById("loader");
+            $loader.classList.remove('loading');
+            $loader.classList.add('hidden');
+        },2500);
 	});
     </script>
 </head>
-<body class="loading">
+<body>
+    <div id="loader" class="loading">hope's<br>portfolio.</div>
     <header>
         <a href="index.html">Hope</a>
         <button class="menu">
@@ -70,7 +74,7 @@
     </header>
     <main role="main">
     <section id="intro">
-        <h1 class="blind"><strong>front-end portfolio</strong></h1>
+        <h1 class="hidden"><strong>front-end portfolio</strong></h1>
         <div class="glitch">
             <div class="glitch_img"></div>
             <div class="glitch_img"></div>
@@ -393,10 +397,10 @@
         <div id="contact_wrap">
             <div id="info">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12860.075339632149!2d127.4548274!3d36.3118501!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x80378004f3b41bde!2z64yA7KCE6rSR7Jet7IucIOuPmeq1rOyyrQ!5e0!3m2!1sko!2skr!4v1581252464619!5m2!1sko!2skr" allowfullscreen=""></iframe>
-                <p>
+                <address>
                     <span>Github: https://thakddl.github.io</span>
                     <span>Mail : <a href="mailto:coids2@naver.com">coids2@naver.com</a></span>
-                </p>
+                </address>
             </div>
             <div id="mail">
                 <form class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbyvi3wvjoneDZFbsSiZ5zfdyooNTp5wP3Dq-yUzuv1Tats7lP0/exec">
