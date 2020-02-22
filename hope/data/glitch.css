@@ -3,7 +3,7 @@
 	--glitch-height: 100%;
 	--gap-horizontal: 10px;
 	--gap-vertical: 5px;
-	--time-anim: 5s;
+	--time-anim: 4s;
 	--delay-anim: 3s;
 	--blend-mode-1: none;
 	--blend-mode-2: none;
@@ -42,12 +42,9 @@
 	background: url(../img/img2.JPG) 50%;
 	background-color: var(--blend-color-1);
 	background-size: contain;
+	opacity: 0;
 	transform: translate3d(0,0,0);
 	background-blend-mode: var(--blend-mode-1);
-}
-
-.glitch_img:nth-child(n+2) {
-	opacity: 0;
 }
 
 .glitch_img:nth-child(n+2) {
