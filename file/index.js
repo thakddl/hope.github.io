@@ -1,9 +1,9 @@
 $(document).ready(function(){
-  //documenr setting
+  //document setting
   $(document).on("dragstart selectstart", function(){
     return false;
   });
-    //함수 setting
+  //함수 setting
   var sw=false; //메뉴바 활성화 상태 
   function moon_int() //메뉴바 함수
   {
@@ -23,7 +23,7 @@ $(document).ready(function(){
     } sw=!sw;
   }
 
-  function fishing() //character location mark 
+  function fishing() //location mark 
   {
     var ht = $(window).height(); 
     var st = $("body").scrollTop();
@@ -44,7 +44,7 @@ $(document).ready(function(){
   $("#moon").click(function(){
     var scr = parseInt($("body").width());
     $("#info").fadeOut(500);
-    if (scr>=1200){
+    if (scr>=1200){ //데스크탑일때
       if ( sw==false ){
         $("#hide").css("display","block");
         setTimeout(moon_int,10);
@@ -55,7 +55,7 @@ $(document).ready(function(){
         setTimeout(function(){$("#hide").css("display","none");}, 2000); 
       }
     }
-    else {
+    else { //모바일, 타블렛일때
       if ( sw==false ){
         $("#hide").css("left","0");
         setTimeout(moon_int,10);
@@ -77,7 +77,7 @@ $(document).ready(function(){
       $("#info").fadeOut(500);
       $("body, html").not(":animated").animate({"scrollTop":"+="+ht+"px"}, 900, 'easeOutQuad');
     } else {
-      $("html, body").not(":animated").animate({"scrollTop":"-="+ht+"px"}, 900, 'easeOutQuad')
+      $("html, body").not(":animated").animate({"scrollTop":"-="+ht+"px"}, 900, 'easeOutQuad');
     }
   });
   $(document).keyup(function(event){
@@ -86,7 +86,7 @@ $(document).ready(function(){
       $("#info").fadeOut(500);
       $("body, html").not(":animated").animate({"scrollTop":"+="+ht+"px"}, 900, 'easeOutQuad');
     } else if(event.keyCode==38){
-      $("html, body").not(":animated").animate({"scrollTop":"-="+ht+"px"}, 900, 'easeOutQuad')
+      $("html, body").not(":animated").animate({"scrollTop":"-="+ht+"px"}, 900, 'easeOutQuad');
     }
   });
   // gnb li cilck 
@@ -109,8 +109,7 @@ $(document).ready(function(){
     }
   });
 
-  
-  //mouseover
+  //gnb li mouseover effect
   $(".gnb li").mouseover(function(){
     var ht = $(window).height(); 
     var scr = parseInt($("body").width());
@@ -120,7 +119,7 @@ $(document).ready(function(){
       idx = $(this).index();
       var st = $("body").scrollTop();
       var sc_idx = parseInt(st/ht);
-      if( idx==sc_idx ) { $("#float").stop().fadeIn(200).css({"animation":"rotate 2s infinite linear", "left": lf.left-50+"px","top":top+"px"}) }
+      if( idx==sc_idx ) { $("#float").stop().fadeIn(200).css({"animation":"rotate 2s infinite linear", "left": lf.left-50+"px","top":top+"px"}); }
       else {
         $("#float").stop().fadeIn(200).css({"animation":"float 2s infinite linear", "left": lf.left+wd+10+"px","top":top+"px"});
       }
@@ -161,17 +160,17 @@ $(document).ready(function(){
   $(".me").mouseout(function(){
     $("#real").css({"display":"none"});
     $("#charlee").css({"display":"block"});
-    $("#hover").text("Mouseover Me ! !").css({transform:"rotateZ(65deg)","font-size":"22px"});
+    $("#hover").text("Mouseover Me ! !").css({"transform":"rotateZ(65deg)","font-size":"22px"});
   });
 
   
   //scroll effect 
-  $("body, html").scroll(function() { 
+  $("body").scroll(function() { 
     if(sw==true){ setTimeout(function() { fishing(); }, 920); }
     $("#info").fadeOut(500);
 
-    obj = parseInt($("#about").offset().top);
-    if( 0<=obj){
+    abOfs = $("#about").offset().top;
+    if( 0<=abOfs){
       function pl(){
         $("#ab_box").fadeTo(300,1);
         for (id=-1; id<=4; id++ ){
@@ -181,16 +180,14 @@ $(document).ready(function(){
       }setTimeout(function () { pl(); },600);
     } 
     
-    po = $("#ability").offset();
+    alOfs = $("#ability").offset().top;
     var scr = parseInt($("body").width());
-    if(scr>=1200){
-      if(0!=po.top){
+    if(scr>=1200 && 0!=alOfs){
       ring_reset();
-      }
     }
 
-    p = $("#contact").offset();
-      if(0==p.top){
+    conOfs = $("#contact").offset().top;
+      if(0==conOfs){
       $("#rocket").css("animation","rocket 8s ease-out infinite");
     } 
   });
@@ -211,10 +208,11 @@ $(document).ready(function(){
       $("#ability_box li").stop().css("display","none"); 
     }
   }
-  
+  // 링클릭시 ability 화면 리셋
   $("#ring").click(function(){
     ring_reset();
   });
+
   $(".planet_wrap").click(function(){
     sw2=true;
     var scr = parseInt($("body").width());
@@ -230,7 +228,7 @@ $(document).ready(function(){
     function counter(){
       if(sw2==false){ return false; }//or x=score;
       else {
-        if ( typeof score != typeof x ) { //문자일 경우(숫지가 아닐경우)
+        if ( typeof score != typeof x ) { //문자일 경우(숫자가 아닐경우)
           name.innerText = score;
         } else if( x++<score ){
           name.innerText = x+"%";
@@ -247,14 +245,14 @@ $(document).ready(function(){
   $(".tab li").click(function(){
     $(this).addClass("on");
     $(this).siblings().removeClass("on");
-    var idx = $(this).index();
-    if ( idx==0 ){  
+    var tabIdx = $(this).index();
+    if ( tabIdx==0 ){  
       $(".grid__item").removeClass("on");
       $(".grid__item").filter(".re").addClass("on");
-    } else if ( idx==1 ){  
+    } else if ( tabIdx==1 ){  
       $(".grid__item").removeClass("on");
       $(".grid__item").filter(".mo").addClass("on");
-    } else if ( idx==2 ){  
+    } else if ( tabIdx==2 ){  
       $(".grid__item").removeClass("on");
       $(".grid__item").filter(".de").addClass("on");
     }
