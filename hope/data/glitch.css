@@ -1,3 +1,4 @@
+@charset "utf-8";
 .glitch {
 	--glitch-width: 100%;
 	--glitch-height: 100%;
@@ -39,7 +40,7 @@
 	left: calc(-1 * var(--gap-horizontal));
 	width: calc(100% + var(--gap-horizontal) * 2);
 	height: calc(100% + var(--gap-vertical) * 2);
-	background: url(../img/img2.jpg) 50%;
+	background: url(../img/img2.JPG) 50%;
 	background-color: var(--blend-color-1);
 	background-size: contain;
 	opacity: 0;

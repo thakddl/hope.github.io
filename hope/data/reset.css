@@ -42,16 +42,6 @@ ul {
     list-style:none;
 }
 
-blockquote, q {
-    quotes:none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content:'';
-    content:none;
-}
-
 a {
     margin:0;
     padding:0;
@@ -69,36 +59,9 @@ button {
     outline: 0;
     user-select: none;
     -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     background-color: transparent;
-}
-
-/* change colours to suit your needs */
-ins {
-    background-color:#ff9;
-    color:#000;
-    text-decoration:none;
-}
-
-/* change colours to suit your needs */
-mark {
-    background-color:#ff9;
-    color:#000;
-    font-style:italic;
-    font-weight:bold;
-}
-
-del {
-    text-decoration: line-through;
-}
-
-abbr[title], dfn[title] {
-    border-bottom:1px dotted;
-    cursor:help;
-}
-
-table {
-    border-collapse:collapse;
-    border-spacing:0;
 }
 
 /* change border colour to suit your needs */

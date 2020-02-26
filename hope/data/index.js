@@ -1,5 +1,39 @@
 $(document).ready(function(){
-// menu btn effect
+// menu effect
+    $(window).resize(function(){
+        var wd = $(window).width();
+        if ( wd < 959 ){
+            $("nav").css("left","100%");
+            $(".menu").removeClass("active");
+        }
+        else {
+            $("nav").css("left","auto");
+        }
+    });
+    $(window).scroll(function(){
+        var wd = $(window).width();
+        var ht = $(window).height();
+        var st = $(window).scrollTop();
+        if ( st > ht*2/3 ){
+            $("#profileImg, #profileCon").css({"opacity":"1", "transform":"translateX(0)"});
+            if ( wd >= 960 ){
+                $(".gnb a").slice(1).addClass("text_outline");
+            }
+        }
+        else {
+            $(".gnb a").slice(1).removeClass("text_outline");
+        }
+    });
+/*
+// profile page effect( body scroll event isn't working )
+    $("html, body").scroll(function(){
+        var ht = $(window).height();
+        var pbofs = $("#profileBox").offset().top; //윈도우 기준이 아닌 문서 기준의 절대값이 표현되고 있다. 바디 스크롤 이벤트가 안 되는 이유와 연관이 있지 않을까?
+        if ( pbofs < ht*2/3 ){
+            $("#profileImg, #profileCon").css({"opacity":"1", "transform":"translateX(0)"});
+        }
+    });
+*/
     var sw = false;
     $(".menu").click(function(){
         if( sw==false ){
@@ -19,27 +53,6 @@ $(document).ready(function(){
             $(".menu").removeClass("active");
         }
     });
-    $(window).resize(function(){
-        var wd = $(window).width();
-        if ( wd < 959 ){
-            $("nav").css("left","100%");
-            $(".menu").removeClass("active");
-        }
-        else {
-            $("nav").css("left","auto");
-        }
-    });
-    $(window).scroll(function(){
-        var wd = $(window).width();
-        var ht = $(window).height();
-        var st = $(window).scrollTop();
-        if ( wd >= 960 && st > ht*2/3 ){
-            $(".gnb a").slice(1).addClass("text_outline");
-        }
-        else {
-            $(".gnb a").slice(1).removeClass("text_outline");
-        }
-   });
 // skill button effect
    $(".skill_btn").click(function(){
         var tar = $(this).find("span");
