@@ -28,7 +28,7 @@ $(document).ready(function(){
 // profile page effect( body scroll event isn't working )
     $("html, body").scroll(function(){
         var ht = $(window).height();
-        var pbofs = $("#profileBox").offset().top; //윈도우 기준이 아닌 문서 기준의 절대값이 표현되고 있다. 바디 스크롤 이벤트가 안 되는 이유와 연관이 있지 않을까?
+        var pbofs = $("#profileBox").offset().top; //윈도우 기준이 아닌 문서 기준의 절대값이 표현되고 있다. 바디 스크롤 이벤트가 안되는 이유와 연관이 있지 않을까?
         if ( pbofs < ht*2/3 ){
             $("#profileImg, #profileCon").css({"opacity":"1", "transform":"translateX(0)"});
         }
