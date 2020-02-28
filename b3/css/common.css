@@ -4,7 +4,7 @@ html, body { width: 100%; height: 100%; font-family: 'Goyang'; }
 ul { list-style: none; }
 a { text-decoration: none; color: #000000; }
 img, button, label { display: block; border: 0; background-color: transparent; outline: 0; font-family: "Goyang"; }
-
+.clearfix::after { content: ''; display: block; clear: both; }
 .join_btn { position: absolute; margin-left: 50px; }
 .join_btn a { display: block; border: 1px solid; font-size: 15px; float: left; line-height: 30px; font-family: 'Goyang'; margin-left: 20px; margin: 10px; width: 65px; background-color: #333366; color: #fff; border-radius: 7px; opacity: 0.8; text-align: center; }
 /*
@@ -31,7 +31,6 @@ select { margin-bottom: 25px; font-family: 'Goyang'; width: 110px; font-size: 16
 #join_in { display: block; width: 65px; height: 30px; border: 1px solid; font-size: 15px; line-height: 25px; font-family: 'Goyang'; margin: 0 auto; background-color: #333366; color: #fff; border-radius: 7px; opacity: 0.8; cursor: pointer; }
 */
 
-
 .hd_wrap { width: 100%; background-color: #fff; font-family: "tree"; }
 .hd { width: 70%; min-width: 1280px; height: 180px; margin: 0 auto; border-bottom: 1px solid; position: relative; }
 .tnb { float: left; width: 100%; height: 50px; margin: 0 auto; border-bottom: 1px solid; }
@@ -42,8 +41,8 @@ select { margin-bottom: 25px; font-family: 'Goyang'; width: 110px; font-size: 16
 .menu { width: 100%; height: 130px; }
 .gnb li:hover a.main { text-decoration: underline; }
 .sub a:hover { text-decoration: underline; }
-.logo { display: block; width: 174px; height: 100px; background-image: url("../data/main_logo.png"); background-size: contain; background-repeat: no-repeat; top: 65px; left: 50px; position: absolute; }
-.gnb { padding-left: 350px; width: 100%; float: right; position: relative; }
+.logo { position: absolute; z-index: 1; display: block; width: 174px; height: 100px; background-image: url("../data/main_logo.png"); background-size: contain; background-repeat: no-repeat; top: 65px; left: 50px; }
+.gnb { position: relative; padding-left: 350px; width: 100%; float: right; }
 .gnb li { float: left; margin-left: 50px; }
 .gnb a { display: block; line-height: 130px; font-size: 35px; margin-left: 50px; color: #000000; }
 
