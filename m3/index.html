@@ -59,7 +59,7 @@
             $("#pw_wrap").submit(function(event){
                 var pw = $("#pw").val();
                 var name = $("#na").val();
-                if ( pw==="123456" ) {
+                if ( pw==="123" ) {
                     $("#first").css("display","none");
                     $("#name").text(name);
                     return false;
@@ -227,7 +227,7 @@
             <h3>아이디</h3>
             <form id="pw_wrap">
                 <input type="text" class="pw" id="na" placeholder="이름을 입력하세요.">
-                <input type="password" class="pw" id="pw" placeholder="패스워드는 123456입니다.">
+                <input type="password" class="pw" id="pw" placeholder="패스워드는 123입니다.">
                 <input type="submit" id="log_btn" value="로그인">
             </form>
         </div>
