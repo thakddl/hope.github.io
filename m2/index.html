@@ -13,7 +13,6 @@
     <meta property="og:description" content="진에어와 함께 지금 떠나세요!">
     <meta property="og:image" content="./data/img1.jpg">
     <meta property="og:updated_time" content="2019.12.01">
-    <link rel="stylesheet" href="./css/font.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/index.css">
     <script src="https://code.jquery.com/jquery-latest.js"></script>
@@ -30,23 +29,20 @@
     <input type="checkbox" id="ck2" name="search" class="none">
     <input type="checkbox" id="ck3" name="login" class="none">    
     <header id="hd">
-        <a href="index.html" class="logo"><img src="./data/logo.png" alt=""></a>
+        <a href="index.html" class="logo"><img src="./data/logo.png" alt="로고 이미지"></a>
         <label for="ck1" class="lst_btn">
-            <span class="line_box">
-                <span class="line1"></span>
-                <span class="line2"></span>
-                <span class="line3"></span>
-            </span>
+            <span id="line1"></span>
+            <span id="line2"></span>
+            <span id="line3"></span>
         </label>
     </header>
-    <div class="blank"></div>
     <nav id="gnb">
         <ul class="thumb_menu">
             <li><a href="index.html">언어</a></li>
             <li><label for="ck2" class="search_call">검색</label></li>
             <li><label for="ck3" class="log_call">로그인</label></li>
         </ul>
-        <h2 class="gnb_tit">메뉴</h2>
+        <p><a href="#">HOME</a></p>
         <ul class="menu">
             <li><a href="javascript:;" data-index="1">항공권 예약</a></li>
             <li><a href="javascript:;" data-index="2">최저가 항공권</a></li>
@@ -66,19 +62,22 @@
         <form action="#">
             <input type="text" id="id" placeholder="아이디 입력" title="아이디를 입력하세요.">
             <input type="password" id="pw" placeholder="비밀번호 입력" title="비밀번호를 입력하세요.">
-            <input type="submit" value="로그인" id="login_btn">
+            <div>
+                <input type="submit" value="로그인" id="login_btn">
+                <input type="button" value="회원가입" id="join_btn">
+            </div>    
         </form>
     </div>
     <main>
-        <div class="vs">
+        <div id="vs" class="page clearfix">
             <ul class="vs_box">
                 <li id="img1"></li>
                 <li id="img2"></li>
                 <li id="img3"></li>
             </ul>
-            <p id="tit">JIN-AIR</p>
+            <h1 id="tit">JIN-AIR</h1>
         </div>
-        <div id="page1">
+        <div id="page1" class="page clearfix">
             <h2>항공권 예약</h2>
             <input type="radio" name="tap1" id="ra1" checked>
             <input type="radio" name="tap1" id="ra2">
@@ -86,36 +85,36 @@
             <label for="ra2" class="tap2">편도</label>
             <div class="re">
                 <form action="#">
-                    <div class="sel">
-                    <button class="from">출발지</button>
-                    <button class="return_img"></button>
-                    <button class="to">도착지</button>
+                    <div class="sel clearfix">
+                        <button class="from">출발지</button>
+                        <button class="return_img"></button>
+                        <button class="to">도착지</button>
                     </div>
                     <button class="date">탑승일</button>
-                    <button class="reservate">예약하기</button>
+                    <button class="submit">예약하기</button>
                 </form>
             </div>
-            <div class="one">
+            <div class="oneway">
                 <form action="#">
-                    <div class="sel">
+                    <div class="sel clearfix">
                     <button class="from">출발지</button>
-                    <button class="one_way"></button>
+                    <button class="oneway_img"></button>
                     <button class="to">도착지</button>
                     </div>
                     <button class="date">탑승일</button>
-                    <button class="reservate">예약하기</button>
+                    <button class="submit">예약하기</button>
                 </form>
             </div>
         </div>
-        <div id="page2">
+        <div id="page2" class="page">
             <h2>최저가 항공권</h2>
-            <ul class="slide_box">
+            <ul class="slide_box clearfix">
                 <li id="slide1"><a href="#">발리 항공권<br>저렴한 가격으로 발리 항공권을 이용해보세요.</a></li>
                 <li id="slide2"><a href="#">파리 항공권<br>매력적인 파리여행 진에어와 함께 하세요.</a></li>
                 <li id="slide3"><a href="#">타즈 매니아<br>진에어와 함께하는 오로라 여행!</a></li>
             </ul>
         </div>
-        <div id="page3">
+        <div id="page3" class="page">
             <h2>체크인</h2>
             <div class="con_wrap">
                 <input type="radio" name="tap2" id="rdo1" class="rad" checked>
@@ -142,17 +141,17 @@
                 </div>
             </div>
         </div>
-        <div id="page4">
+        <div id="page4" class="page">
             <h2>출도착 조회</h2>
             <form action="#">
-                <div class="sel">
-                <button class="from">출발지</button>
-                <button class="return_img"></button>
-                <button class="to">도착지</button>
+                <div class="sel clearfix">
+                    <button class="from">출발지</button>
+                    <button class="return_img"></button>
+                    <button class="to">도착지</button>
                 </div>
                 <button class="date">날짜</button>
                 <p>※출발지 기준</p>
-                <button class="reservate">출도착 조회</button>
+                <button class="submit">출도착 조회</button>
             </form>
         </div>
     </main>
