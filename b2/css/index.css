@@ -4,7 +4,7 @@ body, html { font-family: 'Handon3gyeopsal300g'; }
 ul {list-style: none;}
 a {text-decoration: none; }
 label, img { margin: 0; padding: 0; }
-
+.clearfix::after { content: ''; display: block; clear: both; }
 .hd {width: 100%; min-height: 150px; }
 .hd_wrap {clear: both; width: 1280px; margin: 0 auto; position: relative; }
 .gnb { height: 100px; }
@@ -17,13 +17,13 @@ label, img { margin: 0; padding: 0; }
 .top li { float: left; }
 .top li a {display: block; line-height: 50px; padding: 0px 20px; font-size: 14px; color: #000000;}
 .logo {display: block; width: 120px; height: 60px; background-image: url("../data/logo.png"); margin-top: 20px; margin-left: 120px; float: left;}
-#mainmenu { float: left; margin-left: 80px; margin-top: 25px; width: 650px; font-family: 'Handon3gyeopsal600g';}
-#mainmenu li {float: left; width: 150px; }
-#mainmenu li .sub li {clear: both; font-family: 'Handon3gyeopsal300g'; }
-#mainmenu li a {display: block; color: #333; font-size: 17px; line-height: 35px; }
-#mainmenu li a.dp1 { font-size: 21px; width: 150px; color: #808080; text-align: center; margin-top: 12px;}
+#mainmenu { float: left; margin-left: 80px; width: 650px; height: 100%; font-family: 'Handon3gyeopsal600g'; }
+#mainmenu li { float: left; }
+#mainmenu li a { display: block; width: 150px; color: #333; font-size: 17px; }
+#mainmenu li a.dp1 { font-size: 21px; color: #808080; text-align: center; margin-top: 12px; line-height: 80px; }
+.sub li {clear: both; font-family: 'Handon3gyeopsal300g'; margin-top: 20px; }
 #mainmenu li:hover a.dp1 { color: #000; }
-#mainmenu .sub a:hover { color: #000; text-decoration: underline; }
+.sub a:hover { color: #000; text-decoration: underline; }
 .sub { position: absolute; overflow: hidden; display: block; text-align: center; top: 100px; height: 0; transition: 0.3s; z-index: 900; }
 #mainmenu:after { content: ""; display: block; width: 100%; height: 0px; background-color:#fff; position: absolute; z-index: 899; top: 100px; left: 0px; border-bottom: 2px solid #333; }
 #mainmenu:hover .sub { display: block; text-align: center; height: 150px; }
@@ -40,7 +40,7 @@ label, img { margin: 0; padding: 0; }
 #keyword { display: block; width: 500px; height: 56px; outline:0; border: 2px solid rgba(0,0,0,0.5); margin-top: 40px; margin-left: 300px; float: left; text-indent: 20px; font-size: 18px; }
 .search_btn { display: block; width: 60px; height: 60px; background-image: url("../data/search.png"); border: 2px solid rgba(0,0,0,0.5); background-position: center; background-repeat: no-repeat; float: left; margin-top: 40px; margin-left: 3px; text-indent: -9999px; }
 
-#vs { display: block; height: 75vh; width: 100%; background-image: url("../data/fireworks.jpg"); background-size: cover; background-position: 0% 67%; background-repeat: no-repeat; }
+.vs_box { display: block; height: 75vh; width: 100%; background-image: url("../data/fireworks.jpg"); background-size: cover; background-position: 0% 67%; background-repeat: no-repeat; }
 .tit_box { position: absolute; top: 380px; left: 20%; color: #fff; text-shadow: 2px 2px 5px #000;}
 .drop { width: 30px; height: 17px; opacity: 0; background-image: url("../data/drop.png"); background-size: cover; margin-left: 45px; animation: ani1 1s ease-in-out infinite; }
 .left { width: 60px; height: 60px; background-size: cover; background-image: url("../data/left.png"); float: left; animation: ani2 1s ease-in-out infinite; }
@@ -64,7 +64,7 @@ label, img { margin: 0; padding: 0; }
 .icon_box a { display: block; font-weight: bold; color: #000000; line-height: 80px; }
 
 .wrap { min-height: 400px; width: 1333px; margin: 0 auto; }
-.col_box { height: 400px; margin-top: -100px; position: absolute; margin-left: 160px; }
+.col_box { margin-top: -100px; margin-left: 160px; }
 .con { float: left; width: 300px; height: 400px; margin-right: 50px; background-color: rgba(253,216,198,0.8); border-radius: 30px 30px 0 0; }
 .col_fr { height: 100px; width: 300px; margin: 0 auto; background-color:rgba(0,0,0,0.3); border-radius: 30px 30px 0 0; }
 .col_tit { width: 200px; text-align: center; margin: 0 auto; padding-top: 30px; font-family: 'Handon3gyeopsal600g'; color: black; }
@@ -78,7 +78,7 @@ label, img { margin: 0; padding: 0; }
 
 .nt { margin-top: 20px; margin-left: 20px; line-height: 35px; }
 
-#ft { width: 100%; height: 120px; background-color: #555; color: #000; float: left; padding-top: 30px; }
+#ft { width: 100%; height: 120px; background-color: #555; color: #000; float: left; padding-top: 30px; margin-top: 80px; }
 .q { width: 70%; min-width: 1280px; margin: 0 auto; }
 .q img { display: block; height: 60px; float: left; }
 .fnb { line-height: 20px; margin: 20px 90px; float: left; }
