@@ -1,9 +1,5 @@
 @charset "utf-8";
-.tit { width: 80%; text-align: center; margin: 7% auto; margin-bottom: 0px; border-bottom: 2px solid #97894a; line-height: 3; }
-.sub { width: 100%; text-align: center; margin-top: 9%; font-size: 1em; font-weight: 600; }
-.des { width: 90%; margin: 4% auto; line-height: 25px; }
-form { width: 70%; margin: 7% auto; margin-bottom: 5%; }
-.go { display: block; margin-right: 2%; width: 49%; height: 40px; border: 2px solid #97894a; background-color: transparent; color: #fff; float: left; }
-#sel { display: block; width: 49%; height: 40px; border: 2px solid #97894a; background-color: black; color: #fff; font-family: 'GyeonggiBatang', serif; text-indent: 10px;}
-
+form { width: 70%; margin: 7% auto; margin-bottom: 5%; overflow: hidden; }
+.go, #sel { display: block; float: left; margin: 0 6% 0 0; width: 47%; height: 40px; border: 2px solid #97894a; background-color: transparent; color: #fff; }
+#sel { margin-right: 0; text-indent: 10px;}
 .map img { width: 100%; min-height: 31vh; }

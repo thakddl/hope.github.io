@@ -17,10 +17,10 @@
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/font.css">
     <link href="https://fonts.googleapis.com/css?family=Baskervville&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <script src="https://code.jquery.com/jquery-latest.js"></script>
-    <script src="index.js"></script>
-    <script src="common.js"></script>
+    <script src="common.js"></script>    
 </head>
 <body>
     <input type="checkbox" class="ck" id="ck1">
@@ -50,7 +50,6 @@
             <li><a href="join.html">Join</a></li>
         </ul>
     </nav>
-    <div class="blank"></div>
     <main>
         <figure class="vs">
             <ul class="vs_fr">
@@ -122,5 +121,14 @@
     <footer id="ft">
         <p class="copyright">COPYRIGHTⓒ 2019 Hope Lee. <br> ALL RIGHTS RESERVED.</p>
     </footer>
+    <script>
+        function ani(){
+            var a = parseInt($(".vs_fr li").width());
+            $(".vs_fr").not(":animated").animate({"margin-left": -a+"px"}, 1000, function(){
+                $(".vs_fr li").eq(0).appendTo($(".vs_fr"));
+                $(".vs_fr").css("margin-left","0");
+            });
+        } setInterval(function(){ ani(); }, 3000);
+    </script>
 </body>
 </html>
