@@ -24,10 +24,10 @@ input[type=submit] {-webkit-appearance:none;}
 #ck1:checked ~ #hd #line2 { opacity: 0; transform: rotateZ(180deg); }
 
 #gnb { position: fixed; z-index: 999;  width: 300px; height: 100vh; background-color: rgba(37,172,226,0.85); top: 80px; left: -100%; transition: 0.5s; }
-.thumb_menu { width: 100%; }
-.thumb_menu li { float: left; height: 50px; margin-left: 15px; margin-top: 20px; }
-.thumb_menu label { width: 80px; height: 40px; border: 2px solid #333; box-sizing: border-box; text-align: center; line-height: 40px; color: #000; }
-.thumb_menu a { width: 80px; height: 40px; border: 2px solid #333; box-sizing: border-box; text-align: center; line-height: 40px; color: #000; }
+.top_menu { width: 100%; }
+.top_menu li { float: left; height: 50px; margin-left: 15px; margin-top: 20px; }
+.top_menu label { width: 80px; height: 40px; border: 2px solid #333; box-sizing: border-box; text-align: center; line-height: 40px; color: #000; }
+.top_menu a { width: 80px; height: 40px; border: 2px solid #333; box-sizing: border-box; text-align: center; line-height: 40px; color: #000; }
 
 #gnb p { float: right; width: 100%; padding: 2vh 40px 0 0; font-size: 30px; line-height:40px; text-align: right; }
 #gnb a { color: #000; }
