@@ -20,19 +20,19 @@ label, img { margin: 0; padding: 0; }
 
 .gnb { height: 100px; }
 .logo {display: block; width: 120px; height: 60px; background-image: url("../data/logo.png"); margin-top: 20px; margin-left: 120px; float: left;}
-#mainmenu { float: left; margin-left: 80px; width: 650px; height: 100%; font-family: 'Handon3gyeopsal600g'; }
+#mainmenu { float: left; margin-left: 6%; width: 650px; height: 100%; font-family: 'Handon3gyeopsal600g'; }
 #mainmenu:after { content: ""; display: block; width: 100%; height: 0px; background-color:#fff; position: absolute; z-index: 899; top: 100px; left: 0px; border-bottom: 2px solid #333; transition: 0.5s; }
-#mainmenu li { float: left; }
-#mainmenu li a { display: block; width: 150px; font-size: 17px; }
+#mainmenu > ul > li { float: left; margin-right: 4%; width: fit-content; position: relative; }
+#mainmenu > ul > li > a { display: block; padding: 0 20px; }
 #mainmenu li a.dp1 { font-size: 21px; color: #000; text-align: center; line-height: 100px; }
-#mainmenu li a.dp1:after { content: ''; display: block; width: 30px; height: 4px; background-color: orange; margin: -24px auto; transition: 0.5s; }
-.sub { position: absolute; overflow: hidden; text-align: center; top: 100px; height: 0; transition: 0.5s; z-index: 900; }
-.sub li { clear: both; font-family: 'Handon3gyeopsal300g'; }
-.sub a { width: 100%; color: #000; line-height: 2.3; }
+#mainmenu > ul > li:after { content: ''; display: block; width: 30px; height: 4px; background-color: #777; margin: -24px auto; transition: 0.5s; }
+.sub { width: 100%; position: absolute; overflow: hidden; top: 100px; height: 0; transition: 0.5s; z-index: 900; }
+.sub li { width: 100%; clear: both; font-family: 'Handon3gyeopsal300g'; text-align: center; }
+.sub a { color: #000; line-height: 2.3; }
 
-#mainmenu:hover .sub { text-align: center; height: 150px; }
+#mainmenu:hover .sub { height: 150px; }
 #mainmenu:hover::after { height: 150px; }
-#mainmenu li:hover a.dp1:after { width: 100%; }
+#mainmenu > ul > li:hover::after { width: 100%; background-color: orange; }
 .sub a:hover { color: #ec682c; }
 
 #frm1 {float: left; margin-left: 20px; padding-top: 33px;}
@@ -48,7 +48,7 @@ label, img { margin: 0; padding: 0; }
 
 /* main */
 #vs { display: block; height: 75vh; width: 100%; min-width: 1280px; background-image: url("../data/vsImg.jpg"); background-size: cover; background-repeat: no-repeat; }
-.vs_con { position: absolute; top: 380px; left: 20%; }
+.vs_con { position: absolute; top: 50%; left: 20%; }
 .drop { width: 30px; height: 17px; opacity: 0; background-image: url("../data/drop.png"); background-size: cover; margin-left: 45px; animation: ani1 1s ease-in-out infinite; }
 .left { width: 60px; height: 60px; background-size: cover; background-image: url("../data/left.png"); float: left; animation: ani2 1s ease-in-out infinite; }
 .right { width: 60px; height: 77px; background-size: cover; background-image: url("../data/right.png"); margin-left: 90px; animation: ani3 1s ease-in-out infinite; }
