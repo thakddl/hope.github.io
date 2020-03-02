@@ -86,14 +86,15 @@ $(document).ready(function(){
         }
     });
 // overlay effect
-    $("#list li").click(function(){
+    $("#list > li").click(function(){
         var sct = $("html").scrollTop();
         var tarId = $(this).attr("class")+$(this).attr("data-num");
         $(".overlay").stop().fadeIn(300).css({"top":"sct","position":"fixed"});
-        $("[data-id="+tarId+"]").css("display","flex");
+        $(".overlay_item[data-id="+tarId+"]").addClass("on");
+        console.log(tarId);
     });
     $("#close").click(function(){
         $(".overlay").stop().fadeOut(300).css({"top":"0","position":"absolute"});
-        $(".overlay_item").fadeOut();
+        $(".overlay_item").removeClass("on");
     });
 });
