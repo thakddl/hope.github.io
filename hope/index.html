@@ -69,11 +69,11 @@
     <div id="loader" class="loading">hope's<br>portfolio.</div>
     <header>
         <a href="index.html">Hope</a>
-        <button class="menu">
+        <button class="menuBtn" type="button">
             <span></span>
         </button>
         <nav>
-            <ul class="gnb">
+            <ul class="gnb clearfix">
                 <li><a href="#">intro</a></li>
                 <li><a href="#profile">profile</a></li>
                 <li><a href="#skills">skills</a></li>
@@ -91,13 +91,14 @@
             <div class="glitch_img"></div>
             <div class="glitch_img"></div>
             <div class="glitch_img"></div>
-            <p class="glitch_title">
+            <p>
                 <span><strong>Front&#45;end portfolio</strong></span>
                 <span>By Hope.</span>
             </p>
         </div>
     </section>
-    <section id="profile">
+    <section id="profile" class="mam">
+        <div class="child"></div>
         <h2>profile</h2>
         <div id="profileBox">
             <img id="profileImg" src="./img/img1.JPG" alt="프로필이미지">
@@ -149,7 +150,7 @@
         <ul>
             <li>
                 <button class="skill_btn"><span></span>HTML5</button>
-                <div data-value="85" class="progress"><div class="progressBar"></div></div>
+                <div data-value="95" class="progress"><div class="progressBar"></div></div>
                 <div class="descript">
                     <p>
                         <span>각 종 페이지, 내비게이션, 화면, 위젯 등의 구조적 설계가 가능합니다.</span>
@@ -160,7 +161,7 @@
             </li>
             <li>
                 <button class="skill_btn"><span></span>CSS3</button>
-                <div data-value="80" class="progress"><div class="progressBar"></div></div>
+                <div data-value="87" class="progress"><div class="progressBar"></div></div>
                 <div class="descript">
                     <p>
                         <span>margin, absolute, keyframe, transform 등을 활용한 애니메이션 구현이 가능합니다.</span>
@@ -171,7 +172,7 @@
             </li>
             <li>
                 <button class="skill_btn"><span></span>jQuery</button>
-                <div data-value="85" class="progress"><div class="progressBar"></div></div>
+                <div data-value="90" class="progress"><div class="progressBar"></div></div>
                 <div class="descript">
                     <p>
                         <span>아코디언, 컬랩시블 등의 각 종 메뉴 구현이 가능합니다.</span>
@@ -195,8 +196,8 @@
     </section>
     <section id="works">
         <h2>works</h2>
-        <ul class="clearfix" id="kinds">
-            <li><a href="#a">all</a></li>
+        <ul id="kinds">
+            <li class="on"><a href="#a">all</a></li>
             <li><a href="#a">responsive</a></li>
             <li><a href="#a">mobile</a></li>
             <li><a href="#a">desktop</a></li>
@@ -444,7 +445,7 @@
         <p>2020. Published by Hope Lee.</p>
     </footer>
     
-    <!-- <script data-cfasync="false" src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+    <script data-cfasync="false" src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
     <script>
     {
     $(".overlay_content a.mo").click(function(){
@@ -452,6 +453,6 @@
         window.open(url, "", "width=375, height=667, top=200, left=400", false);
     });
     }
-    </script> -->
+    </script>
 </body>
 </html>
