@@ -37,14 +37,25 @@ $(document).ready(function(){
         if ( wd < 959 ){
             sw=false;
             $("nav").css("left","100%");
-            $(".menuBtn").removeClass("active");
+            $(".menu").removeClass("active");
         }
     });
-// profile page effect
     $(window).scroll(function(){
-        var wd = $(window).width();
         var ht = $(window).height();
         var st = $(window).scrollTop();
+        //menu target event
+        let target = new Array();
+        $("section").each(function(){
+            target.push($(this).offset().top);
+        });
+        for ( i=0; i < target.length; i++ ){
+            let tar = target[i] - ht*0.5;
+            if ( st > tar ){
+                $(".gnb li").eq(i).addClass("on");
+                $(".gnb li").eq(i).siblings().removeClass("on");
+            }
+        }
+        // profile page effect
         if ( st > ht*1/3 ){
             $("#profileImg, #profileCon").css({"opacity":"1", "transform":"translateX(0)"});
         }
