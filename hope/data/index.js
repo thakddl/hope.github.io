@@ -1,4 +1,6 @@
 $(document).ready(function(){
+//background design setting
+    $("#profile").prepend("<div class='child'></div>");
     function backgroundColor(selector){
         var mam = document.querySelector(selector),
         mPoint = mam.getBoundingClientRect(),
@@ -6,7 +8,6 @@ $(document).ready(function(){
         cPoint = child.getBoundingClientRect();
         var radian = Math.atan2(mPoint.height-cPoint.x, mPoint.width-cPoint.x);
         child.style.transform = 'rotate('+-(180*radian/Math.PI)+'deg)';
-        console.log(mPoint)
     }
     backgroundColor('.mam');
 // menu effect
@@ -91,13 +92,17 @@ $(document).ready(function(){
             $(this).css({"border":"2px solid #000", "box-sizing":"border-box"});
         }
     });
-// overlay effect
+// #list effect
+    $("#list > li").mouseenter(function(){
+        $(this).find(".display_box").fadeOut(200);
+    });
+    $("#list > li").mouseleave(function(){
+        $(this).find(".display_box").fadeIn(300);
+    });
     $("#list > li").click(function(){
-        var sct = $("html").scrollTop();
         var tarId = $(this).attr("class")+$(this).attr("data-num");
-        $(".overlay").stop().fadeIn(300).css({"top":"sct","position":"fixed"});
+        $(".overlay").stop().fadeIn(300).css({"position":"fixed"});
         $(".overlay_item[data-id="+tarId+"]").addClass("on");
-        console.log(tarId);
     });
     $("#close").click(function(){
         $(".overlay").stop().fadeOut(300).css({"top":"0","position":"absolute"});
