@@ -17,7 +17,7 @@
     padding-top: calc(50vh - 1.2em);
     box-sizing: border-box;
     font-family: 'Noto Serif', sans-serif;
-    font-size: 2rem;
+    font-size: 2.5rem;
     line-height: 1.2;
     text-align: center;
     color: var(--base-color);
@@ -26,17 +26,15 @@
 .loading::after {
     content: '';
     display: block;
-    width: 3.5em;
+    width: 0;
     height: 2px;
     margin: 0.5em auto;
     background-color: var(--base-color);
-    opacity: 0;
-    animation: loaderAni 0.5s ease-in forwards;
+    animation: loaderAni 0.3s ease-in forwards;
 }
 @keyframes loaderAni {
 	to {
         width: 100%;
-        opacity: 1;
 	}
 }
 
