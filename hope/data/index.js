@@ -37,7 +37,7 @@ $(document).ready(function(){
         if ( wd < 959 ){
             sw=false;
             $("nav").css("left","100%");
-            $(".menu").removeClass("active");
+            $(".menuBtn").removeClass("active");
         }
     });
     $(window).scroll(function(){
