@@ -1,4 +1,5 @@
 @charset "utf-8";
+@font-face { font-family: 'KCC-eunyoung'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/KCC-eunyoung-Regular.woff') format('woff'); font-weight: normal; font-style: normal; }
 /* :root {
     --base-color: #eaeaea;
     --background-color: #0F2A51;
@@ -6,35 +7,39 @@
 } */
 /* loader */
 .loading {
+    display: flex;
+    display: -ms-flexbox;
+    flex-flow: column;
+    align-items: center;
+    /* overflow: hidden; */
     position: fixed;
     z-index: 99999;
     top: 0;
     width: 100%;
     height: 100%;
     background-color: #000;
-    padding-top: calc(50vh - 1.2em);
     box-sizing: border-box;
-    font-family: 'Noto Serif', sans-serif;
-    font-size: 2.5rem;
+    font-family: 'KCC-eunyoung', sans-serif;
+    font-size: 1.8rem;
     line-height: 1.2;
     text-align: center;
     color: #eaeaea;
     text-transform: capitalize;
 }
-.loading::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    margin: 0.5em auto;
-    background-color: #eaeaea;
-    animation: loaderAni 0.5s ease-in forwards;
+.loading div {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    margin: 12vh auto 10vh;
 }
-@keyframes loaderAni {
-	to {
-        width: 100%;
-	}
+.loading img {
+    max-width: 100%;
+    height: 70vh;
 }
+#feet { display: none; position: absolute; height: 50vh; }
+.loading p { width: 10em; }
+.loading p span { display: block; transform: translateX(100px); opacity: 0; transition: 1s; }
+.loading p span.on { transform: translateX(0px); opacity: 1; }
 
 /* common */
 html { font-family: 'Noto Sans KR', sans-serif; background-color: #eaeaea; font-size: 14px; }
