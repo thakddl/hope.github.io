@@ -1,10 +1,19 @@
 $(document).ready(function(){
+// browser setting
+    var agent = navigator.userAgent.toLowerCase();
+    if ( agent.indexOf("edge")!=-1 ){
+        $(".glitch").find("div").removeClass("glitch_img");
+        $(".glitch").find("p").removeClass("glitch_title");
+    } else if ( navigator.appName == 'Netscape' && agent.search('trident') != -1 || agent.indexOf("msie") != -1 ){
+        $(".glitch").find("div").removeClass("glitch_img");
+        $(".glitch").find("p").removeClass("glitch_title");
+    }
 //background design setting
     $("#profile").prepend("<div class='child'></div>");
     function backgroundColor(selector){
         var mam = document.querySelector(selector),
         mPoint = mam.getBoundingClientRect(),
-        child = mam.querySelector(".child")
+        child = mam.querySelector(".child"),
         cPoint = child.getBoundingClientRect();
         var radian = Math.atan2(mPoint.height-cPoint.x, mPoint.width-cPoint.x);
         child.style.transform = 'rotate('+-(180*radian/Math.PI)+'deg)';
@@ -37,7 +46,7 @@ $(document).ready(function(){
         if ( wd < 959 ){
             sw=false;
             $("nav").css("left","100%");
-            $(".menu").removeClass("active");
+            $(".menuBtn").removeClass("active");
         }
     });
     $(window).scroll(function(){

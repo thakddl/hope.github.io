@@ -27,15 +27,6 @@
     <meta name="twitter:image" content="./img/og_image.png">
     <meta name="twitter:creator" content="Hope Lee">
     <meta property="fb:admins" content="https://thakddl.github.io/hope">
-    <!--    모바일 앱 미리보기 설정-->
-    <!-- <meta property="al:ios:url" content="ios앱 URL"> -->
-    <meta property="al:ios:app_store_id" content="Hope's portfolio">
-    <meta property="al:ios:app_name" content="Hope's portfolio">
-    <meta property="al:android:url" content="https://thakddl.github.io/hope">
-    <meta property="al:android:app_name" content="Hope's portfolio">
-    <meta property="al:android:package" content="Hope's portfolio">
-    <meta property="al:android:app_store_id" content="Hope's portfolio">
-    <meta property="al:web:url" content="https://thakddl.github.io">
     <!-- 문서 불러오기 -->
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <link type="text/css" href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap" rel="stylesheet">
@@ -48,20 +39,11 @@
     <script>
     $('.glitch_img').imagesLoaded( { background: true }, function() {
         setTimeout(function(){
-            var $loader = document.getElementById("loader");
-            $loader.classList.remove('loading');
-            $loader.classList.add('blind');
+            let loader = document.getElementById("loader");
+            loader.classList.remove('loading');
+            loader.classList.add('blind');
         },1500);
     });
-    </script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159400414-1"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-159400414-1');
     </script>
 </head>
 <body>
@@ -90,7 +72,7 @@
             <div class="glitch_img"></div>
             <div class="glitch_img"></div>
             <div class="glitch_img"></div>
-            <p>
+            <p class="glitch_title">
                 <span><strong>Front&#45;end developer</strong></span>
                 <span>Hope Lee.</span>
             </p>
@@ -435,14 +417,23 @@
         <p>2020. Published by Hope Lee.</p>
     </footer>
     
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159400414-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-159400414-1');
+    </script>
     <script data-cfasync="false" src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
     <script>
-    {
-    $(".overlay_content a.mo").click(function(){
-        var url = $(this).attr("data-href");
-        window.open(url, "", "width=375, height=667, top=200, left=400", false);
-    });
-    }
-    </script>
+        {
+            $(".overlay_content a.mo").click(function(){
+                var url = $(this).attr("data-href");
+                window.open(url, "", "width=375, height=667, top=200, left=400", false);
+            });
+        }
+        </script>
 </body>
 </html>
