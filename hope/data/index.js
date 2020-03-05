@@ -1,5 +1,5 @@
 $(document).ready(function(){
-// browser setting
+// setting browser
     var agent = navigator.userAgent.toLowerCase();
     if ( agent.indexOf("edge")!=-1 ){
         $(".glitch").find("div").removeClass("glitch_img");
@@ -8,7 +8,7 @@ $(document).ready(function(){
         $(".glitch").find("div").removeClass("glitch_img");
         $(".glitch").find("p").removeClass("glitch_title");
     }
-//background design setting
+// setting profile background design
     $("#profile").prepend("<div class='child'></div>");
     function backgroundColor(selector){
         var mam = document.querySelector(selector),
@@ -20,6 +20,7 @@ $(document).ready(function(){
     }
     backgroundColor('.mam');
 // menu effect
+    var sw = false;
     $(window).resize(function(){
         var wd = $(window).width();
         if ( wd < 959 ){
@@ -29,9 +30,9 @@ $(document).ready(function(){
         else {
             $("nav").css("left","auto");
         }
+        sw = false;
         backgroundColor('.mam');
     });
-    var sw = false;
     $(".menuBtn").click(function(){
         if( sw==false ){
             $(this).addClass("active");
