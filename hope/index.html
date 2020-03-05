@@ -38,34 +38,28 @@
     <script>
     //loader
     setTimeout(function(){
-        $("#suejin").css("display","none");
-        //#feet's position for ie browser.
-        let wd = parseInt($("#feet").width()*0.5);
-        $("#feet").css("left","calc(50% - "+wd+"px)").fadeIn(1000);
+        $("#feet").fadeIn(1500);
         //글씨 fadein
         for (idx=-1; idx<=4; idx++ ){
             $("#loader span").eq(idx).css("transition-delay",idx*0.3+"s");
             $("#loader span").eq(idx).addClass("on");
         } 
-    },1300);
+    },500);
     //remove loader
     setTimeout(function(){
         let loader = document.getElementById("loader");
         loader.classList.remove('loading');
         loader.classList.add('blind');
-    },4300);
+    },4000);
     </script>
 </head>
 <body>
     <div id="loader" class="loading">
-        <div>
-            <img id="feet" src="./img/feet.jpg" alt="강수진 발 사진">
-            <img id="suejin" src="./img/loader.jpg" alt="강수진 공연 사진">
-        </div>
+        <img id="feet" src="./img/feet.jpg" alt="강수진 발 사진">
         <p>
             <span>어제를 넘어선 오늘을 사는 것</span>
             <span>이것이 내 삶의 모토이다.</span>
-            <span>-강수진-</span>
+            <span>- 강수진 -</span>
         </p>
     </div>
     <header>

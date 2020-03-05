@@ -21,22 +21,17 @@
     box-sizing: border-box;
     font-family: 'KCC-eunyoung', sans-serif;
     font-size: 1.8rem;
-    line-height: 1.2;
+    line-height: 1.3;
     text-align: center;
     color: #eaeaea;
     text-transform: capitalize;
 }
-.loading div {
-    position: relative;
-    width: 100%;
-    height: 50%;
-    margin: 12vh auto 10vh;
-}
 .loading img {
+    display: none;
     max-width: 100%;
-    height: 70vh;
+    height: 50%;
+    margin: 14vh auto 9vh;
 }
-#feet { display: none; position: absolute; height: 50vh; }
 .loading p { width: 10em; }
 .loading p span { display: block; transform: translateX(100px); opacity: 0; transition: 1s; }
 .loading p span.on { transform: translateX(0px); opacity: 1; }
