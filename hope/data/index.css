@@ -37,7 +37,7 @@
 .loading p span.on { transform: translateX(0px); opacity: 1; }
 
 /* common */
-html { font-family: 'Noto Sans KR', sans-serif; background-color: #eaeaea; font-size: 14px; }
+html { font-family: 'Noto Sans KR', sans-serif; background-color: #eaeaea; font-size: 14px; word-break: keep-all; }
 .blind { position: absolute !important; overflow: hidden; width: 10px !important; height: 10px !important; margin: -1px !important; clip: rect(0,0,0,0) !important; }
 .clearfix::after { display: table; content: ''; clear: both; }
 .btn { display: block; margin: 1rem auto; padding: 0.4em 0.6em; border-radius: 3em; background-color: #000; font-size: 1rem; color: #eaeaea; transition: 0.3s; cursor: pointer; }

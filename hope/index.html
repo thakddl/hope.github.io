@@ -57,7 +57,7 @@
     <div id="loader" class="loading">
         <img id="feet" src="./img/feet.jpg" alt="강수진 발 사진">
         <p>
-            <span>어제를 넘어선 오늘을 사는 것</span>
+            <span>어제를 넘어선 오늘을 사는 것,</span>
             <span>이것이 내 삶의 모토이다.</span>
             <span>- 강수진 -</span>
         </p>
@@ -153,21 +153,20 @@
             </li>
             <li>
                 <button class="skill_btn"><span></span>CSS3</button>
-                <div data-value="87" class="progress"><div class="progressBar"></div></div>
+                <div data-value="92" class="progress"><div class="progressBar"></div></div>
                 <p class="descript">
-                    <span>margin, absolute, keyframe, transform 등을 활용한 애니메이션 구현이 가능합니다.</span>
-                    <span>모바일, 태블릿, 데스크탑, 반응형 레이아웃 구현, 메인 및 서브페이지 구현이 가능합니다. </span>
-                    <span>bootstrap, bulma 등 프레임 워크를 이용한 레이아웃 구현이 가능합니다.</span>
+                    <span>keyframe, transform 등을 활용한 애니메이션 구현이 가능합니다.</span>
+                    <span>flexbox, rem, em 등을 활용한 반응형 레이아웃 구현이 가능합니다. </span>
+                    <span>프레임 워크를 이용한 레이아웃 구현이 가능합니다.</span>
                 </p>
             </li>
             <li>
-                <button class="skill_btn"><span></span>jQuery</button>
-                <div data-value="90" class="progress"><div class="progressBar"></div></div>
+                <button class="skill_btn"><span></span>JavaScript</button>
+                <div data-value="80" class="progress"><div class="progressBar"></div></div>
                 <p class="descript">
-                    <span>아코디언, 컬랩시블 등의 각 종 메뉴 구현이 가능합니다.</span>
-                    <span>DOM 이벤트, DOM 효과를 활용하여 탭, 슬라이더, 레이어 팝업 기능 구현이 가능합니다.</span>
-                    <span>다양한 인터렉션 및 애니메이션 구현이 가능합니다.</span>
-                    <span>간단한 플러그인 제작이 가능하며, 기존 플러그인의 구조를 분석하여 활용이 가능합니다.</span>
+                    <span>변수, 조건문, 반복문, 함수에 대해 이해하고 있으며 다양한 활용이 가능합니다.</span>
+                    <span>jQuery를 이용하여 메뉴, 슬라이더 등 각 종 인터렉션 구현이 가능합니다.</span>
+                    <span>플러그인 제작이 가능하며, 기존 플러그인의 구조를 분석하여 활용이 가능합니다.</span>
                 </p>
             </li>
             <li>
@@ -189,6 +188,13 @@
             <li><a href="#a">desktop</a></li>
         </ul>
         <ul id="list">
+            <li class="responsive" data-num="1">
+                <img class="display_img" src="./img/r1_img.png" alt="프로젝트 썸네일">
+                <div class="display_box">
+                    <h4>반응형</h4>
+                    <p>민음사</p>
+                </div>
+            </li>
             <li class="responsive" data-num="2">
                 <img class="display_img" src="./img/r2_img.png" alt="프로젝트 썸네일">
                 <div class="display_box">
@@ -239,7 +245,7 @@
                 </div>
             </li>
             <li class="desktop" data-num="3">
-                <img class="display_img" src="./img/d3_img.png" alt="프로젝트 썸네일">
+                <img class="display_img" src="./img/d2_img.png" alt="프로젝트 썸네일">
                 <div class="display_box">
                     <h4>데스크탑</h4>
                     <p>막걸리 축제</p>
@@ -247,6 +253,24 @@
             </li>
         </ul>
         <div class="overlay">
+            <div class="overlay_item" data-id="responsive1">
+                <div class="box">
+                    <h3 class="box_title">민음사</h3>
+                    <img class="box_img" src="./img/r1_img.png" alt="프로젝트 썸네일">
+                    <p class="box_des">
+                        <span class="typo">글꼴: Roboto, Malgun Gothic</span> 
+                        <span class="color">#8e1b20</span>
+                        <span class="color">#68451f</span>
+                        <span class="color">#fff</span>
+                    </p>
+                </div>
+                <p class="overlay_content">
+                    <span>민음사의 대표적인 표지 디자인을 모티브로 레이아웃을 디자인하여 해당 브랜드가 추구하는 도전 정신과 신선함을 담아내었습니다.</span>
+                    <span>데스크탑, 테블릿, 모바일의 메인 화면을 각각 다르게 디자인하였습니다.</span>
+                    <span>메인 레이아웃을 구축하였습니다.</span>
+                    <a href="https://thakddl.github.io/r2" target="_blank" class="btn">바로가기</a>
+                </p>
+            </div>
             <div class="overlay_item" data-id="responsive2">
                 <div class="box">
                     <h3 class="box_title">대한건축사협회</h3>
@@ -371,18 +395,18 @@
             <div class="overlay_item" data-id="desktop3">
                 <div class="box">
                     <h3 class="box_title">자라섬 막걸리 축제</h3>
-                    <img class="box_img" src="./img/d3_img.png" alt="프로젝트 썸네일">
+                    <img class="box_img" src="./img/d2_img.png" alt="프로젝트 썸네일">
                     <p class="box_des">
-                        <span class="typo">글꼴: Noto Sans KR, reality</span> 
+                        <span class="typo">글꼴: Noto Sans</span> 
                         <span class="color">#ec682c</span>
                         <span class="color">orange</span>
                         <span class="color">#333</span>
                     </p>
                 </div>
                 <p class="overlay_content">
-                    <span>서울을 관광하려는 사용자들의 목적에 맞게 서울의 관광지를 잘 소개하는 동영상을 메인 화면에 배치하였습니다. </span>
+                    <span>어르신들이 주 참여자였던 막걸리 축제였으나 다양한 연령층이 즐길 수 있는 이미지로 브랜딩하였습니다.</span>
                     <span>메인 레이아웃을 구축하였습니다.</span>
-                    <a href="https://thakddl.github.io/b1" target="_blank" class="btn">바로가기</a>
+                    <a href="https://thakddl.github.io/b2" target="_blank" class="btn">바로가기</a>
                 </p>
             </div>
             <button id="close">닫기</button>
@@ -406,13 +430,13 @@
                             <input id="name" name="name" placeholder="이름을 입력하세요.">
                         </fieldset>
                         <fieldset>
-                            <label for="message">Message : </label>
-                            <textarea id="message" name="message" placeholder="메세지를 적어주세요." rows="5"></textarea>
-                        </fieldset>
-                        <fieldset>
                             <label for="email">Your email :</label>
                             <input id="email" name="email" type="email" value=""
                             required placeholder="your@email.com">
+                        </fieldset>
+                        <fieldset>
+                            <label for="message">Message : </label>
+                            <textarea id="message" name="message" placeholder="메세지를 입력해주세요." rows="5"></textarea>
                         </fieldset>
                         <button class="button-success btn">Send</button>
                     </div>
