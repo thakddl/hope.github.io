@@ -13,8 +13,32 @@
     <script src="https://code.jquery.com/jquery-latest.js"></script>
     <script src="./jquery/common.js"></script>
     <style>
-    @import url(./css/mobile.css) screen and (max-width:767px);
-    @import url(./css/tablet.css) screen and (min-width:768px) and (max-width:1200px);
+    @media screen and (max-width:767px){
+        .menu_btn { top: 6vh; right: 0px; }
+        #m_btn { top: 4.5vh; right: 20%; }
+        .logo { position: absolute; left: 45vw; bottom: 40px; width: 50px; height: 20px; }
+        .gnb { margin: 0; }
+        .gnb a, #m_btn a { line-height: 10px; font-size: 13px; }
+
+        .ft { height: 380px; padding-top: 25px; }
+        .fnb { display: none; }
+        #sim_wrap { position: relative; width: 90px; height: 120px; }
+        #sim { width: 90px; }
+        .com { font-size: 22px; }
+        #copy { width: 250px; text-align: center; }
+    }
+    @media screen and (min-width:768px) and (max-width:1200px){
+        .logo { position: absolute; left: 45vw; bottom: 40px; width: 50px; height: 20px; }
+        .gnb { margin: 0; }
+        .gnb a { line-height: 10px; font-size: 23px; }
+
+        .ft { height: 380px; padding-top: 25px; flex-flow: column; }
+        .fnb { display: none; }
+        #sim_wrap { position: relative; width: 90px; height: 120px; }
+        #sim { width: 90px; }
+        .com { font-size: 22px; }
+        .f_box { margin-top: 5vh; }
+    }
     </style>
 </head>
 <body>
@@ -26,14 +50,14 @@
         </span>
         <div class="menu_fr">
             <div id="m_btn">
-                <a id="login">로그인</a>
-                <a id="join">회원가입</a>
+                <a href="#a">로그인</a>
+                <a href="#a">회원가입</a>
             </div>
             <div class="menu_wrap">
                 <a href="index.html" class="logo"></a>
                 <ul class="gnb">
                     <li class="menu">
-                        <a href="intro.html">소개</a>
+                        <a href="#">소개</a>
                         <ul class="sub">
                             <li><a href="#">민음사 소개</a></li>
                             <li><a href="#">릿터</a></li>
@@ -81,7 +105,7 @@
                 <span class="spl" id="spl7">A</span>
                 <span class="spl_bar" id="spl_bottom"></span>
             </p>
-            <a href="" id="m_logo"></a>
+            <a href="#" id="m_logo"></a>
         </div>
     </div>
     <div class="page" id="page2">
