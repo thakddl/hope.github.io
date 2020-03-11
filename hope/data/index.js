@@ -120,6 +120,7 @@ $(document).ready(function(){
     $("#list > li").mouseleave(function(){
         $(this).find(".display_box").fadeIn(300);
     });
+//overlay event
     $("#list > li").click(function(){
         var tarId = $(this).attr("class")+$(this).attr("data-num");
         $(".overlay").stop().fadeIn(300).css({"position":"fixed"});
