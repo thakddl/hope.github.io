@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>계산기</title>
+<link href="https://fonts.googleapis.com/css?family=McLaren&display=swap" rel="stylesheet">
+<style>
+    html, body { width: 100%; height: 100%; margin: 0; padding: 0; font-size: 10px; }
+    input, button { margin: 0; padding: 0; font-family: 'McLaren', cursive; }
+    .clearfix::after { content: ''; display: block; clear: both; }
+    .wrap { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 28rem; border: 1px solid; border-radius: 4rem; box-shadow: 13px 15px 30px; background: radial-gradient(circle at 50%, #fbac2d, #e17900); opacity: 0.9; }
+
+    #result { display: block; width: 70%; margin: 5rem auto 0; padding: 1rem; border-radius: 20px; text-align: right; font-size: 2rem; text-transform: capitalize; box-shadow: 5px 5px 10px #a80500, 2px 2px 10px #a80500 inset; }
+    
+    .btnBox { width: 22.5rem; margin: 3rem auto; }
+    div input { width: 4rem; height: 4rem; border-radius: 2rem; margin: 0.25rem; float: left; background-color: #fa7000; box-shadow: 3px 3px 6px #a80500; font-size: 1.3rem; transition: 0.3s; }
+    div input:hover { background: #ccc; }
+    .top { clear: both; }
+    .cls_btn { background-color: antiquewhite; }
+
+    .num { width: 13.5rem; float: left; }
+    .num button { background: #fee579; }
+    
+    .right { width: 9rem; float: left; }
+    #submit { width: 8.5rem; }
+
+    @media screen and (min-width: 768px) {
+        html { font-size: 14px; }
+    }
+    @media screen and (min-width: 960px) {
+        html { font-size: 16px; }
+    }
+</style>
+</head>
+<body>
+    <form name="calc" class="wrap">
+        <input type="text" id="result" name="result" value="0">
+        <div class="btnBox menu clearfix">
+            <div class="top clearfix">
+                <input type="button" value="❤️">
+                <input type="button" value="😊">
+                <input type="button" value="😎">
+                <input type="button" value="C" class="cls_btn">
+                <input type="button" value="DEL" class="cls_btn">
+            </div>
+            <div class="num clearfix">
+                <input type="button" value="7">
+                <input type="button" value="8">
+                <input type="button" value="9">
+                <input type="button" value="4">
+                <input type="button" value="5">
+                <input type="button" value="6">
+                <input type="button" value="1">
+                <input type="button" value="2">
+                <input type="button" value="3">
+                <input type="button" value="0">
+                <input type="button" value=".">
+                <input type="button" value="00">
+            </div>
+            <div class="right math clearfix">
+                <input type="button" value="**" data-operator="**">
+                <input type="button" value="×" data-operator="multiply">
+                <input type="button" value="÷" data-operator="divide">
+                <input type="button" value="-" data-operator="subtract">
+                <input type="button" value="%" data-operator="remainder">
+                <input type="button" value="+" data-operator="add">
+            </div>
+            <input type="button" value="=" id="submit">
+        </div>
+    </form>
+    <script src="calculator.js"></script>
+</body>
+</html>
