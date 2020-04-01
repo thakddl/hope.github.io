@@ -1,12 +1,14 @@
-$(document).ready(function(){
+$(function(){
 // setting browser
-    var agent = navigator.userAgent.toLowerCase();
+    const agent = navigator.userAgent.toLowerCase();
+    const glitchImg = document.querySelector('.glitch div'),
+        glitchTitle = document.querySelector('.glitch p');
     if ( agent.indexOf("edge")!=-1 ){
-        $(".glitch").find("div").removeClass("glitch_img");
-        $(".glitch").find("p").removeClass("glitch_title");
+        glitchImg.classList.remove("glitch_img");
+        glitchTitle.classList.remove("glitch_title");
     } else if ( navigator.appName == 'Netscape' && agent.search('trident') != -1 || agent.indexOf("msie") != -1 ){
-        $(".glitch").find("div").removeClass("glitch_img");
-        $(".glitch").find("p").removeClass("glitch_title");
+        glitchImg.classList.remove("glitch_img");
+        glitchTitle.classList.remove("glitch_title");
     }
 // setting profile background design
     $("#profile").prepend("<div class='child'></div>");
@@ -58,13 +60,20 @@ $(document).ready(function(){
         $("section").each(function(){
             target.push($(this).offset().top);
         });
-        for ( i=0; i < target.length; i++ ){
+        for ( key in target ){
+            let tar = target[key] - ht*0.5;
+            if ( st > tar ){
+                $(".gnb li").eq(key).addClass("on");
+                $(".gnb li").eq(key).siblings().removeClass("on");
+            }
+        }
+        /*for ( i=0; i < target.length; i++ ){
             let tar = target[i] - ht*0.5;
             if ( st > tar ){
                 $(".gnb li").eq(i).addClass("on");
                 $(".gnb li").eq(i).siblings().removeClass("on");
             }
-        }
+        }*/
         // profile page effect
         if ( st > ht*1/3 ){
             $("#profileImg, #profileCon").css({"opacity":"1", "transform":"translateX(0)"});

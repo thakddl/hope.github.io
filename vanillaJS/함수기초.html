@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript-function&scope</title>
+</head>
+<body>
+    <script>
+        // 함수
+        function sample(){
+            console.log("ㅋㅋㅋ");
+        } sample();
+
+        function 매개변수(a, b, c){//parameter
+            console.log(a+b+c);
+        } 매개변수(1,100,9);
+
+        var x = 100;
+        function 리턴(a){
+            if ( x > 0 ){
+                return;//이걸 만나는 순간 함수는 종료되고 실행한 위치로 돌아가게 된다.
+            }
+            console.log("안녕? 나는 "+a+"야.");
+        } 리턴("HOPE");
+
+        function 리턴값(a, b){
+            return a + b; //리턴값. 함수가 그냥 종료되는 것이 아니라 함수의 결과값을 저장하고 종료된다.
+        } console.log( 리턴값(1,500) );
+
+
+        //변수의 유효범위(scope)
+        var a = 100;
+        console.log('함수 밖에서 출력한'+a);
+
+        function sample(){
+            var b = 200;
+            console.log('함수 안에서 출력한'+a,b);
+
+        }
+
+        
+        console.log(true==1);
+        //문자, 숫자, 가 들어오면 로그를 찍어주는 함수
+        // console.log()
+    </script>
+</body>
+</html>
