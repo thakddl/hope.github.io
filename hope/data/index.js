@@ -1,15 +1,4 @@
 $(function(){
-// setting browser
-    const agent = navigator.userAgent.toLowerCase();
-    const glitchImg = document.querySelector('.glitch div'),
-        glitchTitle = document.querySelector('.glitch p');
-    if ( agent.indexOf("edge")!=-1 ){
-        glitchImg.classList.remove("glitch_img");
-        glitchTitle.classList.remove("glitch_title");
-    } else if ( navigator.appName == 'Netscape' && agent.search('trident') != -1 || agent.indexOf("msie") != -1 ){
-        glitchImg.classList.remove("glitch_img");
-        glitchTitle.classList.remove("glitch_title");
-    }
 // setting profile background design
     $("#profile").prepend("<div class='child'></div>");
     function backgroundColor(selector){
