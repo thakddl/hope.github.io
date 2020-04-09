@@ -136,7 +136,7 @@
     <h2 data-content="Click skill buttons.">skills</h2>
     <ul>
       <li>
-        <button class="skill_btn"><span></span>HTML5</button>
+        <button class="skill_btn">HTML5</button>
         <div data-value="95" class="progress"><div class="progressBar"></div></div>
         <div class="descript">
           <p>
@@ -155,38 +155,40 @@
             <span>flexbox, rem, em 등을 활용한 반응형 레이아웃 구현이 가능합니다. </span>
             <span>프레임 워크를 이용한 레이아웃 구현이 가능합니다.</span>
           </p>
-          <dl>
-            <dt>3d 애니메이션</dt>
-            <dd id="milk">
-                <ul class="roof">
-                  <li class="top"></li>
-                  <li class="side12"></li>
-                  <li class="side13"></li>
-                  <li class="side14"></li>
-                  <li class="side15"></li>
-                </ul>
-                <ul class="milk_cube">
-                  <li class="side7">딸기우유 좋아</li>
-                  <li class="side8"></li>
-                  <li class="side9">딸바도 좋아</li>
-                  <li class="side10"></li>
-                  <li class="side11"></li>
-                </ul>
-            </dd>
-            <dt>Margin slide</dt>
-            <dd class="bx">
-              <div class="img_box bx"><img src="./img/peng.jpg" alt="롤오버이미지"></div>
-              <div class="tit_box bx">
-                  <p class="com">마우스 오버</p>
+          <ul class="ex">
+            <li>
+              <p>3d 애니메이션</p>
+              <div id="milk">
+                  <ul class="roof">
+                    <li class="top"></li>
+                    <li class="side12"></li>
+                    <li class="side13"></li>
+                    <li class="side14"></li>
+                    <li class="side15"></li>
+                  </ul>
+                  <ul class="milk_cube">
+                    <li class="side7">딸기 좋아</li>
+                    <li class="side8"></li>
+                    <li class="side9">😍</li>
+                    <li class="side10"></li>
+                    <li class="side11"></li>
+                  </ul>
               </div>
-            </dd>
-            <dt>프레임 워크 활용 - 수디오</dt>
-            <dd>
+            </li>
+            <li>
+              <p>Margin slide</p>
+              <div class="bx">
+                <img src="./img/peng.jpg" alt="롤오버이미지">
+                <p class="com">마우스 오버</p>
+              </div>
+            </li>
+            <li>
+              <p>프레임 워크 활용</p>
               <a href="https://thakddl.github.io/r3/" target="_blank">
                 <img src="./img/r3_img.png" alt="수디오이미지">
               </a>
-            </dd>
-          </dl>
+            </li>
+          </ul>
         </div>
       </li>
       <li>
@@ -198,14 +200,20 @@
             <span>jQuery를 이용하여 메뉴, 슬라이더 등 각 종 인터렉션 구현이 가능합니다.</span>
             <span>플러그인 제작이 가능하며, 기존 플러그인의 구조를 분석하여 활용이 가능합니다.</span>
           </p>
-          <dl>
-            <dt>계산기</dt>
-            <dd><a href="https://thakddl.github.io/vanillaJS/calculator/calculator.html"></a></dd>
-            <dt>To do App</dt>
-            <dd><a href="https://thakddl.github.io/vanillaJS/clockApp/clock.html"></a></dd>
-            <dt>Painting App</dt>
-            <dd><a href=""></a></dd>
-          </dl>
+          <ul class="ex">
+            <li>
+              <p>계산기</p>
+            <a href="https://thakddl.github.io/vanillaJS/calculator/calculator.html" target="_blank"><img src="./img/calc.png" alt="계산기"></a>
+            </li>
+            <li>
+              <p>To do App</p>
+              <a href="https://thakddl.github.io/vanillaJS/clockApp/clock.html" target="_blank"><img src="./img/todo.jpg" alt="To do App"></a>
+            </li>
+            <li>
+              <p>Painting App</p>
+              <a href="https://thakddl.github.io/vanillaJS/painting/index.html" target="_blank"><img src="./img/painting.jpg" alt="Painting App"></a>
+            </li>
+          </ul>
         </div>
       </li>
       <li>
@@ -216,16 +224,16 @@
             <span>일러스트레이터 : 로고, 심볼, 패턴, 타이포그래피 제작이 가능합니다.</span>
             <span>포토샵 : 이미지 편집, 시안 제작, 패턴 제작, 배너 제작, 사진 리터칭 등이 가능합니다.</span>
           </p>
-          <dl>
-            <dt>로고 제작</dt>
-            <dd>
-              <img src="./img/main_logo.png" alt="작업물이미지" class="bg_w">
-            </dd>
-            <dt>타이포그래피 - 맥주</dt>
-            <dd>
-              <img src="./img/typo.png" alt="작업물이미지">
-            </dd>
-          </dl>
+          <ul class="ex">
+            <li>
+              <p>로고 제작</p>
+              <img src="./img/main_logo.png" alt="비전화카페 로고">
+            </li>
+            <li>
+              <p>타이포그래피</p>
+              <img src="./img/typo.png" alt="타이포그래피">
+            </li>
+          </ul>
         </div>
       </li>
     </ul>
@@ -240,13 +248,6 @@
         <li><a href="#a">desktop</a></li>
       </ul>
       <ul id="list">
-        <li class="responsive" data-num="1">
-          <img class="display_img" src="./img/r1_img.png" alt="프로젝트 썸네일">
-          <div class="display_box">
-            <h4>민음사</h4>
-            <p>반응형</p>
-          </div>
-        </li>
         <li class="responsive" data-num="2">
           <img class="display_img" src="./img/r2_img.png" alt="프로젝트 썸네일">
           <div class="display_box">
@@ -305,29 +306,6 @@
         </li>
       </ul>
       <div class="overlay">
-        <div class="overlay_item" data-id="responsive1">
-          <dl class="box">
-            <dt class="box_title">민음사</dt>
-            <dd><img class="box_img" src="./img/r1_img.png" alt="프로젝트 썸네일"></dd>
-            <dd class="typo">글꼴 :
-              <span>Roboto</span>
-              <span>Malgun Gothic</span>
-            </dd>
-            <dd class="colorBox">색상 :
-              <span class="color">#8e1b20</span>
-              <span class="color">#68451f</span>
-              <span class="color">#fff</span>
-              </dd>
-            </dl>
-            <div class="box">
-              <p class="overlay_content">
-                <span>민음사의 대표적인 표지 디자인을 모티브로 레이아웃을 디자인하여 해당 브랜드가 추구하는 도전 정신과 신선함을 담아내었습니다.</span>
-                <span>데스크탑, 테블릿, 모바일의 메인 화면을 각각 다르게 디자인하였습니다.</span>
-                <span>메인 레이아웃을 구축하였습니다.</span>
-              </p>
-              <a href="https://thakddl.github.io/r2" target="_blank" class="btn">바로가기</a>
-            </div>
-          </div>
           <div class="overlay_item" data-id="responsive2">
             <dl class="box">
             <dt class="box_title">대한건축사협회</dt>

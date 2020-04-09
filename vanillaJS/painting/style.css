@@ -8,6 +8,6 @@ body { display: flex; display: -ms-flexbox; flex-flow: column; align-items: cent
 .controls__btns button:active { transform: scale(0.98); }
 
 .controls__colors { display: flex; display: -ms-flexbox; margin-top: 30px; }
-.controls__color { width: 3.5rem; height: 3.5rem; margin: .1rem; border-radius: 50%; box-shadow: 0 4px 6px rgba(50,50,93,0.11), 0 1px 3px rgba(0, 0, 0, 0.08); cursor: pointer; }
+.controls__color { width: 3rem; height: 3rem; margin: .1rem; border-radius: 50%; box-shadow: 0 4px 6px rgba(50,50,93,0.11), 0 1px 3px rgba(0, 0, 0, 0.08); cursor: pointer; }
 
 

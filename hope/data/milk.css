@@ -1,0 +1,26 @@
+@charset "utf-8";
+#milk li {display: block !important;}
+#milk { position: relative; transform-style: preserve-3d; animation-name: cube; animation-duration: 7s; animation-iteration-count: infinite; height: 220px; margin-top: -60px; }
+.roof { position: absolute; width: 200px; height: 150px; transform: rotateY(-90deg); transform-style: preserve-3d; }
+.top { width: 200px; height: 50px; top: 0; transform: rotateY(90deg); background-color: pink; opacity: 0.85; }
+.roof .side12, .roof .side14 { position: absolute; top: 50px; width: 0; height: 0; border-style: solid; border-width: 0 100px 100px 100px; border-color: transparent transparent pink transparent; opacity: 0.6; font-size: 40px; text-align: center; line-height: 30px; }
+.roof .side13, .roof .side15 { position: absolute; width: 200px; height: 142px;  font-size: 40px; text-align: center; top: 78.1px; opacity: 0.6; }
+.side12 { transform: rotateY(0deg) translate3d(0px, 0px, 100px); }
+.side13 { transform: rotateY(90deg) rotateX(45deg) translate3d(0px, 0px, 70px); background-color: pink; }
+.side14 { transform: rotateY(180deg) translate3d(0px, 0px, 100px); }
+.side15 { transform: rotateY(270deg) rotateX(45deg) translate3d(0px, 0px,70px); background-color: pink; }
+
+.milk_cube { position: absolute; top: 150px; width: 200px; height: 200px; transform-style: preserve-3d; backface-visibility: visible; }
+.milk_cube li { width: 200px; height: 200px; position: absolute; left: 0; top: 0; opacity: 0.6; color: #000; font-size: 40px; text-align: center; line-height: 200px; }
+.side7 { transform: rotateY(0deg) translate3d(0px, 0px, 100px); background-color: pink; }
+.side8 { transform: rotateY(90deg) translate3d(0px, 0px, 100px); background-color: pink; }
+.side9 { transform: rotateY(180deg) translate3d(0px, 0px, 100px); background-color: pink; }
+.side10 { transform: rotateY(270deg) translate3d(0px, 0px, 100px); background-color: pink; }
+.side11 { transform: rotateX(270deg) translate3d(0px, 0px, 100px); background-color: pink; }
+
+@keyframes cube { 
+  0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(0.4) scaleZ(0.4) ; }
+  40% { transform: rotateX(-20deg) rotateY(180deg) rotateZ(20deg) scale(0.4) scaleZ(0.4); }
+  80% { transform: rotateX(20deg) rotateY(360deg) rotateZ(15deg) scale(0.4) scaleZ(0.4); }
+  100% { transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg) scale(0.4) scaleZ(0.4); }
+}
