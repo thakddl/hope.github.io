@@ -76,6 +76,7 @@ function saveClick(){
     const link = document.createElement('a');
     link.href = image;
     link.download = "painting";
+    link.click();
 }
 
 if(canvas){
