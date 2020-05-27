@@ -64,7 +64,7 @@ $(function(){
             }
         }*/
         // profile page effect
-        if ( st > ht*1/3 ){
+        if ( st > 3/ht ){
             $("#profileImg, #profileCon").css({"opacity":"1", "transform":"translateX(0)"});
         }
     });

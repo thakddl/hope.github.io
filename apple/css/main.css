@@ -13,7 +13,7 @@ a { color: rgb(29, 29, 31); text-decoration: none; }
 .local-nav-links li:not(.product-name) { margin-left: 2em; font-size: 0.8rem; }
 .scroll-section { padding-top: 50vh; border: #888 solid 3px; }
 #scroll-section-0 h1 { font-size: 4rem; text-align: center; }
-.main-message { display: flex; display: -ms-flexbox; justify-content: center; align-items: center; margin: 5px 0; height: 3em; font-size: 2.5rem; }
+.main-message { display: flex; display: -ms-flexbox; justify-content: center; align-items: center; margin: 5px 0; height: 3em; font-size: 2.5rem; opacity: 0;}
 .main-message p { font-weight: bold; text-align: center; line-height: 1.2; }
 .main-message small { display: block; margin-bottom: 0.5em; font-size: 0.3em; }
 #scroll-section-2 .main-message { font-size: 3.5rem; }
