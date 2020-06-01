@@ -128,4 +128,10 @@ $(function(){
         $(".overlay").stop().fadeOut(300).css({"top":"0","position":"absolute"});
         $(".overlay_item").removeClass("on");
     });
+// mobile case
+    $(".box a.mo").click(function(){
+        const url = $(this).attr("data-href");
+        console.log(url)
+        window.open(url, "", "width=375, height=667, top=200, left=400", false);
+    });
 });

@@ -31,6 +31,7 @@
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
   <link type="text/css" href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="./data/reset.css">
+  <link rel="stylesheet" href="./data/glitch.css">
   <link type="text/css" rel="stylesheet" href="./data/index.css">
   <link type="text/css" rel="stylesheet" href="./data/milk.css">
   <script src="https://code.jquery.com/jquery-latest.js"></script>
@@ -46,14 +47,15 @@
   },500);
   //remove loader
   setTimeout(function(){
-    let loader = document.getElementById("loader");
-    loader.classList.remove('loading');
+    const body = document.querySelector('body');
+    const loader = document.querySelector("body .loading");
+    body.classList.remove('before-load');
     loader.classList.add('blind');
-  },3500);
+  },2000);
   </script>
 </head>
-<body>
-  <div class="before-load">
+<body class="before-load">
+  <div class="loading">
 		<svg class="loading-circle">
 			<circle cx="50%" cy="50%" r="25"></circle>
 		</svg>
@@ -67,19 +69,26 @@
       <ul class="gnb clearfix">
         <li class="on"><a href="#">intro</a></li>
         <li><a href="#profile">profile</a></li>
-        <li><a href="#skills">skills</a></li>
         <li><a href="#works">works</a></li>
+        <li><a href="#skills">skills</a></li>
         <li><a href="#contact">contact</a></li>
       </ul>
     </nav>
   </header>
   <main>
-  <section id="intro">
-    <h1 class="blind">front-end portfolio</h1>
-      <p>
-        <span><strong>Front&#45;end developer</strong></span>
-        <span>Hope Lee.</span>
-      </p>
+  <section class="glitch" id="intro">
+    <h1 class="blind">Web Design portfolio</h1>
+    <div class="glitch_img">
+      <img src="./img/img2.jpg" alt="">
+      <img src="./img/img2.jpg" alt="">
+      <img src="./img/img2.jpg" alt="">
+      <img src="./img/img2.jpg" alt="">
+      <img src="./img/img2.jpg" alt="">
+    </div>
+    <p class="glitch_title">
+      <span><strong>Web Design & developer</strong></span>
+      <span>Hope Lee.</span>
+    </p>
   </section>
   <section id="profile" class="mam">
     <h2>profile</h2>
@@ -127,6 +136,253 @@
           </div>
         </li>
       </ul>
+    </div>
+  </section>
+  <section id="works">
+    <h2>works</h2>
+    <div id="worksWrap">
+      <ul id="kinds">
+        <li class="on"><a href="#a">all</a></li>
+        <li><a href="#a">responsive</a></li>
+        <li><a href="#a">mobile</a></li>
+        <li><a href="#a">desktop</a></li>
+      </ul>
+      <ul id="list">
+        <li class="responsive" data-num="1">
+          <img class="display_img" src="./img/d1_img.png" alt="프로젝트 썸네일">
+          <div class="display_box">
+            <h4>비전화카페</h4>
+            <p>반응형</p>
+          </div>
+        </li>
+        <li class="responsive" data-num="2">
+          <img class="display_img" src="./img/r2_img.jpg" alt="프로젝트 썸네일">
+          <div class="display_box">
+            <h4>apple</h4>
+            <p>반응형</p>
+          </div>
+        </li>
+        <li class="responsive" data-num="3">
+          <img class="display_img" src="./img/r3_img.png" alt="프로젝트 썸네일">
+          <div class="display_box">
+            <h4>수디오</h4>
+            <p>반응형</p>
+          </div>
+        </li>
+        <li class="mobile" data-num="1">
+          <img class="display_img" src="./img/m2_img.png" alt="프로젝트 썸네일">
+          <div class="display_box">
+            <h4>국민은행</h4>
+            <p>모바일</p>
+          </div>
+        </li>
+        <li class="mobile" data-num="2">
+          <img class="display_img" src="./img/m3_img.png" alt="프로젝트 썸네일">
+          <div class="display_box">
+            <h4>진에어</h4>
+            <p>모바일</p>
+          </div>
+        </li>
+        <li class="mobile" data-num="3">
+          <img class="display_img" src="./img/m1_img.png" alt="프로젝트 썸네일">
+          <div class="display_box">
+            <h4>고야드</h4>
+            <p>모바일</p>
+          </div>
+        </li>
+        <li class="desktop" data-num="2">
+          <img class="display_img" src="./img/d3_img.png" alt="프로젝트 썸네일">
+          <div class="display_box">
+            <h4>비짓서울</h4>
+            <p>데스크탑</p>
+          </div>
+        </li>
+        <li class="desktop" data-num="3">
+          <img class="display_img" src="./img/d2_img.png" alt="프로젝트 썸네일">
+          <div class="display_box">
+            <h4>막걸리 축제</h4>
+            <p>데스크탑</p>
+          </div>
+        </li>
+      </ul>
+      <div class="overlay">
+        <div class="overlay_item" data-id="responsive1">
+          <dl class="box">
+            <dt class="box_title">no-plug cafe</dt>
+            <dd><img class="box_img" src="./img/d1_img.png" alt="프로젝트 썸네일"></dd>
+            <dd class="typo">글꼴 :
+              <span>tree</span>
+              <span>Goyang</span>
+            </dd>
+            <dd class="colorBox">색상 :
+              <span class="color">#333366</span>
+              <span class="color">#e5d3be</span>
+              <span class="color">#bc8f8f</span>
+            </dd>
+          </dl>
+          <div class="box">
+            <p class="overlay_content">
+              <span>전기와 화학물질을 적게 쓰려는 브랜드의 메세지를 담아 친환경적인 이미지로 디자인하였습니다.</span>
+              <span>로그인, 회원가입, 메뉴 등 모든 레이아웃을 구축하였습니다.</span>
+            </p>
+            <a href="https://thakddl.github.io/b3" target="_blank" class="btn">바로가기</a>
+          </div>
+        </div>
+          <div class="overlay_item" data-id="responsive2">
+            <dl class="box">
+            <dt class="box_title">apple clone coding</dt>
+            <dd><img class="box_img" src="./img/r2_img.jpg" alt="프로젝트 썸네일"></dd>
+            <dd class="typo">글꼴 :
+              <span>Roboto</span>
+              <span>Malgun Gothic</span>
+            </dd>
+            <dd class="colorBox">색상 :
+                <span class="color">#8e1b20</span>
+                <span class="color">#68451f</span>
+                <span class="color">#fff</span>
+            </dd>
+          </dl>
+          <div class="box">
+            <p class="overlay_content">
+              <span>apple 홈페이지를 clone coding하였습니다.</span>
+              <span>라이브러리를 사용하지 않은 자바스크립트 코드를 보실수 있습니다.</span>
+            </p>
+            <a href="https://thakddl.github.io/apple" target="_blank" class="btn">바로가기</a>
+          </div>
+        </div>
+        <div class="overlay_item" data-id="responsive3">
+          <dl class="box">
+            <dt class="box_title">Sudio</dt>
+            <dd><img class="box_img" src="./img/r3_img.png" alt="프로젝트 썸네일"></dd>
+            <dd class="typo">글꼴 :
+              <span>Source Sans Pro</span>
+              <span>sans-serif</span>
+            </dd>
+            <dd class="colorBox">색상 :
+              <span class="color">#000</span>
+              <span class="color">#848484</span>
+              <span class="color">#b7afaf</span>
+            </dd>
+          </dl>
+          <div class="box">          
+            <p class="overlay_content">
+              <span>템플릿을 활용하여 만든 수디오 레이아웃입니다.</span>
+              <span>모든 레이아웃을 구축하였습니다.</span>
+            </p>
+            <a href="https://thakddl.github.io/r3" target="_blank" class="btn">바로가기</a>
+          </div>
+        </div>
+        <div class="overlay_item" data-id="mobile1">
+          <dl class="box">
+            <dt class="box_title">KB-bank</dt>
+            <dd><img class="box_img" src="./img/m2_img.png" alt="프로젝트 썸네일"></dd>
+            <dd class="typo">글꼴 :
+              <span>Malgun Gothic</span>
+            </dd>
+            <dd class="colorBox">색상 :
+              <span class="color">#ffce0b</span>
+              <span class="color">#fbebba</span>
+              <span class="color">#c8c8c8</span>
+            </dd>
+          </dl>
+          <div class="box">
+            <p class="overlay_content">
+              <span>모바일 어플리케이션으로 디자인하였습니다.</span>
+              <span>국민은행의 메인 컬러를 사용하면서도 가벼운 느낌을 주지 않도록 무채색을 적절히 활용하였습니다.</span>
+              <span>로그인 화면에 아이디와 비밀번호를 입력하면 메인 화면을 볼 수 있도록 레이아웃을 구축하였습니다.</span>
+            </p>
+            <a href="javascript:;" data-href="https://thakddl.github.io/m3" class="btn mo">바로가기</a>
+          </div>
+        </div>
+        <div class="overlay_item" data-id="mobile2">
+          <dl class="box">
+            <dt class="box_title">jin-air</dt>
+            <dd><img class="box_img" src="./img/m3_img.png" alt="프로젝트 썸네일"></dd>
+            <dd class="typo">글꼴 :
+              <span>RIDIBatang</span>
+            </dd>
+            <dd class="colorBox">색상 :
+              <span class="color">#7c174b</span>
+              <span class="color">#25ace2</span>
+              <span class="color">#333</span>
+            </dd>
+          </dl>
+          <div class="box">
+            <p class="overlay_content">
+              <span>모바일 어플리케이션으로 디자인하였습니다.</span>
+              <span>하나의 페이지로 구현하여 사용성을 높였습니다.</span>
+            </p>
+            <a href="javascript:;" data-href="https://thakddl.github.io/m2" class="btn mo">바로가기</a>
+          </div>
+        </div>
+        <div class="overlay_item" data-id="mobile3">
+          <dl class="box">
+            <dt class="box_title">Goyard</dt>
+            <dd><img class="box_img" src="./img/m1_img.png" alt="프로젝트 썸네일"></dd>
+            <dd class="typo">글꼴 :
+              <span>Baskervville</span>
+              <span>GyeonggiBatang</span>
+            </dd>
+            <dd class="colorBox">색상 :
+              <span class="color">#000</span>
+              <span class="color">#97894a</span>
+              <span class="color">#fff</span>
+            </dd>
+          </dl>
+          <div class="box">
+            <p class="overlay_content">
+              <span>검정과 골드 색상 :을 사용하여 깔끔하고 고급스러운 이미지로 브랜딩하였습니다.</span>
+              <span>고야드의 브랜드 스토리와 매장 위치 정보 등을 주요 컨텐츠로 제공하고 있습니다.</span>
+              <span>로그인, 회원가입, 메뉴 등 모든 레이아웃을 구축하였습니다.</span>
+            </p>
+            <a href="javascript:;" data-href="https://thakddl.github.io/m1" class="btn mo">바로가기</a>
+          </div>
+        </div>
+        <div class="overlay_item" data-id="desktop2">
+          <dl class="box">
+            <dt class="box_title">Visit-seoul</dt>
+            <dd><img class="box_img" src="./img/d3_img.png" alt="프로젝트 썸네일"></dd>
+            <dd class="typo">글꼴 :
+              <span>Noto Sans KR</span>
+              <span>reality</span>
+            </dd>
+            <dd class="colorBox">색상 :
+              <span class="color">#fe3c08</span>
+              <span class="color">#655a77</span>
+              <span class="color">#000</span>
+            </dd>
+          </dl>
+          <div class="box">
+            <p class="overlay_content">
+              <span>서울을 관광하려는 사용자들의 목적에 맞게 서울의 관광지를 잘 소개하는 동영상을 메인 화면에 배치하였습니다. </span>
+              <span>메인 레이아웃을 구축하였습니다.</span>
+            </p>
+            <a href="https://thakddl.github.io/b1" target="_blank" class="btn">바로가기</a>
+          </div>
+        </div>
+        <div class="overlay_item" data-id="desktop3">
+          <dl class="box">
+            <dt class="box_title">자라섬 막걸리 축제</dt>
+            <dd><img class="box_img" src="./img/d2_img.png" alt="프로젝트 썸네일"></dd>
+            <dd class="typo">글꼴 :
+              <span>Noto Sans</span>
+            </dd>
+            <dd class="colorBox">색상 :
+              <span class="color">#ec682c</span>
+              <span class="color">orange</span>
+              <span class="color">#333</span>
+            </dd>
+          </dl>
+          <div class="box">
+            <p class="overlay_content">
+              <span>어르신들이 주 참여자였던 막걸리 축제였으나 다양한 연령층이 즐길 수 있는 이미지로 브랜딩하였습니다.</span>
+              <span>메인 레이아웃을 구축하였습니다.</span>
+            </p>
+            <a href="https://thakddl.github.io/b2" target="_blank" class="btn">바로가기</a>
+          </div>
+        </div>
+        <button id="close">닫기</button>
+      </div>
     </div>
   </section>
   <section id="skills">
@@ -224,7 +480,7 @@
           <ul class="ex">
             <li>
               <p>로고 제작</p>
-              <img src="./img/main_logo.png" alt="비전화카페 로고">
+              <img src="./img/main_logo.jpg" alt="비전화카페 로고">
             </li>
             <li>
               <p>타이포그래피</p>
@@ -234,253 +490,6 @@
         </div>
       </li>
     </ul>
-  </section>
-  <section id="works">
-    <h2>works</h2>
-    <div id="worksWrap">
-      <ul id="kinds">
-        <li class="on"><a href="#a">all</a></li>
-        <li><a href="#a">responsive</a></li>
-        <li><a href="#a">mobile</a></li>
-        <li><a href="#a">desktop</a></li>
-      </ul>
-      <ul id="list">
-        <li class="responsive" data-num="2">
-          <img class="display_img" src="./img/r2_img.png" alt="프로젝트 썸네일">
-          <div class="display_box">
-            <h4>apple</h4>
-            <p>반응형</p>
-          </div>
-        </li>
-        <li class="responsive" data-num="3">
-          <img class="display_img" src="./img/r3_img.png" alt="프로젝트 썸네일">
-          <div class="display_box">
-            <h4>수디오</h4>
-            <p>반응형</p>
-          </div>
-        </li>
-        <li class="mobile" data-num="1">
-          <img class="display_img" src="./img/m2_img.png" alt="프로젝트 썸네일">
-          <div class="display_box">
-            <h4>국민은행</h4>
-            <p>모바일</p>
-          </div>
-        </li>
-        <li class="mobile" data-num="2">
-          <img class="display_img" src="./img/m3_img.png" alt="프로젝트 썸네일">
-          <div class="display_box">
-            <h4>진에어</h4>
-            <p>모바일</p>
-          </div>
-        </li>
-        <li class="mobile" data-num="3">
-          <img class="display_img" src="./img/m1_img.png" alt="프로젝트 썸네일">
-          <div class="display_box">
-            <h4>고야드</h4>
-            <p>모바일</p>
-          </div>
-        </li>
-        <li class="desktop" data-num="1">
-          <img class="display_img" src="./img/d1_img.png" alt="프로젝트 썸네일">
-          <div class="display_box">
-            <h4>비전화카페</h4>
-            <p>데스크탑</p>
-          </div>
-        </li>
-        <li class="desktop" data-num="2">
-          <img class="display_img" src="./img/d3_img.png" alt="프로젝트 썸네일">
-          <div class="display_box">
-            <h4>비짓서울</h4>
-            <p>데스크탑</p>
-          </div>
-        </li>
-        <li class="desktop" data-num="3">
-          <img class="display_img" src="./img/d2_img.png" alt="프로젝트 썸네일">
-          <div class="display_box">
-            <h4>막걸리 축제</h4>
-            <p>데스크탑</p>
-          </div>
-        </li>
-      </ul>
-      <div class="overlay">
-          <div class="overlay_item" data-id="responsive2">
-            <dl class="box">
-            <dt class="box_title">apple clone coding</dt>
-            <dd><img class="box_img" src="./img/r2_img.png" alt="프로젝트 썸네일"></dd>
-            <dd class="typo">글꼴 :
-              <span>Roboto</span>
-              <span>Malgun Gothic</span>
-            </dd>
-            <dd class="colorBox">색상 :
-                <span class="color">#8e1b20</span>
-                <span class="color">#68451f</span>
-                <span class="color">#fff</span>
-            </dd>
-          </dl>
-          <div class="box">
-            <p class="overlay_content">
-              <span>apple 홈페이지를 clone coding하였습니다.</span>
-              <span>라이브러리를 사용하지 않고 만든 레이아웃입니다.</span>
-            </p>
-            <a href="https://thakddl.github.io/apple" target="_blank" class="btn">바로가기</a>
-          </div>
-        </div>
-        <div class="overlay_item" data-id="responsive3">
-          <dl class="box">
-            <dt class="box_title">Sudio</dt>
-            <dd><img class="box_img" src="./img/r3_img.png" alt="프로젝트 썸네일"></dd>
-            <dd class="typo">글꼴 :
-              <span>Source Sans Pro</span>
-              <span>sans-serif</span>
-            </dd>
-            <dd class="colorBox">색상 :
-              <span class="color">#000</span>
-              <span class="color">#848484</span>
-              <span class="color">#b7afaf</span>
-            </dd>
-          </dl>
-          <div class="box">          
-            <p class="overlay_content">
-              <span>템플릿을 활용하여 만든 수디오 레이아웃입니다.</span>
-              <span>모든 레이아웃을 구축하였습니다.</span>
-            </p>
-            <a href="https://thakddl.github.io/r3" target="_blank" class="btn">바로가기</a>
-          </div>
-        </div>
-        <div class="overlay_item" data-id="mobile1">
-          <dl class="box">
-            <dt class="box_title">KB-bank</dt>
-            <dd><img class="box_img" src="./img/m2_img.png" alt="프로젝트 썸네일"></dd>
-            <dd class="typo">글꼴 :
-              <span>Malgun Gothic</span>
-            </dd>
-            <dd class="colorBox">색상 :
-              <span class="color">#ffce0b</span>
-              <span class="color">#fbebba</span>
-              <span class="color">#c8c8c8</span>
-            </dd>
-          </dl>
-          <div class="box">
-            <p class="overlay_content">
-              <span>모바일 어플리케이션으로 디자인하였습니다.</span>
-              <span>국민은행의 메인 컬러를 사용하면서도 가벼운 느낌을 주지 않도록 무채색을 적절히 활용하였습니다.</span>
-              <span>로그인 화면에 아이디와 비밀번호를 입력하면 메인 화면을 볼 수 있도록 레이아웃을 구축하였습니다.</span>
-            </p>
-            <a href="javascript:;" data-href="https://thakddl.github.io/m3" class="btn mo">바로가기</a>
-          </div>
-        </div>
-        <div class="overlay_item" data-id="mobile2">
-          <dl class="box">
-            <dt class="box_title">jin-air</dt>
-            <dd><img class="box_img" src="./img/m3_img.png" alt="프로젝트 썸네일"></dd>
-            <dd class="typo">글꼴 :
-              <span>RIDIBatang</span>
-            </dd>
-            <dd class="colorBox">색상 :
-              <span class="color">#7c174b</span>
-              <span class="color">#25ace2</span>
-              <span class="color">#333</span>
-            </dd>
-          </dl>
-          <div class="box">
-            <p class="overlay_content">
-              <span>모바일 어플리케이션으로 디자인하였습니다.</span>
-              <span>하나의 페이지로 구현하여 사용성을 높였습니다.</span>
-            </p>
-            <a href="javascript:;" data-href="https://thakddl.github.io/m2" class="btn mo">바로가기</a>
-          </div>
-        </div>
-        <div class="overlay_item" data-id="mobile3">
-          <dl class="box">
-            <dt class="box_title">Goyard</dt>
-            <dd><img class="box_img" src="./img/m1_img.png" alt="프로젝트 썸네일"></dd>
-            <dd class="typo">글꼴 :
-              <span>Baskervville</span>
-              <span>GyeonggiBatang</span>
-            </dd>
-            <dd class="colorBox">색상 :
-              <span class="color">#000</span>
-              <span class="color">#97894a</span>
-              <span class="color">#fff</span>
-            </dd>
-          </dl>
-          <div class="box">
-            <p class="overlay_content">
-              <span>검정과 골드 색상 :을 사용하여 깔끔하고 고급스러운 이미지로 브랜딩하였습니다.</span>
-              <span>고야드의 브랜드 스토리와 매장 위치 정보 등을 주요 컨텐츠로 제공하고 있습니다.</span>
-              <span>로그인, 회원가입, 메뉴 등 모든 레이아웃을 구축하였습니다.</span>
-            </p>
-            <a href="javascript:;" data-href="https://thakddl.github.io/m1" class="btn mo">바로가기</a>
-          </div>
-        </div>
-        <div class="overlay_item" data-id="desktop1">
-          <dl class="box">
-            <dt class="box_title">no-plug cafe</dt>
-            <dd><img class="box_img" src="./img/d1_img.png" alt="프로젝트 썸네일"></dd>
-            <dd class="typo">글꼴 :
-              <span>tree</span>
-              <span>Goyang</span>
-            </dd>
-            <dd class="colorBox">색상 :
-              <span class="color">#333366</span>
-              <span class="color">#e5d3be</span>
-              <span class="color">#ccc</span>
-            </dd>
-          </dl>
-          <div class="box">
-            <p class="overlay_content">
-              <span>전기와 화학물질을 적게 쓰려는 브랜드의 메세지를 담아 친환경적인 이미지로 디자인하였습니다.</span>
-              <span>로그인, 회원가입, 메뉴 등 모든 레이아웃을 구축하였습니다.</span>
-            </p>
-            <a href="https://thakddl.github.io/b3" target="_blank" class="btn">바로가기</a>
-          </div>
-        </div>
-        <div class="overlay_item" data-id="desktop2">
-          <dl class="box">
-            <dt class="box_title">Visit-seoul</dt>
-            <dd><img class="box_img" src="./img/d3_img.png" alt="프로젝트 썸네일"></dd>
-            <dd class="typo">글꼴 :
-              <span>Noto Sans KR</span>
-              <span>reality</span>
-            </dd>
-            <dd class="colorBox">색상 :
-              <span class="color">#fe3c08</span>
-              <span class="color">#655a77</span>
-              <span class="color">#000</span>
-            </dd>
-          </dl>
-          <div class="box">
-            <p class="overlay_content">
-              <span>서울을 관광하려는 사용자들의 목적에 맞게 서울의 관광지를 잘 소개하는 동영상을 메인 화면에 배치하였습니다. </span>
-              <span>메인 레이아웃을 구축하였습니다.</span>
-            </p>
-            <a href="https://thakddl.github.io/b1" target="_blank" class="btn">바로가기</a>
-          </div>
-        </div>
-        <div class="overlay_item" data-id="desktop3">
-          <dl class="box">
-            <dt class="box_title">자라섬 막걸리 축제</dt>
-            <dd><img class="box_img" src="./img/d2_img.png" alt="프로젝트 썸네일"></dd>
-            <dd class="typo">글꼴 :
-              <span>Noto Sans</span>
-            </dd>
-            <dd class="colorBox">색상 :
-              <span class="color">#ec682c</span>
-              <span class="color">orange</span>
-              <span class="color">#333</span>
-            </dd>
-          </dl>
-          <div class="box">
-            <p class="overlay_content">
-              <span>어르신들이 주 참여자였던 막걸리 축제였으나 다양한 연령층이 즐길 수 있는 이미지로 브랜딩하였습니다.</span>
-              <span>메인 레이아웃을 구축하였습니다.</span>
-            </p>
-            <a href="https://thakddl.github.io/b2" target="_blank" class="btn">바로가기</a>
-          </div>
-        </div>
-        <button id="close">닫기</button>
-      </div>
-    </div>
   </section>
   <section id="contact">
     <h2>contact</h2>
@@ -530,18 +539,9 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'UA-159400414-1');
   </script>
   <script data-cfasync="false" src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
-  <script>
-    {
-      $(".overlay_content a.mo").click(function(){
-        var url = $(this).attr("data-href");
-        window.open(url, "", "width=375, height=667, top=200, left=400", false);
-      });
-    }
-    </script>
 <script src="./data/index.js"></script>
 </body>
 </html>

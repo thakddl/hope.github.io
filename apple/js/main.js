@@ -376,8 +376,6 @@
                         objs.canvas.classList.remove('sticky');
                     }
                 }
-                
-
                 break;
         }
     }
