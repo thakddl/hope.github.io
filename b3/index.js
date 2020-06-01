@@ -12,15 +12,15 @@ $(document).ready(function(){
         $(".slide_box").not(":animated").animate({"margin-left":"0px"}, 500);
     }
     
-    var intv = setInterval(function(){ nextAni(); }, 2900);
+    var intv = setInterval(function(){ nextAni(); }, 4000);
     $(".btn_box .prev_btn").click(function(){
         clearInterval(intv);
         prevAni();
-        intv = setInterval(function(){ nextAni(); }, 2900);
+        intv = setInterval(function(){ nextAni(); }, 4000);
     });
     $(".btn_box .next_btn").click(function(){
         clearInterval(intv);
         nextAni();
-        intv = setInterval(function(){ nextAni(); }, 2900);
+        intv = setInterval(function(){ nextAni(); }, 4000);
     });
 });

@@ -1,65 +1,54 @@
 @charset "utf-8";
 * { margin: 0; padding: 0; box-sizing: border-box;}
-html, body { width: 100%; height: 100%; font-family: 'Goyang'; }
+html, body { width: 100%; height: 100%; font-family: 'Goyang'; font-size: 14px; }
 ul { list-style: none; }
 a { text-decoration: none; color: #000000; }
 img, button, label { display: block; border: 0; background-color: transparent; outline: 0; font-family: "Goyang"; }
 .clearfix::after { content: ''; display: block; clear: both; }
-.join_btn { position: absolute; margin-left: 50px; }
-.join_btn a { display: block; border: 1px solid; font-size: 15px; float: left; line-height: 30px; font-family: 'Goyang'; margin-left: 20px; margin: 10px; width: 65px; background-color: #333366; color: #fff; border-radius: 7px; opacity: 0.8; text-align: center; }
-/*
-.join_btn { margin-left: 50px; }
-.join_btn button { border: 1px solid; font-size: 15px; float: left; line-height: 30px; font-family: 'Goyang'; margin-left: 20px; display: block; margin: 10px; width: 65px; background-color: #333366; color: #fff; border-radius: 7px; opacity: 0.8; cursor: pointer; }
-.sign { width: 500px; height: 500px; border: 2px solid; background-image: url("../data/paper.jpg"); background-position: center; position: absolute; z-index: 1000; left: 710px; top: 225px; display: none; }
-.close_btn1 { position: absolute; font-size: 25px; right: 40px; top: 30px; color: #fff; background: #333366; line-height: 25px; width: 20px; border-radius: 4px; opacity: 0.8; cursor: pointer; font-family: 'Goyang'; }
-#logo { display: block; background-image: url("../data/main_logo.png"); width: 250px; height: 150px; background-repeat: no-repeat; background-size: cover; margin: 50px auto; cursor: pointer; }
-.sign input { clear: both; display: block; margin: 25px auto; font-family: 'Goyang'; font-size: 18px; text-indent: 5px; }
-#sign_in { display: block; width: 65px; height: 30px; border: 1px solid; font-size: 15px; line-height: 25px; background-color: #333366; color: #fff; border-radius: 7px; opacity: 0.8; cursor: pointer; }
-.sign ul { width: 190px; height: 20px; margin: 25px auto; padding-left: 10px; }
-.sign li { float: left; }
-.sign ul a { display: block; font-size: 18px; width: 90px; height: 18px; text-align: center; font-family: 'Goyang'; }
-.sign li a:after { content: "|"; margin-left: 10px; }
-.sign li a#last:after { content: ""; }
 
-.join { width: 500px; height: 550px; border: 2px solid; background-image: url("../data/paper.jpg"); background-position: center; font-family: 'Goyang'; position: absolute; z-index: 1000; top: 200px; left: 710px; display: none; }
-.close_btn2 { position: absolute; font-size: 25px; right: 40px; top: 30px; color: #fff; background: #333366; line-height: 25px; width: 20px; border-radius: 4px; opacity: 0.8; cursor: pointer; font-family: 'Goyang'; }
-feildset { display: block; width: 300px; height: 550px; margin: 0 auto; }
-legend { font-size: 23px; line-height: 30px; width: 80px; height: 30px; text-align: center; margin: 20px auto; margin-top: 50px; }
-.join label { font-size: 20px; margin-top: 15px; }
-.join input { margin-top: 10px; font-family: 'Goyang'; width: 170px; font-size: 16px; text-indent: 5px; }
-select { margin-bottom: 25px; font-family: 'Goyang'; width: 110px; font-size: 16px; }
-#join_in { display: block; width: 65px; height: 30px; border: 1px solid; font-size: 15px; line-height: 25px; font-family: 'Goyang'; margin: 0 auto; background-color: #333366; color: #fff; border-radius: 7px; opacity: 0.8; cursor: pointer; }
-*/
+.hd { margin: 0 auto; max-width: 1000px; font-family: "tree"; }
+.tnb { display: flex; display: -ms-flexbox; justify-content: space-between; align-items: center; padding: 0.7rem 0; }
+.tnb ul li { float: left; margin-right: 0.7rem; }
+.join_btn a { display: block; border: 1px solid; font-size: 15px; float: left; line-height: 30px; font-family: 'Goyang'; margin: 0 10px; width: 65px; background-color: #333366; color: #fff; border-radius: 7px; opacity: 0.8; text-align: center; }
 
-.hd_wrap { width: 100%; background-color: #fff; font-family: "tree"; }
-.hd { width: 70%; min-width: 1280px; height: 180px; margin: 0 auto; border-bottom: 1px solid; position: relative; }
-.tnb { float: left; width: 100%; height: 50px; margin: 0 auto; border-bottom: 1px solid; }
-.tnb ul { float: right; height: 50px; }
-.tnb li { float: left; margin: 10px; }
-#t_lo { margin: 0; }
-.tnb .t_logo { display: block; width: 120px; height: 50px; background-image: url("../data/tnb_logo.png"); }
-.menu { width: 100%; height: 130px; }
-.gnb li:hover a.main { text-decoration: underline; }
-.sub a:hover { text-decoration: underline; }
-.logo { position: absolute; z-index: 1; display: block; width: 174px; height: 100px; background-image: url("../data/main_logo.png"); background-size: contain; background-repeat: no-repeat; top: 65px; left: 50px; }
-.gnb { position: relative; padding-left: 350px; width: 100%; float: right; }
-.gnb li { float: left; margin-left: 50px; }
-.gnb a { display: block; line-height: 130px; font-size: 35px; margin-left: 50px; color: #000000; }
+.gnbBox { position: relative; padding: 1.2rem 0; }
+.logo { display: block; margin: auto; width: 10rem; height: 6rem; background: url("../data/main_logo.png") center/contain no-repeat; }
+.m_btn { position: absolute; z-index: 999; top: 3rem; right: 3rem; width: 45px; height: 45px; background-color: rgba(230, 230, 230, 0.8); }
+.m_btn span { display: block; margin: 0 auto; width: 30px; height: 3px; background-color: #000000; transition: 0.3s; }
+.m_btn span.line1 { transform: translateY(-8px); }
+.m_btn span.line3 { transform: translateY(8px); }
+.gnb { display: flex; display: -ms-flexbox; flex-direction: column; justify-content: center; align-items: center; position: fixed; z-index: 998; top: 0; right: -80vw; width: 60vw; min-width: 300px; max-width: 400px; height: 100vh; background-color: rgba(188, 143, 143, 0.9); transition: 0.5s; border-radius: 30% 0 0 50%; }
+.gnb > li { margin: 0.5rem; font-size: 2.5rem;  }
+.sub { height: 0; overflow: hidden; transition: 0.5s; }
+.gnb > li:hover .sub { height: 8rem; }
 
-.gnb:after { content: ""; width: 100%; height: 175px; background-color: #fff; position: absolute; top: 129px; left: 0%; z-index: 998; border-bottom: 2px solid #000000; visibility: hidden; opacity: 0; transition: 0.5s; }
-.sub { position: absolute; top: 130px; z-index: 999; visibility: hidden; opacity: 0; transition: 0.5s; }
-.sub li { clear: both; height: 50px; margin: 0; }
-.sub a { font-size: 25px; line-height: 50px; text-align: center; margin-left: 40px; }
-.sub.comm { margin-left: 20px; }
+.sub a { font-size: 1.5rem; }
 .sub a:before { content: "-"; }
-.gnb:hover .sub { visibility: visible; opacity: 1; }
-.gnb:hover::after { visibility: visible; opacity: 1; }
+.sub a:hover { text-decoration: underline; }
+.gnb li:hover a.main { text-decoration: underline; }
 
+.fnb { display: flex; display: -ms-flexbox; flex-direction: column; align-items: center; padding: 2rem; }
+.fnb_logo { margin-bottom: 10px; }
 
-#ft { float: left; width: 100%; height: 130px; background: #ccc; font-family: "tree"; }
-#ft ul { width: 70%; min-width: 1280px; margin: 0 auto; }
-.fnb li { float: left; margin-left: 30px; }
-.fnb_logo { display: block; margin-top: 15px; margin-left: 5%; }
-.fnb p { height: 130px; font-size: 22px; line-height: 130px; margin-left: 50px; }
+#totop { display: block; position: fixed; right: 100px; bottom: 50px; background-image: url("../data/totop.png"); width: 60px; height: 30px; border-radius: 25px; z-index: 999; }
+@media screen and (min-width : 900px){
+    .tnb .t_logo { display: block; width: 100px; height: 30px; background: url("../data/tnb_logo.png") center/cover no-repeat; }
+    .gnbBox { display: block; }
+    .logo { float: left; }
+    .m_btn { display: none; }
+    .gnb { float: right; display: block; position: static; margin-right: 6rem; min-width: fit-content; height: auto; background-color: transparent; }
+    .gnb > li {  float: left; margin: auto; margin-left: 4.5rem;  }
+    .gnb > li > a { display: block; line-height: 6rem; color: #000000; }
+    
+    .gnb:after { content: ""; width: 100%; height: 10rem; background-color: #fff; position: absolute; top: 8.4rem; left: 0; z-index: 998; border-bottom: 2px solid #000000; visibility: hidden; opacity: 0; transition: 0.5s; }
+    
+    .sub { position: absolute; top: 8.4rem; z-index: 999; height: auto; visibility: hidden; opacity: 0; transition: 0.5s; }
+    .gnb:hover .sub { height: auto; visibility: visible; opacity: 1; }
+    .gnb:hover::after { visibility: visible; opacity: 1; }
+    
+    .fnb { flex-direction: row; justify-content: space-around; font-size: 1rem; }
+}
+@media screen and (min-width : 1024px){
+    html { font-size: 16px; }
+}
 
-#totop { display: block; position: fixed; right: 100px; bottom: 50px; background-image: url("../data/totop.png"); width: 60px; height: 50px; border-radius: 25px; z-index: 999; }

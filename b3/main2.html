@@ -29,96 +29,58 @@
     <script src="common.js"></script>
 </head>
 <body>
-    <div class="hd_wrap">
-        <header class="hd">
-            
-<!--
+    <header class="hd">
+        <nav class="tnb">
             <div class="join_btn">
-                <button class="log_in">로그인</button>
-                <button class="jo">회원가입</button>
+                <a href="sign.html">로그인</a>
+                <a href="join.html">회원가입</a>
             </div>
-            <form action="" class="sign">
-                <button class="close_btn1">X</button>
-                <a href="index.html" id="logo"></a>
-                <input type="text" id="id" placeholder="아이디" title="아이디를 입력하세요." autofocus>
-                <input type="password" id="pw" placeholder="비밀번호" title="비밀번호를 입력하세요.">
-                <input type="submit" value="로그인" id="sign_in">
-                <ul>
-                    <li><a href="#">회원가입</a></li>
-                    <li><a href="#" id="last">비밀번호 찾기</a></li>
-                </ul>
-            </form>
-            <form action="" class="join">
-                <feildset>
-                    <button class="close_btn2">X</button>
-                    <legend>회원가입</legend>
-                    <label for="m_id">아이디</label>
-                    <input type="text" id="m_id" placeholder="아이디를 입력하세요." title="아이디를 입력하세요." autofocus>
-                    <label for="m_pw">비밀번호</label>
-                    <input type="password" id="m_pw" placeholder="패스워드를 입력하세요." title="패스워드를 입력하세요.">
-                    <label for="m_pw">비밀번호 확인</label>
-                    <input type="password" id="m_pw2" placeholder="패스워드 확인을 입력하세요." title="패스워드 확인을 입력하세요.">
-                    <label for="tel">전화번호</label>
-                    <input type="tel" id="tel" placeholder="전화번호를 입력하세요." title="전화번호를 입력하세요.">
-                    <label for="e_mail">이메일</label>
-                    <input type="email" id="e_mail" placeholder="아이디" title="이메일을 입력하세요.">@
-                    <select name="email2" id="e_mail2">
-                        <option value="">선택안함</option>
-                        <option value="naver.com">네이버</option>
-                        <option value="google.com">구글</option>
-                        <option value="daum.net">다음</option>
-                    </select>
-                    <input type="submit" value="가입하기" id="join_in">
-                </feildset>
-            </form>  
--->
-            <nav class="tnb">
-                <div class="join_btn">
-                    <a href="sign.html" class="log_in">로그인</a>
-                    <a href="join.html" class="log_in">회원가입</a>
-                </div>
-                <ul>
-                    <li id="t_lo"><a href="http://noplug.kr/" target="_blank" class="t_logo"></a></li>
-                    <li><a href="https://noplug.tistory.com/" target="_blank"><img src="./data/blog.png" alt="블로그"></a></li>
-                    <li><a href="https://www.facebook.com/noplug2017/" target="_blank"><img src="./data/facebook.png" alt="페이스북"></a></li>
-                    <li><a href="https://www.instagram.com/noplugseoul/" target="_blank"><img src="./data/insta.png" alt="인스타그램"></a></li>
-                </ul>
-            </nav>
-            <nav class="menu">
-               <a href="index.html" class="logo"></a>
-                <ul class="gnb">
-                    <li>
-                        <a href="main1.html" class="main">Intro</a>
-                        <ul class="sub">
-                            <li><a href="main1.html">비전화카페</a></li>
-                            <li><a href="main1_2.html">메뉴</a></li>
-                            <li><a href="main1_3.html">오시는 길</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="main2.html" class="main">Work</a>
-                        <ul class="sub">
-                            <li><a href="main2.html">지원사업</a></li>
-                            <li><a href="main2_2.html">비전화교육</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="main3.html" class="main">Community</a>
-                        <ul class="sub comm">
-                            <li><a href="main3.html">워크숍일정</a></li>
-                            <li><a href="main3_2.html">공지사항</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="main4.html" class="main">Membership</a>
-                        <ul class="sub">
-                            <li><a href="main4.html">소모임예약</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-   </div>
+            <ul>
+                <li><a href="http://noplug.kr/" target="_blank" class="t_logo"></a></li>
+                <li><a href="https://noplug.tistory.com/" target="_blank"><img src="./data/blog.png" alt="블로그"></a></li>
+                <li><a href="https://www.facebook.com/noplug2017/" target="_blank"><img src="./data/facebook.png" alt="페이스북"></a></li>
+                <li><a href="https://www.instagram.com/noplugseoul/" target="_blank"><img src="./data/insta.png" alt="인스타그램"></a></li>
+            </ul>
+        </nav>
+        <nav class="gnbBox clearfix">
+            <a href="index.html" class="logo"></a>
+            <button class="m_btn">
+                <span class="line1"></span>
+                <span class="line2"></span>
+                <span class="line3"></span>
+            </button>
+            <ul class="gnb clearfix">
+                <li>
+                    <a href="main1.html" class="main">Intro</a>
+                    <ul class="sub">
+                        <li><a href="main1.html">비전화카페</a></li>
+                        <li><a href="main1_2.html">메뉴</a></li>
+                        <li><a href="main1_3.html">오시는 길</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="main2.html" class="main">Work</a>
+                    <ul class="sub">
+                        <li><a href="main2.html">지원사업</a></li>
+                        <li><a href="main2_2.html">비전화교육</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="main3.html" class="main">Community</a>
+                    <ul class="sub comm">
+                        <li><a href="main3.html">워크숍일정</a></li>
+                        <li><a href="main3_2.html">공지사항</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="main4.html" class="main">Membership</a>
+                    <ul class="sub">
+                        <li><a href="main4.html">소모임예약</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <main>
         <div class="bread">
             <p><a href="main2.html">Work</a>&gt;지원사업</p>
