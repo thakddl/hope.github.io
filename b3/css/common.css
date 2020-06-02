@@ -13,7 +13,7 @@ img, button, label { display: block; border: 0; background-color: transparent; o
 
 .gnbBox { position: relative; padding: 1.2rem 0; }
 .logo { display: block; margin: auto; width: 10rem; height: 6rem; background: url("../data/main_logo.png") center/contain no-repeat; }
-.m_btn { position: absolute; z-index: 999; top: 3rem; right: 3rem; width: 45px; height: 45px; background-color: rgba(230, 230, 230, 0.8); }
+.m_btn { position: absolute; z-index: 999; top: 3rem; right: 3rem; width: 45px; height: 45px; background-color: rgba(230, 230, 230, 0.8); cursor: pointer; }
 .m_btn span { display: block; margin: 0 auto; width: 30px; height: 3px; background-color: #000000; transition: 0.3s; }
 .m_btn span.line1 { transform: translateY(-8px); }
 .m_btn span.line3 { transform: translateY(8px); }
@@ -27,6 +27,7 @@ img, button, label { display: block; border: 0; background-color: transparent; o
 .sub a:hover { text-decoration: underline; }
 .gnb li:hover a.main { text-decoration: underline; }
 
+footer{ clear: both; margin-top: 2rem; }
 .fnb { display: flex; display: -ms-flexbox; flex-direction: column; align-items: center; padding: 2rem; }
 .fnb_logo { margin-bottom: 10px; }
 

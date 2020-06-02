@@ -1,0 +1,24 @@
+@charset "utf-8";
+main { clear: both; max-width: 1000px; margin: 2rem auto; position: relative; }
+
+.local { float: left; width: 15%; padding-right: 2rem; text-align: right; font-family: 'tree'; }
+.local h1 { font-weight: normal; font-size: 2.5rem; line-height: 2; }
+.local ul { font-size: 1.6rem; line-height: 1.5; }
+.local ul li::before { content: "-"; }
+.local a:hover { text-decoration: underline; }
+
+.bread { width: 100%; font-size: 1.2rem; line-height: 3; text-align: right; }
+.bread a { text-decoration: underline; }
+
+.content { float: right; display: flex; display: -ms-flexbox; flex-wrap: wrap; align-items: center; width: 85%; padding: 5rem; padding-top: 0; box-sizing: border-box; border-left: 2px solid #000; }
+.content img { width: 50%; margin: 0 auto 2rem; }
+.content h2 { width: 100%; margin-bottom: 2rem; font-size: 2rem; text-align: center; }
+
+.con h3 { font-size: 1.5rem; line-height: 2.5; }
+.con p { font-size: 1.2rem; }
+.con span { display: block; margin-bottom: 1rem; }
+
+@media screen and (max-width:899px){
+    .local { display: none; }
+    .content { float: none; margin: 0 auto; border: 0; }
+}

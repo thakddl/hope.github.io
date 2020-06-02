@@ -24,9 +24,16 @@
 
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/font.css">
-    <link rel="stylesheet" href="./css/main1_2.css">
+    <link rel="stylesheet" href="./css/main.css">
     <script src="jquery-1.11.1.js"></script>
     <script src="common.js"></script>
+    <style>
+        .con img { width: 45%; margin: 0; }
+        .list { width: 50%; }
+        .list h3 { line-height: 3; font-size: 1.3rem; }
+        .con p { font-size: 1.1rem; margin: 0 2rem; }
+        .con span { margin-bottom: 0; }
+    </style>
 </head>
 <body>
     <header class="hd">
@@ -80,13 +87,11 @@
                 </li>
             </ul>
         </nav>
-    </header>    <main>
-        <div class="bread">
-            <p><a href="main1.html">Intro</a>&gt;메뉴</p>
-        </div>
+    </header>    
+    <main>
         <aside class="local">
             <div class="lo_bar">
-                <p>Intro</p>
+                <h1>Intro</h1>
                 <ul class="lo_manu">
                     <li><a href="main1.html">비전화카페</a></li>
                     <li><a href="main1_2.html">메뉴</a></li>
@@ -94,10 +99,12 @@
                 </ul>
             </div>
         </aside>
-        <section class="con">
-            <img src="./data/menu.jpg" alt="이미지">
-            <div class="list">
-                <h1>메뉴</h1>
+        <section class="content">
+            <div class="bread">
+                <p><a href="main1.html">Intro</a> &gt; 메뉴</p>
+            </div>
+            <div class="con list">
+                <h2>메뉴</h2>
                 <ul>
                     <li>
                         <h3>비전화커피 Non-electric coffee ... 6.0</h3>
@@ -106,22 +113,23 @@
                     <li>
                         <h3>모과차 Quince tea ... 6.0</h3>
                         <p><span>직접 수확한 모과로 만든 무농약 차</span>
-                        <span>몸에 온기를 부어 넣어줍니다.</span>
+                            <span>몸에 온기를 부어 넣어줍니다.</span>
                         </p>
                     </li>
                     <li>
                         <h3>국화차 Chrysanthemum tea ... 6.0</h3>
                         <p><span>무농약 감국으로 만든 차.</span>
-                    <span>찻잔의 꽃을 바라보는 즐거움이 있습니다.</span></p>
-                    </li>
-                    <li>
-                        <h3>보름달 숲 Fullmoon soup ... 8.0</h3>
-                        <p><span>제작자가 직접 기른 볼음도 유기농 고구마로 만든 수프</span> 
-                        <span>Set - 당일 따온 비전화 농장 잎채소와 비전화 착유기로 짠 오일(깨, 호두, 땅콩)을 넣은 샐러드 포함</span></p>
-                    </li>
-                </ul>
-            </div>
-        </section>
+                            <span>찻잔의 꽃을 바라보는 즐거움이 있습니다.</span></p>
+                        </li>
+                        <li>
+                            <h3>보름달 숲 Fullmoon soup ... 8.0</h3>
+                            <p><span>제작자가 직접 기른 볼음도 유기농 고구마로 만든 수프</span> 
+                                <span>Set - 당일 따온 비전화 농장 잎채소와 비전화 착유기로 짠 오일(깨, 호두, 땅콩)을 넣은 샐러드 포함</span></p>
+                        </li>
+                    </ul>
+                </div>
+                <img src="./data/menu.jpg" alt="이미지">
+                </section>
     </main>
     <footer id="ft">
         <ul class="fnb">

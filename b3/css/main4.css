@@ -14,26 +14,7 @@
 .on { display: none; }
 .pop li a:hover { text-decoration: underline; }
 
-main { clear: both; width: 70%; margin: 0 auto; position: relative; }
-
-.local { width: 15%; height: 300px; float: left; font-family: 'tree'; position: relative; text-align: right; }
-.lo_bar { position: absolute;  width: 70%; right: 30%; top: 30px; }
-.local p { font-size: 38px; line-height: 70px; margin-bottom: 20px; }
-.local ul { font-size: 25px; line-height: 38px; }
-.local a:hover { text-decoration: underline; }
-
-.bread { height: 60px; margin-left: 17%; font-size: 20px; padding-top: 20px; text-align: right; margin-right: 60px; }
-.bread a { text-decoration: underline; }
-
-.content { margin-left: 15%; width: 85%; height: 530px; margin-top: 25px; margin-bottom: 40px; border-left: 2px solid; }
-.content h1 { font-size: 30px; text-align: center; margin: 30px; }
-.con { width: 90%; margin: 0 auto; margin-top: 50px; }
-.content img { display: block; width: 60%; float: left; }
-table { display: table; padding-left: 30px; width: 40%; text-align: center; padding-top: 70px; }
-tr { display: table-row; }
-th { display: table-cell; font-size: 22px; line-height: 40px; }
-td { display: table-cell; font-size: 20px; line-height: 30px; margin-bottom: 20px; margin-left: 20px; padding-bottom: 5px; }
-table a:hover { text-decoration: underline; }
-.content p { margin: 30px; font-size: 18px; text-indent: 50px; }
-.reser { display: block; text-indent: 45px; width: 230px; text-align: center; font-size: 20px; font-family: 'Goyang'; cursor: pointer; }
+table { width: 50%; font-size: 1rem; text-align: center; }
+.reser { cursor: pointer; }
 .reser:hover { text-decoration: underline; }
+.noti { width: 100%; text-align: center; }

@@ -5,7 +5,7 @@
 .content { clear: both; }
 .slide { position: relative; overflow: hidden; }
 .slide_box { width: 400%; }
-.slide_box img { display: block; width: 100%; min-width: 700px; }
+.slide_box img { display: block; width: 100%; min-width: 700px; min-height: 30vh; }
 .slide_box li { float: left; width: 25%; overflow: hidden; }
 
 .btn_box .it { position: absolute; background: url("../data/arrow.png") center/contain no-repeat; width: 5vw; max-width: 70px; height: 4.5vw; max-height: 40px; top: 45%; }
@@ -37,6 +37,7 @@
 .item_box a { display: block; width: 100%; color: #333366; margin-top: 35px;}
 
 @media screen and ( min-width:900px ){
+    .slide_box img { min-height: unset; }
     .notice_box li { width: 20%; }
     .item_box { flex-flow: row; justify-content: center; align-items: unset; }
 

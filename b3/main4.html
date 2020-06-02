@@ -24,8 +24,10 @@
     
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/main4.css">
     <script src="jquery-1.11.1.js"></script>
+    <script src="common.js"></script>
     <script src="main4_1.js"></script>
     <script>
     $(document).ready(function(){
@@ -37,8 +39,9 @@
             $(".pop").fadeOut(500);
         });
     });
-    
     </script>
+    <style>
+    </style>
 </head>
 <body>
     <header class="hd">
@@ -94,55 +97,51 @@
         </nav>
     </header>
     <main>
-        <div class="bread">
-            <p><a href="main4.html">Membership</a>&gt;소모임예약</p>
-        </div>
         <aside class="local">
-            <div class="lo_bar">
-                <p>Community</p>
-                <ul class="lo_manu">
-                    <li><a href="main4.html">소모임 예약</a></li>
-                </ul>
-            </div>
+            <h1>Membership</h1>
+            <ul class="lo_manu">
+                <li><a href="main4.html">소모임 예약</a></li>
+            </ul>
         </aside>
         <section class="content">
-            <h1>소모임 예약</h1>
-                <div class="con">
-                    <img src="./data/reservation.jpg" alt="이미지">
-                    <table>
-                        <tr>
-                            <th>번호</th>
-                            <th>날짜</th>
-                            <th>상태</th>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td><button class="log_in reser">2019년 11월 30일</button></td>
-                            <td>가능</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td><button class="log_in reser">2019년 11월 29일</button></td>
-                            <td>가능</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>2019년 11월 28일</td>
-                            <td>예약됨</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>2019년 11월 27일</td>
-                            <td>예약됨</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>2019년 11월 26일</td>
-                            <td>예약됨</td>
-                        </tr>
-                    </table>
-                    <P> ※ 하루 한 팀, 5인 이상 소모임 예약이 가능합니다.</P>
-                </div>
+            <div class="bread">
+                <p><a href="main4.html">Membership</a> &gt; 소모임예약</p>
+            </div>
+            <h2>소모임 예약</h2>
+            <img src="./data/reservation.jpg" alt="이미지">
+            <table>
+                <tr>
+                    <th>번호</th>
+                    <th>날짜</th>
+                    <th>상태</th>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><a class="log_in reser">2019년 11월 30일</a></td>
+                    <td>가능</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><a class="log_in reser">2019년 11월 29일</a></td>
+                    <td>가능</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>2019년 11월 28일</td>
+                    <td>예약됨</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>2019년 11월 27일</td>
+                    <td>예약됨</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2019년 11월 26일</td>
+                    <td>예약됨</td>
+                </tr>
+            </table>
+            <p class="noti"> ※ 하루 한 팀, 5인 이상 소모임 예약이 가능합니다.</p>
         </section>
     </main>
     <footer id="ft">

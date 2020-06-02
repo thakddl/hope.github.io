@@ -24,9 +24,14 @@
 
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/font.css">
-    <link rel="stylesheet" href="./css/main3.css">
+    <link rel="stylesheet" href="./css/main.css">
     <script src="jquery-1.11.1.js"></script>
     <script src="common.js"></script>
+    <style>
+        main img { padding: 2rem 0 0 2rem; }
+        main table { display: table; width: 50%; text-align: center; font-size: 1rem; }
+        main table a:hover { text-decoration: underline; }
+    </style>
 </head>
 <body>
     <header class="hd">
@@ -82,12 +87,9 @@
         </nav>
     </header>
     <main>
-        <div class="bread">
-            <p><a href="main3.html">Community</a>&gt;워크숍일정</p>
-        </div>
         <aside class="local">
             <div class="lo_bar">
-                <p>Community</p>
+                <h1>Community</h1>
                 <ul class="lo_manu">
                     <li><a href="main3.html">워크숍일정</a></li>
                     <li><a href="main3_2.html">공지사항</a></li>
@@ -95,8 +97,10 @@
             </div>
         </aside>
         <section class="content">
-            <h1>워크숍 일정</h1>
-            <img src="./data/work.jpg" alt="이미지">
+            <div class="bread">
+                <p><a href="main3.html">Community</a> &gt; 워크숍일정</p>
+            </div>
+            <h2>워크숍 일정</h2>
             <table>
                 <tr>
                     <th>번호</th>
@@ -129,6 +133,7 @@
                     <td>2019. 05. 18 11:00 - 17:00</td>
                 </tr>
             </table>
+            <img src="./data/work.jpg" alt="이미지">
         </section>
     </main>
     <footer id="ft">
