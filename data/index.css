@@ -196,7 +196,7 @@ section h2 { position: relative; width: 100%; padding-bottom: 6rem; font-family:
   .menuBtn { display: none; }
   nav { width: auto; height: auto; top: 2.85rem; left: auto; right: 10%; padding-top: 0; background-color: transparent; }
   .gnb { flex-flow: row; }
-  footer { flex-flow: row; justify-content: space-around; height: 30%; }
+  footer { flex-flow: row; justify-content: space-around; height: 12rem; }
   footer > a { padding-bottom: 0; }
   #kinds > li > a { padding: 0.7rem 1.2rem; font-size: 1.7rem; }
   #list > li { width: calc(91% / 3); }
