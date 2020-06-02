@@ -35,24 +35,6 @@
   <link type="text/css" rel="stylesheet" href="./data/index.css">
   <link type="text/css" rel="stylesheet" href="./data/milk.css">
   <script src="https://code.jquery.com/jquery-latest.js"></script>
-  <script>
-  //loader
-  setTimeout(function(){
-    $("#feet").fadeIn(1500);
-  //글씨 fadein
-    for (idx=-1; idx<=4; idx++ ){
-      $("#loader span").eq(idx).css("transition-delay",idx*0.3+"s");
-      $("#loader span").eq(idx).addClass("on");
-    } 
-  },500);
-  //remove loader
-  setTimeout(function(){
-    const body = document.querySelector('body');
-    const loader = document.querySelector("body .loading");
-    body.classList.remove('before-load');
-    loader.classList.add('blind');
-  },2000);
-  </script>
 </head>
 <body class="before-load">
   <div class="loading">
@@ -533,6 +515,15 @@
   <p>2020. Published by Hope Lee.</p>
   </footer>
   
+  <script>
+  //remove loader
+  window.addEventListener('load', function(){
+    const body = document.querySelector('body');
+    const loader = document.querySelector("body .loading");
+    body.classList.remove('before-load');
+    loader.classList.add('blind');
+  });
+  </script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159400414-1"></script>
   <script>
