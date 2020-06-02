@@ -44,5 +44,5 @@ window.addEventListener('load',()=>{
         const loader = document.querySelector('.loading');
         document.body.classList.remove('before-load');
         loader.classList.add('blind');
-    },2000)
+    },1500)
 })
