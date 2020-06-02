@@ -406,6 +406,7 @@
     function init(){
         setCanvasImages();
         window.addEventListener('load', ()=>{
+            document.body.classList.remove('before-load');
             sceneInfo[0].objs.context.drawImage(sceneInfo[0].objs.videoImgs[0], 0, 0);
             setLayout();
         });
