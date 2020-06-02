@@ -1,31 +1,8 @@
 @charset "utf-8";
-* { box-sizing: border-box; }
-html { overflow: hidden; }
-.pop { width: 500px; height: 500px; border: 2px solid; background-image: url("../data/paper.jpg"); background-position: center; position: absolute; z-index: 1000; left: 710px; top: 225px; }
-.close_btn0 { position: absolute; font-size: 25px; right: 40px; top: 30px; color: #fff; background: #333366; text-align: center; line-height: 25px; width: 20px; border-radius: 4px; opacity: 0.8; cursor: pointer; font-family: 'Goyang'; }
-#pop { display: block; background-image: url("../data/main_logo.png"); width: 250px; height: 150px; background-repeat: no-repeat; background-size: cover; margin: 50px auto; cursor: pointer; }
-#clo { display: none; }
-.pop input { clear: both; display: block; margin: 25px auto; font-family: 'Goyang'; font-size: 18px; text-indent: 5px; }
-#pop_in { display: block; width: 65px; height: 30px; border: 1px solid; font-size: 15px; line-height: 25px; background-color: #333366; color: #fff; border-radius: 7px; opacity: 0.8; cursor: pointer; }
-.pop ul { width: 190px; height: 20px; margin: 25px auto; padding-left: 10px; }
-.pop li { float: left; }
-.pop ul a { display: block; font-size: 18px; width: 90px; height: 18px; text-align: center; font-family: 'Goyang'; }
-.pop li a:after { content: "|"; margin-left: 10px; }
-.pop li a.last:after { content: ""; }
-.on { display: none; }
-
-main { clear: both; width: 70%; margin: 0 auto; position: relative; }
-
-.local { width: 15%; float: left; font-family: 'tree'; position: relative; text-align: right; }
-.lo_bar { position: absolute;  width: 70%; right: 30%; top: 20px; }
-.local p { font-size: 38px; line-height: 50px; margin-bottom: 20px; }
-
-.content { margin-left: 15%; width: 85%; height: 530px; margin-top: 90px; margin-bottom: 40px; border-left: 2px solid; }
-.content h1 { font-size: 30px; text-align: center; margin: 30px; }
-.content form { margin: 30px auto; }
+.content form { margin: 2rem auto; }
 .login_logo { display: block; width: 280px; height: 150px; background-image: url("../data/main_logo.png"); background-size: cover; margin: 10px auto; clear: both; }
 #id, #pw { display: block; clear: both; text-indent: 10px; width: 200px; height: 50px; font-size: 18px; margin-bottom: 10px; font-family: 'Goyang'; }
-.lala { width:320px; margin-left: -15px; float: left; }
+.lala { width: 300px; margin-left: -15px; float: left; }
 .lala li { float: left; }
 .lala a { display: block; text-align: center; font-size: 20px; float: left; }
 .lala li:after { content: "/"; font-weight: 900; margin: 0 20px;}
