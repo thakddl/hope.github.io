@@ -38,6 +38,6 @@
 
 @media screen and ( min-width:900px ){
     .notice_box li { width: 20%; }
-    .item_box { flex-flow: row; align-items: unset; }
+    .item_box { flex-flow: row; justify-content: center; align-items: unset; }
 
 }
