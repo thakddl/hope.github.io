@@ -109,9 +109,13 @@ section h2 { position: relative; width: 100%; padding-bottom: 6rem; font-family:
 #skills > h2::after { display: block; width: 100%; content: attr(data-content); font-size: 1.3rem; text-align: center; padding-top: 1.5rem; text-transform: none; }
 #skills > ul { display: -ms-flexbox; display: flex; flex-flow: column; width: 60%; margin: 0 auto; }
 #skills > ul > li { margin-bottom: 3rem; }
-.skill_btn { position: relative; width: 6rem; height: 6rem; margin: 0 auto; background-color: #000; border-radius: 50%; font-size: 1rem; color: #eaeaea; cursor: pointer; }
-.skill_btn::before { display: block; position: absolute; top: 0; left: 0; content: ""; width: inherit; height: inherit; border: 0.2rem solid #eaeaea; border-radius: 50%; box-sizing: border-box; transition: 0.3s; opacity: 0; }
-.skill_btn:hover::before { transform: scale(0.8); opacity: 1; }
+.skill_btn { position: relative; width: 6rem; height: 6rem; margin: 0 auto; border-radius: 50%; font-size: 1rem; color: #eaeaea; cursor: pointer; }
+.skill_btn::before, 
+.skill_btn::after { display: block; position: absolute; top: 0; left: 0; content: ""; width: inherit; height: inherit; border: 0.2rem solid #eaeaea; border-radius: 50%; box-sizing: border-box; transition: 0.3s; opacity: 1; }
+.skill_btn::after { margin: -0.2rem; }
+.skill_btn::before { margin: 0.2rem; }
+.skill_btn:hover::after { transform: translate3d(-1rem, 1rem, 0) scale(1.2); opacity: 0; }
+.skill_btn:hover::before { transform: translate3d(1rem, -1rem, 0) scale(1.2); opacity: 0; }
 #skills span { display: block; line-height: 1.5; }
 .progress { overflow: hidden; width: 80%; height: 1rem; margin: 2rem auto; border: 2px solid #000; border-radius: 1rem; }
 .progressBar { width: 0%; height: inherit; background-color: #0F2A51; transition: 1s; border-radius: 1rem; }
