@@ -117,8 +117,8 @@ section h2 { position: relative; width: 100%; padding-bottom: 6rem; font-family:
 .skill_btn:hover::after { transform: translate3d(-1rem, 1rem, 0) scale(1.2); opacity: 0; }
 .skill_btn:hover::before { transform: translate3d(1rem, -1rem, 0) scale(1.2); opacity: 0; }
 #skills span { display: block; line-height: 1.5; }
-.progress { overflow: hidden; width: 80%; height: 1rem; margin: 2rem auto; border: 2px solid #000; border-radius: 1rem; }
-.progressBar { width: 0%; height: inherit; background-color: #0F2A51; transition: 1s; border-radius: 1rem; }
+.progress { overflow: hidden; width: 80%; height: 1rem; margin: 2rem auto; border: 2px solid #eaeaea; border-radius: 1rem; }
+.progressBar { width: 0%; height: inherit; background-color: #eaeaea; transition: 1s; border-radius: 1rem; }
 .descript { display: none; }
 .descript span { display: block; margin-bottom: 0.5em;  line-height: 1.5; }
 .descript span::before { content: ''; display: inline-block; width: .5em; height: .5em; margin-right: 0.5em; background-color: #0F2A51; border-radius: 50%; color: #eaeaea; text-align: center; }
