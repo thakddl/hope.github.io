@@ -97,6 +97,7 @@
             objs: {
                 container: document.querySelector('#scroll-section-3'),
                 canvas: document.querySelector('.img-blend-canvas'),
+                canvasCaption: document.querySelector('.canvas-caption'),
                 context: document.querySelector('.img-blend-canvas').getContext('2d'),
                 imgPath: [
                     './images/blend-image-1.jpg',
@@ -107,9 +108,9 @@
             values: {
                 rect1X: [ 0, 0, { start: 0, end: 0 } ],
                 rect2X: [ 0, 0, { start: 0, end: 0 } ],
-                imgBlendY: [ 1080, 0, { start: 0, end: 0 } ],
-                rectStartY: 0
-                
+                imgBlendHeight: [ 0, 0, { start: 0, end: 0 } ],
+                canvasY: 0,
+                canvas_scale: [ 1, 0.5, { start: 0, end: 0 } ]
             }
         }
     ];
@@ -172,9 +173,9 @@
             const partScrollEnd = values[2].end * scrollHeight;
             const partScrollHeight = partScrollEnd - partScrollStart; 
             if(currentYOffset>=partScrollStart && currentYOffset<=partScrollEnd){
-                rv = (currentYOffset-partScrollStart) / partScrollHeight * (values[1]-values[0]) + values[0];
-            }
-            else if (currentYOffset<partScrollStart){ rv = values[0]; }
+                rv = values[0] + (currentYOffset-partScrollStart) / partScrollHeight * (values[1]-values[0]);
+            }//시작값 + 증가값(partHeightRatio * 전체값)
+            else if (currentYOffset<partScrollStart){ rv = values[0]; }//바운스 오류 방지
             else if (currentYOffset>partScrollEnd){ rv = values[1]; };
 
         } else {
@@ -345,11 +346,11 @@
                 values.rect1X[1] = values.rect1X[0] - whithRectWidth;
                 values.rect2X[0] = values.rect1X[0] + recalculatedInnerWidth - whithRectWidth;
                 values.rect2X[1] = values.rect2X[0] + whithRectWidth;
-                // 종료 지점 구하기
-                if (!values.rectStartY){
-                    values.rectStartY = (objs.canvas.offsetTop - prevScrollHeight) + (objs.canvas.height - objs.canvas.height * canvasScaleRatio) / 2; // U can change parent's position value to "relative" to get a relative offsetTop value at CSS. But that's a original canvas's position value.
-                    values.rect1X[2].end = values.rectStartY / scrollHeight;
-                    values.rect2X[2].end = values.rectStartY / scrollHeight;
+                // 시작과 종료 지점 구하기( canvas offsetTop 값이 애니매이션의 종료시점 )
+                if (!values.canvasY){
+                    values.canvasY = (objs.canvas.offsetTop - prevScrollHeight) + (objs.canvas.height - objs.canvas.height * canvasScaleRatio) / 2; // U can change parent's position value to "relative" to get a relative offsetTop value at CSS. But that's a original canvas's position value.
+                    values.rect1X[2].end = values.canvasY / scrollHeight;
+                    values.rect2X[2].end = values.canvasY / scrollHeight;
                     values.rect1X[2].start = values.rect1X[2].end / 3.5;
                     values.rect2X[2].start = values.rect2X[2].end / 3.5;
                 }
@@ -361,19 +362,39 @@
                 
                 if ( values.rect2X[2].end > scrollRatio ) {
                     step = 1;
-                    console.log('안담', values.rect2X[2].end, scrollRatio);
+                    // console.log('안담', values.rect2X[2].end, scrollRatio);
                     objs.canvas.classList.remove('sticky');
                 } else {
                     step = 2;
-                    console.log('닿음', values.rect2X[2].end, scrollRatio);
-                    objs.canvas.classList.add('sticky');
-                    objs.canvas.style.top = `${-(objs.canvas.height - objs.canvas.height * canvasScaleRatio) / 2}px`;
-                    // 이미지 블랜드 imgBlendY: [ 0, 0, { start: 0, end: 0 } ]
-                    values.imgBlendY[2].start = values.rect2X[2].end;
-                    values.imgBlendY[2].end = values.rect2X[2].end + 0.1;
+                    // console.log('닿음', values.rect2X[2].end, scrollRatio);
+                    const canvasW = objs.canvas.width;
+                    const canvasH = objs.canvas.height;
+                    const blendHeight = calcValues(values.imgBlendHeight, currentYOffset);
 
-                    if ( scrollRatio > values.imgBlendY[2].end ) {
+                    objs.canvas.classList.add('sticky');
+                    objs.canvas.style.top = `${-(canvasH - canvasH * canvasScaleRatio) / 2}px`;
+                    // 이미지 블랜드 imgBlendY: [ 0, 0, { start: 0, end: 0 } ]
+                    values.imgBlendHeight[0] = 0;
+                    values.imgBlendHeight[1] = canvasH;
+                    values.imgBlendHeight[2].start = values.rect1X[2].end;
+                    values.imgBlendHeight[2].end = values.imgBlendHeight[2].start + 0.2;
+                    objs.context.drawImage( objs.images[1], 
+                        0, canvasH-blendHeight, canvasW, blendHeight, 
+                        0, canvasH-blendHeight, canvasW, blendHeight
+                        );
+
+                    if ( scrollRatio > values.imgBlendHeight[2].end ) {
+                        values.canvas_scale[0] = canvasScaleRatio;
+                        values.canvas_scale[1] = document.body.offsetWidth / ( canvasW * 1.5 );
+                        values.canvas_scale[2].start = values.imgBlendHeight[2].end;
+                        values.canvas_scale[2].end = values.canvas_scale[2].start + 0.2;
+                        objs.canvas.style.transform = `scale(${calcValues(values.canvas_scale, currentYOffset)})`
+                        objs.canvas.style.marginTop = 0;
+                    } 
+                    if ( scrollRatio > values.canvas_scale[2].end && 0 < values.canvas_scale[2].end ) {
                         objs.canvas.classList.remove('sticky');
+                        objs.canvas.style.marginTop = `${scrollHeight * 0.4}px`;
+                        //애니메이션이 시작한 시점부터 0.4 만큼 지남
                     }
                 }
                 break;
