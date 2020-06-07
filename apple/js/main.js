@@ -406,9 +406,12 @@
                         values.canvas_scale[2].end = values.canvas_scale[2].start + 0.2;
                         objs.canvas.style.transform = `scale(${calcValues(values.canvas_scale, currentYOffset)})`
                         objs.canvas.style.marginTop = 0;
+                        objs.canvasCaption.style.display = 'none';
+
                     } 
                     if ( scrollRatio > values.canvas_scale[2].end && 0 < values.canvas_scale[2].end ) {
                         objs.canvas.classList.remove('sticky');
+                        objs.canvasCaption.style.display = 'block';
                         objs.canvas.style.marginTop = `${scrollHeight * 0.4}px`;
                         //애니메이션이 시작한 시점부터 0.4 만큼 지남
                         values.canvasCaption_opacity[2].start = values.canvas_scale[2].end;
@@ -477,24 +480,40 @@
             setLayout();
             sceneInfo[0].objs.context.drawImage(sceneInfo[0].objs.videoImgs[0], 0, 0);
             
-            window.addEventListener('resize', ()=>{
-                    if ( window.innerWidth > 900 ){
-                        setLayout();
-                        sceneInfo[3].values.canvasOffsetTop = 0;
+            let tempYOffset = yOffset;
+            let tempScrollCount = 0;
+            if ( yOffset > 0 ){
+                let siId = setInterval(()=>{ 
+                    scrollTo(0, tempYOffset)
+                    tempYOffset +=2
+                    tempScrollCount++
+    
+                    if(tempScrollCount>20){
+                        clearInterval(siId);
                     }
-                });
+                }, 20);
+            }
+
+            window.addEventListener('resize', ()=>{
+                // if ( window.innerWidth > 900 ){
+                setLayout();
+                sceneInfo[3].values.canvasOffsetTop = 0;
+
+                // }
+            });
                 window.addEventListener('orientationchange', ()=>{
                     setTimeout(setLayout, 300);
                 });
                 window.addEventListener('scroll',() => {
-                yOffset = window.pageYOffset;
-                stickyMenu();
-                scrollLoop();
-                if ( !rafState ){
-                    rafId = requestAnimationFrame(loop);
-                    rafState = true;
-                }
-            });
+                    yOffset = window.pageYOffset;
+                    stickyMenu();
+                    scrollLoop();
+                    if ( !rafState ){
+                        rafId = requestAnimationFrame(loop);
+                        rafState = true;
+                    }
+                });
+                sceneInfo[3].values.canvasOffsetTop = 0;
         });
         document.querySelector('.loading').addEventListener('transitionend', (e)=>{
             document.body.removeChild(e.currentTarget);
