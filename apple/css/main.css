@@ -4,6 +4,10 @@ body { overflow-x: hidden; color: rgb(29, 29, 31); letter-spacing: -0.05em; back
 p { line-height: 1.6; }
 a { color: rgb(29, 29, 31); text-decoration: none; }
 
+/* loader */
+body.before-load {
+	overflow: hidden;
+}
 .loading {
 	display: flex;
 	align-items: center;
@@ -17,9 +21,6 @@ a { color: rgb(29, 29, 31); text-decoration: none; }
 	background: white;
 	opacity: 0;
 	transition: 0.5s;
-}
-.before-load .container {
-    display: none;
 }
 .before-load .loading {
 	opacity: 1;
@@ -40,21 +41,25 @@ a { color: rgb(29, 29, 31); text-decoration: none; }
 .loading-circle circle {
 	stroke: black;
 	stroke-width: 4;
-	/* getTotalLength()로 stroke의 길이를 얻어올 수 있음 */
 	stroke-dasharray: 157;
 	stroke-dashoffset: 0;
 	fill: transparent;
 	animation: loading-circle-ani 1s infinite;
 }
 
-nav { z-index: 999; }
+.container { overflow-x: hidden; }
+/* navigation */
+nav { z-index: 99; }
 .global-nav { position: absolute; top: 0; left: 0; width: 100%; height: 44px; }
 .local-nav { position: absolute; top: 44px; left: 0; width: 100%; height: 52px; border-bottom: 1px solid #ddd; }
+.local-nav-sticky .local-nav { position: fixed; top: 0; left: 0; background-color: rgba(255, 255, 255, 0.1); backdrop-filter: saturate(180%) blur(15px); -webkit-backdrop-filter: saturate(180%) blur(15px); -moz-backdrop-filter: saturate(180%) blur(15px); }
 .global-nav-links,
 .local-nav-links { display: flex; display: -ms-flexbox; align-items: center; max-width: 1000px; height: 100%; padding: 0 1rem; margin: 0 auto; text-transform: capitalize; }
 .global-nav-links { justify-content: space-between; }
 .product-name { margin-right: auto; font-size: 1.4rem; font-weight: 900; }
 .local-nav-links li:not(.product-name) { margin-left: 2em; font-size: 0.8rem; }
+
+/* section */
 .scroll-section { padding-top: 50vh; }
 #scroll-section-0 h1 {position: relative; top: -10vh; z-index: 5; font-size: 4rem; text-align: center; }
 .main-message { display: flex; display: -ms-flexbox; justify-content: center; align-items: center; top: 35vh; height: 3em; font-size: 2.5rem; opacity: 0; }
@@ -66,7 +71,7 @@ nav { z-index: 999; }
 #show-scene-0 #scroll-section-0 .sticky-elem,
 #show-scene-1 #scroll-section-1 .sticky-elem,
 #show-scene-2 #scroll-section-2 .sticky-elem,
-#show-scene-3 #scroll-section-3 .sticky-elem { display: block; }
+#show-scene-3 #scroll-section-3 .sticky-elem { display: block; will-change: transform, opacity; }
 .sticky-elem-canvas { top: 0; height: 100%; }
 .sticky-elem-canvas canvas { position: absolute; top: 50%; left: 50%; }
 
@@ -78,22 +83,22 @@ nav { z-index: 999; }
 #scroll-section-2 .c { top: 15%; left: 45%; }
 
 #scroll-section-3 { display: flex; display: -ms-flexbox; flex-direction: column; align-items: center; }
-.mid-message { max-width: 1000px; margin: 0 auto; padding: 0 1rem; font-size: 2rem; color: #888; }
+.mid-message { width: 1000px; margin: 0 auto; padding: 0 1rem; font-size: 2rem; color: #888; }
 .mid-message strong { color: rgb(29, 29, 31); }
 .img-blend-canvas.sticky { position: fixed; top: 0; }
-.canvas-caption { max-width: 1000px; margin: 0 auto; padding: 0 1rem; font-size: 1.2rem; color: #888; }
+.canvas-caption { max-width: 1000px; margin: -24rem auto; padding: 0 1rem; font-size: 1.2rem; color: #888; opacity: 0; }
 footer { display: flex; display: -ms-flexbox; justify-content: center; align-items: center; height: 7em; margin-top: 10rem; background-color: rosybrown; color: white; }
 
 
 @media ( min-width: 1024px ) {
     #scroll-section-0 h1 { font-size: 8vw; }
     .main-message { font-size: 3.2vw; }
-    .description { font-size: 1.7rem; }
+    .description { padding: 0; font-size: 1.7rem; }
     .description strong { font-size: 5.5rem; }
     #scroll-section-2 .main-message { font-size: 5.5vw; }
     .desc-message { width: 20%; }
     #scroll-section-2 .b { top: 20%; left: 53%; }
     #scroll-section-2 .c { left: 55%; }
-    .mid-message { font-size: 3.2vw; }
-    .canvas-caption { font-size: 1.7rem; }
+    .mid-message { padding: 0; font-size: 3.2vw; }
+    .canvas-caption { margin: -8rem auto; padding: 0; font-size: 1.7rem; }
 }

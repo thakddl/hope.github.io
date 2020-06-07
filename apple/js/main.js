@@ -5,6 +5,10 @@
     let currentScene = 0; //The currently active scene
     let enterNewScene = false; //It will change to ture when you enter a new scene.
     
+    let acc = 0.1,
+    delayedYOffset = 0,
+    rafId, rafState;
+
     const sceneInfo = [
         { // 0
             type: 'sticky',
@@ -109,8 +113,10 @@
                 rect1X: [ 0, 0, { start: 0, end: 0 } ],
                 rect2X: [ 0, 0, { start: 0, end: 0 } ],
                 imgBlendHeight: [ 0, 0, { start: 0, end: 0 } ],
-                canvasY: 0,
-                canvas_scale: [ 1, 0.5, { start: 0, end: 0 } ]
+                canvasOffsetTop: 0,
+                canvas_scale: [ 1, 0.5, { start: 0, end: 0 } ],
+                canvasCaption_opacity: [ 0, 1, { start: 0, end: 0 } ],
+                canvasCaption_translateY: [ 20, 0, { start: 0, end: 0 } ],
             }
         }
     ];
@@ -136,6 +142,15 @@
         }
     }
     
+    function stickyMenu(){
+        if ( yOffset > 44 ){
+            document.body.classList.add('local-nav-sticky');
+        } else {
+            document.body.classList.remove('local-nav-sticky');
+
+        }
+    }
+
     function setLayout() { 
         //각 스크롤 섹션의 높이 세팅
         for (let i = 0; i < sceneInfo.length; i++) {
@@ -194,8 +209,8 @@
 
         switch (currentScene){
             case 0:
-                let sequence = Math.round(calcValues(values.imgSequence, currentYOffset));
-                objs.context.drawImage(objs.videoImgs[sequence], 0, 0);
+                // let sequence = Math.round(calcValues(values.imgSequence, currentYOffset));
+                // objs.context.drawImage(objs.videoImgs[sequence], 0, 0);
                 objs.canvas.style.opacity = calcValues(values.canvas_opacity_out, currentYOffset);
                 //a
                 if(scrollRatio <= values.messageA_opacity_out[2].start){
@@ -240,8 +255,8 @@
                 break;
 
             case 2:
-                let sequence2 = Math.round(calcValues(values.imgSequence, currentYOffset));
-                objs.context.drawImage(objs.videoImgs[sequence2], 0, 0);
+                // let sequence2 = Math.round(calcValues(values.imgSequence, currentYOffset));
+                // objs.context.drawImage(objs.videoImgs[sequence2], 0, 0);
                 if (scrollRatio <= values.canvas_opacity_in[2].end ) { objs.canvas.style.opacity = calcValues(values.canvas_opacity_in, currentYOffset); }
                 else { objs.canvas.style.opacity = calcValues(values.canvas_opacity_out, currentYOffset); }
                 //a
@@ -347,10 +362,10 @@
                 values.rect2X[0] = values.rect1X[0] + recalculatedInnerWidth - whithRectWidth;
                 values.rect2X[1] = values.rect2X[0] + whithRectWidth;
                 // 시작과 종료 지점 구하기( canvas offsetTop 값이 애니매이션의 종료시점 )
-                if (!values.canvasY){
-                    values.canvasY = (objs.canvas.offsetTop - prevScrollHeight) + (objs.canvas.height - objs.canvas.height * canvasScaleRatio) / 2; // U can change parent's position value to "relative" to get a relative offsetTop value at CSS. But that's a original canvas's position value.
-                    values.rect1X[2].end = values.canvasY / scrollHeight;
-                    values.rect2X[2].end = values.canvasY / scrollHeight;
+                if (!values.canvasOffsetTop){
+                    values.canvasOffsetTop = (objs.canvas.offsetTop - prevScrollHeight) + (objs.canvas.height - objs.canvas.height * canvasScaleRatio) / 2; // U can change parent's position value to "relative" to get a relative offsetTop value at CSS. But that's a original canvas's position value.
+                    values.rect1X[2].end = values.canvasOffsetTop / scrollHeight;
+                    values.rect2X[2].end = values.canvasOffsetTop / scrollHeight;
                     values.rect1X[2].start = values.rect1X[2].end / 3.5;
                     values.rect2X[2].start = values.rect2X[2].end / 3.5;
                 }
@@ -371,18 +386,19 @@
                     const canvasH = objs.canvas.height;
                     const blendHeight = calcValues(values.imgBlendHeight, currentYOffset);
 
+                    
                     objs.canvas.classList.add('sticky');
                     objs.canvas.style.top = `${-(canvasH - canvasH * canvasScaleRatio) / 2}px`;
-                    // 이미지 블랜드 imgBlendY: [ 0, 0, { start: 0, end: 0 } ]
+                    // 이미지 블랜드 imgBlendHeight: [ 0, 0, { start: 0, end: 0 } ]
                     values.imgBlendHeight[0] = 0;
                     values.imgBlendHeight[1] = canvasH;
                     values.imgBlendHeight[2].start = values.rect1X[2].end;
                     values.imgBlendHeight[2].end = values.imgBlendHeight[2].start + 0.2;
+                    
                     objs.context.drawImage( objs.images[1], 
                         0, canvasH-blendHeight, canvasW, blendHeight, 
                         0, canvasH-blendHeight, canvasW, blendHeight
-                        );
-
+                    );
                     if ( scrollRatio > values.imgBlendHeight[2].end ) {
                         values.canvas_scale[0] = canvasScaleRatio;
                         values.canvas_scale[1] = document.body.offsetWidth / ( canvasW * 1.5 );
@@ -395,6 +411,13 @@
                         objs.canvas.classList.remove('sticky');
                         objs.canvas.style.marginTop = `${scrollHeight * 0.4}px`;
                         //애니메이션이 시작한 시점부터 0.4 만큼 지남
+                        values.canvasCaption_opacity[2].start = values.canvas_scale[2].end;
+                        values.canvasCaption_opacity[2].end = values.canvasCaption_opacity[2].start + 0.1;
+                        values.canvasCaption_translateY[2].start = values.canvasCaption_opacity[2].start;
+                        values.canvasCaption_translateY[2].end = values.canvasCaption_opacity[2].end;
+
+                        objs.canvasCaption.style.opacity = calcValues(values.canvasCaption_opacity, currentYOffset);
+                        objs.canvasCaption.style.transform = `translate3d(0, ${calcValues(values.canvasCaption_translateY, currentYOffset)}%, 0)`;
                     }
                 }
                 break;
@@ -409,12 +432,12 @@
             prevScrollHeight += sceneInfo[i].scrollHeight;
         }
         //currentScene 설정
-        if ( yOffset > prevScrollHeight+sceneInfo[currentScene].scrollHeight ){
+        if ( delayedYOffset > prevScrollHeight+sceneInfo[currentScene].scrollHeight ){
             enterNewScene = true;
             currentScene++;
             document.body.setAttribute('id', `show-scene-${currentScene}`);
         } 
-        if ( yOffset < prevScrollHeight ) {
+        if ( delayedYOffset < prevScrollHeight ) {
             enterNewScene = true;
             if ( currentScene === 0 ) return;//모바일에서 브라우저의 바운스로 인해 마이너스가 되는 것을 방지
             currentScene--;
@@ -423,19 +446,61 @@
         if (enterNewScene) return;
         playAnimation();
     }
+
+    function loop(){
+        delayedYOffset = delayedYOffset + ( yOffset - delayedYOffset ) * acc;
+
+        if (!enterNewScene) {//씬이 바뀔때 오차 없앰
+            if ( currentScene === 0 || currentScene === 2 ){
+                const objs = sceneInfo[currentScene].objs;
+                const values = sceneInfo[currentScene].values;
+                const currentYOffset = delayedYOffset - prevScrollHeight;
+                let sequence = Math.round(calcValues(values.imgSequence, currentYOffset));
+                // console.log(sequence) 계산 오차로 인한 버그방지
+                if ( objs.videoImgs[sequence] ){ //존재할때만 그리도록
+                    objs.context.drawImage(objs.videoImgs[sequence], 0, 0);
+                }
+            }
+        }
+
+        rafId = requestAnimationFrame(loop);//1초에 60회정도 불려짐
+
+        if ( Math.abs( yOffset - delayedYOffset ) < 1 ){
+            cancelAnimationFrame(rafId);
+            rafState = false;
+        }
+    }
     
     function init(){
-        setCanvasImages();
         window.addEventListener('load', ()=>{
             document.body.classList.remove('before-load');
-            sceneInfo[0].objs.context.drawImage(sceneInfo[0].objs.videoImgs[0], 0, 0);
             setLayout();
+            sceneInfo[0].objs.context.drawImage(sceneInfo[0].objs.videoImgs[0], 0, 0);
+            
+            window.addEventListener('resize', ()=>{
+                // if ( window.innerWidth > 900 ){
+                    setLayout();
+                    sceneInfo[3].values.canvasOffsetTop = 0;
+                    // }
+                });
+                window.addEventListener('orientationchange', ()=>{
+                    setTimeout(setLayout, 300);
+                });
+                window.addEventListener('scroll',() => {
+                yOffset = window.pageYOffset;
+                stickyMenu();
+                scrollLoop();
+                if ( !rafState ){
+                    rafId = requestAnimationFrame(loop);
+                    rafState = true;
+                }
+            });
         });
-        window.addEventListener('resize', setLayout);
-        window.addEventListener('scroll',() => {
-            yOffset = window.pageYOffset;
-            scrollLoop();
+        document.querySelector('.loading').addEventListener('transitionend', (e)=>{
+            document.body.removeChild(e.currentTarget);
         });
+        setCanvasImages();
+
     } init();
 
 })();
