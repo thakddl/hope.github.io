@@ -495,11 +495,10 @@
             }
 
             window.addEventListener('resize', ()=>{
-                // if ( window.innerWidth > 900 ){
-                setLayout();
-                sceneInfo[3].values.canvasOffsetTop = 0;
-
-                // }
+                if ( window.innerWidth > 900 ){
+                    setLayout();
+                    sceneInfo[3].values.canvasOffsetTop = 0;
+                }
             });
                 window.addEventListener('orientationchange', ()=>{
                     setTimeout(setLayout, 300);
