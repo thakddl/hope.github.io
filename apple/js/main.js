@@ -493,26 +493,25 @@
                     }
                 }, 20);
             }
+        });
 
-            window.addEventListener('resize', ()=>{
-                if ( window.innerWidth > 900 ){
-                    setLayout();
-                    sceneInfo[3].values.canvasOffsetTop = 0;
-                }
-            });
-                window.addEventListener('orientationchange', ()=>{
-                    setTimeout(setLayout, 300);
-                });
-                window.addEventListener('scroll',() => {
-                    yOffset = window.pageYOffset;
-                    stickyMenu();
-                    scrollLoop();
-                    if ( !rafState ){
-                        rafId = requestAnimationFrame(loop);
-                        rafState = true;
-                    }
-                });
+        window.addEventListener('resize', ()=>{
+            if ( window.innerWidth > 900 ){
+                setLayout();
                 sceneInfo[3].values.canvasOffsetTop = 0;
+            }
+        });
+        window.addEventListener('orientationchange', ()=>{
+            setTimeout(setLayout, 300);
+        });
+        window.addEventListener('scroll',() => {
+            yOffset = window.pageYOffset;
+            stickyMenu();
+            scrollLoop();
+            if ( !rafState ){
+                rafId = requestAnimationFrame(loop);
+                rafState = true;
+            }
         });
         document.querySelector('.loading').addEventListener('transitionend', (e)=>{
             document.body.removeChild(e.currentTarget);
