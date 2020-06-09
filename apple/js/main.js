@@ -162,7 +162,6 @@
             }
             sceneInfo[i].objs.container.style.height = `${sceneInfo[i].scrollHeight}px`;
         }
-        console.log(sceneInfo[3].heightMulti)
         //currentScene 판별
         yOffset = window.pageYOffset;
         let totalScrollHeight = 0;
@@ -494,9 +493,12 @@
                 }, 20);
             }
         });
-
         window.addEventListener('resize', ()=>{
-            if ( window.innerWidth > 900 ){
+            const isSafari = navigator.vendor;
+            if ( isSafari.indexOf('Apple') === -1 ){//when it isn't safari,
+                setLayout();
+                sceneInfo[3].values.canvasOffsetTop = 0;
+            } else if (isSafari.indexOf('Apple') !== -1 && innerWidth > 1024){//when it's safari and desktop.
                 setLayout();
                 sceneInfo[3].values.canvasOffsetTop = 0;
             }
