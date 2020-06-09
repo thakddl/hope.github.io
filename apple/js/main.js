@@ -154,6 +154,7 @@
     function setLayout() { 
         //각 스크롤 섹션의 높이 세팅
         if (window.innerHeight < 700) sceneInfo[3].heightMulti = 7;
+        if (window.innerHeight < 400) sceneInfo[3].heightMulti = 9;
         for (let i = 0; i < sceneInfo.length; i++) {
             if (sceneInfo[i].type === 'sticky'){
                 sceneInfo[i].scrollHeight = sceneInfo[i].heightMulti * window.innerHeight;
