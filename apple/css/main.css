@@ -1,4 +1,5 @@
 @charset "utf-8";
+* { margin: 0; padding: 0; }
 html { font-family: 'Noto Sans KR', sans-serif; font-size: 14px; }
 body { overflow-x: hidden; color: rgb(29, 29, 31); letter-spacing: -0.05em; background: white; }
 p { line-height: 1.6; }
@@ -86,11 +87,11 @@ nav { z-index: 99; }
 #scroll-section-2 .c { top: 15%; left: 45%; }
 
 #scroll-section-3 { display: flex; display: -ms-flexbox; flex-direction: column; align-items: center; }
-.mid-message { width: 1000px; max-width: 100%; margin: 0 auto; padding: 0 1rem; font-size: 2rem; color: #888; }
+.mid-message { width: 1000px; max-width: 100%; box-sizing: border-box; margin: 0 auto; padding: 0 1rem; font-size: 2rem; color: #888; }
 .mid-message strong { color: rgb(29, 29, 31); }
-.img-blend-canvas.sticky { position: fixed; top: 0; }
+.img-blend-canvas.sticky { position: fixed; top: 0; z-index: 3; }
 .canvas-caption { max-width: 1000px; margin: -24rem auto; padding: 0 1rem; font-size: 1.2rem; color: #888; }
-footer { display: flex; display: -ms-flexbox; justify-content: center; align-items: center; height: 7em; margin-top: 10rem; background-color: rosybrown; color: white; }
+footer { display: flex; display: -ms-flexbox; justify-content: center; align-items: center; height: 7em; margin-top: 5rem; background-color: rosybrown; color: white; }
 
 
 @media ( min-width: 1024px ) {
@@ -103,5 +104,5 @@ footer { display: flex; display: -ms-flexbox; justify-content: center; align-ite
     #scroll-section-2 .b { top: 20%; left: 53%; }
     #scroll-section-2 .c { left: 55%; }
     .mid-message { padding: 0; font-size: 3.2vw; }
-    .canvas-caption { margin: -12rem auto; padding: 0; font-size: 1.7rem; }
+    .canvas-caption { margin: -4rem auto; padding: 0; font-size: 1.7rem; }
 }

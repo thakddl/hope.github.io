@@ -153,6 +153,7 @@
 
     function setLayout() { 
         //각 스크롤 섹션의 높이 세팅
+        if (window.innerHeight < 700) sceneInfo[3].heightMulti = 7;
         for (let i = 0; i < sceneInfo.length; i++) {
             if (sceneInfo[i].type === 'sticky'){
                 sceneInfo[i].scrollHeight = sceneInfo[i].heightMulti * window.innerHeight;
@@ -161,6 +162,7 @@
             }
             sceneInfo[i].objs.container.style.height = `${sceneInfo[i].scrollHeight}px`;
         }
+        console.log(sceneInfo[3].heightMulti)
         //currentScene 판별
         yOffset = window.pageYOffset;
         let totalScrollHeight = 0;
@@ -406,12 +408,10 @@
                         values.canvas_scale[2].end = values.canvas_scale[2].start + 0.2;
                         objs.canvas.style.transform = `scale(${calcValues(values.canvas_scale, currentYOffset)})`
                         objs.canvas.style.marginTop = 0;
-                        objs.canvasCaption.style.display = 'none';
 
                     } 
                     if ( scrollRatio > values.canvas_scale[2].end && 0 < values.canvas_scale[2].end ) {
                         objs.canvas.classList.remove('sticky');
-                        objs.canvasCaption.style.display = 'block';
                         objs.canvas.style.marginTop = `${scrollHeight * 0.4}px`;
                         //애니메이션이 시작한 시점부터 0.4 만큼 지남
                         values.canvasCaption_opacity[2].start = values.canvas_scale[2].end;
@@ -499,6 +499,9 @@
             if ( window.innerWidth > 900 ){
                 setLayout();
                 sceneInfo[3].values.canvasOffsetTop = 0;
+            }
+            if ( currentScene===3 ){
+                scrollTo(0, sceneInfo[1].scrollHeight);
             }
         });
         window.addEventListener('orientationchange', ()=>{
