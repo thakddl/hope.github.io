@@ -51,7 +51,7 @@ body.before-load {
 	animation: loading-circle-ani 1s infinite;
 }
 
-/* .container { overflow-x: hidden; } */
+.container { overflow-x: hidden; }
 /* navigation */
 nav { z-index: 99; }
 .global-nav { position: absolute; top: 0; left: 0; width: 100%; height: 44px; }
