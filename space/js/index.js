@@ -100,11 +100,11 @@ $(document).ready(function(){
     let otp = parseInt($(".page_wrap .page").eq(idx).attr("data-top"));
     $("body, html").stop().animate({"scrollTop":otp+"px"}, 900, 'easeOutQuad');
   });
-  $("#hide").click(function(){
+  $("nav").click(function(){
     var scr = parseInt($("body").width());
     if(scr<1200){
       moon_int();
-      $("#hide").css({"left":"100%"});
+      $("nav").css({"left":"100%"});
       $("#fishing").css("display","none");
     }
   });
@@ -139,8 +139,8 @@ $(document).ready(function(){
       function pl(){
         $("#ab_box").fadeTo(300,1);
         for (id=-1; id<=4; id++ ){
-          $("#card li.card_lst:eq("+id+")").css("transition-delay",id*0.2+"s");
-          $("#card li.card_lst:eq("+id+")").addClass("on");
+          $("#card > li:eq("+id+")").css("transition-delay",id*0.2+"s");
+          $("#card > li:eq("+id+")").addClass("on");
         } 
       }setTimeout(function () { pl(); },600);
     } 

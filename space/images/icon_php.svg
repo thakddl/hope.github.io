@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="icon_php" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 612 792" enable-background="new 0 0 612 792" xml:space="preserve">
+<circle fill="#FFD83B" cx="306" cy="396" r="306"/>
+<g>
+	<circle fill="#F3C432" cx="198.843" cy="226.916" r="57.375"/>
+	<circle fill="#F3C432" cx="454.391" cy="262.01" r="42.61"/>
+	<circle fill="#F3C432" cx="298.866" cy="396" r="37.504"/>
+	<circle fill="#F3C432" cx="341.132" cy="504.515" r="15.759"/>
+	<circle fill="#F3C432" cx="141.429" cy="383.856" r="15.759"/>
+	<path fill="#F3C432" d="M469.022,137.354c29.835,47.239,47.354,103.026,47.354,163.021c0,168.988-136.993,306-306,306
+		c-59.995,0-115.783-17.519-163.021-47.354C101.554,644.835,197.007,702,306,702c169.007,0,306-137.012,306-306
+		C612,287.007,554.835,191.554,469.022,137.354z"/>
+</g>
+<circle fill="#E8AF2A" cx="315.256" cy="640.972" r="21.114"/>
+<circle fill="#F3C432" cx="188.439" cy="504.515" r="31.25"/>
+<circle fill="#E8AF2A" cx="502.413" cy="488.775" r="31.25"/>
+</svg>
