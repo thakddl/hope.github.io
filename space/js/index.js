@@ -9,6 +9,7 @@
 
     let currentSection = 0;
     let menu = false;
+    let wheelDelta = 0;
 
     const sectionInfo = [
         {//0
@@ -108,6 +109,25 @@
         };
     }
 
+    $(window).on("mousewheel", function(e){//jQuery
+        return wheelDelta = e.originalEvent.wheelDelta;
+    });
+    function autoScroll(){
+        if( wheelDelta < 0 ){
+            wheelDelta = 0;
+            scrollTo({
+                top: sectionInfo[currentSection+1].sectionTop,
+                behavior: 'smooth'
+            });
+        } else if ( wheelDelta > 0 ) {
+            wheelDelta = 0;
+            scrollTo({
+                top: sectionInfo[currentSection-1].sectionTop,
+                behavior: 'smooth'
+            });
+        }
+    }
+
     window.addEventListener('resize',()=>{
         setBase();
         setBread();
@@ -116,6 +136,7 @@
     window.addEventListener('scroll', ()=>{
         setBase();
         setBread();
+        if ( innerWidth>757 && innerHeight>750 ){ autoScroll(); };
 
     });
     menuBtn.addEventListener('click', menuHandler);
