@@ -142,7 +142,8 @@
                 const transforms = {
                     translation : {
                         x: (t.x[1]-t.x[0])/bounds.width*relmousepos.x + t.x[0],
-                        y: (t.y[1]-t.y[0])/bounds.height*relmousepos.y + t.y[0],
+                        y: -50,
+                        // y: (t.y[1]-t.y[0])/bounds.height*relmousepos.y + t.y[0],
                         z: (t.z[1]-t.z[0])/bounds.height*relmousepos.y + t.z[0],
                     },
                     rotation : {
