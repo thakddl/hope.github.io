@@ -4,7 +4,9 @@
     const gnb = document.querySelector('.gnb');
     const gnbList = gnb.children;
     const menuBtn = document.querySelector('#icon_moon');
-    
+    const breadIcon = document.querySelector('#icon_fishing');
+
+
     let currentSection = 0;
     let menu = false;
 
@@ -58,9 +60,11 @@
                 gnbList[i].style.transform = `translate3d(0, 0, 0)`;
                 gnbList[i].style.opacity = 1;
             }
+            setTimeout(setBread, 1500);
             menu = true;
         } else {
             menu = false;
+            setBread();
             menuBtn.style.animation = 'moon_scale 5s infinite linear';
             let reverseNumber = 0;
             for( i=gnbList.length-1; i>=0; i-- ){
@@ -75,11 +79,24 @@
         }
     }
 
+    function setBread(){
+        const obj = gnbList[currentSection];
+        if (menu){
+            breadIcon.style.opacity = 1;
+            breadIcon.style.top = `${obj.offsetTop - 15}px`;
+            breadIcon.style.left = `${obj.offsetLeft + obj.offsetWidth - 15}px`;
+        } else { breadIcon.style.opacity = 0; }
+    }
+
     window.addEventListener('resize',()=>{
         setBase();
+        setBread();
+
     });
     window.addEventListener('scroll', ()=>{
         setBase();
+        setBread();
+
     });
     menuBtn.addEventListener('click', menuHandler);
 })();
