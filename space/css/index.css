@@ -27,22 +27,22 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
 }
 
 @media screen and ( min-width:1024px ){
-  nav { padding: 0; width: 100%; max-width: unset; height: auto; background: transparent; transition: unset; }
+  nav { padding: 0; width: 100%; max-width: unset; height: auto; background: transparent; backdrop-filter: blur(10px); transition: unset; }
   .gnb { flex-direction: row; }
-  .gnb li { margin: 2rem 3vw; }
+  .gnb li { margin: 2rem 3vw 1rem; }
 }
-#icon_hi { position: absolute; width: 40px; height: 45px; top: 0; left: 0; animation: float 2s infinite linear; }
+#icon_hi { display: none; position: absolute; width: 40px; height: 45px; top: 0; left: 0; opacity: 0; transition: .5s; animation: float 2s infinite linear; }
 #icon_fishing { position: absolute; width: 60px; height: 40px; opacity: 0; transition: 1s; }
 @keyframes float { 
-  from { transform: rotateZ(-12deg); }
-  50% { transform: rotateZ(-2deg); }
-  to { transform: rotateZ(-12deg); }
+  from { transform: rotateY(180deg) rotateZ(-12deg); }
+  50% { transform: rotateY(180deg) rotateZ(-2deg); }
+  to { transform: rotateY(180deg) rotateZ(-12deg); }
 }@keyframes rotate { 
   from { transform: rotateY(180deg) rotateZ(-12deg); }
   50% { transform: rotateY(180deg) rotateZ(-2deg); }
   to { transform: rotateY(180deg) rotateZ(-12deg); }
 }
-#icon_moon { position: fixed; top: 2rem; right: 2rem; width: 4rem; height: 4rem; animation: moon_scale 5s infinite linear; cursor: pointer; transform-origin: 50% 60%; transform: rotateY(180deg); }
+#icon_moon { position: fixed; top: 2rem; right: 2rem; width: 4rem; height: 4rem; animation: moon_scale 4s infinite linear; cursor: pointer; transform-origin: 50% 60%; transform: rotateY(180deg); }
 /* #info { position: absolute; font-size: 24px; width: 200px; margin-left: -55px; padding-top: 15px; text-shadow: 3px 3px 15px #fff; } */
 @keyframes moon_scale {
   0% { transform: scale(0.8) rotate(0deg) rotateY(180deg); }
@@ -54,9 +54,9 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
   to { transform: rotate(-360deg) rotateY(180deg); }
 }
 
-.page { display: flex; display: -ms-flexbox; justify-content: center; align-items: center; padding: 5rem 0; min-height: 100vh; border: 2px solid #fff; }
+.page { display: flex; display: -ms-flexbox; justify-content: center; align-items: center; padding: 6rem 0 0rem; min-height: 100vh; }
 /* home */
-#section-0 p { text-align: center; font-size: 2rem; }
+#section-0 h1 { margin-top: -4rem; text-align: center; font-size: 2rem; }
 
 /* about page */
 #section-1 { flex-direction: column; font-size: 1.1rem; }
@@ -91,9 +91,9 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
 #ability_box > li { display: none; }
 #ability_box > li.display { display: block; }
 
-.ability_works { display: flex; flex-wrap: wrap; }
+.ability_works { display: flex; flex-flow: column wrap; align-items: center; }
 .ability_works dt { width: 100%; padding: 1rem 0 0.2rem 0; }
-.ability_works dd { padding: 0 0.5rem 0.5rem; width: calc(100% / 3); min-width: 150px; }
+.ability_works dd { padding: 0 0.5rem 0.5rem; width: 50%}
 .ability_works dd * { width: 100%; }
 /* css dd */
 .slide_size { width: 100%; max-width: 200px; height: 110px; overflow: hidden; background-color: rgb(250, 218, 177) ; transition: 0.3s; }
@@ -167,20 +167,21 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
   html { font-size: 18px; }
   #card { columns: 2; }
   #ability_box { max-width: 600px; }
-  
+  .ability_works { flex-flow: row wrap; }
+  .ability_works dd { width: calc(100% / 3);  }
   .tab li { margin-right: 7rem; }
   #icon_rocket { top: 60vh; left: 43vw; }
   
-  
+  /* .page {padding: 0;} */
 }
 @media screen and (min-width:1024px){
   html { font-size: 20px; }
   #icon_moon { top: 1.5rem; right: 4vw; width: 3.5rem; height: 3.5rem; }
-  #section-1 { flex-direction: row; justify-content: center; }
+  #section-1 { flex-direction: row; justify-content: center; align-items: center; }
   #card { columns: 2; margin-left: 2rem; column-gap: 3rem; }
   #section-2 { position: relative; display: flex; display: -ms-flexbox; justify-content: center; align-items: center; }
+  #planets_box { margin: 0 0 0 -30vw; }
   #ability_box { max-width: 800px; }
-
   .tab li { margin-right: 10rem; }
   .col { width: 40%; }
   #icon_rocket { top: 70vh; left: 39vw; }

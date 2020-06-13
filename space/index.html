@@ -45,7 +45,7 @@
   <link rel="stylesheet" href="./css/base.css">
   <link rel="stylesheet" href="./css/index.css">
   <script src="https://code.jquery.com/jquery-latest.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
   <script src="./js/jquery.easing.min.js"></script>
   <script src="./js/universe.js"></script>
   <!-- <script src="./js/index.js"></script> -->
@@ -71,7 +71,7 @@
   </header>
   <main>
     <section class="page" id="section-0">
-      <p>Hi there, I'm HOPE!<br>Enjoy my space!</p>
+      <h1>Hi there, I'm HOPE!<br>Enjoy my space!</h1>
     </section>
     <section class="page" id="section-1">
       <div id="iden_box">
@@ -471,8 +471,8 @@
               <a href="https://thakddl.github.io/b1" target="_blank" class="go">바로가기</a>
             </p>
           </div>
-          <button class="overlay__close" style="z-index: 555;">
-            <object id="icon_close" data="images/icon_close.svg" type="image/svg+xml"></object>
+          <button class="overlay__close" type="button" style="z-index: 555;">
+            <img id="icon_close" src="images/icon_close.svg" type="image/svg+xml"></img>
           </button>
         </div>
       </div>
@@ -507,7 +507,7 @@
               <input id="email" name="email" type="email" value=""
               required placeholder="your@email.com"/>
             </fieldset>
-            <button class="btn">
+            <button type="submit" class="btn" type="submit">
               <i class="fa fa-paper-plane"></i>&nbsp;Send&nbsp;
             </button>
           </div>
@@ -527,18 +527,18 @@
     <div>php planet 아이콘 제작자 <a href="https://www.flaticon.com/kr/authors/vectors-market" title="Vectors Market">Vectors Market</a> from <a href="https://www.flaticon.com/kr/" title="Flaticon">www.flaticon.com</a></div>
     <div>gnb, gnb hover, gnb cilck 아이콘 제작자 <a href="https://www.flaticon.com/kr/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/kr/" title="Flaticon">www.flaticon.com</a></div>
   </div> -->
-  <script src="js/setlayout.js"></script>
+  <script src="js/index.js"></script>
   <script src="js/imagesloaded.pkgd.min.js"></script>
   <script src="js/TweenMax.min.js"></script>
   <script src="js/demo.js"></script>
   <script data-cfasync="false" type="text/javascript" src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
   <script>
-    {
-      $(".overlay__content a.mo").click(function(){
-        var url = $(this).attr("data-href");
-        window.open(url, "", "width=375, height=667, top=200, left=400", false);
-      });
-    }
+  {
+    $(".overlay__content a.mo").click(function(){
+      var url = $(this).attr("data-href");
+      window.open(url, "", "width=375, height=667, top=200, left=400", false);
+    });
+  }
   </script>
 </body>
 </html>
