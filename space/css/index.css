@@ -54,9 +54,9 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
   to { transform: rotate(-360deg) rotateY(180deg); }
 }
 
-.page { display: flex; display: -ms-flexbox; justify-content: center; align-items: center; padding: 6rem 0 0rem; min-height: 100vh; }
+.page { display: flex; display: -ms-flexbox; justify-content: center; align-items: center; padding: 6rem 0 3rem; min-height: 100vh; border: 2px solid indianred; }
 /* home */
-#section-0 h1 { margin-top: -4rem; text-align: center; font-size: 2rem; }
+#section-0 h1 { margin-top: -2rem; text-align: center; font-size: 2rem; }
 
 /* about page */
 #section-1 { flex-direction: column; font-size: 1.1rem; }
@@ -166,6 +166,7 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
 @media screen and (min-width:757px){
   html { font-size: 18px; }
   #card { columns: 2; }
+  #section-2 { display: flex; display: -ms-flexbox; }
   #ability_box { max-width: 600px; }
   .ability_works { flex-flow: row wrap; }
   .ability_works dd { width: calc(100% / 3);  }
