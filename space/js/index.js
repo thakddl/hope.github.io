@@ -88,6 +88,26 @@
         } else { breadIcon.style.opacity = 0; }
     }
 
+    function getIndex(e){
+        const parent = e.target.parentNode;
+        const child = parent.children;
+        for( i=0; i<child.length; i++ ){
+            if( e.target === child[i] ){
+                return i;
+            }
+        }
+    }
+    
+    function scrollToMenu(e){
+        if( e.target.nodeName !== 'UL' ){
+            const idxNum = getIndex(e);
+            window.scrollTo({
+                top:sectionInfo[idxNum].sectionTop,
+                behavior: 'smooth'
+            })
+        };
+    }
+
     window.addEventListener('resize',()=>{
         setBase();
         setBread();
@@ -99,4 +119,6 @@
 
     });
     menuBtn.addEventListener('click', menuHandler);
+    gnb.addEventListener('click', scrollToMenu);
+
 })();
