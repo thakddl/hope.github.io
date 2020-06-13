@@ -5,7 +5,7 @@
     const gnbList = gnb.children;
     const menuBtn = document.querySelector('#icon_moon');
     const breadIcon = document.querySelector('#icon_fishing');
-
+    const tab = document.querySelector('.tab');
 
     let currentSection = 0;
     let menu = false;
@@ -128,6 +128,38 @@
         }
     }
 
+    function tabOn(e){
+        const itemBox = document.querySelector('.grid');
+        const idx = getIndex(e);
+        let tabList = [];
+        let itemList = [];
+
+        if( e.target.nodeName === 'UL' ) return;
+
+        for(i=0; i<tab.children.length; i++){
+            tabList.push(tab.children[i]);
+            tabList[i].classList.remove('on');
+        }
+        e.target.classList.add('on');
+
+        for(i=0; i<itemBox.children.length; i++){
+            itemList.push(itemBox.children[i]);
+            itemList[i].classList.remove('on');
+        }
+        switch(idx){
+            case 0:
+                itemList = itemList.filter(item => item.classList.contains('responsive'));
+                break;
+            case 1:
+                itemList = itemList.filter(item => item.classList.contains('mobile'));
+                break;
+            case 2:
+                itemList = itemList.filter(item => item.classList.contains('desktop'));
+                break;
+        }
+        itemList.forEach(item=>item.classList.add('on'));
+    }
+    
     window.addEventListener('resize',()=>{
         setBase();
         setBread();
@@ -141,5 +173,6 @@
     });
     menuBtn.addEventListener('click', menuHandler);
     gnb.addEventListener('click', scrollToMenu);
+    tab.addEventListener('click', tabOn);
 
 })();
