@@ -1,11 +1,13 @@
 (()=>{
-    
+
     const nav = document.querySelector('nav');
     const gnb = document.querySelector('.gnb');
     const gnbList = gnb.children;
     const menuBtn = document.querySelector('#icon_moon');
     const breadIcon = document.querySelector('#icon_fishing');
     const worksTab = document.querySelector('.tab');
+    const planetsBox = document.querySelector('#planets_box');
+    const planets = planetsBox.children;
 
     let currentSection = 0;
     let menu = false;
@@ -34,6 +36,8 @@
         },
     ];
 
+    
+
     function setBase(){
         // set sectionInfo
         const section = document.querySelector('main').children;
@@ -50,6 +54,15 @@
                 break;
             } 
         }
+        // set planets position at section-2
+        for( i=0; i<planets.length; i++ ){
+            const datumPointX = planetsBox.offsetWidth/2 - planets[0].offsetWidth/2;
+            const datumPointY = planetsBox.offsetHeight/2 - planets[0].offsetHeight/2;
+            planetsBox.style.transform = `rotateZ(-50deg)`;
+            planets[i].style.top = `${datumPointX}px`;
+            planets[i].style.left = `${datumPointY}px`;
+        }
+        playAnimation();
     }
 
     function menuHandler(){
@@ -161,6 +174,20 @@
         itemList.forEach(item=>item.classList.add('on'));
     }
 
+    
+    function playAnimation(){
+        switch(currentSection){
+            case 2:
+                for( i=0; i<planets.length; i++ ){
+                    const rotateZ = 300/planets.length * i;
+                    planets[i].style.transitionDelay = `${0.3*i}s`;
+                    planets[i].style.transform = `rotateZ(${rotateZ}deg) translate3d(${planetsBox.offsetWidth/2}px, 0, 0)`;
+                }
+                
+                break;
+        }
+    }
+
     window.addEventListener('resize',()=>{
         setBase();
         setBread();
@@ -170,7 +197,7 @@
         setBase();
         setBread();
         if ( innerWidth>757 && innerHeight>750 ){ autoScroll(); };
-
+        playAnimation();
     });
     menuBtn.addEventListener('click', menuHandler);
     gnb.addEventListener('click', scrollToMenu);
