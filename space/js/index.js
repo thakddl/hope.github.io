@@ -5,7 +5,7 @@
     const gnbList = gnb.children;
     const menuBtn = document.querySelector('#icon_moon');
     const breadIcon = document.querySelector('#icon_fishing');
-    const tab = document.querySelector('.tab');
+    const worksTab = document.querySelector('.tab');
 
     let currentSection = 0;
     let menu = false;
@@ -129,6 +129,7 @@
     }
 
     function tabOn(e){
+        const tab = e.target.parentNode;
         const itemBox = document.querySelector('.grid');
         const idx = getIndex(e);
         let tabList = [];
@@ -159,7 +160,7 @@
         }
         itemList.forEach(item=>item.classList.add('on'));
     }
-    
+
     window.addEventListener('resize',()=>{
         setBase();
         setBread();
@@ -173,6 +174,6 @@
     });
     menuBtn.addEventListener('click', menuHandler);
     gnb.addEventListener('click', scrollToMenu);
-    tab.addEventListener('click', tabOn);
+    worksTab.addEventListener('click', tabOn);
 
 })();
