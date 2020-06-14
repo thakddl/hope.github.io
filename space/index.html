@@ -121,38 +121,16 @@
       </ul>
     </section>
     <section class="page" id="section-2">
-      <div id="counter_wrap">
-        <p>Cilck planets.</p>
-        <object id="icon_ring" data="images/icon_ring.svg" type="image/svg+xml"></object>
+      <div class="tab" id="planets_box">
+        <img id="icon_html" data-tab="html" src="images/icon_html.svg" type="image/svg+xml"></img>
+        <img id="icon_css" data-tab="css" src="images/icon_css.svg" type="image/svg+xml"></img>
+        <img id="icon_javascript" data-tab="javascript" src="images/icon_javascript.svg" type="image/svg+xml"></img>
+        <img id="icon_jquery" data-tab="jquery" src="images/icon_jquery.svg" type="image/svg+xml"></img>
+        <img id="icon_php" data-tab="php" src="images/icon_php.svg" type="image/svg+xml"></img>
+        <img id="icon_design" data-tab="design" src="images/icon_design.svg" type="image/svg+xml"></img>
       </div>
-      <ul id="planets_box">
-        <li id="html_wrap">
-          <p class="planet_tit" id="html_tit">HTML</p>
-          <object id="icon_html" data="images/icon_html.svg" type="image/svg+xml"></object>
-        </li>
-        <li id="css_wrap">
-          <p class="planet_tit" id="css_tit">CSS</p>
-          <object id="icon_css" data="images/icon_css.svg" type="image/svg+xml"></object>
-        </li>
-        <li id="javascript_wrap">
-          <p class="planet_tit" id="javascript_tit">Javascript</p>
-          <object id="icon_javascript" data="images/icon_javascript.svg" type="image/svg+xml"></object>
-        </li>
-        <li id="jquery_wrap">
-          <p class="planet_tit" id="jquery_tit">jQuery</p>
-          <object id="icon_jquery" data="images/icon_jquery.svg" type="image/svg+xml"></object>
-        </li>
-        <li id="php_wrap">
-          <p class="planet_tit" id="php_tit">PHP</p>
-          <object id="icon_php" data="images/icon_php.svg" type="image/svg+xml"></object>
-        </li>
-        <li id="design_wrap">
-          <p class="planet_tit" id="design_tit">Design&nbsp;tools</p>
-          <object id="icon_design" data="images/icon_design.svg" type="image/svg+xml"></object>
-        </li>
-      </ul>
-      <ul id="ability_box">
-        <li class="ability_con">
+      <ul class="tab_items" id="ability_box">
+        <li class="ability_con" data-item="html">
           <h3>HTML5</h3>
           <p>
             <span>각 종 페이지, 내비게이션, 화면, 위젯 등의 구조적 설계가 가능합니다.</span>
@@ -177,7 +155,7 @@
             </dd>
           </dl>
         </li>
-        <li class="ability_con display">
+        <li class="ability_con on" data-item="css">
           <h3>CSS3</h3>
           <p>
             <span>margin, absolute, keyframe, transform 등을 활용한 애니메이션 구현이 가능합니다.</span>
@@ -222,13 +200,13 @@
             </dd>
           </dl>
         </li>
-        <li class="ability_con">
+        <li class="ability_con" data-item="javascript">
           <h3>Javascript</h3>
           <p>
             <span>변수, 함수, 출력제어, 조건문, 반복문, 제어문에 대해 이해하고 활용할 수 있습니다.</span>
           </p>
         </li>
-        <li class="ability_con">
+        <li class="ability_con" data-item="jquery">
           <h3>jQuery</h3>
           <p>
             <span>아코디언, 컬랩시블 등의 각 종 메뉴 구현이 가능합니다.</span>
@@ -237,13 +215,13 @@
             <span>간단한 플러그인 제작이 가능하며, 기존 플러그인의 구조를 분석하여 활용이 가능합니다.</span>
           </p>
         </li>
-        <li class="ability_con">
+        <li class="ability_con" data-item="php">
           <h3>PHP</h3>
           <p>
             <span>php의 기초적인 구조를 이해하고 있으며, 그누보드 및 워드프레스를 이용한 웹사이트 구축이 가능합니다.</span>
           </p>
         </li>
-        <li class="ability_con">
+        <li class="ability_con" data-item="design">
           <h3>Design tools</h3>
           <p>
             <span>일러스트레이터 : 로고, 심볼, 패턴, 앰블럼, 타이포 제작이 가능합니다.</span>
@@ -270,12 +248,12 @@
     <section class="page" id="section-3">
       <div class="content">
         <ul class="tab">
-          <li class="on">반응형</li>
-          <li>모바일</li>
-          <li>데스크탑</li>
+          <li class="on" data-tab="responsive">반응형</li>
+          <li data-tab="mobile">모바일</li>
+          <li data-tab="desktop">데스크탑</li>
         </ul>
-        <div class="grid">
-          <a class="grid__item responsive on" href="#preview-r1">
+        <div class="grid tab_items">
+          <a class="grid__item responsive on" data-item="responsive" href="#preview-r1">
             <div class="box">
               <div class="box__shadow"></div>
               <img class="box__img" src="./images/r1_img.png" alt="thumbnail"/>
@@ -283,7 +261,7 @@
               <h4 class="box__text box__text--bottom"><span class="box__text-inner box__text-inner--rotated1">Book</span></h4>
             </div>
           </a>
-          <a class="grid__item responsive on" href="#preview-r2">
+          <a class="grid__item responsive on" data-item="responsive" href="#preview-r2">
             <div class="box">
               <div class="box__shadow"></div>
               <img class="box__img" src="./images/r2_img.png" alt="thumbnail"/>
@@ -292,7 +270,7 @@
                 Association</span></h4>
             </div>
           </a>
-          <a class="grid__item responsive on" href="#preview-r3">
+          <a class="grid__item responsive on" data-item="responsive" href="#preview-r3">
             <div class="box">
               <div class="box__shadow"></div>
               <img class="box__img" src="./images/r3_img.png" alt="thumbnail"/>
@@ -300,7 +278,7 @@
               <h4 class="box__text box__text--bottomcloser"><span class="box__text-inner">Music</span></h4>
             </div>
           </a>
-          <a class="grid__item mobile" href="#preview-m1">
+          <a class="grid__item mobile" data-item="mobile" href="#preview-m1">
             <div class="box">
               <div class="box__shadow"></div>
               <img class="box__img" src="./images/m1_img.png" alt="thumbnail"/>
@@ -308,7 +286,7 @@
               <h4 class="box__text box__text--bottom"><span class="box__text-inner box__text-inner--rotated1">fashion</span></h4>
             </div>
           </a>
-          <a class="grid__item mobile" href="#preview-m2">
+          <a class="grid__item mobile" data-item="mobile" href="#preview-m2">
             <div class="box">
               <div class="box__shadow"></div>
               <img class="box__img" src="./images/m2_img.png" alt="thumbnail"/>
@@ -316,7 +294,7 @@
               <h4 class="box__text box__text--topcloser"><span class="box__text-inner">money</span></h4>
             </div>
           </a>
-          <a class="grid__item mobile" href="#preview-m3">
+          <a class="grid__item mobile" data-item="mobile" href="#preview-m3">
             <div class="box">
               <div class="box__shadow"></div>
               <img class="box__img" src="./images/m3_img.png" alt="thumbnail"/>
@@ -324,7 +302,7 @@
               <h4 class="box__text box__text--bottomcloser"><span class="box__text-inner">air</span></h4>
             </div>
           </a>
-          <a class="grid__item desktop" href="#preview-d1">
+          <a class="grid__item desktop" data-item="desktop" href="#preview-d1">
             <div class="box">
               <div class="box__shadow"></div>
               <img class="box__img" src="./images/d1_img.png" alt="thumbnail"/>
@@ -332,7 +310,7 @@
               <h4 class="box__text box__text--bottom"><span class="box__text-inner box__text-inner--rotated1">plug</span></h4>
             </div>
           </a>
-          <a class="grid__item desktop" href="#preview-d2">
+          <a class="grid__item desktop" data-item="desktop" href="#preview-d2">
             <div class="box">
               <div class="box__shadow"></div>
               <img class="box__img" src="./images/d2_img.png" alt="thumbnail"/>
@@ -340,7 +318,7 @@
               <h4 class="box__text box__text--topcloser"><span class="box__text-inner">fastival</span></h4>
             </div>
           </a>
-          <a class="grid__item desktop" href="#preview-d3">
+          <a class="grid__item desktop" data-item="desktop" href="#preview-d3">
             <div class="box">
               <div class="box__shadow"></div>
               <img class="box__img" src="./images/d3_img.png" alt="thumbnail"/>
