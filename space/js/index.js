@@ -191,13 +191,11 @@
     window.addEventListener('resize',()=>{
         setBase();
         setBread();
-
     });
     window.addEventListener('scroll', ()=>{
         setBase();
         setBread();
         if ( innerWidth>757 && innerHeight>750 ){ autoScroll(); };
-        playAnimation();
     });
     menuBtn.addEventListener('click', menuHandler);
     gnb.addEventListener('click', scrollToMenu);
