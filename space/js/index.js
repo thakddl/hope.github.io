@@ -177,6 +177,26 @@
                 break;
         }
     }
+    let totalDeg = -45;
+    function planetsAni(e){
+        const datumUpLine = planetsBox.offsetTop + planetsBox.offsetHeight*0.4;
+        const datumDownLine = planetsBox.offsetTop + planetsBox.offsetHeight*0.7;
+        const datumDeg = 270/planetsBox.children.length;
+        if ( e.clientY < datumUpLine ){
+            if ( totalDeg === 0 ) return;
+            totalDeg += datumDeg;
+        } 
+        else if ( e.clientY > datumDownLine ){
+            if ( totalDeg === -datumDeg * (planetsBox.children.length-1) ) return;
+            totalDeg -= datumDeg;
+        }
+        planetsBox.style.transform = `rotateZ(${totalDeg}deg)`;
+        console.log(datumUpLine,datumDownLine)
+    }
+
+    planetsBox.addEventListener('mousemove',(e)=>{
+        planetsAni(e)
+    });
 
     window.addEventListener('resize',()=>{
         setBase();
