@@ -51,15 +51,16 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
 
 /* about page */
 #section-1 { flex-direction: column; font-size: 1.1rem; }
-#iden_box { margin-bottom: 5rem; opacity: 1; transform: rotateZ(-10deg); }
+#iden_box { margin-bottom: 5rem; transform: rotateZ(40deg); opacity: 0; transition: 0.3s; }
+#iden_box.on { animation: iden 3s 0.3s ease-out both; transform-origin: 50% 0; opacity: 1; }
 #iden_box img { display: block; height: 25vh; }
 
-#card { columns: 1; }
-#card > li { padding-bottom: 2rem; transition: 0.5s ease-out; transform: translateX(3vw); opacity: 1; }
-#card > li.on { transform: translateX(0vw) translateY(0vh); opacity: 1; }
+#profile { columns: 1; }
+#profile > li { padding-bottom: 2rem; transition: 0.5s ease-out; transform: translateX(100px); opacity: 0; }
+#profile > li.on { transform: translateX(0vw) translateY(0vh); opacity: 1; }
 #lang_list li { display: inline; }
 
-/* @keyframes char { 흔들리는 기능. 사용안함 animation: char 3s ease-out; transform-origin: 50% 0; 
+@keyframes iden { 
   0% { transform: rotateZ(40deg); }
   10% { transform: rotateZ(-28deg); }
   20% { transform: rotateZ(14deg); }
@@ -69,7 +70,7 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
   80% { transform: rotateZ(5deg); }
   100% { transform: rotateZ(0deg); }
 }
-#about_menu { position: absolute; font-size: 30px; top: 26%;right: 13%; }
+/* #about_menu { position: absolute; font-size: 30px; top: 26%;right: 13%; }
 #about_menu li { transform: rotateZ(-20deg); padding: 2vh 0; } */
 
 /* ability page */
@@ -160,7 +161,7 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
 .form-elements button { margin-top: 10px; }
 @media screen and (min-width:757px){
   html { font-size: 18px; }
-  #card { columns: 2; }
+  #profile { columns: 2; }
   #section-2 { display: flex; display: -ms-flexbox; }  
   #ability_box { max-width: 600px; }
   .ability_works { flex-flow: row wrap; }
@@ -178,7 +179,7 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
   .gnb li { margin: 2rem 3vw 1rem; }
   #icon_moon { top: 1.5rem; right: 4vw; width: 3.5rem; height: 3.5rem; }
   #section-1 { flex-direction: row; justify-content: center; align-items: center; }
-  #card { columns: 2; margin-left: 2rem; column-gap: 3rem; }
+  #profile { columns: 2; margin-left: 5rem; column-gap: 3rem; }
   #section-2 { position: relative; display: flex; display: -ms-flexbox; justify-content: center; align-items: center; }
   #planets_box { margin: 0 0 0 -25vw; }
 

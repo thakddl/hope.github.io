@@ -5,6 +5,8 @@
     const gnbList = gnb.children;
     const menuBtn = document.querySelector('#icon_moon');
     const breadIcon = document.querySelector('#icon_fishing');
+    const profileBox = document.querySelector('#profile');
+    const idenBox = document.querySelector('#iden_box');
     const abilitiesTab = document.querySelector('#section-2 .tab');
     const worksTab = document.querySelector('#section-3 .tab');
     const planetsBox = document.querySelector('#planets_box');
@@ -52,6 +54,16 @@
                 currentSection = i;
                 break;
             } 
+        }
+        // set section-1
+        if ( currentSection !== 1 ){
+            let reverseNumber = 0;
+            idenBox.classList.remove('on');
+            for( i=profileBox.children.length-1; i>=0; i-- ){
+                reverseNumber++
+                profileBox.children[i].style.transitionDelay = `${0.2*reverseNumber}s`;
+                profileBox.children[i].classList.remove('on');
+            }
         }
         // set planets position at section-2
         for( i=0; i<planets.length; i++ ){
@@ -166,6 +178,13 @@
     
     function playAnimation(){
         switch(currentSection){
+            case 1:
+                idenBox.classList.add('on');
+                for(i=0; i<profileBox.children.length; i++){
+                    profileBox.children[i].style.transitionDelay = `${0.2*i}s`;
+                    profileBox.children[i].classList.add('on');
+                }
+                break;
             case 2:
                 for( i=0; i<planets.length; i++ ){
                     const rotateZ = 270/planets.length * i;
