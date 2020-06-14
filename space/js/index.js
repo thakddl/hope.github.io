@@ -225,6 +225,9 @@
         cursor.style.top = `${e.pageY+10}px`;
         cursor.style.left = `${e.pageX+10}px`;
     });
+    window.addEventListener('load',()=>{
+        setBase();
+    });
     window.addEventListener('resize',()=>{
         setBase();
         setBread();
