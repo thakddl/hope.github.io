@@ -3,6 +3,7 @@
     const nav = document.querySelector('nav');
     const gnb = document.querySelector('.gnb');
     const menuBtn = document.querySelector('#icon_moon');
+    const menuInfo = document.querySelector('#menu_info');
     const cursor = document.querySelector('#icon_cursor');
     const breadIcon = document.querySelector('#icon_fishing');
     const profileBox = document.querySelector('#profile');
@@ -76,6 +77,7 @@
     }
 
     function menuHandler(){
+        menuInfo.style.opacity = 0;
         if (!menu){
             nav.style.transform = 'translateX(0%)';
             menuBtn.style.animation = 'circle 1.5s 1 ease-out';
@@ -231,6 +233,8 @@
         setBase();
         setBread();
         if ( innerWidth>757 && innerHeight>750 ){ autoScroll(); };
+        // set section-0
+        menuInfo.style.opacity = 0;
     });
     menuBtn.addEventListener('click', menuHandler);
     gnb.addEventListener('click', scrollToMenu);

@@ -28,7 +28,7 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
 
 #icon_fishing { position: absolute; width: 60px; height: 40px; opacity: 0; transition: 1s; }
 #icon_moon { position: fixed; top: 2rem; right: 2rem; width: 4rem; height: 4rem; animation: moon_scale 4s infinite linear; cursor: pointer; transform-origin: 50% 60%; transform: rotateY(180deg); }
-/* #info { position: absolute; font-size: 24px; width: 200px; margin-left: -55px; padding-top: 15px; text-shadow: 3px 3px 15px #fff; } */
+#menu_info { position: absolute; top: 6rem; right: 2rem; font-size: 1.2rem; text-shadow: 3px 3px 15px #fff; opacity: 1; transition: 1s; }
 @keyframes moon_scale {
   0% { transform: scale(0.8) rotate(0deg) rotateY(180deg); }
   50% { transform: scale(1.0) rotate(180deg) rotateY(180deg); }
@@ -172,6 +172,7 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
   .gnb { flex-direction: row; }
   .gnb li { margin: 2rem 3vw 1rem; }
   #icon_moon { top: 1.5rem; right: 4vw; width: 3.5rem; height: 3.5rem; }
+  #menu_info { top: 5rem; right: 4vw; }
   #section-1 { flex-direction: row; justify-content: center; align-items: center; }
   #profile { columns: 2; margin-left: 5rem; column-gap: 3rem; }
   #section-2 { position: relative; display: flex; display: -ms-flexbox; justify-content: center; align-items: center; }
@@ -183,5 +184,6 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
 }
 @media screen and (min-width:1200px){
   #icon_moon { top: 1.5rem; right: 7vw; width: 3.5rem; height: 3.5rem; }
+  #menu_info { right: 7vw; }
   .me { display: block; }
 }
