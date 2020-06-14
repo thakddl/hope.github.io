@@ -5,7 +5,8 @@
     const gnbList = gnb.children;
     const menuBtn = document.querySelector('#icon_moon');
     const breadIcon = document.querySelector('#icon_fishing');
-    const worksTab = document.querySelector('.tab');
+    const abilitiesTab = document.querySelector('#section-2 .tab');
+    const worksTab = document.querySelector('#section-3 .tab');
     const planetsBox = document.querySelector('#planets_box');
     const planets = planetsBox.children;
 
@@ -35,8 +36,6 @@
             sectionHeight: 0
         },
     ];
-
-    
 
     function setBase(){
         // set sectionInfo
@@ -143,35 +142,22 @@
 
     function tabOn(e){
         const tab = e.target.parentNode;
-        const itemBox = document.querySelector('.grid');
-        const idx = getIndex(e);
-        let tabList = [];
-        let itemList = [];
-
+        const itemBox = tab.parentNode.querySelector('.tab_items');
+        let dataTab = e.target.dataset.tab;
+        let dataItem;
         if( e.target.nodeName === 'UL' ) return;
 
         for(i=0; i<tab.children.length; i++){
-            tabList.push(tab.children[i]);
-            tabList[i].classList.remove('on');
+            tab.children[i].classList.remove('on');
         }
         e.target.classList.add('on');
-
         for(i=0; i<itemBox.children.length; i++){
-            itemList.push(itemBox.children[i]);
-            itemList[i].classList.remove('on');
+            itemBox.children[i].classList.remove('on');
+            dataItem = itemBox.children[i].dataset.item;
+            if ( dataTab === dataItem ){
+                itemBox.children[i].classList.add('on');
+            }
         }
-        switch(idx){
-            case 0:
-                itemList = itemList.filter(item => item.classList.contains('responsive'));
-                break;
-            case 1:
-                itemList = itemList.filter(item => item.classList.contains('mobile'));
-                break;
-            case 2:
-                itemList = itemList.filter(item => item.classList.contains('desktop'));
-                break;
-        }
-        itemList.forEach(item=>item.classList.add('on'));
     }
 
     
@@ -200,5 +186,6 @@
     menuBtn.addEventListener('click', menuHandler);
     gnb.addEventListener('click', scrollToMenu);
     worksTab.addEventListener('click', tabOn);
+    abilitiesTab.addEventListener('click', tabOn);
 
 })();
