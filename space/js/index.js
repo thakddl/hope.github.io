@@ -2,7 +2,6 @@
 
     const nav = document.querySelector('nav');
     const gnb = document.querySelector('.gnb');
-    const gnbList = gnb.children;
     const menuBtn = document.querySelector('#icon_moon');
     const breadIcon = document.querySelector('#icon_fishing');
     const profileBox = document.querySelector('#profile');
@@ -79,10 +78,10 @@
         if (!menu){
             nav.style.transform = 'translateX(0%)';
             menuBtn.style.animation = 'circle 1.5s 1 ease-out';
-            for( i=0; i<gnbList.length; i++ ){
-                gnbList[i].style.transitionDelay = `${0.2*i}s`;
-                gnbList[i].style.transform = `translate3d(0, 0, 0)`;
-                gnbList[i].style.opacity = 1;
+            for( i=0; i<gnb.children.length; i++ ){
+                gnb.children[i].style.transitionDelay = `${0.2*i}s`;
+                gnb.children[i].style.transform = `translate3d(0, 0, 0)`;
+                gnb.children[i].style.opacity = 1;
             }
             setTimeout(setBread, 1500);
             menu = true;
@@ -91,11 +90,11 @@
             setBread();
             menuBtn.style.animation = 'moon_scale 5s infinite linear';
             let reverseNumber = 0;
-            for( i=gnbList.length-1; i>=0; i-- ){
+            for( i=gnb.children.length-1; i>=0; i-- ){
                 reverseNumber++
-                gnbList[i].style.transitionDelay = `${0.2*reverseNumber}s`;
-                gnbList[i].style.transform = `translate3d(300px, 0, 0)`;
-                gnbList[i].style.opacity = 0;
+                gnb.children[i].style.transitionDelay = `${0.2*reverseNumber}s`;
+                gnb.children[i].style.transform = `translate3d(300px, 0, 0)`;
+                gnb.children[i].style.opacity = 0;
             }
             setTimeout(()=>{ 
                 nav.style.transform = 'translateX(100%)';
@@ -104,7 +103,7 @@
     }
 
     function setBread(){
-        const obj = gnbList[currentSection];
+        const obj = gnb.children[currentSection];
         if (menu){
             breadIcon.style.opacity = 1;
             breadIcon.style.top = `${obj.offsetTop - 15}px`;
