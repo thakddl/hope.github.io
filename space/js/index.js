@@ -192,6 +192,10 @@
                 }
                 
                 break;
+            case 4:
+                const rocket = document.querySelector('#icon_rocket');
+                rocket.classList.add('on');
+                break;
         }
     }
     let totalDeg = -45;
