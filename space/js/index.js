@@ -57,7 +57,6 @@
         for( i=0; i<planets.length; i++ ){
             const datumPointX = planetsBox.offsetWidth/2 - planets[0].offsetWidth/2;
             const datumPointY = planetsBox.offsetHeight/2 - planets[0].offsetHeight/2;
-            planetsBox.style.transform = `rotateZ(-50deg)`;
             planets[i].style.top = `${datumPointX}px`;
             planets[i].style.left = `${datumPointY}px`;
         }
@@ -169,7 +168,7 @@
         switch(currentSection){
             case 2:
                 for( i=0; i<planets.length; i++ ){
-                    const rotateZ = 300/planets.length * i;
+                    const rotateZ = 270/planets.length * i;
                     planets[i].style.transitionDelay = `${0.3*i}s`;
                     planets[i].style.transform = `rotateZ(${rotateZ}deg) translate3d(${planetsBox.offsetWidth/2}px, 0, 0)`;
                 }
