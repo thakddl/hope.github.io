@@ -141,18 +141,22 @@
     }
 
     function tabOn(e){
-        const tab = e.target.parentNode;
-        const itemBox = tab.parentNode.querySelector('.tab_items');
-        let dataTab = e.target.dataset.tab;
+        let target = e.target
+        let tab = e.currentTarget;
+        let itemBox = tab.parentNode.querySelector('.tab_items');
+        let dataTab;
         let dataItem;
-        if( e.target.nodeName === 'UL' ) return;
+        if( e.target === e.currentTarget ) return;
+        if( target.nodeName !== 'BUTTON' ){ target = target.parentNode; };
+        console.log(target,e.currentTarget)
 
         for(i=0; i<tab.children.length; i++){
             tab.children[i].classList.remove('on');
         }
-        e.target.classList.add('on');
+        target.classList.add('on');
         for(i=0; i<itemBox.children.length; i++){
             itemBox.children[i].classList.remove('on');
+            dataTab = target.dataset.tab;
             dataItem = itemBox.children[i].dataset.item;
             if ( dataTab === dataItem ){
                 itemBox.children[i].classList.add('on');

@@ -1,15 +1,15 @@
 @charset "utf-8";
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html, body { width: 100%; height: 100%; color:#fff; font-family: 'Indie Flower', 'UhBeeMiMi'; }
-/* ::-webkit-scrollbar { display: none; }
+::-webkit-scrollbar { display: none; }
 ::-moz-scrollbar { display: none; }
-::-o-scrollbar { display: none; } */
+::-o-scrollbar { display: none; }
 html { overflow-x: hidden; }
 a { text-decoration: none; color: #fff; }
 ul { list-style: none; }
 p { cursor: context-menu; }
-
-.btn { display: inline-block; margin: 0 auto; text-align: center; -webkit-appearance: none; border: 2px solid #fff; border-radius: 1rem; padding: 0.5rem 1rem; color:#fff; transition: 0.3s; cursor: pointer; }
+button { display: inline-block; margin: 0 auto; border: 0; background-color: transparent; color: #fff; text-align: center; -webkit-appearance: none; outline: 0; }
+.btn { border: 2px solid #fff; border-radius: 1rem; padding: 0.5rem 1rem; color:#fff; transition: 0.3s; cursor: pointer; }
 .btn:hover { text-shadow: 0 0 20px #fff; font-weight: 900; color: #0d75fd; }
 
 /* universe */
@@ -22,15 +22,6 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
 .gnb { display: flex; flex-direction: column; align-items: center; }
 .gnb li { width: fit-content; cursor: pointer; transform: translate3d(300px, 0, 0); opacity: 0; transition: 1s; }
 
-@media screen and ( min-width:757px ){
-  
-}
-
-@media screen and ( min-width:1024px ){
-  nav { padding: 0; width: 100%; max-width: unset; height: auto; background: transparent; backdrop-filter: blur(10px); transition: unset; }
-  .gnb { flex-direction: row; }
-  .gnb li { margin: 2rem 3vw 1rem; }
-}
 #icon_hi { display: none; position: absolute; width: 40px; height: 45px; top: 0; left: 0; opacity: 0; transition: .5s; animation: float 2s infinite linear; }
 #icon_fishing { position: absolute; width: 60px; height: 40px; opacity: 0; transition: 1s; }
 @keyframes float { 
@@ -83,17 +74,18 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
 
 /* ability page */
 #section-2 { display: block; }
-#counter_wrap { display: none; }
-.planet_tit{ display: none; }
-#planets_box { float: left; position: relative; width: 50vw; max-width: 80vh; height: 50vw; max-height: 80vh; border-radius: 50%; margin: 0 2rem 1rem -25vw; border: 2px solid olivedrab; transition: 0.5s; }
-#planets_box > li { position: absolute; top: 50%; left: 50%; transform: translate3d(-50%, -50%, 0); width: 20%; height: 20%; }
+#planets_box { float: left; position: relative; width: 50vw; max-width: 80vh; height: 50vw; max-height: 80vh; border-radius: 50%; margin: 0 2rem 1rem -25vw; border: 2px solid #e3e3e3; }
+.planet { display: block; position: absolute; width: 20%; height: 20%; color: #fff; text-align: right; transition: 0.7s; }
+.planet img { width: 100%; height: 100%; }
+.planet.on:before { display: block; position: absolute; z-index: -1; top: -25%; left: -25%; width: 150%; height: 150%; background: radial-gradient(closest-side, #FEFF9D 0%, transparent); content: ''; }
+
 #ability_box { padding: 2rem; margin: auto; }
 #ability_box > li { display: none; }
-#ability_box > li.display { display: block; }
+#ability_box > li.on { display: block; }
 
 .ability_works { display: flex; flex-flow: column wrap; align-items: center; }
 .ability_works dt { width: 100%; padding: 1rem 0 0.2rem 0; }
-.ability_works dd { padding: 0 0.5rem 0.5rem; width: 50%}
+.ability_works dd { padding: 0 0.5rem 0.5rem; width: 50% }
 .ability_works dd * { width: 100%; }
 /* css dd */
 .slide_size { width: 100%; max-width: 200px; height: 110px; overflow: hidden; background-color: rgb(250, 218, 177) ; transition: 0.3s; }
@@ -127,10 +119,11 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
 }
 
 /* works page */
-.tab { display: flex; display: -ms-flexbox; justify-content: center; font-size: 1.6rem; }
-.tab li { margin-right: 10vw; cursor: pointer; }
-.tab li:last-of-type { margin-right: 0; }
-.tab li.on { color: #0d75fd; text-shadow: 0px 0px 30px #fff; }
+#section-3 { position: relative; }
+#section-3 .tab { display: flex; display: -ms-flexbox; justify-content: center; font-size: 1.6rem; }
+#section-3 .tab button { margin-right: 10vw; cursor: pointer; }
+#section-3 .tab button:last-of-type { margin-right: 0; }
+#section-3 .tab button.on { color: #0d75fd; text-shadow: 0px 0px 30px #fff; }
 
 .overlay__content span { display: block; text-indent: 0.5em; }
 .go { display: block; float: right; color: #000; font-weight: 900; padding-top: 1rem; }
@@ -167,6 +160,7 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
   html { font-size: 18px; }
   #card { columns: 2; }
   #section-2 { display: flex; display: -ms-flexbox; }
+
   #ability_box { max-width: 600px; }
   .ability_works { flex-flow: row wrap; }
   .ability_works dd { width: calc(100% / 3);  }
@@ -177,11 +171,15 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
 }
 @media screen and (min-width:1024px){
   html { font-size: 20px; }
+  nav { padding: 0; width: 100%; max-width: unset; height: auto; background: transparent; backdrop-filter: blur(10px); transition: unset; }
+  .gnb { flex-direction: row; }
+  .gnb li { margin: 2rem 3vw 1rem; }
   #icon_moon { top: 1.5rem; right: 4vw; width: 3.5rem; height: 3.5rem; }
   #section-1 { flex-direction: row; justify-content: center; align-items: center; }
   #card { columns: 2; margin-left: 2rem; column-gap: 3rem; }
   #section-2 { position: relative; display: flex; display: -ms-flexbox; justify-content: center; align-items: center; }
-  #planets_box { margin: 0 0 0 -30vw; }
+  #planets_box { margin: 0 0 0 -25vw; }
+
   #ability_box { max-width: 800px; }
   .tab li { margin-right: 10rem; }
   .col { width: 40%; }
