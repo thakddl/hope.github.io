@@ -20,3 +20,24 @@
     gnb.addEventListener('mouseout', menuHoverEvent);
 
 })();
+
+                
+                // const smallBox = document.querySelector('#planets_box > li');
+                // pos = (smallBox.offsetWidth/(2*planetsBox.offsetWidth))*100;
+                // pos = 50 - pos;
+
+                // for(j=0; j<planets.length; j++) {
+
+                //     planets[j].style.top = pos + '%';
+                //     planets[j].style.left = pos + '%';
+                // }
+
+                // for( i=0; i<planets.length; i++ ){
+                    
+                //     const rotateZ = 360/planets.length * i;
+                //     planets[i].style.transitionDelay = `${0.3*i}s`;
+                            
+                //     planets[i].style.transform = `rotateZ(${rotateZ}deg) translate3d( 150%, 150%, 0)`
+           
+                //     console.log(positionX,rotateZ)
+                // }

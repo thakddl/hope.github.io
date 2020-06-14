@@ -47,7 +47,7 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
 
 .page { display: flex; display: -ms-flexbox; justify-content: center; align-items: center; padding: 6rem 0 3rem; min-height: 100vh; border: 2px solid indianred; }
 /* home */
-#section-0 h1 { margin-top: -2rem; text-align: center; font-size: 2rem; }
+#section-0 h1 { margin-top: -2rem; text-align: center; font-size: 2rem; font-weight: normal; }
 
 /* about page */
 #section-1 { flex-direction: column; font-size: 1.1rem; }
@@ -73,8 +73,8 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
 #about_menu li { transform: rotateZ(-20deg); padding: 2vh 0; } */
 
 /* ability page */
-#section-2 { display: block; }
-#planets_box { float: left; position: relative; width: 50vw; max-width: 80vh; height: 50vw; max-height: 80vh; border-radius: 50%; margin: 0 2rem 1rem -25vw; border: 2px solid #e3e3e3; }
+#section-2 { display: block; position: relative; }
+#planets_box { float: left; position: relative; width: 50vw; max-width: 80vh; height: 50vw; max-height: 80vh; border-radius: 50%; margin: 0 2rem 1rem -35vw; border: 2px solid #e3e3e3; transform: rotateZ(-45deg); transition: 7s; }
 .planet { display: block; position: absolute; width: 20%; height: 20%; color: #fff; text-align: right; transition: 0.7s; }
 .planet img { width: 100%; height: 100%; }
 .planet.on:before { display: block; position: absolute; z-index: -1; top: -25%; left: -25%; width: 150%; height: 150%; background: radial-gradient(closest-side, #FEFF9D 0%, transparent); content: ''; }
@@ -121,8 +121,7 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
 /* works page */
 #section-3 { position: relative; }
 #section-3 .tab { display: flex; display: -ms-flexbox; justify-content: center; font-size: 1.6rem; }
-#section-3 .tab button { margin-right: 10vw; cursor: pointer; }
-#section-3 .tab button:last-of-type { margin-right: 0; }
+#section-3 .tab button { margin: 0 7%; cursor: pointer; }
 #section-3 .tab button.on { color: #0d75fd; text-shadow: 0px 0px 30px #fff; }
 
 .overlay__content span { display: block; text-indent: 0.5em; }
@@ -153,18 +152,21 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
 }
 
 #map { overflow: hidden; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; width: 100%; height: 30vh; margin: 3% auto; border: 2px solid #fff; border-radius: 2rem; font-size: 3vh; color: #000; }
-.btn { background-color: transparent; }
-.pure-group { height: max-content; margin: 5% auto; border: 2px solid #fff; border-radius: 0.8rem; }
-
+.form-elements { display: flex; flex-flow: column; justify-content: start; align-items: center; }
+.pure-group { margin: 5px auto; padding: .7rem 8%; width: 100%; border: 2px solid #fff; border-radius: 0.8rem; }
+.pure-group label { display: block; }
+.pure-group input,
+.pure-group textarea { width: 100%; }
+.form-elements button { margin-top: 10px; }
 @media screen and (min-width:757px){
   html { font-size: 18px; }
   #card { columns: 2; }
-  #section-2 { display: flex; display: -ms-flexbox; }
-
+  #section-2 { display: flex; display: -ms-flexbox; }  
   #ability_box { max-width: 600px; }
   .ability_works { flex-flow: row wrap; }
-  .ability_works dd { width: calc(100% / 3);  }
-  .tab li { margin-right: 7rem; }
+  .ability_works dd { width: calc(100% / 3); }
+
+  #section-3 .tab button { margin: 0 10%; }
   #icon_rocket { top: 60vh; left: 43vw; }
   
   /* .page {padding: 0;} */
@@ -181,7 +183,6 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
   #planets_box { margin: 0 0 0 -25vw; }
 
   #ability_box { max-width: 800px; }
-  .tab li { margin-right: 10rem; }
   .col { width: 40%; }
   #icon_rocket { top: 70vh; left: 39vw; }
 
