@@ -15,7 +15,7 @@ button { display: inline-block; margin: 0 auto; border: 0; background-color: tra
 /* universe and cursor */
 .container { position: fixed; z-index: -1; width: 100%; height: 100%; background-image: radial-gradient(1200px at 60% 120%, rgb(23, 28, 58) 5%, #020409 100%); }
 #universe { width: 100%; height: 100%; }
-#icon_cursor { position: absolute; z-index: 501; width: 40px; animation: float 2s infinite linear alternate; will-change: top, left; }
+#icon_cursor { position: absolute; z-index: 501; top: 50%; left: calc(50% + 7.5rem); width: 40px; animation: float 2s infinite linear alternate; will-change: top, left; }
 @keyframes float { 
   from { transform: rotateZ(-30deg); }
   to { transform: rotateZ(10deg); }
