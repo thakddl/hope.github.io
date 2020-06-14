@@ -3,6 +3,7 @@
     const nav = document.querySelector('nav');
     const gnb = document.querySelector('.gnb');
     const menuBtn = document.querySelector('#icon_moon');
+    const cursor = document.querySelector('#icon_cursor');
     const breadIcon = document.querySelector('#icon_fishing');
     const profileBox = document.querySelector('#profile');
     const idenBox = document.querySelector('#iden_box');
@@ -218,7 +219,10 @@
     planetsBox.addEventListener('mousemove',(e)=>{
         planetsAni(e)
     });
-
+    window.addEventListener('mousemove',(e)=>{
+        cursor.style.top = `${e.pageY+10}px`;
+        cursor.style.left = `${e.pageX+10}px`;
+    });
     window.addEventListener('resize',()=>{
         setBase();
         setBread();

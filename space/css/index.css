@@ -12,27 +12,21 @@ button { display: inline-block; margin: 0 auto; border: 0; background-color: tra
 .btn { border: 2px solid #fff; border-radius: 1rem; padding: 0.5rem 1rem; color:#fff; transition: 0.3s; cursor: pointer; }
 .btn:hover { text-shadow: 0 0 20px #fff; font-weight: 900; color: #0d75fd; }
 
-/* universe */
+/* universe and cursor */
 .container { position: fixed; z-index: -1; width: 100%; height: 100%; background-image: radial-gradient(1200px at 60% 120%, rgb(23, 28, 58) 5%, #020409 100%); }
 #universe { width: 100%; height: 100%; }
-
+#icon_cursor { position: absolute; z-index: 501; width: 40px; animation: float 2s infinite linear alternate; will-change: top, left; }
+@keyframes float { 
+  from { transform: rotateZ(-30deg); }
+  to { transform: rotateZ(10deg); }
+}
 /* navigation bar */
-.hd { position: fixed; z-index: 999; width: 100%; }
+.hd { position: fixed; z-index: 500; width: 100%; }
 nav { display: flex; display: -ms-flexbox; justify-content: center; position: fixed; top: 0; right: 0; width: 90%; max-width: 350px; height: 100vh; padding-top: 20vh; background: #000; font-size: 2rem; text-align: center; transform: translateX(100%); transition: 0.5s; }
 .gnb { display: flex; flex-direction: column; align-items: center; }
 .gnb li { width: fit-content; cursor: pointer; transform: translate3d(300px, 0, 0); opacity: 0; transition: 1s; }
 
-#icon_hi { display: none; position: absolute; width: 40px; height: 45px; top: 0; left: 0; opacity: 0; transition: .5s; animation: float 2s infinite linear; }
 #icon_fishing { position: absolute; width: 60px; height: 40px; opacity: 0; transition: 1s; }
-@keyframes float { 
-  from { transform: rotateY(180deg) rotateZ(-12deg); }
-  50% { transform: rotateY(180deg) rotateZ(-2deg); }
-  to { transform: rotateY(180deg) rotateZ(-12deg); }
-}@keyframes rotate { 
-  from { transform: rotateY(180deg) rotateZ(-12deg); }
-  50% { transform: rotateY(180deg) rotateZ(-2deg); }
-  to { transform: rotateY(180deg) rotateZ(-12deg); }
-}
 #icon_moon { position: fixed; top: 2rem; right: 2rem; width: 4rem; height: 4rem; animation: moon_scale 4s infinite linear; cursor: pointer; transform-origin: 50% 60%; transform: rotateY(180deg); }
 /* #info { position: absolute; font-size: 24px; width: 200px; margin-left: -55px; padding-top: 15px; text-shadow: 3px 3px 15px #fff; } */
 @keyframes moon_scale {
