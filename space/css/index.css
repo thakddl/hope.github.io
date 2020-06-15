@@ -27,7 +27,7 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
 .gnb li { width: fit-content; cursor: pointer; transform: translate3d(300px, 0, 0); opacity: 0; transition: 1s; }
 
 #icon_fishing { position: absolute; width: 60px; height: 40px; opacity: 0; transition: 1s; }
-#icon_moon { position: fixed; top: 2rem; right: 2rem; width: 4rem; height: 4rem; animation: moon_scale 4s infinite linear; cursor: pointer; transform-origin: 50% 60%; transform: rotateY(180deg); }
+#icon_moon { position: fixed; z-index: 502; top: 2rem; right: 2rem; width: 4rem; height: 4rem; animation: moon_scale 4s infinite linear; cursor: pointer; transform-origin: 50% 60%; transform: rotateY(180deg); }
 #menu_info { position: absolute; top: 6rem; right: 2rem; font-size: 1.2rem; text-shadow: 3px 3px 15px #fff; opacity: 1; transition: 1s; }
 @keyframes moon_scale {
   0% { transform: scale(0.8) rotate(0deg) rotateY(180deg); }
@@ -86,8 +86,8 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
 .img_box { display: block; margin-top: -110px; height: 110px; }
 .slide_size:hover .img_box { margin-top: 0px; }
 /* 우유곽 애니메이션 */
-#milk { transform-style: preserve-3d; animation: cube 7s infinite; margin-top: -40px; margin-left: -30px; width: 200px; height: 220px; }
-.roof { position: relative; height: 150px; transform-style: preserve-3d; }
+#milk { transform-style: preserve-3d; -webkit-transform-style: preserve-3d; animation: cube 7s infinite; margin-top: -40px; margin-left: -30px; width: 200px; height: 220px; }
+.roof { position: relative; height: 150px; transform-style: preserve-3d; -webkit-transform-style: preserve-3d; transform-style: -preserve-3d; }
 .top { height: 50px; opacity: 0.85; background-color: pink; }
 .roof .side12, .roof .side14 { position: absolute; top: 50px; border-style: solid; border-width: 0 100px 100px 100px; border-color: transparent transparent pink transparent; opacity: 0.6; }
 .roof .side13, .roof .side15 { position: absolute; height: 142.5px; top: 78.4px; opacity: 0.6; background-color: pink; }
@@ -96,7 +96,7 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
 .side14 { transform: rotateY(270deg) translate3d(0px, 0px, 100px); }
 .side15 { transform: rotateY(0deg) rotateX(45deg) translate3d(0px, 0px, 70px); }
 
-.milk_cube { position: relative; height: 200px; transform-style: preserve-3d; backface-visibility: visible; }
+.milk_cube { position: relative; height: 200px; transform-style: preserve-3d; -webkit-transform-style: preserve-3d; backface-visibility: visible; }
 .milk_cube li { height: 200px; position: absolute; left: 0; top: 0; opacity: 0.6; color: #000; font-size: 40px; text-align: center; line-height: 200px;background-color: pink; }
 .side7 { transform: rotateY(0deg) translate3d(0, 0, 100px); }
 .side8 { transform: rotateY(90deg) translate3d(0, 0, 100px); }
