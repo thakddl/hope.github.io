@@ -22,7 +22,7 @@ button { display: inline-block; margin: 0 auto; border: 0; background-color: tra
 }
 /* navigation bar */
 .hd { position: fixed; z-index: 500; width: 100%; }
-nav { display: flex; display: -ms-flexbox; justify-content: center; position: fixed; top: 0; right: 0; width: 90%; max-width: 350px; height: 100vh; padding-top: 20vh; background: #000; font-size: 2rem; text-align: center; transform: translateX(100%); transition: 0.5s; }
+nav { display: flex; display: -ms-flexbox; justify-content: center; position: fixed; top: 0; right: 0; width: 90%; max-width: 350px; height: 100vh; padding-top: 20vh; background: rgba(0, 0, 0, 0.9); font-size: 2rem; text-align: center; transform: translateX(100%); transition: 0.5s; }
 .gnb { display: flex; flex-direction: column; align-items: center; }
 .gnb li { width: fit-content; cursor: pointer; transform: translate3d(300px, 0, 0); opacity: 0; transition: 1s; }
 
@@ -39,7 +39,7 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
   to { transform: rotate(-360deg) rotateY(180deg); }
 }
 
-.page { display: flex; display: -ms-flexbox; justify-content: center; align-items: center; padding: 6rem 0 3rem; min-height: 100vh; border: 2px solid indianred; }
+.page { display: flex; display: -ms-flexbox; justify-content: center; align-items: center; padding: 6rem 0 3rem; min-height: 100vh; }
 /* home */
 #section-0 h1 { margin-top: -2rem; text-align: center; font-size: 2rem; font-weight: normal; }
 
@@ -64,8 +64,6 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
   80% { transform: rotateZ(5deg); }
   100% { transform: rotateZ(0deg); }
 }
-/* #about_menu { position: absolute; font-size: 30px; top: 26%;right: 13%; }
-#about_menu li { transform: rotateZ(-20deg); padding: 2vh 0; } */
 
 /* ability page */
 #section-2 { display: block; position: relative; }
@@ -125,7 +123,7 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
 .hopelee { display: none; position: relative; }
 .hopelee img { height: 80vh; }
 .talk { position: absolute; top: 12%; right: -55%; transform: rotateZ(60deg); transform-origin: 0 100%; text-shadow: 5px -3px 10px #fff; }
-.talk.on { top: 10%; right: -35%; transform: rotateZ(10deg); transform-origin: 0 100%; }
+.talk.on { top: 5%; right: -75%; transform: rotateZ(10deg); transform-origin: 0 100%; }
 
 /* contact page */
 #section-4 { position: relative; flex-direction: column; }
