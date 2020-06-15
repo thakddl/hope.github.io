@@ -251,23 +251,11 @@
     planetsBox.addEventListener('click',(e)=>{
         planetsAni(e)
     });
-    window.addEventListener('mousemove',(e)=>{
+    window.addEventListener('mousemove',(e)=>{//for cursor icon
         cursor.style.top = `${e.pageY+10}px`;
         cursor.style.left = `${e.pageX+10}px`;
     });
-    window.addEventListener('load',()=>{
-        setBase();
-    });
-    window.addEventListener('resize',()=>{
-        setBase();
-        setBread();
-    });
-    window.addEventListener('scroll', ()=>{
-        setBase();
-        setBread();
-        if ( innerWidth>757 && innerHeight>750 ){ autoScroll(); };
-        menuInfo.style.opacity = 0;
-    });
+    
     menuBtn.addEventListener('click', menuHandler);
     gnb.addEventListener('click', scrollToMenu);
     worksTab.addEventListener('click', tabOn);
@@ -281,6 +269,20 @@
         sectionInfo[3].objs.hopelee.children[0].src = sectionInfo[3].values.imgPath[0];
         sectionInfo[3].objs.hopelee.children[1].classList.remove('on');
         sectionInfo[3].objs.hopelee.children[1].innerHTML = 'Mouseover me ! !';
+    });
+
+    window.addEventListener('load',()=>{
+        setBase();
+    });
+    window.addEventListener('resize',()=>{
+        setBase();
+        setBread();
+    });
+    window.addEventListener('scroll', ()=>{
+        setBase();
+        setBread();
+        if ( innerWidth>757 && innerHeight>750 ){ autoScroll(); };
+        menuInfo.style.opacity = 0;
     });
     setCanvasImages();
 
