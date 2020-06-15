@@ -32,7 +32,22 @@
         },
         {//3
             sectionTop: 0,
-            sectionHeight: 0
+            sectionHeight: 0,
+            objs:{
+                hopelee: document.querySelector('.hopelee'),
+                // canvas: document.querySelector('#hope'),
+                // context: document.querySelector('#hope').getContext('2d'),
+                images: []
+            },
+            values:{
+                mouseX: 0,
+                ratio: innerHeight*0.8/600,
+                imgBlendWidth:[0, 200, {start:0, end:1}],
+                imgPath:[
+                    './images/hopelee.png',
+                    './images/somang.png'
+                ]
+            }
         },
         {//4
             sectionTop: 0,
@@ -73,6 +88,9 @@
             planets[i].style.top = `${datumPointX}px`;
             planets[i].style.left = `${datumPointY}px`;
         }
+        //set section3
+        // sectionInfo[3].objs.context.drawImage(sectionInfo[3].objs.images[0], 0, 0);
+        // sectionInfo[3].objs.canvasBox.style.transform = `scale(${sectionInfo[3].values.ratio})`;
         playAnimation();
     }
 
@@ -176,9 +194,19 @@
             }
         }
     }
+    function setCanvasImages(){
+        let imgElem;
+        for (i=0; i<sectionInfo[3].values.imgPath.length; i++){
+            imgElem = new Image;
+            imgElem.src = sectionInfo[3].values.imgPath[i];
+            sectionInfo[3].objs.images.push(imgElem);
+        }
+    }
 
-    
     function playAnimation(){
+        const objs = sectionInfo[currentSection].objs;
+        const values = sectionInfo[currentSection].values;
+
         switch(currentSection){
             case 1:
                 idenBox.classList.add('on');
@@ -193,6 +221,8 @@
                     planets[i].style.transitionDelay = `${0.3*i}s`;
                     planets[i].style.transform = `rotateZ(${rotateZ}deg) translate3d(${planetsBox.offsetWidth/2}px, 0, 0)`;
                 }
+                break;
+            case 3:
                 
                 break;
             case 4:
@@ -236,12 +266,22 @@
         setBase();
         setBread();
         if ( innerWidth>757 && innerHeight>750 ){ autoScroll(); };
-        // set section-0
         menuInfo.style.opacity = 0;
     });
     menuBtn.addEventListener('click', menuHandler);
     gnb.addEventListener('click', scrollToMenu);
     worksTab.addEventListener('click', tabOn);
     abilitiesTab.addEventListener('click', tabOn);
+    sectionInfo[3].objs.hopelee.addEventListener('mouseover',(e)=>{
+        sectionInfo[3].objs.hopelee.children[0].src = sectionInfo[3].values.imgPath[1];
+        sectionInfo[3].objs.hopelee.children[1].classList.add('on');
+        sectionInfo[3].objs.hopelee.children[1].innerHTML = 'Just tell me your style<br> what you want.';
+    });
+    sectionInfo[3].objs.hopelee.addEventListener('mouseout',(e)=>{
+        sectionInfo[3].objs.hopelee.children[0].src = sectionInfo[3].values.imgPath[0];
+        sectionInfo[3].objs.hopelee.children[1].classList.remove('on');
+        sectionInfo[3].objs.hopelee.children[1].innerHTML = 'Mouseover me ! !';
+    });
+    setCanvasImages();
 
 })();

@@ -122,9 +122,10 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
 .overlay__content span { display: block; text-indent: 0.5em; }
 .go { display: block; float: right; color: #000; font-weight: 900; padding-top: 1rem; }
 
-.me { display: none; position: relative; width: 12vw; max-width: 10rem; }
-#charlee { display: block; width: 100%; }
-.me_hover { position: absolute; top: 20%; left: 60%; transform: rotateZ(65deg); transform-origin: 50% 50%; color: #fff; text-shadow: 5px -3px 10px #fff; }
+.hopelee { display: none; position: relative; }
+.hopelee img { height: 80vh; }
+.talk { position: absolute; top: 12%; right: -55%; transform: rotateZ(60deg); transform-origin: 0 100%; text-shadow: 5px -3px 10px #fff; }
+.talk.on { top: 10%; right: -35%; transform: rotateZ(10deg); transform-origin: 0 100%; }
 
 /* contact page */
 #section-4 { position: relative; flex-direction: column; }
@@ -180,10 +181,10 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
 
   #ability_box { max-width: 800px; }
   .col { width: 40%; }
-
+  
 }
 @media screen and (min-width:1200px){
   #icon_moon { top: 1.5rem; right: 7vw; width: 3.5rem; height: 3.5rem; }
   #menu_info { right: 7vw; }
-  .me { display: block; }
+  .hopelee { display: block; }
 }
