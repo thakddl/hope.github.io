@@ -144,13 +144,16 @@
     }
     
     function scrollToMenu(e){
-        if( e.target.nodeName !== 'UL' ){
+        if( e.target !== e.currentTarget ){
             const idxNum = getIndex(e);
             window.scrollTo({
                 top:sectionInfo[idxNum].sectionTop,
                 behavior: 'smooth'
             })
         };
+        if ( innerWidth < 1024 ){
+            menuHandler();
+        }
     }
 
     $(window).on("mousewheel", function(e){//jQuery
