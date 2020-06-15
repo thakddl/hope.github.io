@@ -69,7 +69,7 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
 
 /* ability page */
 #section-2 { display: block; position: relative; }
-#planets_box { float: left; position: relative; width: 50vw; max-width: 80vh; height: 50vw; max-height: 80vh; border-radius: 50%; margin: 0 2rem 1rem -35vw; border: 2px solid #e3e3e3; transform: rotateZ(-45deg); transition: 7s; }
+#planets_box { float: left; position: relative; width: 50vw; max-width: 80vh; height: 50vw; max-height: 80vh; border-radius: 50%; margin: 0 2rem 1rem -35vw; border: 2px solid #e3e3e3; transform: rotateZ(-45deg); }
 .planet { display: block; position: absolute; width: 20%; height: 20%; color: #fff; text-align: right; transition: 0.7s; }
 .planet img { width: 100%; height: 100%; }
 .planet.on:before { display: block; position: absolute; z-index: -1; top: -25%; left: -25%; width: 150%; height: 150%; background: radial-gradient(closest-side, #FEFF9D 0%, transparent); content: ''; }

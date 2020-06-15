@@ -82,6 +82,7 @@
             }
         }
         // set planets position at section-2
+        planetsBox.style.transition = `0s`;
         for( i=0; i<planets.length; i++ ){
             const datumPointX = planetsBox.offsetWidth/2 - planets[0].offsetWidth/2;
             const datumPointY = planetsBox.offsetHeight/2 - planets[0].offsetHeight/2;
@@ -179,7 +180,6 @@
         let dataItem;
         if( e.target === e.currentTarget ) return;
         if( target.nodeName !== 'BUTTON' ){ target = target.parentNode; };
-        console.log(target,e.currentTarget)
 
         for(i=0; i<tab.children.length; i++){
             tab.children[i].classList.remove('on');
@@ -233,22 +233,22 @@
     }
     let totalDeg = -45;
     function planetsAni(e){
-        const datumUpLine = planetsBox.offsetTop + planetsBox.offsetHeight*0.4;
-        const datumDownLine = planetsBox.offsetTop + planetsBox.offsetHeight*0.7;
+        const datumLine = planetsBox.offsetTop + planetsBox.offsetHeight/2;
         const datumDeg = 270/planetsBox.children.length;
-        if ( e.clientY < datumUpLine ){
+        if ( e.clientY < datumLine ){
             if ( totalDeg === 0 ) return;
             totalDeg += datumDeg;
         } 
-        else if ( e.clientY > datumDownLine ){
+        else if ( e.clientY > datumLine ){
             if ( totalDeg === -datumDeg * (planetsBox.children.length-1) ) return;
             totalDeg -= datumDeg;
         }
+        planetsBox.style.transition = `7s`;
         planetsBox.style.transform = `rotateZ(${totalDeg}deg)`;
-        console.log(datumUpLine,datumDownLine)
+        console.log(datumUpLine)
     }
 
-    planetsBox.addEventListener('mousemove',(e)=>{
+    planetsBox.addEventListener('click',(e)=>{
         planetsAni(e)
     });
     window.addEventListener('mousemove',(e)=>{
