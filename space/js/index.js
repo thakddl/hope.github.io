@@ -120,7 +120,7 @@
             }
             setTimeout(()=>{ 
                 nav.style.transform = 'translateX(100%)';
-            }, 1200);
+            }, 1500);
         }
     }
 
