@@ -21,7 +21,7 @@ $(document).ready(function(){
     //페이지2 메뉴 버튼 클릭
     $(".con_menu li").click(function(){
         const idx = $(this).index();
-        const targetNum = $("#con"+idx).index();
+        const targetNum = $(".content_box").find('[data-index='+idx+']').index();
         clearInterval(int);
         
         for(a=0; a<targetNum; a++) {
