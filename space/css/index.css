@@ -63,6 +63,7 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
 #iden_box img { display: block; height: 25vh; }
 
 #profile { columns: 1; }
+#profile strong { font-weight: normal; }
 #profile > li { padding-bottom: 2rem; transition: 0.5s ease-out; transform: translateX(100px); opacity: 0; }
 #profile > li.on { transform: translateX(0vw) translateY(0vh); opacity: 1; }
 #lang_list li { display: inline; }
