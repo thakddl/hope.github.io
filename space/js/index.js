@@ -99,7 +99,7 @@
         menuInfo.style.opacity = 0;
         if (!menu){
             nav.style.transform = 'translateX(0%)';
-            menuBtn.style.animation = 'circle 1.5s 1 ease-out';
+            menuBtn.classList.add('on');
             for( i=0; i<gnb.children.length; i++ ){
                 gnb.children[i].style.transitionDelay = `${0.2*i}s`;
                 gnb.children[i].style.transform = `translate3d(0, 0, 0)`;
@@ -110,7 +110,7 @@
         } else {
             menu = false;
             setBread();
-            menuBtn.style.animation = 'moon_scale 5s infinite linear';
+            menuBtn.classList.remove('on');
             let reverseNumber = 0;
             for( i=gnb.children.length-1; i>=0; i-- ){
                 reverseNumber++
