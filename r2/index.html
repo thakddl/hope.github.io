@@ -61,12 +61,23 @@
         </nav>
     </header>
     <section class="page" id="intro">
-        <img src="./data/w_cover.png" alt="이미지" class="cover w_item">
-        <img src="./data/h_cover.jpg" alt="이미지" class="cover h_item">
+        <img src="./data/w_cover.png" alt="이미지" class="cover">
         <h1>minumsa</h1>
         <a href="#" class="logo"></a>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+            </defs>
+            <g class="parallax">
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(0,101,209,0.5)"></use>
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,101,116,0.8)"></use>
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(0,101,209,0.8)"></use>
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="#E3D2D1"></use>
+            </g>
+        </svg>
     </section>
     <section class="page" id="main">
+        <div class="progress"><span></span></div>
         <div class="con_menu">
             <h2>민음사 신작</h2>
             <ul>
@@ -123,6 +134,7 @@
             </li>
         </ul>
     </section>
+    <img class="bg" src="./data/ft_bg.png" alt="배경">
     <footer class="ft">
         <img src="./data/sim.png" alt="심볼 아이콘" id="sim">
         <p class="com_wrap">
