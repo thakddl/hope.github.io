@@ -7,39 +7,11 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>민음사</title>
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
     <script src="https://code.jquery.com/jquery-latest.js"></script>
-    <script src="./jquery/common.js"></script>
-    <style>
-    @media screen and (max-width:767px){
-        .menu_btn { top: 6vh; right: 0px; }
-        #m_btn { top: 4.5vh; right: 20%; }
-        .logo { position: absolute; left: 45vw; bottom: 40px; width: 50px; height: 20px; }
-        .gnb { margin: 0; }
-        .gnb a, #m_btn a { line-height: 10px; font-size: 13px; }
-
-        .ft { height: 380px; padding-top: 25px; }
-        .fnb { display: none; }
-        #sim_wrap { position: relative; width: 90px; height: 120px; }
-        #sim { width: 90px; }
-        .com { font-size: 22px; }
-        #copy { width: 250px; text-align: center; }
-    }
-    @media screen and (min-width:768px) and (max-width:1200px){
-        .logo { position: absolute; left: 45vw; bottom: 40px; width: 50px; height: 20px; }
-        .gnb { margin: 0; }
-        .gnb a { line-height: 10px; font-size: 23px; }
-
-        .ft { height: 380px; padding-top: 25px; flex-flow: column; }
-        .fnb { display: none; }
-        #sim_wrap { position: relative; width: 90px; height: 120px; }
-        #sim { width: 90px; }
-        .com { font-size: 22px; }
-        .f_box { margin-top: 5vh; }
-    }
-    </style>
+    <!-- <script src="./jquery/common.js"></script> -->
 </head>
 <body>
     <header class="hd">
@@ -48,7 +20,7 @@
             <span class="btn_bar" id="bar2"></span>
             <span class="btn_bar" id="bar3"></span>
         </span>
-        <div class="menu_fr">
+        <nav class="menu_fr">
             <div id="m_btn">
                 <a href="#a">로그인</a>
                 <a href="#a">회원가입</a>
@@ -87,31 +59,18 @@
                     </li>
                 </ul>
             </div>
-        </div>
+        </nav>
     </header>
-    <div class="page vs">
-        <video src="./data/vs1.mp4" class="cover" autoplay muted id="de_cover"></video>
-        <img src="./data/vsimg.jpg" alt="이미지" class="cover" id="m_cover">
-        <img src="./data/lolo.png" alt="이미지" class="cover" id="t_cover">
-        <div class="vs_bottom">
-            <p id="min">
-                <span class="spl_bar" id="spl_top"></span>
-                <span class="spl it" id="spl1">M</span>
-                <span class="spl" id="spl2">I</span>
-                <span class="spl" id="spl3">N</span>
-                <span class="spl" id="spl4">U</span>
-                <span class="spl" id="spl5">M</span>
-                <span class="spl" id="spl6">S</span>
-                <span class="spl" id="spl7">A</span>
-                <span class="spl_bar" id="spl_bottom"></span>
-            </p>
-            <a href="#" id="m_logo"></a>
-        </div>
-    </div>
-    <div class="page" id="page2">
+    <section class="page" id="intro">
+        <img src="./data/w_cover.png" alt="이미지" class="cover w_item">
+        <img src="./data/h_cover.jpg" alt="이미지" class="cover h_item">
+        <h1>minumsa</h1>
+        <a href="#" class="logo"></a>
+    </section>
+    <section class="page" id="main">
         <div class="con_menu">
             <h2>민음사 신작</h2>
-            <ul class="con_local">
+            <ul>
                 <li>런던, NW</li>
                 <li>느긋하게 밥을 먹고 느슨한 옷을 입습니다.</li>
                 <li>어디서부터 오는 비인가요</li>
@@ -120,69 +79,53 @@
                 <li>양방향</li>
             </ul>
         </div>
-        <div class="con_wrap">
-            <div id="vs_book">
-                <a href="#">
-                    <img src="./data/img1.jpg" alt="이미지" id="vs_img">
-                </a>
-                <a href="#">
-                    <div id="vs_bo">
-                        <h3 id="vs_tit">런던, NW</h3>
-                        <p id="vs_des">『하얀 이빨』, 『온 뷰티』의 작가 제이디 스미스 신작 《뉴욕 타임스 북 리뷰》·《월 스트리트 저널》·《타임》 TOP 10선정 전미 서평가 협회상 최종 후보</p>
-                    </div>
-                </a>
-            </div>
-            <div class="con_fr">
-                <ul class="con_box">
-                    <li class="on" id="con0">
-                        <img src="./data/img1.jpg" alt="이미지" class="new_b">
-                        <div class="txt_box">
-                            <h3 class="tit">런던, NW</h3>
-                            <p class="des">『하얀 이빨』, 『온 뷰티』의 작가 제이디 스미스 신작 《뉴욕 타임스 북 리뷰》·《월 스트리트 저널》·《타임》 TOP 10선정 전미 서평가 협회상 최종 후보</p>
-                        </div>
-                    </li>
-                    <li id="con1">
-                        <img src="./data/img2.jpg" alt="이미지" class="new_b">
-                        <div class="txt_box">
-                            <h3 class="tit">느긋하게 밥을 먹고 느슨한 옷을 입습니다</h3>
-                            <p class="des">소박한 음식, 미니멀한 옷, 함께하기 좋은 집, 화려하지는 않지만 따뜻하고 기분 좋은 보통의 일상이 온다</p>
-                        </div>
-                    </li>
-                    <li id="con2">
-                        <img src="./data/img3.jpg" alt="이미지" class="new_b">
-                        <div class="txt_box">
-                            <h3 class="tit">어디서부터 오는 비인가요</h3>
-                            <p class="des">인과와 질서의 견고한 세계 너머 자꾸만 감지되는 신비의 징후</p>
-                        </div>
-                    </li>
-                    <li id="con3">
-                        <img src="./data/img4.jpg" alt="이미지" class="new_b">
-                        <div class="txt_box">
-                            <h3 class="tit">나를 참으면 다만 내가 되는 걸까</h3>
-                            <p class="des">자신을 포착하기 위해 스스로를 잃어버리는 결항과 파국의 미학   김성대 신작 시집 『나를 참으면 다만 내가 되는 걸까』가 ‘민음의 시’로 출간되었다. 김성대…</p>
-                        </div>
-                    </li>
-                    <li id="con4">
-                        <img src="./data/img5.jpg" alt="이미지" class="new_b">
-                        <div class="txt_box">
-                            <h3 class="tit">미친 아담</h3>
-                            <p class="des">2019년 부커 상 수상 작가 마거릿 애트우드 『시녀 이야기』를 잇는 디스토피아 소설 ‘미친 아담 3부작’ 완결편 “그래요, 우리는 돌아올 거예요. 우리가 다시 돌아오기를…</p>
-                        </div>
-                    </li>
-                    <li id="con5">
-                        <img src="./data/img6.jpg" alt="이미지" class="new_b">
-                        <div class="txt_box">
-                            <h3 class="tit">양방향</h3>
-                            <p class="des">생각이 살아 움직이는 이상한 시의 나라 마르지 않는 이야기로 가득한 시의 미로</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="curve"><img src="./data/contact_bg.png" alt="이미지"></div>
+        <ul class="content_box">
+            <li class="on">
+                <img src="./data/img1.jpg" alt="이미지">
+                <div class="txt_box">
+                    <h3 class="tit">런던, NW</h3>
+                    <p class="des">『하얀 이빨』, 『온 뷰티』의 작가 제이디 스미스 신작 《뉴욕 타임스 북 리뷰》·《월 스트리트 저널》·《타임》 TOP 10선정 전미 서평가 협회상 최종 후보</p>
+                </div>
+            </li>
+            <li>
+                <img src="./data/img2.jpg" alt="이미지">
+                <div class="txt_box">
+                    <h3 class="tit">느긋하게 밥을 먹고 느슨한 옷을 입습니다</h3>
+                    <p class="des">소박한 음식, 미니멀한 옷, 함께하기 좋은 집, 화려하지는 않지만 따뜻하고 기분 좋은 보통의 일상이 온다</p>
+                </div>
+            </li>
+            <li>
+                <img src="./data/img3.jpg" alt="이미지">
+                <div class="txt_box">
+                    <h3 class="tit">어디서부터 오는 비인가요</h3>
+                    <p class="des">인과와 질서의 견고한 세계 너머 자꾸만 감지되는 신비의 징후</p>
+                </div>
+            </li>
+            <li>
+                <img src="./data/img4.jpg" alt="이미지">
+                <div class="txt_box">
+                    <h3 class="tit">나를 참으면 다만 내가 되는 걸까</h3>
+                    <p class="des">자신을 포착하기 위해 스스로를 잃어버리는 결항과 파국의 미학   김성대 신작 시집 『나를 참으면 다만 내가 되는 걸까』가 ‘민음의 시’로 출간되었다. 김성대…</p>
+                </div>
+            </li>
+            <li>
+                <img src="./data/img5.jpg" alt="이미지">
+                <div class="txt_box">
+                    <h3 class="tit">미친 아담</h3>
+                    <p class="des">2019년 부커 상 수상 작가 마거릿 애트우드 『시녀 이야기』를 잇는 디스토피아 소설 ‘미친 아담 3부작’ 완결편 “그래요, 우리는 돌아올 거예요. 우리가 다시 돌아오기를…</p>
+                </div>
+            </li>
+            <li>
+                <img src="./data/img6.jpg" alt="이미지">
+                <div class="txt_box">
+                    <h3 class="tit">양방향</h3>
+                    <p class="des">생각이 살아 움직이는 이상한 시의 나라 마르지 않는 이야기로 가득한 시의 미로</p>
+                </div>
+            </li>
+        </ul>
+    </section>
     <footer class="ft">
-        <div id="sim_wrap"><img src="./data/sim.png" alt="이미지" id="sim"></div>
+        <img src="./data/sim.png" alt="이미지" id="sim">
         <p class="com_wrap">
             <span class="com" id="com1">M</span>
             <span class="com" id="com2">I</span>
@@ -192,19 +135,17 @@
             <span class="com" id="com6">S</span>
             <span class="com" id="com7">A</span>
         </p>
-        <div class="f_box">
-            <ul class="fnb">
-                <li><a href="#">회원약관</a></li>
-                <li><a href="#">개인정보처리방침</a></li>
-                <li><a href="#">문의</a></li>
-                <li><a href="#">2차 저작권 문의 가이드</a></li>
-                <li><a href="#">위치 및 연락처</a></li>
-                <li><a href="#">사이트맵</a></li>
-                <li><a href="#">소식 PSS</a></li>
-                <li><a href="#">민음사 출판그룹도서 RSS</a></li>
-            </ul>
-            <p id="copy">COPYRIGHTⓒ 2020 Hope Lee. ALL RIGHTS RESERVED.</p>
-        </div>
+        <ul class="fnb">
+            <li><a href="#">회원약관</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">문의</a></li>
+            <li><a href="#">2차 저작권 문의 가이드</a></li>
+            <li><a href="#">위치 및 연락처</a></li>
+            <li><a href="#">사이트맵</a></li>
+            <li><a href="#">소식 PSS</a></li>
+            <li><a href="#">민음사 출판그룹도서 RSS</a></li>
+        </ul>
+        <p id="copy">COPYRIGHTⓒ 2020 Hope Lee. ALL RIGHTS RESERVED.</p>
     </footer>
 </body>
 </html>
