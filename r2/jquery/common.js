@@ -7,13 +7,13 @@ $(document).ready(function(){
             $(".menu").css({"display":"flex"});
             $("#bar1").css({"transform":"rotateZ(45deg)"});
             $("#bar3").css({"transform":"rotateZ(-45deg)"});
-            $("#bar2").css("width","0px");
+            $("#bar2").css({"width":"0px", "opacity":"0"});
             $("#sim").css("display","none");
         } else {
             $(".menu").fadeOut(100);
             $("#bar1").css({"transform":"rotateZ(0deg)"});
             $("#bar3").css({"transform":"rotateZ(0deg)"});
-            $("#bar2").css("width","100%");
+            $("#bar2").css({"width":"100%", "opacity":"1"});
             $("#sim").css("display","block");
         } sw = !sw
     });
