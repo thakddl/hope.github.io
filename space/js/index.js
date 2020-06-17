@@ -141,10 +141,12 @@
     }
 
     function getIndex(e){
-        const parent = e.target.parentNode;
+        const parent = e.currentTarget;
         const child = parent.children;
+        let target = e.target;
+        if ( target.nodeName === 'IMG' ){ target = target.parentNode }
         for( i=0; i<child.length; i++ ){
-            if( e.target === child[i] ){
+            if( target === child[i] ){
                 return i;
             }
         }
@@ -241,20 +243,16 @@
                 break;
         }
     }
-    let totalDeg = -45;
     function planetsAni(e){
-        const datumLine = planetsBox.offsetTop + planetsBox.offsetHeight/2;
-        const datumDeg = 270/planetsBox.children.length;
-        if ( e.clientY < datumLine ){
-            if ( totalDeg === 0 ) return;
-            totalDeg += datumDeg;
-        } 
-        else if ( e.clientY > datumLine ){
-            if ( totalDeg === -datumDeg * (planetsBox.children.length-1) ) return;
-            totalDeg -= datumDeg;
-        }
+        const startDeg = 0;
+        const length = planetsBox.children.length;
+        const datumDeg = 270/length;
+        const idx = getIndex(e);
+        let totalDeg = 0;
+        totalDeg = startDeg - idx*datumDeg;
         planetsBox.style.transition = `7s`;
         planetsBox.style.transform = `rotateZ(${totalDeg}deg)`;
+        // console.log(idx,totalDeg)
     }
 
     planetsBox.addEventListener('click',(e)=>{
