@@ -12,7 +12,7 @@ button { display: inline-block; margin: 0 auto; border: 0; background-color: tra
 .btn { border: 2px solid #fff; border-radius: 1rem; padding: 0.5rem 1rem; color:#fff; transition: 0.3s; cursor: pointer; }
 .btn:hover { text-shadow: 0 0 20px #fff; font-weight: 900; color: #0d75fd; }
 /* loader */
-.loaded .loader { display: none; }
+.loaded .loader { opacity: 0; transition: 0.5s; z-index: -6; }
 .loader {
   position: fixed;
   top: 0;
