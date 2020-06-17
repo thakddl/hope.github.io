@@ -269,15 +269,13 @@
     gnb.addEventListener('click', scrollToMenu);
     worksTab.addEventListener('click', tabOn);
     abilitiesTab.addEventListener('click', tabOn);
-    sectionInfo[3].objs.hopelee.addEventListener('mouseover',(e)=>{
+    sectionInfo[3].objs.hopelee.children[0].addEventListener('mouseover',(e)=>{
         sectionInfo[3].objs.hopelee.children[0].src = sectionInfo[3].values.imgPath[1];
         sectionInfo[3].objs.hopelee.children[1].classList.add('on');
-        sectionInfo[3].objs.hopelee.children[1].innerHTML = 'Just tell me your style<br> what you want.';
     });
-    sectionInfo[3].objs.hopelee.addEventListener('mouseout',(e)=>{
+    sectionInfo[3].objs.hopelee.children[0].addEventListener('mouseout',(e)=>{
         sectionInfo[3].objs.hopelee.children[0].src = sectionInfo[3].values.imgPath[0];
         sectionInfo[3].objs.hopelee.children[1].classList.remove('on');
-        sectionInfo[3].objs.hopelee.children[1].innerHTML = 'Mouseover me ! !';
     });
 
     window.addEventListener('load',()=>{
