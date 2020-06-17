@@ -244,24 +244,35 @@
         }
     }
     function planetsAni(e){
-        const startDeg = 0;
         const length = planetsBox.children.length;
         const datumDeg = 270/length;
         const idx = getIndex(e);
         let totalDeg = 0;
-        totalDeg = startDeg - idx*datumDeg;
+
+        totalDeg = -idx*datumDeg;
         planetsBox.style.transition = `7s`;
         planetsBox.style.transform = `rotateZ(${totalDeg}deg)`;
-        // console.log(idx,totalDeg)
     }
-
+    // function planetsIntvAni(e){
+    //     const length = planetsBox.children.length;
+    //     const datumline = planetsBox.offsetTop + planetsBox.offsetHeight/2;
+    //     const datumDeg = 270/length;
+    //     let totalDeg = 0;
+    //     if ( totalDeg === 0 || totalDeg <= -270 ) return;
+    //     planetsBox.style.transition = `7s`;
+    //     planetsBox.style.transform = `rotateZ(${totalDeg}deg)`;
+    // }
+    
     planetsBox.addEventListener('click',(e)=>{
         planetsAni(e)
     });
-    window.addEventListener('mousemove',(e)=>{//for cursor icon
-        cursor.style.top = `${e.pageY+10}px`;
-        cursor.style.left = `${e.pageX+10}px`;
-    });
+    // planetsBox.addEventListener('mousemove',(e)=>{
+    //     let planetsIntv = setInterval(()=>{planetsIntvAni(e)},2000);
+    //     console.log(123)
+    //     clearInterval(planetsIntv);
+    //     planetsIntv = setInterval(()=>{planetsIntvAni(e)},2000);
+    // });
+
     
     menuBtn.addEventListener('click', menuHandler);
     gnb.addEventListener('click', scrollToMenu);
@@ -275,7 +286,11 @@
         sectionInfo[3].objs.hopelee.children[0].src = sectionInfo[3].values.imgPath[0];
         sectionInfo[3].objs.hopelee.children[1].classList.remove('on');
     });
-
+    
+    window.addEventListener('mousemove',(e)=>{//for cursor icon
+        cursor.style.top = `${e.pageY+10}px`;
+        cursor.style.left = `${e.pageX+10}px`;
+    });
     window.addEventListener('load',()=>{
         setBase();
     });
