@@ -85,31 +85,6 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
 .tit_box { width: 100%; height: 110px; padding: 1rem; color: black; }
 .img_box { display: block; margin-top: -110px; height: 110px; }
 .slide_size:hover .img_box { margin-top: 0px; }
-/* 우유곽 애니메이션 */
-#milk { position: relative; transform-style: preserve-3d; animation: cube 7s infinite; margin-top: -40px; margin-left: -30px; width: 200px; height: 220px; }
-.roof { position: relative; height: 150px; transform-style: preserve-3d; }
-.top { height: 50px; opacity: 0.85; background-color: pink; }
-.roof .side12, .roof .side14 { position: absolute; top: 50px; border-style: solid; border-width: 0 100px 100px 100px; border-color: transparent transparent pink transparent; opacity: 0.6; }
-.roof .side13, .roof .side15 { position: absolute; height: 142.5px; top: 78.4px; opacity: 0.6; background-color: pink; }
-.side12 { transform: rotateY(90deg) translate3d(0px, 0px, 100px); }
-.side13 { transform: rotateY(180deg) rotateX(45deg) translate3d(0px, 0px, 70px); }
-.side14 { transform: rotateY(270deg) translate3d(0px, 0px, 100px); }
-.side15 { transform: rotateY(0deg) rotateX(45deg) translate3d(0px, 0px, 70px); }
-
-.milk_cube { position: relative; height: 200px; transform-style: preserve-3d; backface-visibility: visible; }
-.milk_cube li { height: 200px; position: absolute; left: 0; top: 0; opacity: 0.6; color: #000; font-size: 40px; text-align: center; line-height: 200px;background-color: pink; }
-.side7 { transform: rotateY(0deg) translate3d(0, 0, 100px); }
-.side8 { transform: rotateY(90deg) translate3d(0, 0, 100px); }
-.side9 { transform: rotateY(180deg) translate3d(0, 0, 100px); }
-.side10 { transform: rotateY(270deg) translate3d(0, 0, 100px); }
-.side11 { transform: rotateX(270deg) translate3d(0, 0, 100px); }
-
-@keyframes cube { 
-  0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(0.4, 0.4, 0.4); }
-  40% { transform: rotateX(-20deg) rotateY(180deg) rotateZ(20deg) scale3d(0.4, 0.4, 0.4); }
-  80% { transform: rotateX(20deg) rotateY(360deg) rotateZ(15deg) scale3d(0.4, 0.4, 0.4); }
-  100% { transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg) scale3d(0.4, 0.4, 0.4); }
-}
 
 /* works page */
 #section-3 { position: relative; flex-wrap: wrap; }
