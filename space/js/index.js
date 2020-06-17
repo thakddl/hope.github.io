@@ -71,6 +71,13 @@
                 break;
             } 
         }
+        // set section-0
+        if ( window.pageYOffset === 0 && menu === false ){
+            menuInfo.style.opacity = 1;
+        } else {
+            menuInfo.style.opacity = 0;
+        }
+
         // set section-1
         if ( currentSection !== 1 ){
             let reverseNumber = 0;
@@ -248,7 +255,6 @@
         }
         planetsBox.style.transition = `7s`;
         planetsBox.style.transform = `rotateZ(${totalDeg}deg)`;
-        console.log(datumUpLine)
     }
 
     planetsBox.addEventListener('click',(e)=>{
@@ -285,7 +291,6 @@
         setBase();
         setBread();
         if ( innerWidth>757 && innerHeight>750 ){ autoScroll(); };
-        menuInfo.style.opacity = 0;
     });
     setCanvasImages();
 
