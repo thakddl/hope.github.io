@@ -15,34 +15,21 @@ button { display: inline-block; margin: 0 auto; border: 0; background-color: tra
 /* universe and cursor */
 .container { position: fixed; z-index: -1; width: 100%; height: 100%; background-image: radial-gradient(1200px at 60% 120%, rgb(23, 28, 58) 5%, #020409 100%); }
 #universe { width: 100%; height: 100%; }
-#icon_cursor { position: absolute; z-index: 502; top: 50%; left: calc(50% + 7.5rem); width: 40px; animation: float 2s infinite linear alternate; -webkit-animation: float 2s infinite linear alternate; will-change: top, left; }
-@-webkit-keyframes float { 
-  from { transform: rotateZ(-30deg); }
-  to { transform: rotateZ(10deg); }
-}
+#icon_cursor { position: absolute; z-index: 502; top: 50%; left: calc(50% + 7.5rem); width: 40px; animation: float 2s infinite linear alternate; will-change: top, left; }
 @keyframes float { 
   from { transform: rotateZ(-30deg); }
   to { transform: rotateZ(10deg); }
 }
 /* navigation bar */
 .hd { position: fixed; z-index: 500; width: 100%; }
-nav { display: flex; display: -ms-flexbox; justify-content: center; position: fixed; top: 0; right: 0; width: 90%; max-width: 350px; height: 100vh; padding-top: 20vh; background: rgba(0, 0, 0, 0.9); font-size: 2rem; text-align: center; transform: translateX(100%); transition: 0.5s; }
+nav { display: flex; display: -ms-flexbox; justify-content: center; position: fixed; z-index: 502; top: 0; right: 0; width: 90%; max-width: 350px; height: 100vh; padding-top: 20vh; background: rgba(0, 0, 0, 0.9); font-size: 2rem; text-align: center; transform: translateX(100%); transition: 0.5s; }
 .gnb { display: flex; flex-direction: column; align-items: center; }
 .gnb li { width: fit-content; cursor: pointer; transform: translate3d(300px, 0, 0); opacity: 0; transition: 1s; }
 
 #icon_fishing { position: absolute; width: 60px; height: 40px; opacity: 0; transition: 1s; }
-#icon_moon { position: fixed; z-index: 999; top: 2rem; right: 2rem; width: 4rem; height: 4rem; animation: moon_scale 4s infinite linear; -webkit-animation: moon_scale 4s infinite linear; cursor: pointer; transform-origin: 50% 60%; transform: rotateY(180deg); }
-#icon_moon.on { -webkit-animation: circle 1.5s 1 ease-out; animation: circle 1.5s 1 ease-out; }
+#icon_moon { position: fixed; z-index: 999; top: 2rem; right: 2rem; width: 4rem; height: 4rem; animation: moon_scale 4s infinite linear; cursor: pointer; transform-origin: 50% 60%; transform: rotateY(180deg); }
+#icon_moon.on { animation: circle 1.5s 1 ease-out; }
 #menu_info { position: absolute; top: 6rem; right: 2rem; font-size: 1.2rem; text-shadow: 3px 3px 15px #fff; opacity: 1; transition: 1s; }
-@-webkit-keyframes moon_scale {
-  0% { transform: scale(0.8) rotate(0deg) rotateY(180deg); }
-  50% { transform: scale(1.0) rotate(180deg) rotateY(180deg); }
-  100% { transform: scale(0.8) rotate(360deg) rotateY(180deg); }
-}
-@-webkit-keyframes circle { 
-  from { transform: rotate(0deg) rotateY(180deg); }
-  to { transform: rotate(-360deg) rotateY(180deg); }
-}
 @keyframes moon_scale {
   0% { transform: scale(0.8) rotate(0deg) rotateY(180deg); }
   50% { transform: scale(1.0) rotate(180deg) rotateY(180deg); }
@@ -59,7 +46,7 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
 /* about page */
 #section-1 { flex-direction: column; font-size: 1.1rem; }
 #iden_box { margin-bottom: 5rem; transform: rotateZ(40deg); opacity: 0; transition: 0.3s; }
-#iden_box.on { animation: iden 3s 0.3s ease-out both; -webkit-animation: iden 3s 0.3s ease-out both; transform-origin: 50% 0; opacity: 1; }
+#iden_box.on { animation: iden 3s 0.3s ease-out both; transform-origin: 50% 0; opacity: 1; }
 #iden_box img { display: block; height: 25vh; }
 
 #profile { columns: 1; }
@@ -67,18 +54,7 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
 #profile > li { padding-bottom: 2rem; transition: 0.5s ease-out; transform: translateX(100px); opacity: 0; }
 #profile > li.on { transform: translateX(0vw) translateY(0vh); opacity: 1; }
 #lang_list li { display: inline; }
-
 @keyframes iden { 
-  0% { transform: rotateZ(40deg); }
-  10% { transform: rotateZ(-28deg); }
-  20% { transform: rotateZ(14deg); }
-  30% { transform: rotateZ(-13deg); }
-  40% { transform: rotateZ(10deg); }
-  60% { transform: rotateZ(-8deg); }
-  80% { transform: rotateZ(5deg); }
-  100% { transform: rotateZ(0deg); }
-}
-@-webkit-keyframes iden { 
   0% { transform: rotateZ(40deg); }
   10% { transform: rotateZ(-28deg); }
   20% { transform: rotateZ(14deg); }
@@ -111,7 +87,7 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
 .slide_size:hover .img_box { margin-top: 0px; }
 /* 우유곽 애니메이션 */
 #milk { position: relative; transform-style: preserve-3d; animation: cube 7s infinite; margin-top: -40px; margin-left: -30px; width: 200px; height: 220px; }
-.roof { position: relative; height: 150px; transform-style: preserve-3d; transform-style: -preserve-3d; }
+.roof { position: relative; height: 150px; transform-style: preserve-3d; }
 .top { height: 50px; opacity: 0.85; background-color: pink; }
 .roof .side12, .roof .side14 { position: absolute; top: 50px; border-style: solid; border-width: 0 100px 100px 100px; border-color: transparent transparent pink transparent; opacity: 0.6; }
 .roof .side13, .roof .side15 { position: absolute; height: 142.5px; top: 78.4px; opacity: 0.6; background-color: pink; }
@@ -138,7 +114,7 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
 /* works page */
 #section-3 { position: relative; flex-wrap: wrap; }
 #section-3 .tab { display: flex; display: -ms-flexbox; justify-content: center; width: 100%; font-size: 1.6rem; }
-#section-3 .tab button { margin: 0 7%; cursor: pointer; }
+#section-3 .tab button { padding: 15px; cursor: pointer; }
 #section-3 .tab button.on { color: #0d75fd; text-shadow: 0px 0px 30px #fff; }
 
 .overlay__content span { display: block; text-indent: 0.5em; }
@@ -171,7 +147,7 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
   100% { left: 90vw; bottom: 95vh; width: 15px; height: 15px; }
 }
 
-#map { overflow: hidden; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; width: 100%; height: 30vh; margin: 3% auto; border: 2px solid #fff; border-radius: 2rem; font-size: 3vh; color: #000; }
+#map { overflow: hidden; width: 100%; height: 30vh; margin: 3% auto; border: 2px solid #fff; border-radius: 2rem; font-size: 3vh; color: #000; }
 .form-elements { display: flex; flex-flow: column; justify-content: start; align-items: center; }
 .pure-group { margin: 5px auto; padding: .7rem 8%; width: 100%; border: 2px solid #fff; border-radius: 0.8rem; }
 .pure-group label { display: block; }
