@@ -292,6 +292,7 @@
         cursor.style.left = `${e.pageX+10}px`;
     });
     window.addEventListener('load',()=>{
+        setTimeout(()=>{ document.querySelector('body').classList.add('loaded') }, 3000)
         setBase();
     });
     window.addEventListener('resize',()=>{
