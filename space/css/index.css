@@ -120,10 +120,7 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
 .overlay__content span { display: block; text-indent: 0.5em; }
 .go { display: block; float: right; color: #000; font-weight: 900; padding-top: 1rem; }
 
-.hopelee { display: none; position: relative; }
-.hopelee img { height: 80vh; }
-.talk { position: absolute; top: 12%; right: -55%; transform: rotateZ(60deg); transform-origin: 0 100%; text-shadow: 5px -3px 10px #fff; }
-.talk.on { top: 5%; right: -75%; transform: rotateZ(10deg); transform-origin: 0 100%; }
+.hopelee { display: none; }
 
 /* contact page */
 #section-4 { position: relative; flex-direction: column; }
@@ -185,5 +182,14 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
 @media screen and (min-width:1200px){
   #icon_moon { top: 1.5rem; right: 7vw; width: 3.5rem; height: 3.5rem; }
   #menu_info { right: 7vw; }
-  .hopelee { display: block; }
+  .grid { max-width: 800px; }
+  .hopelee { display: block; margin-right: -10%; }
+  .hopelee img { float: left; height: 100%; }
+  .talk { position: relative; float: left; margin-left: -12%; text-shadow: 5px -3px 10px #fff; font-size: 1.2rem; }
+  .talk span { display: block; transform-origin: 0 100%; transition: .5s; }
+  .talk .out { position: absolute; top: 100%; left: 0; transform: rotateZ(60deg); }
+  .talk .over { transform: rotateZ(15deg); opacity: 0; }
+  .talk.on .out { opacity: 0; }
+  .talk.on .over { opacity: 1; }
+
 }
