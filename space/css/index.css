@@ -4,7 +4,7 @@ html, body { width: 100%; height: 100%; color:#fff; font-family: 'Indie Flower',
 ::-webkit-scrollbar { display: none; }
 ::-moz-scrollbar { display: none; }
 ::-o-scrollbar { display: none; }
-html { overflow-x: hidden; }
+body { overflow-x: hidden; }
 a { text-decoration: none; color: #fff; }
 ul { list-style: none; }
 p { cursor: context-menu; }
@@ -66,7 +66,7 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
 }
 
 /* ability page */
-#section-2 { display: block; position: relative; }
+#section-2 { overflow: visible; display: block; position: relative; }
 #planets_box { float: left; position: relative; width: 50vw; max-width: 80vh; height: 50vw; max-height: 80vh; border-radius: 50%; margin: 0 2rem 1rem -35vw; border: 2px solid #e3e3e3; transform: rotateZ(-45deg); }
 .planet { display: block; position: absolute; width: 20%; height: 20%; color: #fff; text-align: right; transition: 0.7s; }
 .planet img { width: 100%; height: 100%; }

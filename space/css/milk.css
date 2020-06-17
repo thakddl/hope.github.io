@@ -1,7 +1,7 @@
   
 @charset "utf-8";
-#milk { position: relative; transform-style: preserve-3d; animation: cube 7s infinite; width: 200px; height: 220px; margin-top: -60px; }
-.roof { position: absolute; height: 150px; transform: rotateY(-90deg); transform-style: preserve-3d; }
+#milk { position: relative; transform-style: preserve-3d; backface-visibility: visible; animation: cube 7s infinite; width: 200px; height: 220px; margin-top: -60px; }
+.roof { position: absolute; height: 150px; transform: rotateY(-90deg); transform-style: preserve-3d; backface-visibility: visible;  }
 .top { height: 50px; top: 0; transform: rotateY(90deg); background-color: pink; opacity: 0.85; }
 .roof .side12, .roof .side14 { position: absolute; top: 50px; width: 0; height: 0; border-style: solid; border-width: 0 100px 100px 100px; border-color: transparent transparent pink transparent; opacity: 0.6; }
 .roof .side13, .roof .side15 { position: absolute; height: 142px; font-size: 40px; text-align: center; top: 78.1px; opacity: 0.6; background-color: pink; }
