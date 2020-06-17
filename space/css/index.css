@@ -106,7 +106,7 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
 .tit_box { width: 100%; height: 110px; padding: 1rem; color: black; }
 .img_box { display: block; margin-top: -110px; height: 110px; }
 .slide_size:hover .img_box { margin-top: 0px; }
-
+#safari.it { display: none; }
 /* works page */
 #section-3 { position: relative; flex-wrap: wrap; }
 #section-3 .tab { display: flex; display: -ms-flexbox; justify-content: center; width: 100%; font-size: 1.6rem; }

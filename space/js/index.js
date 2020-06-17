@@ -294,6 +294,9 @@
     window.addEventListener('load',()=>{
         setTimeout(()=>{ document.querySelector('body').classList.add('loaded') }, 3000)
         setBase();
+        if ( isSafari.indexOf('Apple') !== -1 ){//when it is safari,
+            document.querySelector('#safari').classList.add('it');
+        }
     });
     window.addEventListener('resize',()=>{
         setBase();
