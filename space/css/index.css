@@ -60,7 +60,7 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
   from { transform: rotate(0deg) rotateY(180deg); }
   to { transform: rotate(-360deg) rotateY(180deg); }
 }
-.page { display: flex; display: -ms-flexbox; justify-content: center; align-items: center; padding: 6rem 0 3rem; min-height: 100vh; }
+.page { overflow-x: hidden; display: flex; display: -ms-flexbox; justify-content: center; align-items: center; padding: 6rem 0 3rem; width: 100%; min-height: 100vh; }
 /* home */
 #section-0 h1 { margin-top: -2rem; text-align: center; font-size: 2rem; font-weight: normal; }
 
@@ -139,7 +139,7 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
   100% { left: 90vw; bottom: 95vh; width: 15px; height: 15px; }
 }
 
-#map { overflow: hidden; height: 30vh; margin: 3% auto; border: 2px solid #fff; width: 100%; height: 100%; }
+#map { overflow: hidden; width: 100%; height: 30vh; margin: 3% auto; border: 2px solid #fff; }
 .form-elements { display: flex; flex-flow: column; justify-content: start; align-items: center; }
 .pure-group { margin: 5px auto; padding: .7rem 8%; width: 100%; border: 2px solid #fff; border-radius: 0.8rem; }
 .pure-group label { display: block; }
