@@ -176,6 +176,7 @@
         show(contentItem) {
             this.contentItem = contentItem;
             this.DOM.el.classList.add('overlay--open');
+            contentItem.style.zIndex = 103;
             // show revealer
             TweenMax.to(this.DOM.reveal, .5, {
                 ease: 'Power1.easeInOut',
