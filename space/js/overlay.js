@@ -181,8 +181,8 @@
                 ease: 'Power1.easeInOut',
                 x: '0%',
                 onComplete: () => {
-                    // hide scroll
-                    document.body.classList.add('preview-open');
+                    // hide ->scroll 발생시 scroll범위가 사라지므로 scroll이 top으로 이동
+                    // document.body.classList.add('preview-open');
                     // show preview
                     this.revealItem(contentItem);
                     // hide revealer
@@ -198,7 +198,7 @@
             });
         }
         revealItem() {
-            this.contentItem.querySelector('.overlay__content').style.zIndex = 101;
+            this.contentItem.querySelector('.overlay__content').style.zIndex = 100;
             this.contentItem.style.opacity = 1;
 
             let itemElems = [];
@@ -232,7 +232,7 @@
 
             // show revealer
             TweenMax.to(this.DOM.reveal, .5, {
-                //delay: 0.15,
+                delay: 0.15,
                 ease: 'Power3.easeOut',
                 x: '0%',
                 onComplete: () => {
@@ -240,7 +240,7 @@
                     this.contentItem.style.zIndex = 100;
 
                     // show scroll
-                    document.body.classList.remove('preview-open');
+                    // document.body.classList.remove('preview-open');
                     // hide preview
                     this.contentItem.style.opacity = 0;
                     // hide revealer
@@ -348,6 +348,4 @@
     let allowTilt = true;
     new Grid(document.querySelector('.grid'));
 
-    // Preload all the images in the page..
-    imagesLoaded(document.querySelectorAll('.box__img'), () => document.body.classList.remove('loading'));
 }
