@@ -273,24 +273,6 @@
     //     planetsIntv = setInterval(()=>{planetsIntvAni(e)},2000);
     // });
 
-    
-    menuBtn.addEventListener('click', menuHandler);
-    gnb.addEventListener('click', scrollToMenu);
-    worksTab.addEventListener('click', tabOn);
-    abilitiesTab.addEventListener('click', tabOn);
-    sectionInfo[3].objs.hopelee.children[0].addEventListener('mouseover',(e)=>{
-        sectionInfo[3].objs.hopelee.children[0].src = sectionInfo[3].values.imgPath[1];
-        sectionInfo[3].objs.hopelee.children[1].classList.add('on');
-    });
-    sectionInfo[3].objs.hopelee.children[0].addEventListener('mouseout',(e)=>{
-        sectionInfo[3].objs.hopelee.children[0].src = sectionInfo[3].values.imgPath[0];
-        sectionInfo[3].objs.hopelee.children[1].classList.remove('on');
-    });
-    
-    window.addEventListener('mousemove',(e)=>{//for cursor icon
-        cursor.style.top = `${e.pageY+10}px`;
-        cursor.style.left = `${e.pageX+10}px`;
-    });
     window.addEventListener('load',()=>{
         setTimeout(()=>{ document.querySelector('body').classList.add('loaded') }, 3000)
         setBase();
@@ -303,6 +285,23 @@
         setBase();
         setBread();
         if ( innerWidth>757 && innerHeight>750 ){ autoScroll(); };
+    });
+    window.addEventListener('mousemove',(e)=>{//for cursor icon
+        cursor.style.top = `${e.pageY+10}px`;
+        cursor.style.left = `${e.pageX+10}px`;
+    });
+    
+    menuBtn.addEventListener('click', menuHandler);
+    gnb.addEventListener('click', scrollToMenu);
+    worksTab.addEventListener('click', tabOn);
+    abilitiesTab.addEventListener('click', tabOn);
+    sectionInfo[3].objs.hopelee.children[0].addEventListener('mouseover',(e)=>{
+        sectionInfo[3].objs.hopelee.children[0].src = sectionInfo[3].values.imgPath[1];
+        sectionInfo[3].objs.hopelee.children[1].classList.add('on');
+    });
+    sectionInfo[3].objs.hopelee.children[0].addEventListener('mouseout',(e)=>{
+        sectionInfo[3].objs.hopelee.children[0].src = sectionInfo[3].values.imgPath[0];
+        sectionInfo[3].objs.hopelee.children[1].classList.remove('on');
     });
     setCanvasImages();
 
