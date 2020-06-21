@@ -10,7 +10,7 @@ main { clear: both; max-width: 1000px; margin: 2rem auto; position: relative; }
 .bread { width: 100%; font-size: 1.2rem; line-height: 3; text-align: right; }
 .bread a { text-decoration: underline; }
 
-.content { float: right; display: flex; display: -ms-flexbox; flex-wrap: wrap; align-items: center; width: 85%; padding: 5rem; padding-top: 0; box-sizing: border-box; border-left: 2px solid #000; }
+.content { float: right; display: flex; display: -ms-flexbox; flex-wrap: wrap; align-items: center; width: 85%; min-width: 300px; padding: 5rem; padding-top: 0; box-sizing: border-box; border-left: 2px solid #000; }
 .content img { width: 50%; margin: 0 auto 2rem; }
 .content h2 { width: 100%; margin-bottom: 2rem; font-size: 2rem; text-align: center; }
 

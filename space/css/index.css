@@ -186,5 +186,4 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
   .talk .over { transform: rotateZ(15deg); opacity: 0; }
   .talk.on .out { opacity: 0; }
   .talk.on .over { opacity: 1; }
-
 }
