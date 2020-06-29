@@ -60,6 +60,7 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
   from { transform: rotate(0deg) rotateY(180deg); }
   to { transform: rotate(-360deg) rotateY(180deg); }
 }
+
 .page { overflow-x: hidden; display: flex; display: -ms-flexbox; justify-content: center; align-items: center; padding: 6rem 0 3rem; width: 100%; min-height: 100vh; }
 /* home */
 #section-0 h1 { margin-top: -2rem; text-align: center; font-size: 2rem; font-weight: normal; }
@@ -96,6 +97,7 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
 #ability_box { padding: 2rem; margin: auto; }
 #ability_box > li { display: none; }
 #ability_box > li.on { display: block; }
+.ability_con span { display: block; }
 
 .ability_works { display: flex; flex-flow: column wrap; align-items: center; }
 .ability_works dt { width: 100%; padding: 1rem 0 0.2rem 0; }
@@ -146,8 +148,8 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
 .pure-group input,
 .pure-group textarea { width: 100%; }
 .form-elements button { margin-top: 10px; }
-@media screen and (min-width:757px) and (min-height: 750px){
-  #section-2 { min-height: unset; }
+@media screen and (min-height: 750px){
+  #section-2 { min-height: auto; }
 }
 @media screen and (min-width:757px){
   html { font-size: 18px; }
