@@ -148,13 +148,11 @@ nav { display: flex; display: -ms-flexbox; justify-content: center; position: fi
 .pure-group input,
 .pure-group textarea { width: 100%; }
 .form-elements button { margin-top: 10px; }
-@media screen and (min-height: 750px){
-  #section-2 { min-height: auto; }
-}
+
 @media screen and (min-width:757px){
   html { font-size: 18px; }
   #profile { columns: 2; }
-  #section-2 { display: flex; display: -ms-flexbox; }  
+  #section-2 { display: flex; display: -ms-flexbox; min-height: unset; }  
   #ability_box { max-width: 600px; }
   .ability_works { flex-flow: row wrap; }
   .ability_works dd { width: calc(100% / 3); }
