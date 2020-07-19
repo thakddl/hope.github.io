@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="loader.css" />
+  </head>
+  <body class="loading">
+    <div class="loader">
+      <object data="loader.svg" type="image/svg+xml"></object>
+    </div>
+    <script>
+      (() => {
+        const loader = document.querySelector('.loader');
+        const body = document.querySelector('body');
+
+        window.addEventListener('load', () => {
+          loader.classList.add('ani');
+          setTimeout(() => {
+            body.classList.remove('loading');
+            body.classList.add('loaded');
+          }, 3500);
+        });
+      })();
+    </script>
+  </body>
+</html>
