@@ -5,24 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="loader.css" />
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
   </head>
   <body class="loading">
     <div class="loader">
       <object data="loader.svg" type="image/svg+xml"></object>
     </div>
     <script>
-      (() => {
-        const loader = document.querySelector('.loader');
-        const body = document.querySelector('body');
+      console.log('11111');
+      $(window).load(function () {
+        $('.loader').addClass('ani');
+        setTimeout(() => {
+          $('body').removeClass('loading');
+          $('body').addClass('loaded');
+        }, 3500);
+      });
+      // (() => {
+      //   const loader = document.querySelector('.loader');
+      //   const body = document.querySelector('body');
 
-        window.addEventListener('load', () => {
-          loader.classList.add('ani');
-          setTimeout(() => {
-            body.classList.remove('loading');
-            body.classList.add('loaded');
-          }, 3500);
-        });
-      })();
+      //   window.addEventListener('load', () => {
+      //     loader.classList.add('ani');
+      //     setTimeout(() => {
+      //       body.classList.remove('loading');
+      //       body.classList.add('loaded');
+      //     }, 3500);
+      //   });
+      // })();
     </script>
   </body>
 </html>
