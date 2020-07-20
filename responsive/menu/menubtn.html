@@ -13,62 +13,124 @@
         height: 100vh;
         overflow: auto;
         -ms-overflow-style: none;
+        transform: translateX(100%);
+        transition: 0.5s;
       }
       ul::-webkit-scrollbar {
         display: none;
       }
+      ul.on {
+        transform: translateX(0%);
+      }
+      button {
+        display: block;
+        position: fixed;
+        z-index: 999;
+        top: 1rem;
+        right: 1rem;
+        width: 46px;
+        height: 46px;
+        border: 0;
+        border-radius: 0;
+        background-color: black;
+      }
+      button span.menu-hamburger {
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        background-color: #ffffff;
+        transition: 0.5s;
+        text-indent: -999px;
+      }
+      button span:nth-of-type(1) {
+        transform: translateY(-10px);
+      }
+      button span:nth-of-type(3) {
+        transform: translateY(10px);
+      }
+      button.on span:nth-of-type(1) {
+        transform: translateY(0px) rotateZ(45deg);
+      }
+      button.on span:nth-of-type(2) {
+        width: 0px;
+        height: 0;
+      }
+      button.on span:nth-of-type(3) {
+        transform: translateY(0px) rotateZ(-45deg);
+      }
     </style>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
   </head>
   <body>
-    <ul>
-      <li>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-          tempora amet, placeat facere vero quasi reprehenderit est sit numquam
-          quas molestiae, obcaecati, voluptatibus praesentium minus recusandae
-          aperiam. Neque, tempore saepe.
-        </p>
-      </li>
-      <li>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-          tempora amet, placeat facere vero quasi reprehenderit est sit numquam
-          quas molestiae, obcaecati, voluptatibus praesentium minus recusandae
-          aperiam. Neque, tempore saepe.
-        </p>
-      </li>
-      <li>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-          tempora amet, placeat facere vero quasi reprehenderit est sit numquam
-          quas molestiae, obcaecati, voluptatibus praesentium minus recusandae
-          aperiam. Neque, tempore saepe.
-        </p>
-      </li>
-      <li>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-          tempora amet, placeat facere vero quasi reprehenderit est sit numquam
-          quas molestiae, obcaecati, voluptatibus praesentium minus recusandae
-          aperiam. Neque, tempore saepe.
-        </p>
-      </li>
-      <li>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-          tempora amet, placeat facere vero quasi reprehenderit est sit numquam
-          quas molestiae, obcaecati, voluptatibus praesentium minus recusandae
-          aperiam. Neque, tempore saepe.
-        </p>
-      </li>
-      <li>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-          tempora amet, placeat facere vero quasi reprehenderit est sit numquam
-          quas molestiae, obcaecati, voluptatibus praesentium minus recusandae
-          aperiam. Neque, tempore saepe.
-        </p>
-      </li>
-    </ul>
+    <nav>
+      <button class="menuBtn" type="button">
+        <span class="menu-hamburger"></span>
+        <span class="menu-hamburger"></span>
+        <span class="menu-hamburger"></span>
+        <span>버튼</span>
+      </button>
+      <ul class="menuBar">
+        <li>
+          <a>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+            tempora amet, placeat facere vero quasi reprehenderit est sit
+            numquam quas molestiae, obcaecati, voluptatibus praesentium minus
+            recusandae aperiam. Neque, tempore saepe.
+          </a>
+        </li>
+        <li>
+          <a>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+            tempora amet, placeat facere vero quasi reprehenderit est sit
+            numquam quas molestiae, obcaecati, voluptatibus praesentium minus
+            recusandae aperiam. Neque, tempore saepe.
+          </a>
+        </li>
+        <li>
+          <a>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+            tempora amet, placeat facere vero quasi reprehenderit est sit
+            numquam quas molestiae, obcaecati, voluptatibus praesentium minus
+            recusandae aperiam. Neque, tempore saepe.
+          </a>
+        </li>
+        <li>
+          <a>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+            tempora amet, placeat facere vero quasi reprehenderit est sit
+            numquam quas molestiae, obcaecati, voluptatibus praesentium minus
+            recusandae aperiam. Neque, tempore saepe.
+          </a>
+        </li>
+        <li>
+          <a>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+            tempora amet, placeat facere vero quasi reprehenderit est sit
+            numquam quas molestiae, obcaecati, voluptatibus praesentium minus
+            recusandae aperiam. Neque, tempore saepe.
+          </a>
+        </li>
+        <li>
+          <a>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+            tempora amet, placeat facere vero quasi reprehenderit est sit
+            numquam quas molestiae, obcaecati, voluptatibus praesentium minus
+            recusandae aperiam. Neque, tempore saepe.
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <script>
+      $(".menuBtn").click(function () {
+        $(this).toggleClass("on");
+        $(".menuBar").toggleClass("on");
+      });
+    </script>
   </body>
 </html>
