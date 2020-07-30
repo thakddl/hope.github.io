@@ -1,0 +1,120 @@
+@charset "utf-8";
+.page-head { background: url(../images/company/history-head-bg.jpg) 0% 40%/cover no-repeat; }
+
+/* 조직도 */
+.system {
+  position: relative;
+  min-width: 300px;
+  max-width: 1280px;
+  margin: auto;
+  padding: 0 10px;
+}
+.system p {
+  text-align: center;
+  width: calc(20% - 15px);
+  padding: 1rem;
+  border: 1px #c9c9c9 solid;
+  font-weight: bold;
+}
+.first > p {
+  min-width: 110px;
+  margin: 0 auto;
+  background-color: #3861b9;
+  color: #fff;
+}
+.second {
+  padding-top: 5rem;
+}
+.second > li > p {
+  position: absolute;
+  left: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+  background-color: #0e3b64;
+  color: #fff;
+}
+.third {
+  position: relative;
+  display: flex; 
+  display: -ms-flexbox;
+  justify-content: space-between;
+  padding-top: 6rem;
+}
+.third > li {
+  position: relative;
+  width: calc(20% - 15px);
+  border: 1px #c9c9c9 solid;
+  background-color: #fff;
+}
+.third strong {
+  display: block;
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(147, 205, 221, 0.65);
+}
+.third div {
+  text-align: center;
+  padding: 1rem;
+}
+.third span {
+  display: block;
+  padding-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+.third span:last-of-type {
+  padding-bottom: 0;
+}
+/* 조직도 선 */
+.first:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  content: '';
+  display: block;
+  margin: auto;
+  width: 2px;
+  height: 100%;
+  background-color: #c9c9c9;
+}
+.second > li > p::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  transform: translate(-101%);
+  z-index: -1;
+  content: '';
+  display: block;
+  margin: auto;
+  width: 50%;
+  height: 2px;
+  background-color: #c9c9c9;
+}
+.third::before {
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  margin: 0 auto;
+  content: '';
+  display: block;
+  width: calc(80% + 15px);
+  height: 2px;
+  background-color: #c9c9c9;
+}
+.third > li::before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  margin: 0 auto;
+  transform: translateY(-100%);
+  content: '';
+  display: block;
+  width: 2px;
+  height: 1rem;
+  background-color: #c9c9c9;
+}
