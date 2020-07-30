@@ -5,6 +5,12 @@ footer .grid { display: flex; display: -ms-flexbox; justify-content: space-betwe
 footer img { width: 100px; }
 
 /* page head 영역 */
+.company.page-head { background: url(../images/company/head-bg.jpg) 0% 40%/cover no-repeat; }
+.smartFactory.page-head { background: url(../images/smartFactory/head-bg.jpg) center/cover no-repeat; }
+.business.page-head { background: url(../images/business/head-bg.jpg) 0 40%/cover no-repeat; }
+.product.page-head { background: url(../images/product/head-bg.jpg) 0 12%/cover no-repeat; }
+.support.page-head { background: url(../images/support/head-bg.jpg) center/cover no-repeat; }
+
 .page-head h2 { padding: 8rem 0 6rem; text-align: center; font-size: 2rem; font-weight: medium; color: #fff; text-shadow: .1em .1em .3em #0000009a; }
 .localMenu { display: flex; display: -ms-flexbox; }
 .localMenu .bread { padding: .7rem 1rem; color: #fff; font-size: .9rem; text-shadow: .1em .1em .3em #0000009a; cursor: pointer; }
@@ -29,8 +35,7 @@ div.bread:hover::after { transform: rotateZ(90deg); transition: .5s; }
 .cardBox { display: flex; display: -ms-flexbox; flex-flow: wrap; justify-content: flex-start; }
 .cardBox > li { position: relative; width: 100%; margin-bottom: 15px; padding: 1.5rem 1.5rem; box-sizing: border-box; font-size: .9rem; background-color: whitesmoke; }
 .cardBox > li > img { display: block; width: 100%; }
-.cardBox > li > h3 { width: 100%; padding-top: 1.5rem; }
-.cardBox > li > h3 strong { display: block; text-align: center; }
+.cardBox > li > h3 { width: 100%; padding-top: 1.5rem; text-align: center; }
 .cardBox > li > p { width: 100%; padding: .8rem 0; }
 .cardBox p span { display: block; padding: 0.1em 0; }
 .cardBox p span:before { content: ''; display: inline-block; vertical-align: middle; width: 6px; height: 7px; margin-right: 10px; border-radius: 100%; background-color: #083F85; }

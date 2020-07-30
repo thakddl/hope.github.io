@@ -33,33 +33,33 @@
 .section1--contents:hover .btn-blue { display: block; }
 
 /* section3 */
-#section3 { padding: 80px 0; background-image: url(../images/section3-bg.jpg); color: #fff; }
-#section3 h2 { width: 8em; margin: 0; font-size: 60px; }
-#section3 h2 span { display: block; text-transform: uppercase; color: #28c5f6; }
-#section3 h2 span:first-child { letter-spacing: .45em; font-weight: 300; color: #0c6fbc; }
-#section3 .textBox { display: flex; display: -ms-flexbox; flex-direction: column; padding-bottom: 40px; }
-#section3 .contentBox { display: flex; display: -ms-flexbox; flex-flow: wrap; justify-content: space-between; }
-#section3 .contentBox li { overflow: hidden; width: 100%; margin-bottom: 15px; height: 200px; background: center/cover no-repeat; }
-#section3 .contentBox li:nth-of-type(1) { background-image: url(../images/section3-con1-bg.JPG); }
-#section3 .contentBox li:nth-of-type(2) { background-image: url(../images/section3-con2-bg.JPG); }
-#section3 .contentBox li:nth-of-type(3) { background-image: url(../images/section3-con3-bg.JPG); }
-#section3 .contentBox li:nth-of-type(4) { background-image: url(../images/section3-con4-bg.JPG); }
-#section3 .contentBox li:nth-of-type(5) { background-image: url(../images/section3-con5-bg.JPG); }
-#section3 .contentBox li:nth-of-type(6) { background-image: url(../images/section3-con6-bg.JPG); }
+#section2 { padding: 80px 0; background-image: url(../images/section3-bg.jpg); color: #fff; }
+#section2 h2 { width: 8em; margin: 0; font-size: 60px; }
+#section2 h2 span { display: block; text-transform: uppercase; color: #28c5f6; }
+#section2 h2 span:first-child { letter-spacing: .45em; font-weight: 300; color: #0c6fbc; }
+#section2 .textBox { display: flex; display: -ms-flexbox; flex-direction: column; padding-bottom: 40px; }
+#section2 .contentBox { display: flex; display: -ms-flexbox; flex-flow: wrap; justify-content: space-between; }
+#section2 .contentBox li { overflow: hidden; width: 100%; margin-bottom: 15px; height: 200px; background: center/cover no-repeat; }
+#section2 .contentBox li:nth-of-type(1) { background-image: url(../images/section3-con1-bg.JPG); }
+#section2 .contentBox li:nth-of-type(2) { background-image: url(../images/section3-con2-bg.JPG); }
+#section2 .contentBox li:nth-of-type(3) { background-image: url(../images/section3-con3-bg.JPG); }
+#section2 .contentBox li:nth-of-type(4) { background-image: url(../images/section3-con4-bg.JPG); }
+#section2 .contentBox li:nth-of-type(5) { background-image: url(../images/section3-con5-bg.JPG); }
+#section2 .contentBox li:nth-of-type(6) { background-image: url(../images/section3-con6-bg.JPG); }
 
-#section3 .card { display: flex; display: -ms-flexbox; flex-direction: column; justify-content: space-between; align-items: center; height: 100%; margin: 160px auto 0; background-color: rgba(51, 196, 232, .8); text-align: center; color: #000; transition: .5s; }
-#section3 .contentBox li:hover > .card { justify-content: center; background-color: rgba(51, 196, 232, 1); animation: cardUp 1s ease 1 forwards; }
+#section2 .card { display: flex; display: -ms-flexbox; flex-direction: column; justify-content: space-between; align-items: center; height: 100%; margin: 160px auto 0; background-color: rgba(51, 196, 232, .8); text-align: center; color: #000; transition: .5s; }
+#section2 .contentBox li:hover > .card { justify-content: center; background-color: rgba(51, 196, 232, 1); animation: cardUp 1s ease 1 forwards; }
 @keyframes cardUp {
   100% { width: 100%; margin-top: 0; }
 }
 
-#section3 .card h3 { font-size: .9em; line-height: 40px; }
-#section3 .card > div { display: flex; display: -ms-flexbox; flex-direction: column; justify-content: center; align-items: center; font-size: 0.75em; }
-#section3 .card a { display: inline-block; margin: 0.7em auto 0; }
+#section2 .card h3 { font-size: .9em; line-height: 40px; }
+#section2 .card > div { display: flex; display: -ms-flexbox; flex-direction: column; justify-content: center; align-items: center; font-size: 0.75em; }
+#section2 .card a { display: inline-block; margin: 0.7em auto 0; }
 
 @media screen and ( min-width: 500px ){
   /* section3 */
-  #section3 .contentBox li { width: calc(50% - 7px); margin-bottom: 15px; }
+  #section2 .contentBox li { width: calc(50% - 7px); margin-bottom: 15px; }
 }
 
 /* 타블랫 이상 */
@@ -70,23 +70,23 @@
   .section1--contents img { height: 90px; }
   
   /* section3 */
-  #section3 .contentBox li { width: calc(100%/3 - 9px); margin-bottom: 15px; }
+  #section2 .contentBox li { width: calc(100%/3 - 9px); margin-bottom: 15px; }
 }
 
 /* 데스크탑 */
 @media screen and ( min-width: 1080px ){
   /* section3 */
-  #section3 { padding: 150px 0 50px; }
-  #section3 h2 { margin-right: 40px; }
-  #section3 h2 span { font-size: 79px; }
-  #section3 .textBox { flex-direction: row; align-items: center; }
-  #section3 .textBox p { max-width: 900px; }
-  #section3 .contentBox { padding-bottom: 150px; }
-  #section3 .contentBox li { flex-basis: calc(25% - 15px); margin-bottom: 20px; height: 280px; }
-  #section3 .contentBox li:first-child,
-  #section3 .contentBox li:last-child { flex-basis: calc(50% - 10px); }
-  #section3 .card { width: 60%; margin: 235px auto 0; }
-  #section3 .card h3 { line-height: 45px; }
+  #section2 { padding: 150px 0 50px; }
+  #section2 h2 { margin-right: 40px; }
+  #section2 h2 span { font-size: 79px; }
+  #section2 .textBox { flex-direction: row; align-items: center; }
+  #section2 .textBox p { max-width: 900px; }
+  #section2 .contentBox { padding-bottom: 150px; }
+  #section2 .contentBox li { flex-basis: calc(25% - 15px); margin-bottom: 20px; height: 280px; }
+  #section2 .contentBox li:first-child,
+  #section2 .contentBox li:last-child { flex-basis: calc(50% - 10px); }
+  #section2 .card { width: 60%; margin: 235px auto 0; }
+  #section2 .card h3 { line-height: 45px; }
 
 
   @keyframes cardUp {
