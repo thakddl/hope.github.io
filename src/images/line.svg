@@ -1,0 +1,16 @@
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="linearGradient" gradientTransform="rotate(90)">
+      <stop offset="0%" stop-color="#083F85" />
+      <stop offset="80%" stop-color="#083F85" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+  <path
+    d="M250 450c-110.457 0-200-89.544-200-200 0-110.457 89.543-200 200-200"
+    
+    fill="none"
+    stroke="url(#linearGradient)"
+    stroke-linecap="round"
+    stroke-width="15"
+  />
+</svg>
