@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* reset */
+* { margin: 0; padding: 0; }
+html, body { overflow-x: hidden; width: 100%; height: 100%; margin: 0; padding: 0; font-family: 'Noto Sans KR', sans-serif; }
+html { font-size: 14px; }
+ul { list-style: none; }
+a { text-decoration: none; color: #000; }
+button { all: unset; margin: 0; padding: 0; border: 0; }
+
+/* 로더 */
+body.loading {
+  overflow: hidden;
+}
+body.loaded .loader {
+  display: none;
+}
+.loader {
+  position: relative;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+}
+.loader.ani {
+  animation: opacity-0 .3s 1s 1 forwards;
+}
+.loader object {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  width: 5rem;
+  margin: auto;
+  background: none;
+}
+.loader object.line {
+  transform-origin: center;
+  animation: line 1.2s infinite linear;
+}
+@keyframes opacity-0 {
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes line {
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+/* 공통 */
+.grid { min-width: 320px; max-width: 1280px; padding: 0 15px; box-sizing: border-box; }
+.clear:after { content: ''; display: block; clear: both; }
+.logo { display: block; width: 100%; height: 100%; background: url(../images/mainLogo.png) center/contain no-repeat; }
+.removeText { overflow: hidden; line-height: 0; text-indent: -9999px; }
+.btn-blue { padding: .8em 2em; background-color: #191f4f; font-size: .7rem; color: #fff; }    
+
+/* 메뉴바 */
+header { height: 59px; background-color: #fff; }
+header nav { margin: 0 auto; }
+header h1 { width: 90px; height: 59px; margin-left: 5px; }
+.menuBtn { position: fixed; top: 7px; right: 20px; z-index: 99; width: 45px; height: 45px; border: 1px solid #fff; box-sizing: border-box; background: #162246; cursor: pointer; }
+.menuBtn .menu-hamburger { display: block; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; width: 27px; height: 1px; background-color: #fff; transition: .5s; }
+.menuBtn span:nth-of-type(1) { transform: translateY(-9px); }
+.menuBtn span:nth-of-type(3) { transform: translateY(9px); }
+.menuBtn.on span:nth-of-type(1) { transform: translateY(0px) rotateZ(45deg); }
+.menuBtn.on span:nth-of-type(2) { width: 0; }
+.menuBtn.on span:nth-of-type(3) { transform: translateY(0px) rotateZ(-45deg); }
+.globalMenu { overflow: auto; -ms-overflow-style: none; position: fixed; top: 0; right: -250px; z-index: 98; background-color: #fff; width: 250px; height: 100vh; padding: 80px 0; box-sizing: border-box; text-align: center; transition: .5s; }
+.globalMenu::-webkit-scrollbar { display: none; }
+.globalMenu.show { right: 0; }
+.globalMenu a { color: #162246; }
+.mainMenu { display: block; width: 50%; margin: 0 auto; padding: 1rem 0; font-size: 16px; }
+.subMenu { overflow: hidden; width: 60%; height: 0; margin: 0 auto; transition: .5s; border-top: 0px solid #eee; }
+.subMenu a { display: block; padding-bottom: 8px; font-size: 13px; }
+.globalMenu li:hover > a { font-weight: medium; color: #0b56b8; }
+.globalMenu li:hover .subMenu { height: 165px; padding-top: 10px; border-top: 1px solid #eee; }
+.subMenu li:hover a { color: #0b56b8; }
+
+/* 푸터 */
+.copy { font-size: 12px; color: rgb(182, 182, 182); }
+.toTop { position: fixed; bottom: 30px; right: 30px; font-size: 14px; color: rgb(182, 182, 182); }
+.toTop::before { content: ''; display: block; width: 20px; height: 20px; margin: 0 auto; background: url(../images/arrow.png) center/contain no-repeat; }
+
+/* 타블랫 이상 */
+@media screen and ( min-width: 750px ){
+  html { font-size: 16px; }
+}
+
+/* 데스크탑 */
+@media screen and ( min-width: 1080px ){
+  html { font-size: 18px; }
+  
+  /* 공통 */
+  .grid { padding: 0 20px; margin: 0 auto; }
+  
+  /* 메뉴바 */
+  header { position: relative; width: 100%; height: 100px; }
+  header h1 { float: left; width: 100px; height: 100px; margin: 0 20px 0 0; }
+  .menuBtn { display: none; }
+  .globalMenu { overflow: visible; position: static; float: right; width: 900px; height: auto; padding: 0; }
+  .globalMenu:after { content: ''; display: block; position: absolute; top: 100px; left: 0; width: 100%; height: 0; background: #fff; transition: .5s; }
+  .globalMenu > li { float: left; position: relative; width: calc(100% / 5); padding-top: 3px; line-height: 97px; }
+  .mainMenu { width: 100%; padding: 0; font-size: 1rem; }
+  .mainMenu:after { overflow: hidden; content: ''; display: block; width: 0%; height: 3px; margin: -3px auto; background: #162246; transition: .5s; }
+  .subMenu { position: absolute; z-index: 999; top: 100px; left: 0; width: 100%; padding-top: 10px; font-size: 16px; line-height: 2; }
+  .globalMenu li:hover .mainMenu:after { width: 80%; }
+  .globalMenu:hover:after { border-top: 1px solid #000; height: 200px; }
+  .globalMenu li:hover .subMenu { height: 200px; border-top: 0; }
+  .globalMenu:hover .subMenu { height: 200px; }
+}
