@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MES 시스템 - 로그인</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/sign_in.css" />
+  </head>
+  <body>
+    <header>
+      <select name="language" id="lang">
+        <option value="#">Language</option>
+        <option value="ko">한국어</option>
+        <option value="en">English</option>
+      </select>
+      <h1>MES SYSTEM</h1>
+      <p class="infoBox">
+        로그인을 해주세요.
+      </p>
+    </header>
+    <section>
+      <form action="POST" id="login">
+        <input
+          class="data"
+          type="id"
+          name="userId"
+          placeholder="아이디를 입력하세요."
+          autofocus
+          required
+        />
+        <input
+          class="data"
+          type="password"
+          name="userPw"
+          placeholder="비밀번호를 입력하세요."
+          required
+        />
+        <input class="btn" type="submit" value="로그인" />
+      </form>
+    </section>
+  </body>
+</html>

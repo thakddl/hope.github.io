@@ -1,0 +1,472 @@
+$base-bg-blue: #f4f7fc;
+$base-bg-grayBlue: #c4cedd;
+$bg: #153d77;
+$point-color-blue: #3b7ddd;
+$point-color-red: rgb(231, 35, 74);
+$font-color: #6c757d;
+$font-color-dark: #212529;
+$border-color: #e3e3e3;
+$gray: #eee;
+$white: #fff;
+
+%padding {
+  padding: 0.2em 0.2em;
+}
+%frame {
+  padding: 1.1rem;
+  box-sizing: border-box;
+}
+%frame-side {
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+%border-radius {
+  border-radius: 0.4em;
+}
+%scrollBar-hidden {
+  overflow: auto;
+  scrollbar-width: none; //firefox
+  -ms-overflow-style: none; //IE and Edge
+  &::-webkit-scrollbar {
+    display: none; //chrome, safari, opera
+  }
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  font-family: "Poppins", "Nanum Gothic", sans-serif;
+  color: $font-color-dark;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+fieldset,
+ul,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+.btn {
+  padding: 0.6em 1em;
+  border: 0;
+  border-radius: 0.3rem;
+  background-color: $point-color-blue;
+  font-size: 0.8rem;
+  color: $white;
+}
+
+#lang {
+  @extend %border-radius;
+  display: block;
+  margin-left: auto;
+  padding: 0.3em 0.5em;
+  border: 2px solid $base-bg-grayBlue;
+  background-color: transparent;
+  color: $base-bg-blue;
+  option {
+    color: $font-color-dark;
+  }
+  select:focus,
+  input:focus {
+    border: 0;
+    outline: medium solid $point-color-blue;
+  }
+}
+
+.body {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  height: 100vh;
+}
+
+#sidebar {
+  @extend %scrollBar-hidden;
+  width: 250px;
+  height: 100%;
+  flex-shrink: 0;
+  transition: 0.3s;
+  a.logo {
+    display: block;
+    height: 64px;
+    background-color: $bg;
+    line-height: 64px;
+    text-align: center;
+    color: $white;
+  }
+  .userBox {
+    padding-top: 46px;
+    text-align: center;
+    #user-company {
+      display: inline-block;
+      width: 52px;
+      height: 52px;
+      margin-bottom: 5px;
+      background: url("../images/logo.svg") center/contain no-repeat;
+    }
+    #user-name {
+      margin-bottom: 5px;
+      font-size: 0.95rem;
+      font-weight: bolder;
+    }
+    #user-position {
+      font-size: 0.7rem;
+    }
+  }
+}
+#nav {
+  @extend %frame;
+  .menuBar > li {
+    a {
+      display: block;
+      color: $font-color;
+    }
+    a:hover {
+      color: $bg;
+      font-weight: bold;
+    }
+    a.mainMenu {
+      padding: 1em;
+      .icon {
+        display: inline-block;
+        width: 20px;
+        text-align: left;
+      }
+      span {
+        padding-left: 10px;
+      }
+      .arrow {
+        float: right;
+        transition: 0.3s;
+      }
+    }
+    &.on {
+      a.mainMenu {
+        color: $bg;
+        font-weight: bold;
+      }
+      .arrow {
+        transform: rotateZ(90deg);
+      }
+    }
+  }
+}
+.subMenu {
+  display: none;
+  padding-left: 40px;
+  box-sizing: border-box;
+  font-size: 0.9em;
+  a {
+    padding: 1em 0.6em;
+  }
+}
+.main {
+  overflow: auto;
+  position: relative;
+  z-index: 1;
+  flex-grow: 1;
+  width: calc(100% - 250px);
+  min-width: 320px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background-color: $base-bg-blue;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    height: 265px;
+    background-color: $bg;
+  }
+}
+.tnb {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  padding-right: 15px;
+  #menuBtn {
+    overflow: hidden;
+    width: 64px;
+    height: 64px;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    appearance: none;
+    .bar {
+      display: block;
+      width: 28px;
+      height: 2px;
+      margin: auto;
+      background-color: $base-bg-grayBlue;
+    }
+    .bar:first-child {
+      margin-bottom: 7px;
+    }
+    .bar:last-child {
+      margin-top: 7px;
+    }
+  }
+}
+.header {
+  margin: 0 1.1rem 55px;
+  color: $white;
+  a {
+    color: $white;
+  }
+  h1 {
+    padding-top: 70px;
+    font-size: 25px;
+  }
+  .bread {
+    font-size: 14px;
+    span::after {
+      content: ">";
+      padding: 0 8px;
+    }
+    span:last-child::after {
+      content: "";
+    }
+  }
+}
+.contentsBox {
+  @extend %frame;
+  @extend %border-radius;
+  min-height: calc(100vh - 368px);
+  margin: 0 1.1rem 56px;
+  background-color: $white;
+}
+.footer {
+  @extend %frame-side;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  background-color: $gray;
+  color: $font-color;
+}
+
+.form-insert {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 46px 20px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  .group {
+    width: 100%;
+    padding-bottom: 1em;
+    border: 0;
+    font-weight: bold;
+    label {
+      font-size: 0.9em;
+    }
+  }
+  select,
+  input {
+    width: 100%;
+    height: 2.5em;
+    border: 0;
+    border-bottom: 2px solid $border-color;
+    box-sizing: border-box;
+    color: $bg;
+    font-size: 1rem;
+    font-weight: bolder;
+    caret-color: $bg;
+  }
+  option {
+    font-weight: bolder;
+    color: $bg;
+  }
+  select:focus,
+  input:focus {
+    outline: 0;
+    border-bottom: 2px solid $bg;
+    color: $bg;
+  }
+  input:focus::placeholder {
+    color: transparent;
+  }
+  input::placeholder {
+    color: $border-color;
+  }
+  .dt-buttons {
+    margin-top: 30px;
+  }
+}
+
+/* data table */
+#table_wrapper {
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  .dataTables_filter,
+  .dataTables_info {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .dataTables_filter input {
+    margin-left: 6px;
+  }
+}
+#table {
+  width: 100%;
+  margin: 1rem 0;
+  border-collapse: collapse;
+  text-align: center;
+  thead {
+    th {
+      padding: 1em;
+      border-right: 1px solid $border-color;
+      box-sizing: border-box;
+    }
+    th:last-of-type {
+      border-right: 0;
+    }
+  }
+  tbody {
+    td {
+      padding: 1.2em;
+    }
+  }
+}
+.table-display {
+  thead {
+    tr {
+      background-color: $point-color-blue;
+      color: $white;
+    }
+  }
+  tbody {
+    tr.even {
+      background-color: #f0f6ff;
+    }
+    tr:hover {
+      color: $point-color-blue;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    td {
+      border-right: 1px solid $border-color;
+    }
+    td:last-of-type {
+      border-right: 0;
+    }
+  }
+}
+
+// button style
+.paginate_button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  margin: 5px;
+  font-size: 0.8rem;
+}
+.paginate_button.current {
+  color: $base-bg-blue;
+  background: $point-color-blue;
+}
+.dt-buttons {
+  display: flex;
+  &.left {
+    justify-content: flex-end;
+  }
+}
+.dt-button {
+  @extend %border-radius;
+  overflow: hidden;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  margin-left: 10px;
+  padding: 0;
+  border: 0;
+  text-indent: -999px;
+  cursor: pointer;
+  appearance: none;
+  &.buttons-text {
+    width: 5em;
+    height: 2.8em;
+    font-weight: bolder;
+    font-size: 0.9em;
+    text-indent: 0;
+    color: $white;
+  }
+  &.buttons-add {
+    background-color: $point-color-blue;
+  }
+  &.buttons-delete {
+    background-color: $point-color-red;
+  }
+  &.buttons-copy {
+    background: url("https://img.icons8.com/color/28/000000/copy.png")
+      center/28px no-repeat;
+  }
+  &.buttons-excel {
+    background: url("https://img.icons8.com/color/28/000000/ms-excel.png")
+      center/28px no-repeat;
+  }
+  &.buttons-pdf {
+    background: url("https://img.icons8.com/offices/26/000000/pdf.png")
+      center/26px no-repeat;
+  }
+  &.buttons-print {
+    background: url("https://img.icons8.com/offices/26/000000/print.png")
+      center/26px no-repeat;
+  }
+}
+
+@media screen and (min-width: 751px) {
+  html {
+    font-size: 15px;
+  }
+  .form-insert {
+    max-width: 600px;
+    padding: 5rem;
+    border: 2px solid $border-color;
+  }
+}
+@media screen and (min-width: 1081px) {
+  html {
+    font-size: 16px;
+  }
+  .header {
+    margin: 0 5rem 55px;
+  }
+  .contentsBox {
+    margin: 0 5rem 56px;
+  }
+}
+@media screen and (min-width: 1921px) {
+  html {
+    font-size: 18px;
+  }
+}

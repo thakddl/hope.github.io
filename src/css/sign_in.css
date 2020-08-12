@@ -1,0 +1,107 @@
+body {
+  background-color: #f4f7fc;
+}
+
+header {
+  min-width: 320px;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #153d77;
+  color: #fff;
+}
+
+header h1 {
+  padding: 16vh 0 5vh;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.infoBox {
+  padding-bottom: 3vh;
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1rem;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 320px;
+  margin-top: 15px;
+  padding: 3vh 2vh 2vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 280px;
+}
+
+#login .data {
+  width: 100%;
+  padding: 0.4em;
+  margin-bottom: 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 0.8rem;
+}
+
+.nav {
+  max-width: 70%;
+}
+
+.menu-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.menu-item {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 20%;
+  margin: 1%;
+  background-color: #ccc;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.menu-item span {
+  color: #000;
+}
+
+.menu-item a::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+  background-color: #aaa;
+}
+/*# sourceMappingURL=sign_in.css.map */
