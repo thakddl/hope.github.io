@@ -1,0 +1,594 @@
+#nav, .contentsBox {
+  padding: 1.1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.footer {
+  padding: 0 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#lang, .contentsBox, .dt-button {
+  border-radius: 0.4em;
+}
+
+#sidebar {
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+#sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  font-family: "Poppins", "Nanum Gothic", sans-serif;
+  color: #212529;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+fieldset,
+ul,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.btn {
+  padding: 0.6em 1em;
+  border: 0;
+  border-radius: 0.3rem;
+  background-color: #3b7ddd;
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+#lang {
+  display: block;
+  margin-left: auto;
+  padding: 0.3em 0.5em;
+  border: 2px solid #c4cedd;
+  background-color: transparent;
+  color: #f4f7fc;
+}
+
+#lang option {
+  color: #212529;
+}
+
+#lang select:focus,
+#lang input:focus {
+  border: 0;
+  outline: medium solid #3b7ddd;
+}
+
+.body {
+  overflow: hidden;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+}
+
+#sidebar {
+  width: 250px;
+  height: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#sidebar a.logo {
+  display: block;
+  height: 64px;
+  background-color: #153d77;
+  line-height: 64px;
+  text-align: center;
+  color: #fff;
+}
+
+#sidebar .userBox {
+  padding-top: 46px;
+  text-align: center;
+}
+
+#sidebar .userBox #user-company {
+  display: inline-block;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 5px;
+  background: url("../images/logo.svg") center/contain no-repeat;
+}
+
+#sidebar .userBox #user-name {
+  margin-bottom: 5px;
+  font-size: 0.95rem;
+  font-weight: bolder;
+}
+
+#sidebar .userBox #user-position {
+  font-size: 0.7rem;
+}
+
+#nav .menuBar > li a {
+  display: block;
+  color: #6c757d;
+}
+
+#nav .menuBar > li a:hover {
+  color: #153d77;
+  font-weight: bold;
+}
+
+#nav .menuBar > li a.mainMenu {
+  padding: 1em;
+}
+
+#nav .menuBar > li a.mainMenu .icon {
+  display: inline-block;
+  width: 20px;
+  text-align: left;
+}
+
+#nav .menuBar > li a.mainMenu span {
+  padding-left: 10px;
+}
+
+#nav .menuBar > li a.mainMenu .arrow {
+  float: right;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#nav .menuBar > li.on a.mainMenu {
+  color: #153d77;
+  font-weight: bold;
+}
+
+#nav .menuBar > li.on .arrow {
+  -webkit-transform: rotateZ(90deg);
+          transform: rotateZ(90deg);
+}
+
+.subMenu {
+  display: none;
+  padding-left: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 0.9em;
+}
+
+.subMenu a {
+  padding: 1em 0.6em;
+}
+
+.main {
+  overflow: auto;
+  position: relative;
+  z-index: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: calc(100% - 250px);
+  min-width: 320px;
+  min-height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #f4f7fc;
+}
+
+.main::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  height: 265px;
+  background-color: #153d77;
+}
+
+.tnb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 64px;
+  padding-right: 15px;
+}
+
+.tnb #menuBtn {
+  overflow: hidden;
+  width: 64px;
+  height: 64px;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.tnb #menuBtn .bar {
+  display: block;
+  width: 28px;
+  height: 2px;
+  margin: auto;
+  background-color: #c4cedd;
+}
+
+.tnb #menuBtn .bar:first-child {
+  margin-bottom: 7px;
+}
+
+.tnb #menuBtn .bar:last-child {
+  margin-top: 7px;
+}
+
+.header {
+  margin: 0 1.1rem 55px;
+  color: #fff;
+}
+
+.header a {
+  color: #fff;
+}
+
+.header h1 {
+  padding-top: 70px;
+  font-size: 25px;
+}
+
+.header .bread {
+  font-size: 14px;
+}
+
+.header .bread span::after {
+  content: ">";
+  padding: 0 8px;
+}
+
+.header .bread span:last-child::after {
+  content: "";
+}
+
+.contentsBox {
+  min-height: calc(100vh - 368px);
+  margin: 0 1.1rem 56px;
+  background-color: #fff;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 64px;
+  background-color: #eee;
+  color: #6c757d;
+}
+
+.form-insert {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 46px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1rem;
+}
+
+.form-insert .group {
+  width: 100%;
+  padding-bottom: 1em;
+  border: 0;
+  font-weight: bold;
+}
+
+.form-insert .group label {
+  font-size: 0.9em;
+}
+
+.form-insert select,
+.form-insert input {
+  width: 100%;
+  height: 2.5em;
+  border: 0;
+  border-bottom: 2px solid #e3e3e3;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #153d77;
+  font-size: 1rem;
+  font-weight: bolder;
+  caret-color: #153d77;
+}
+
+.form-insert option {
+  font-weight: bolder;
+  color: #153d77;
+}
+
+.form-insert select:focus,
+.form-insert input:focus {
+  outline: 0;
+  border-bottom: 2px solid #153d77;
+  color: #153d77;
+}
+
+.form-insert input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form-insert input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-insert input:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-insert input:focus::placeholder {
+  color: transparent;
+}
+
+.form-insert input::-webkit-input-placeholder {
+  color: #e3e3e3;
+}
+
+.form-insert input:-ms-input-placeholder {
+  color: #e3e3e3;
+}
+
+.form-insert input::-ms-input-placeholder {
+  color: #e3e3e3;
+}
+
+.form-insert input::placeholder {
+  color: #e3e3e3;
+}
+
+.form-insert .dt-buttons {
+  margin-top: 30px;
+}
+
+/* data table */
+#table_wrapper {
+  overflow: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+#table_wrapper .dataTables_filter,
+#table_wrapper .dataTables_info {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#table_wrapper .dataTables_filter input {
+  margin-left: 6px;
+}
+
+#table {
+  width: 100%;
+  margin: 1rem 0;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+#table thead th {
+  padding: 1em;
+  border-right: 1px solid #e3e3e3;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#table thead th:last-of-type {
+  border-right: 0;
+}
+
+#table tbody td {
+  padding: 1.2em;
+}
+
+.table-display thead tr {
+  background-color: #3b7ddd;
+  color: #fff;
+}
+
+.table-display tbody tr.even {
+  background-color: #f0f6ff;
+}
+
+.table-display tbody tr:hover {
+  color: #3b7ddd;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.table-display tbody td {
+  border-right: 1px solid #e3e3e3;
+}
+
+.table-display tbody td:last-of-type {
+  border-right: 0;
+}
+
+.paginate_button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 45px;
+  height: 45px;
+  margin: 5px;
+  font-size: 0.8rem;
+}
+
+.paginate_button.current {
+  color: #f4f7fc;
+  background: #3b7ddd;
+}
+
+.dt-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dt-buttons.left {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.dt-button {
+  overflow: hidden;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 45px;
+  height: 45px;
+  margin-left: 10px;
+  padding: 0;
+  border: 0;
+  text-indent: -999px;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.dt-button.buttons-text {
+  width: 5em;
+  height: 2.8em;
+  font-weight: bolder;
+  font-size: 0.9em;
+  text-indent: 0;
+  color: #fff;
+}
+
+.dt-button.buttons-add {
+  background-color: #3b7ddd;
+}
+
+.dt-button.buttons-delete {
+  background-color: #e7234a;
+}
+
+.dt-button.buttons-copy {
+  background: url("https://img.icons8.com/color/28/000000/copy.png") center/28px no-repeat;
+}
+
+.dt-button.buttons-excel {
+  background: url("https://img.icons8.com/color/28/000000/ms-excel.png") center/28px no-repeat;
+}
+
+.dt-button.buttons-pdf {
+  background: url("https://img.icons8.com/offices/26/000000/pdf.png") center/26px no-repeat;
+}
+
+.dt-button.buttons-print {
+  background: url("https://img.icons8.com/offices/26/000000/print.png") center/26px no-repeat;
+}
+
+@media screen and (min-width: 751px) {
+  html {
+    font-size: 15px;
+  }
+  .form-insert {
+    max-width: 600px;
+    padding: 5rem;
+    border: 2px solid #e3e3e3;
+  }
+}
+
+@media screen and (min-width: 1081px) {
+  html {
+    font-size: 16px;
+  }
+  .header {
+    margin: 0 5rem 55px;
+  }
+  .contentsBox {
+    margin: 0 5rem 56px;
+  }
+}
+
+@media screen and (min-width: 1921px) {
+  html {
+    font-size: 18px;
+  }
+}
+/*# sourceMappingURL=common.css.map */
