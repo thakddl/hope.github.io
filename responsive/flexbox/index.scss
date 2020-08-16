@@ -1,0 +1,144 @@
+html, body { 
+  margin: 0; 
+  padding: 0; 
+  width: 100%; 
+  height: 100%; 
+  background-color: #eee;
+}
+a {
+  text-decoration: none;
+}
+p {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  .logo {
+    color: #777;
+    font-weight: bolder;
+  }
+  form {
+    display: flex;
+    height: 30px;
+    input {
+      display: block;
+      border: 0;
+      padding: 0 1em;
+    }
+    input[type=submit] {
+      margin-left: .5em;
+      background-color: gold;
+    }
+  }
+}
+nav {
+  .gnb {
+    display: flex;
+    li {
+      width: 25%;
+      background-color: gold;
+      transition: .3s;
+      a {
+        display: block;
+        padding: 1em;
+        text-align: center;
+        color: #333;
+        font-weight: bold;
+        text-transform: capitalize;
+      }
+    }
+    li:hover {
+      width: 33%;
+      background-color: indianred;
+    }
+  }
+}
+main {
+  display: flex;
+  flex-direction: column;
+  aside {
+    background-color: #fff;
+    &.left {
+      .desc {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      .user-item {
+        align-items: center;
+      }
+    }
+    .user-item {
+      display: flex;
+      margin-bottom: 10px;
+      padding: 10px;
+    }
+    .list-image {
+      flex-shrink: 0;
+      width: 50px;
+      height: 50px;
+      margin: 0 10px 0 0;
+      border-radius: 50%;
+      background-color: #333;
+    }
+  }
+  section {
+    padding: 1em;
+  }
+}
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  figure {
+    margin: 0;
+    padding-top: 50%;
+    background: url(https://placehold.it/200x200);
+  }
+  p {
+    flex-grow: 1;
+    padding: 1em;
+    background-color: #fff;
+  }
+}
+@media (min-width:900px) {
+  main {
+    flex-direction: row;
+    aside.left {
+      order: -1;
+    }
+    aside {
+      width: 250px;
+      flex-shrink: 0;
+    }
+    section {
+      order: 0;
+      flex-grow: 1;
+    }
+  }
+  .card-list {
+    margin: -.5em;
+  }
+  .card-item {
+    width: 50%;
+    padding: .5em;
+    box-sizing: border-box;
+  }
+}
+@media (min-width:1200px){
+  .card-item {
+    width: 33.333%;
+  }
+}
