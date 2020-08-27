@@ -1,0 +1,65 @@
+@charset "utf-8";
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-width: 320px;
+}
+.header {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  margin-bottom: 100px;
+  background-color: antiquewhite;
+}
+
+.contentsBox {
+  padding: 0 20px;
+  margin: 0 auto 80px;
+  max-width: 1280px;
+  box-sizing: border-box;
+}
+.contentTitle{
+  margin-bottom: 50px;
+  padding-bottom: 20px;
+  border-bottom: 4px solid #000;
+}
+.messageImg {
+  display: block;
+  width: 80%;
+  margin: 0 auto 40px;
+}
+.message {
+  text-align: center;
+}
+.iframe {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 300px;
+}
+.album {
+  display: flex;
+  flex-flow: wrap;
+  margin: -10px;
+}
+.album img {
+  flex-grow: 1;
+  display: block;
+  margin: 10px;
+  width: 100%;
+}
+@media screen and (min-width:750px){
+  .album img {
+    width: 40%;
+  }
+}
+@media screen and (min-width:1080px){
+  
+}
+@media screen and (min-width:1280px){
+  
+}
